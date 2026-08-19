@@ -122,16 +122,16 @@
       "ai"
     ],
     "chapters": [
-      "AI is not a tool",
-      "The third shift: Multi-agent AI",
-      "Why leaders feel AI anxiety",
-      "The productivity trap",
-      "Three skills for the AI age",
-      "Why AI transformation is a people problem",
-      "Managing an AI agent workforce",
-      "Building an AI layer for your company",
-      "The exponential pace of AI change",
-      "What leaders should do in the next 30 days"
+      "AIは道具ではない",
+      "第 3 のシフト: マルチエージェント AI",
+      "なぜリーダーはAIに不安を感じるのか",
+      "生産性の罠",
+      "AI時代の3つのスキル",
+      "AI 変革が人々の問題となる理由",
+      "AI エージェントの労働力の管理",
+      "あなたの会社の AI レイヤーを構築する",
+      "AI の急激な変化",
+      "リーダーが今後 30 日間にすべきこと"
     ]
   },
   {
@@ -194,27 +194,27 @@
       "ai"
     ],
     "chapters": [
-      "Introduction",
-      "Extreme co-design and rack-scale engineering",
-      "How Jensen runs NVIDIA",
-      "AI scaling laws",
-      "Biggest blockers to AI scaling laws",
-      "Supply chain",
-      "Memory",
-      "Power",
-      "Elon and Colossus",
-      "Jensen's approach to engineering and leadership",
-      "China",
-      "TSMC and Taiwan",
-      "NVIDIA's moat",
-      "AI data centers in space",
-      "Will NVIDIA be worth $10 trillion?",
-      "Leadership under pressure",
-      "Video games",
-      "AGI timeline",
-      "Future of programming",
-      "Consciousness",
-      "Mortality"
+      "導入",
+      "究極の共同設計とラックスケールエンジニアリング",
+      "Jensen が NVIDIA をどのように運営しているか",
+      "AI スケーリングの法則",
+      "AI スケーリングの法則の最大の障害",
+      "サプライチェーン",
+      "メモリ",
+      "力",
+      "エロンと巨像",
+      "エンジニアリングとリーダーシップに対するジェンセンのアプローチ",
+      "中国",
+      "TSMCと台湾",
+      "NVIDIAの堀",
+      "宇宙のAIデータセンター",
+      "NVIDIA の価値は 10 兆ドルになるでしょうか?",
+      "プレッシャーの下でのリーダーシップ",
+      "ビデオゲーム",
+      "AGI タイムライン",
+      "プログラミングの未来",
+      "意識",
+      "死亡"
     ]
   },
   {
@@ -227,14 +227,14 @@
       "ai"
     ],
     "chapters": [
-      "Is AI R&D verifiable enough to unlock recursive self-improvement?",
-      "Is AI progress bottlenecked by human expert data?",
-      "Flat token prices suggest scaling has been slow",
-      "Skills AI can't train on: does it even need them?",
-      "Aligned to whom?",
-      "Recent incidents of AIs colluding and deceiving humans",
-      "What could possibly go wrong? A concrete scenario",
-      "From reward hacking to takeover"
+      "AI の研究開発は再帰的な自己改善を可能にするのに十分検証可能ですか?",
+      "AIの進歩は人間の専門家データがボトルネックになっているのでしょうか?",
+      "トークン価格の横ばいとスケーリング減速の示唆",
+      "AI がトレーニングできないスキル: AI にはそれが必要なのでしょうか?",
+      "誰に合わせますか？",
+      "AIが人間を共謀し騙す最近の事件",
+      "何が問題になる可能性がありますか?具体的なシナリオ",
+      "報酬ハッキングから乗っ取りまで"
     ]
   },
   {
@@ -247,20 +247,20 @@
       "ai"
     ],
     "chapters": [
-      "Michael Kratsios on AI Policy and Public Service",
-      "From Tech to the White House",
-      "How Technology Policy Actually Gets Made",
-      "The White House on Open Source AI",
-      "How Washington Sees AI Differently",
-      "Regulating a Technology That Changes Every Six Months",
-      "Which AI Risks Are Overblown?",
-      "Giving Little Tech a Seat at the Table",
-      "Regulation Without Creating Incumbent Moats",
+      "マイケル・クラツィオスが AI 政策と公共サービスについて語る",
+      "シリコンバレーからホワイトハウスへの転身",
+      "テクノロジー政策は実際にどのように作られるのか",
+      "ホワイトハウスにおけるオープンソースAIの戦略的意義",
+      "ワシントンのAIに対する見方が違う",
+      "半年ごとに変わるテクノロジーを規制する",
+      "どの AI リスクが過大評価されていますか?",
+      "小さな技術者にテーブルの席を与える",
+      "既存の堀を作らない規制",
       "Born Free vs. Born in Captivity Technologies",
-      "What Working in the White House Is Actually Like",
-      "A New Golden Age of American Science",
-      "Quantum, Congress, IP, and What Comes Next",
-      "Why Technologists Should Consider Public Service"
+      "ホワイトハウスで働くというのは実際どのようなものなのか",
+      "アメリカ科学の新たな黄金時代",
+      "量子、議会、知財、そして次に起こること",
+      "技術者が公共サービスを検討すべき理由"
     ]
   }
 ]

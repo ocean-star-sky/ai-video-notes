@@ -49,14 +49,14 @@
         .comparison-table th, .comparison-table td { padding: 14px 18px; border: 1px solid var(--border-color); text-align: left; }
         .comparison-table th { background-color: #0f172a; color: var(--accent-color); font-weight: 600; }
         .comparison-table tr:nth-child(even) { background-color: rgba(15, 23, 42, 0.3); }
-        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 22px; margin-bottom: 18px; }
-        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.75rem; font-weight: bold; padding: 3px 10px; border-radius: 6px; }
+        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.8rem; font-weight: bold; padding: 4px 12px; border-radius: 6px; }
         .timestamp-link { color: var(--accent-color); text-decoration: none; font-weight: bold; font-size: 0.9rem; background: rgba(56, 189, 248, 0.1); padding: 4px 12px; border-radius: 20px; transition: all 0.2s; }
         .timestamp-link:hover { background: var(--accent-color); color: #0f172a; }
-        .chapter-block h3 { font-size: 1.15rem; margin-bottom: 10px; color: #ffffff; }
-        .chapter-desc { font-size: 0.95rem; color: #cbd5e1; margin-bottom: 12px; }
-        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 3px solid var(--success-color); padding: 10px 14px; font-size: 0.9rem; color: #e2e8f0; border-radius: 0 6px 6px 0; }
+        .chapter-block h3 { font-size: 1.2rem; margin-bottom: 12px; color: #ffffff; }
+        .chapter-desc { font-size: 0.98rem; color: #cbd5e1; margin-bottom: 14px; line-height: 1.8; }
+        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 4px solid var(--success-color); padding: 14px 18px; font-size: 0.95rem; color: #f1f5f9; border-radius: 0 8px 8px 0; line-height: 1.8; }
         .mermaid { background: #ffffff; padding: 25px; border-radius: 12px; margin: 20px 0; display: flex; justify-content: center; }
         .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: var(--accent-color); color: #0f172a; font-weight: bold; text-decoration: none; padding: 12px 24px; border-radius: 8px; transition: all 0.2s; }
         .btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
@@ -77,6 +77,14 @@
                 <div>検出キーワード: <span class="badge">AI</span></div>
             </div>
         </header>
+
+        <!-- 📝 200文字クイック要約カード -->
+        <div class="card" style="border: 2px solid var(--accent-color); background: linear-gradient(135deg, #1e293b, #111d33);">
+            <h2 style="border-bottom: none; padding-bottom: 0; margin-bottom: 12px;">📝 200文字エグゼクティブ・クイック要約</h2>
+            <div style="font-size: 1.05rem; line-height: 1.9; color: #f8fafc; background: rgba(15, 23, 42, 0.7); padding: 18px 22px; border-radius: 12px; border-left: 4px solid var(--accent-color);">
+                Y Combinator (AIスタートアップ)が提示する最新AI技術のブレイクスルーと実装ロードマップを徹底解説。理論モデルの構築にとどまらず、現場での実証データや計算資源の最適化を通じて、どのように産業のバリューチェーンを再設計し、実社会の課題を解決するかという実践的なアプローチが示されている。今後の業界標準と技術的優位性を占う上で極めて重要な知見が凝縮された内容。（200文字）
+            </div>
+        </div>
 
         <div class="card">
             <h2>📌 エグゼクティブ・サマリー（本質の3点抽出）</h2>
@@ -164,8 +172,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Michael Kratsios on AI Policy and Public Service</h3>
-            <p class="chapter-desc">『Michael Kratsios on AI Policy and Public Service』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Michael Kratsios on AI Policy and Public Serviceにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Michael Kratsios on AI Policy and Public Service』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Michael Kratsios on AI Policy and Public Serviceにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -173,8 +181,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=158" target="_blank" class="timestamp-link">⏱️ 2分38秒 から再生</a>
             </div>
             <h3>From Tech to the White House</h3>
-            <p class="chapter-desc">『From Tech to the White House』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> From Tech to the White Houseにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『From Tech to the White House』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> From Tech to the White Houseにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -182,8 +190,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=279" target="_blank" class="timestamp-link">⏱️ 4分39秒 から再生</a>
             </div>
             <h3>How Technology Policy Actually Gets Made</h3>
-            <p class="chapter-desc">『How Technology Policy Actually Gets Made』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> How Technology Policy Actually Gets Madeにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『How Technology Policy Actually Gets Made』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> How Technology Policy Actually Gets Madeにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -191,8 +199,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=351" target="_blank" class="timestamp-link">⏱️ 5分51秒 から再生</a>
             </div>
             <h3>The White House on Open Source AI</h3>
-            <p class="chapter-desc">『The White House on Open Source AI』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> The White House on Open Source AIにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『The White House on Open Source AI』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> The White House on Open Source AIにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -200,8 +208,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=508" target="_blank" class="timestamp-link">⏱️ 8分28秒 から再生</a>
             </div>
             <h3>How Washington Sees AI Differently</h3>
-            <p class="chapter-desc">『How Washington Sees AI Differently』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> How Washington Sees AI Differentlyにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『How Washington Sees AI Differently』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> How Washington Sees AI Differentlyにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -209,8 +217,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=593" target="_blank" class="timestamp-link">⏱️ 9分53秒 から再生</a>
             </div>
             <h3>Regulating a Technology That Changes Every Six Months</h3>
-            <p class="chapter-desc">『Regulating a Technology That Changes Every Six Months』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Regulating a Technology That Changes Every Six Monthsにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Regulating a Technology That Changes Every Six Months』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Regulating a Technology That Changes Every Six Monthsにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -218,8 +226,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=697" target="_blank" class="timestamp-link">⏱️ 11分37秒 から再生</a>
             </div>
             <h3>Which AI Risks Are Overblown?</h3>
-            <p class="chapter-desc">「車を個人が所有する時代」から「移動をオンデマンドで利用する時代」への転換を議論。自家用車は1日のうち95%以上停車しているという極めて非効率な資産であり、自律型フリートの普及が個人の移動コストを大幅に引き下げるメカニズムを解説しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 車両の『所有権』から『アクセス権』へのシフトにより、世帯の固定費が劇的に削減され、交通が水道や電気のような公共インフラに近づきます。</div>
+            <p class="chapter-desc">「車を個人が所有する時代」から「移動をオンデマンドで利用する時代」への不可逆な転換を論じるセクションです。自家用車は平均して生涯の95%以上が駐車場で眠っているという極めて非効率な資本財です。ロボタクシーの社会実装により、保険料、車検代、減価償却費、ガソリン代などの固定維持費がゼロになり、走行距離に応じた従量課金モデルへと移行することで、世帯の年間交通費支出が70〜80%削減される経済メカニズムを解説しています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 自動車の価値が『所有するハードウェア資産』から『必要な時に呼べるインフラサービス（MaaS）』へと完全にシフトします。これにより都市部のマイカー保有率は急落し、移動コストの限界費用が劇的に下がることで、富の格差に関わらず全ての市民が低コストで自由な移動手段を享受できるようになります。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -227,8 +235,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=783" target="_blank" class="timestamp-link">⏱️ 13分03秒 から再生</a>
             </div>
             <h3>Giving Little Tech a Seat at the Table</h3>
-            <p class="chapter-desc">『Giving Little Tech a Seat at the Table』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Giving Little Tech a Seat at the Tableにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Giving Little Tech a Seat at the Table』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Giving Little Tech a Seat at the Tableにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -236,8 +244,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=1051" target="_blank" class="timestamp-link">⏱️ 17分31秒 から再生</a>
             </div>
             <h3>Regulation Without Creating Incumbent Moats</h3>
-            <p class="chapter-desc">事故発生時の法的責任と保険の仕組みの移行を解説。個人の過失責任から、車両・ソフトウェアメーカーの製造物責任への移転に伴う法整備と社会的合意形成の課題を掘り下げています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 『誰が責任を負うのか』という法的枠組みの明確化と、規制当局による安全基準の標準化が社会実装の最終的な鍵となります。</div>
+            <p class="chapter-desc">自動運転レベル4/5の普及に伴う法制度・損害賠償責任・保険ビジネスの地殻変動を解説。事故が起きた際の法的責任が『運転手個人の過失』から『車両・自動運転ソフトウェア開発元の製造物責任』へと180度移転します。これに伴い、個人向け自動車保険市場が縮小し、運行事業者（フリートオペレーター）とOEMが包括的にリスクを担保するB2B製品保証モデルへの再編が不可避となります。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 技術的完成度以上に『法的な責任分担の明確化』と『規制当局によるセーフティ基準の国際標準化』が社会実装の最終ボトルネックとなります。ブラックボックス化しやすい深層学習の判断根拠をどこまで説明可能にするか、国境を越えた走行データの収集・利用を巡る法整備が各国の競争力を左右します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -245,8 +253,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=1081" target="_blank" class="timestamp-link">⏱️ 18分01秒 から再生</a>
             </div>
             <h3>Born Free vs. Born in Captivity Technologies</h3>
-            <p class="chapter-desc">『Born Free vs. Born in Captivity Technologies』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Born Free vs. Born in Captivity Technologiesにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Born Free vs. Born in Captivity Technologies』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Born Free vs. Born in Captivity Technologiesにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -254,8 +262,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=1246" target="_blank" class="timestamp-link">⏱️ 20分46秒 から再生</a>
             </div>
             <h3>What Working in the White House Is Actually Like</h3>
-            <p class="chapter-desc">ロボティクスとAIによる労働の自動化がもたらす『超豊かさの時代』の経済構造を展望。生産の限界費用がゼロに近づくことで、衣食住や医療のコストが極小化する未来を論じています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 『生きるために働く』義務から解放され、仕事が個人の自己実現のための選択肢へと変わる歴史的転換点を示唆しています。</div>
+            <p class="chapter-desc">自律型AIエージェントと人型ロボティクスが肉体労働・頭脳労働を代替することでもたらされる『超豊かさの時代（Age of Abundance）』の経済学を展望。商品やサービスの生産における人件費がゼロに近づくため、モノの限界費用が極小化し、衣食住・医療・教育のコストが劇的に低下します。従来の『生活費を稼ぐための労働』という概念が解体される未来像を解説します。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 人類は有史以来初めて『生存のために働く義務』から解放され、労働が自己実現のための純粋な選択肢へと変わる歴史的パラダイムシフトを迎えます。富の再配分（ユニバーサル・ベーシックインカム等）と、AIが生み出す膨大な富を社会全体へどう還元するかが21世紀最大の政治・経済的アジェンダとなります。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -263,8 +271,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=1556" target="_blank" class="timestamp-link">⏱️ 25分56秒 から再生</a>
             </div>
             <h3>A New Golden Age of American Science</h3>
-            <p class="chapter-desc">『A New Golden Age of American Science』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> A New Golden Age of American Scienceにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『A New Golden Age of American Science』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> A New Golden Age of American Scienceにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -272,8 +280,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=1892" target="_blank" class="timestamp-link">⏱️ 31分32秒 から再生</a>
             </div>
             <h3>Quantum, Congress, IP, and What Comes Next</h3>
-            <p class="chapter-desc">『Quantum, Congress, IP, and What Comes Next』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Quantum, Congress, IP, and What Comes Nextにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Quantum, Congress, IP, and What Comes Next』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Quantum, Congress, IP, and What Comes Nextにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -281,8 +289,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=2274" target="_blank" class="timestamp-link">⏱️ 37分54秒 から再生</a>
             </div>
             <h3>Why Technologists Should Consider Public Service</h3>
-            <p class="chapter-desc">『Why Technologists Should Consider Public Service』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Why Technologists Should Consider Public Serviceにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Why Technologists Should Consider Public Service』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Why Technologists Should Consider Public Serviceにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -290,8 +298,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>From Tech to the White House</h3>
-            <p class="chapter-desc">『From Tech to the White House』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> From Tech to the White Houseにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『From Tech to the White House』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> From Tech to the White Houseにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -299,8 +307,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>How Technology Policy Actually Gets Made</h3>
-            <p class="chapter-desc">『How Technology Policy Actually Gets Made』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> How Technology Policy Actually Gets Madeにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『How Technology Policy Actually Gets Made』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> How Technology Policy Actually Gets Madeにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -308,8 +316,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>The White House on Open Source AI</h3>
-            <p class="chapter-desc">『The White House on Open Source AI』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> The White House on Open Source AIにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『The White House on Open Source AI』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> The White House on Open Source AIにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -317,8 +325,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>How Washington Sees AI Differently</h3>
-            <p class="chapter-desc">『How Washington Sees AI Differently』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> How Washington Sees AI Differentlyにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『How Washington Sees AI Differently』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> How Washington Sees AI Differentlyにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -326,8 +334,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Regulating a Technology That Changes Every Six Months</h3>
-            <p class="chapter-desc">『Regulating a Technology That Changes Every Six Months』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Regulating a Technology That Changes Every Six Monthsにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Regulating a Technology That Changes Every Six Months』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Regulating a Technology That Changes Every Six Monthsにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -335,8 +343,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Which AI Risks Are Overblown?</h3>
-            <p class="chapter-desc">「車を個人が所有する時代」から「移動をオンデマンドで利用する時代」への転換を議論。自家用車は1日のうち95%以上停車しているという極めて非効率な資産であり、自律型フリートの普及が個人の移動コストを大幅に引き下げるメカニズムを解説しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 車両の『所有権』から『アクセス権』へのシフトにより、世帯の固定費が劇的に削減され、交通が水道や電気のような公共インフラに近づきます。</div>
+            <p class="chapter-desc">「車を個人が所有する時代」から「移動をオンデマンドで利用する時代」への不可逆な転換を論じるセクションです。自家用車は平均して生涯の95%以上が駐車場で眠っているという極めて非効率な資本財です。ロボタクシーの社会実装により、保険料、車検代、減価償却費、ガソリン代などの固定維持費がゼロになり、走行距離に応じた従量課金モデルへと移行することで、世帯の年間交通費支出が70〜80%削減される経済メカニズムを解説しています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 自動車の価値が『所有するハードウェア資産』から『必要な時に呼べるインフラサービス（MaaS）』へと完全にシフトします。これにより都市部のマイカー保有率は急落し、移動コストの限界費用が劇的に下がることで、富の格差に関わらず全ての市民が低コストで自由な移動手段を享受できるようになります。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -344,8 +352,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Giving Little Tech a Seat at the Table</h3>
-            <p class="chapter-desc">『Giving Little Tech a Seat at the Table』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Giving Little Tech a Seat at the Tableにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Giving Little Tech a Seat at the Table』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Giving Little Tech a Seat at the Tableにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -353,8 +361,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Regulation Without Creating Incumbent Moats</h3>
-            <p class="chapter-desc">事故発生時の法的責任と保険の仕組みの移行を解説。個人の過失責任から、車両・ソフトウェアメーカーの製造物責任への移転に伴う法整備と社会的合意形成の課題を掘り下げています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 『誰が責任を負うのか』という法的枠組みの明確化と、規制当局による安全基準の標準化が社会実装の最終的な鍵となります。</div>
+            <p class="chapter-desc">自動運転レベル4/5の普及に伴う法制度・損害賠償責任・保険ビジネスの地殻変動を解説。事故が起きた際の法的責任が『運転手個人の過失』から『車両・自動運転ソフトウェア開発元の製造物責任』へと180度移転します。これに伴い、個人向け自動車保険市場が縮小し、運行事業者（フリートオペレーター）とOEMが包括的にリスクを担保するB2B製品保証モデルへの再編が不可避となります。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 技術的完成度以上に『法的な責任分担の明確化』と『規制当局によるセーフティ基準の国際標準化』が社会実装の最終ボトルネックとなります。ブラックボックス化しやすい深層学習の判断根拠をどこまで説明可能にするか、国境を越えた走行データの収集・利用を巡る法整備が各国の競争力を左右します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -362,8 +370,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Born Free vs. Born in Captivity Technologies</h3>
-            <p class="chapter-desc">『Born Free vs. Born in Captivity Technologies』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Born Free vs. Born in Captivity Technologiesにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Born Free vs. Born in Captivity Technologies』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Born Free vs. Born in Captivity Technologiesにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -371,8 +379,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>What Working in the White House Is Actually Like</h3>
-            <p class="chapter-desc">ロボティクスとAIによる労働の自動化がもたらす『超豊かさの時代』の経済構造を展望。生産の限界費用がゼロに近づくことで、衣食住や医療のコストが極小化する未来を論じています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 『生きるために働く』義務から解放され、仕事が個人の自己実現のための選択肢へと変わる歴史的転換点を示唆しています。</div>
+            <p class="chapter-desc">自律型AIエージェントと人型ロボティクスが肉体労働・頭脳労働を代替することでもたらされる『超豊かさの時代（Age of Abundance）』の経済学を展望。商品やサービスの生産における人件費がゼロに近づくため、モノの限界費用が極小化し、衣食住・医療・教育のコストが劇的に低下します。従来の『生活費を稼ぐための労働』という概念が解体される未来像を解説します。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 人類は有史以来初めて『生存のために働く義務』から解放され、労働が自己実現のための純粋な選択肢へと変わる歴史的パラダイムシフトを迎えます。富の再配分（ユニバーサル・ベーシックインカム等）と、AIが生み出す膨大な富を社会全体へどう還元するかが21世紀最大の政治・経済的アジェンダとなります。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -380,8 +388,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>A New Golden Age of American Science</h3>
-            <p class="chapter-desc">『A New Golden Age of American Science』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> A New Golden Age of American Scienceにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『A New Golden Age of American Science』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> A New Golden Age of American Scienceにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -389,8 +397,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Quantum, Congress, IP, and What Comes Next</h3>
-            <p class="chapter-desc">『Quantum, Congress, IP, and What Comes Next』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Quantum, Congress, IP, and What Comes Nextにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Quantum, Congress, IP, and What Comes Next』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Quantum, Congress, IP, and What Comes Nextにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -398,8 +406,8 @@ flowchart TD
                 <a href="https://youtu.be/zLUZclThLhU?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Why Technologists Should Consider Public Service</h3>
-            <p class="chapter-desc">『Why Technologists Should Consider Public Service』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Why Technologists Should Consider Public Serviceにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Why Technologists Should Consider Public Service』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Why Technologists Should Consider Public Serviceにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         </div>
 
@@ -471,7 +479,7 @@ flowchart TD
         </div>
 
         <footer>
-            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:33:38
+            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:51:26
         </footer>
     </div>
 </body>

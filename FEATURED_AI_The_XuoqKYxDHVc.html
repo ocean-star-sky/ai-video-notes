@@ -49,14 +49,14 @@
         .comparison-table th, .comparison-table td { padding: 14px 18px; border: 1px solid var(--border-color); text-align: left; }
         .comparison-table th { background-color: #0f172a; color: var(--accent-color); font-weight: 600; }
         .comparison-table tr:nth-child(even) { background-color: rgba(15, 23, 42, 0.3); }
-        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 22px; margin-bottom: 18px; }
-        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.75rem; font-weight: bold; padding: 3px 10px; border-radius: 6px; }
+        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.8rem; font-weight: bold; padding: 4px 12px; border-radius: 6px; }
         .timestamp-link { color: var(--accent-color); text-decoration: none; font-weight: bold; font-size: 0.9rem; background: rgba(56, 189, 248, 0.1); padding: 4px 12px; border-radius: 20px; transition: all 0.2s; }
         .timestamp-link:hover { background: var(--accent-color); color: #0f172a; }
-        .chapter-block h3 { font-size: 1.15rem; margin-bottom: 10px; color: #ffffff; }
-        .chapter-desc { font-size: 0.95rem; color: #cbd5e1; margin-bottom: 12px; }
-        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 3px solid var(--success-color); padding: 10px 14px; font-size: 0.9rem; color: #e2e8f0; border-radius: 0 6px 6px 0; }
+        .chapter-block h3 { font-size: 1.2rem; margin-bottom: 12px; color: #ffffff; }
+        .chapter-desc { font-size: 0.98rem; color: #cbd5e1; margin-bottom: 14px; line-height: 1.8; }
+        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 4px solid var(--success-color); padding: 14px 18px; font-size: 0.95rem; color: #f1f5f9; border-radius: 0 8px 8px 0; line-height: 1.8; }
         .mermaid { background: #ffffff; padding: 25px; border-radius: 12px; margin: 20px 0; display: flex; justify-content: center; }
         .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: var(--accent-color); color: #0f172a; font-weight: bold; text-decoration: none; padding: 12px 24px; border-radius: 8px; transition: all 0.2s; }
         .btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
@@ -77,6 +77,14 @@
                 <div>検出キーワード: <span class="badge">AI</span><span class="badge">AGI</span><span class="badge">ROBOTICS</span><span class="badge">ENERGY</span></div>
             </div>
         </header>
+
+        <!-- 📝 200文字クイック要約カード -->
+        <div class="card" style="border: 2px solid var(--accent-color); background: linear-gradient(135deg, #1e293b, #111d33);">
+            <h2 style="border-bottom: none; padding-bottom: 0; margin-bottom: 12px;">📝 200文字エグゼクティブ・クイック要約</h2>
+            <div style="font-size: 1.05rem; line-height: 1.9; color: #f8fafc; background: rgba(15, 23, 42, 0.7); padding: 18px 22px; border-radius: 12px; border-left: 4px solid var(--accent-color);">
+                The Economistが提示する最新AI技術のブレイクスルーと実装ロードマップを徹底解説。理論モデルの構築にとどまらず、現場での実証データや計算資源の最適化を通じて、どのように産業のバリューチェーンを再設計し、実社会の課題を解決するかという実践的なアプローチが示されている。今後の業界標準と技術的優位性を占う上で極めて重要な知見が凝縮された内容。（200文字）
+            </div>
+        </div>
 
         <div class="card">
             <h2>📌 エグゼクティブ・サマリー（本質の3点抽出）</h2>
@@ -164,8 +172,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>AIは5年後には人間より賢くなる</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -173,8 +181,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=730" target="_blank" class="timestamp-link">⏱️ 12分10秒 から再生</a>
             </div>
             <h3>AI企業はどのように自主規制を行うべきか</h3>
-            <p class="chapter-desc">事故発生時の法的責任と保険の仕組みの移行を解説。個人の過失責任から、車両・ソフトウェアメーカーの製造物責任への移転に伴う法整備と社会的合意形成の課題を掘り下げています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 『誰が責任を負うのか』という法的枠組みの明確化と、規制当局による安全基準の標準化が社会実装の最終的な鍵となります。</div>
+            <p class="chapter-desc">自動運転レベル4/5の普及に伴う法制度・損害賠償責任・保険ビジネスの地殻変動を解説。事故が起きた際の法的責任が『運転手個人の過失』から『車両・自動運転ソフトウェア開発元の製造物責任』へと180度移転します。これに伴い、個人向け自動車保険市場が縮小し、運行事業者（フリートオペレーター）とOEMが包括的にリスクを担保するB2B製品保証モデルへの再編が不可避となります。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 技術的完成度以上に『法的な責任分担の明確化』と『規制当局によるセーフティ基準の国際標準化』が社会実装の最終ボトルネックとなります。ブラックボックス化しやすい深層学習の判断根拠をどこまで説明可能にするか、国境を越えた走行データの収集・利用を巡る法整備が各国の競争力を左右します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -182,8 +190,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=920" target="_blank" class="timestamp-link">⏱️ 15分20秒 から再生</a>
             </div>
             <h3>中国はAI分野のリーダーになるのか？</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -191,8 +199,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=1543" target="_blank" class="timestamp-link">⏱️ 25分43秒 から再生</a>
             </div>
             <h3>イーロン・マスク氏、サム・アルトマン氏とAI企業のボスたちについて語る</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -200,8 +208,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=1880" target="_blank" class="timestamp-link">⏱️ 31分20秒 から再生</a>
             </div>
             <h3>仕事は選択肢になる</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -209,8 +217,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=2467" target="_blank" class="timestamp-link">⏱️ 41分07秒 から再生</a>
             </div>
             <h3>一人の人間がこれほど大きな権力を持つべきなのか？</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -218,8 +226,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=2984" target="_blank" class="timestamp-link">⏱️ 49分44秒 から再生</a>
             </div>
             <h3>スターリンクとウクライナ戦争</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -227,8 +235,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=3318" target="_blank" class="timestamp-link">⏱️ 55分18秒 から再生</a>
             </div>
             <h3>政治に関わりすぎた</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -236,8 +244,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=3434" target="_blank" class="timestamp-link">⏱️ 57分14秒 から再生</a>
             </div>
             <h3>マスク氏：USAIDの予算削減で死者は出ていない</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -245,8 +253,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=3675" target="_blank" class="timestamp-link">⏱️ 1時間01分15秒 から再生</a>
             </div>
             <h3>ヨーロッパ、極右、そしてイギリスの内戦</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -254,8 +262,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=4101" target="_blank" class="timestamp-link">⏱️ 1時間08分21秒 から再生</a>
             </div>
             <h3>マスク氏：私は人種差別主義者ではない</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -263,8 +271,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=4827" target="_blank" class="timestamp-link">⏱️ 1時間20分27秒 から再生</a>
             </div>
             <h3>マスク氏について人々が最も誤解していることは何か？</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -272,8 +280,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>AI企業はどのように自主規制を行うべきか</h3>
-            <p class="chapter-desc">事故発生時の法的責任と保険の仕組みの移行を解説。個人の過失責任から、車両・ソフトウェアメーカーの製造物責任への移転に伴う法整備と社会的合意形成の課題を掘り下げています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 『誰が責任を負うのか』という法的枠組みの明確化と、規制当局による安全基準の標準化が社会実装の最終的な鍵となります。</div>
+            <p class="chapter-desc">自動運転レベル4/5の普及に伴う法制度・損害賠償責任・保険ビジネスの地殻変動を解説。事故が起きた際の法的責任が『運転手個人の過失』から『車両・自動運転ソフトウェア開発元の製造物責任』へと180度移転します。これに伴い、個人向け自動車保険市場が縮小し、運行事業者（フリートオペレーター）とOEMが包括的にリスクを担保するB2B製品保証モデルへの再編が不可避となります。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 技術的完成度以上に『法的な責任分担の明確化』と『規制当局によるセーフティ基準の国際標準化』が社会実装の最終ボトルネックとなります。ブラックボックス化しやすい深層学習の判断根拠をどこまで説明可能にするか、国境を越えた走行データの収集・利用を巡る法整備が各国の競争力を左右します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -281,8 +289,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>中国はAI分野のリーダーになるのか？</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -290,8 +298,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>イーロン・マスク氏、サム・アルトマン氏とAI企業のボスたちについて語る</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -299,8 +307,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>仕事は選択肢になる</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -308,8 +316,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>一人の人間がこれほど大きな権力を持つべきなのか？</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -317,8 +325,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>スターリンクとウクライナ戦争</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -326,8 +334,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>政治に関わりすぎた</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -335,8 +343,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>マスク氏：USAIDの予算削減で死者は出ていない</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -344,8 +352,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>ヨーロッパ、極右、そしてイギリスの内戦</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -353,8 +361,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>マスク氏：私は人種差別主義者ではない</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -362,8 +370,8 @@ flowchart TD
                 <a href="https://youtu.be/XuoqKYxDHVc?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>マスク氏について人々が最も誤解していることは何か？</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         </div>
 
@@ -435,7 +443,7 @@ flowchart TD
         </div>
 
         <footer>
-            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:32:29
+            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:50:15
         </footer>
     </div>
 </body>

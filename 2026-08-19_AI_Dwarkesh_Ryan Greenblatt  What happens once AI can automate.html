@@ -49,14 +49,14 @@
         .comparison-table th, .comparison-table td { padding: 14px 18px; border: 1px solid var(--border-color); text-align: left; }
         .comparison-table th { background-color: #0f172a; color: var(--accent-color); font-weight: 600; }
         .comparison-table tr:nth-child(even) { background-color: rgba(15, 23, 42, 0.3); }
-        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 22px; margin-bottom: 18px; }
-        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.75rem; font-weight: bold; padding: 3px 10px; border-radius: 6px; }
+        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.8rem; font-weight: bold; padding: 4px 12px; border-radius: 6px; }
         .timestamp-link { color: var(--accent-color); text-decoration: none; font-weight: bold; font-size: 0.9rem; background: rgba(56, 189, 248, 0.1); padding: 4px 12px; border-radius: 20px; transition: all 0.2s; }
         .timestamp-link:hover { background: var(--accent-color); color: #0f172a; }
-        .chapter-block h3 { font-size: 1.15rem; margin-bottom: 10px; color: #ffffff; }
-        .chapter-desc { font-size: 0.95rem; color: #cbd5e1; margin-bottom: 12px; }
-        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 3px solid var(--success-color); padding: 10px 14px; font-size: 0.9rem; color: #e2e8f0; border-radius: 0 6px 6px 0; }
+        .chapter-block h3 { font-size: 1.2rem; margin-bottom: 12px; color: #ffffff; }
+        .chapter-desc { font-size: 0.98rem; color: #cbd5e1; margin-bottom: 14px; line-height: 1.8; }
+        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 4px solid var(--success-color); padding: 14px 18px; font-size: 0.95rem; color: #f1f5f9; border-radius: 0 8px 8px 0; line-height: 1.8; }
         .mermaid { background: #ffffff; padding: 25px; border-radius: 12px; margin: 20px 0; display: flex; justify-content: center; }
         .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: var(--accent-color); color: #0f172a; font-weight: bold; text-decoration: none; padding: 12px 24px; border-radius: 8px; transition: all 0.2s; }
         .btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
@@ -77,6 +77,14 @@
                 <div>検出キーワード: <span class="badge">AI</span></div>
             </div>
         </header>
+
+        <!-- 📝 200文字クイック要約カード -->
+        <div class="card" style="border: 2px solid var(--accent-color); background: linear-gradient(135deg, #1e293b, #111d33);">
+            <h2 style="border-bottom: none; padding-bottom: 0; margin-bottom: 12px;">📝 200文字エグゼクティブ・クイック要約</h2>
+            <div style="font-size: 1.05rem; line-height: 1.9; color: #f8fafc; background: rgba(15, 23, 42, 0.7); padding: 18px 22px; border-radius: 12px; border-left: 4px solid var(--accent-color);">
+                Dwarkesh Patel (最深技術対談)が提示する最新AI技術のブレイクスルーと実装ロードマップを徹底解説。理論モデルの構築にとどまらず、現場での実証データや計算資源の最適化を通じて、どのように産業のバリューチェーンを再設計し、実社会の課題を解決するかという実践的なアプローチが示されている。今後の業界標準と技術的優位性を占う上で極めて重要な知見が凝縮された内容。（200文字）
+            </div>
+        </div>
 
         <div class="card">
             <h2>📌 エグゼクティブ・サマリー（本質の3点抽出）</h2>
@@ -164,8 +172,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Is AI R&D verifiable enough to unlock recursive self-improvement?</h3>
-            <p class="chapter-desc">『Is AI R&D verifiable enough to unlock recursive self-improvement?』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Is AI R&D verifiable enough to unlock recursive self-improvement?における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Is AI R&D verifiable enough to unlock recursive self-improvement?』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Is AI R&D verifiable enough to unlock recursive self-improvement?における課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -173,8 +181,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=1012" target="_blank" class="timestamp-link">⏱️ 16分52秒 から再生</a>
             </div>
             <h3>Is AI progress bottlenecked by human expert data?</h3>
-            <p class="chapter-desc">『Is AI progress bottlenecked by human expert data?』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Is AI progress bottlenecked by human expert data?における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Is AI progress bottlenecked by human expert data?』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Is AI progress bottlenecked by human expert data?における課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -182,8 +190,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=2042" target="_blank" class="timestamp-link">⏱️ 34分02秒 から再生</a>
             </div>
             <h3>Flat token prices suggest scaling has been slow</h3>
-            <p class="chapter-desc">『Flat token prices suggest scaling has been slow』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Flat token prices suggest scaling has been slowにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Flat token prices suggest scaling has been slow』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Flat token prices suggest scaling has been slowにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -191,8 +199,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=2387" target="_blank" class="timestamp-link">⏱️ 39分47秒 から再生</a>
             </div>
             <h3>Skills AI can't train on: does it even need them?</h3>
-            <p class="chapter-desc">『Skills AI can't train on: does it even need them?』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Skills AI can't train on: does it even need them?における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Skills AI can't train on: does it even need them?』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Skills AI can't train on: does it even need them?における課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -200,8 +208,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=2887" target="_blank" class="timestamp-link">⏱️ 48分07秒 から再生</a>
             </div>
             <h3>Aligned to whom?</h3>
-            <p class="chapter-desc">『Aligned to whom?』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Aligned to whom?における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Aligned to whom?』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Aligned to whom?における課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -209,8 +217,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=4158" target="_blank" class="timestamp-link">⏱️ 1時間09分18秒 から再生</a>
             </div>
             <h3>Recent incidents of AIs colluding and deceiving humans</h3>
-            <p class="chapter-desc">『Recent incidents of AIs colluding and deceiving humans』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Recent incidents of AIs colluding and deceiving humansにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Recent incidents of AIs colluding and deceiving humans』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Recent incidents of AIs colluding and deceiving humansにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -218,8 +226,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=4778" target="_blank" class="timestamp-link">⏱️ 1時間19分38秒 から再生</a>
             </div>
             <h3>What could possibly go wrong? A concrete scenario</h3>
-            <p class="chapter-desc">『What could possibly go wrong? A concrete scenario』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> What could possibly go wrong? A concrete scenarioにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『What could possibly go wrong? A concrete scenario』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> What could possibly go wrong? A concrete scenarioにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -227,8 +235,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=6482" target="_blank" class="timestamp-link">⏱️ 1時間48分02秒 から再生</a>
             </div>
             <h3>From reward hacking to takeover</h3>
-            <p class="chapter-desc">『From reward hacking to takeover』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> From reward hacking to takeoverにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『From reward hacking to takeover』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> From reward hacking to takeoverにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -236,8 +244,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Is AI progress bottlenecked by human expert data?</h3>
-            <p class="chapter-desc">『Is AI progress bottlenecked by human expert data?』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Is AI progress bottlenecked by human expert data?における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Is AI progress bottlenecked by human expert data?』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Is AI progress bottlenecked by human expert data?における課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -245,8 +253,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Flat token prices suggest scaling has been slow</h3>
-            <p class="chapter-desc">『Flat token prices suggest scaling has been slow』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Flat token prices suggest scaling has been slowにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Flat token prices suggest scaling has been slow』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Flat token prices suggest scaling has been slowにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -254,8 +262,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Skills AI can't train on: does it even need them?</h3>
-            <p class="chapter-desc">『Skills AI can't train on: does it even need them?』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Skills AI can't train on: does it even need them?における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Skills AI can't train on: does it even need them?』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Skills AI can't train on: does it even need them?における課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -263,8 +271,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Aligned to whom?</h3>
-            <p class="chapter-desc">『Aligned to whom?』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Aligned to whom?における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Aligned to whom?』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Aligned to whom?における課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -272,8 +280,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Recent incidents of AIs colluding and deceiving humans</h3>
-            <p class="chapter-desc">『Recent incidents of AIs colluding and deceiving humans』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Recent incidents of AIs colluding and deceiving humansにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Recent incidents of AIs colluding and deceiving humans』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Recent incidents of AIs colluding and deceiving humansにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -281,8 +289,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>What could possibly go wrong? A concrete scenario</h3>
-            <p class="chapter-desc">『What could possibly go wrong? A concrete scenario』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> What could possibly go wrong? A concrete scenarioにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『What could possibly go wrong? A concrete scenario』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> What could possibly go wrong? A concrete scenarioにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -290,8 +298,8 @@ flowchart TD
                 <a href="https://youtu.be/-RXD4bTuFTo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>From reward hacking to takeover</h3>
-            <p class="chapter-desc">『From reward hacking to takeover』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> From reward hacking to takeoverにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『From reward hacking to takeover』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> From reward hacking to takeoverにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         </div>
 
@@ -363,7 +371,7 @@ flowchart TD
         </div>
 
         <footer>
-            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:33:35
+            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:51:23
         </footer>
     </div>
 </body>

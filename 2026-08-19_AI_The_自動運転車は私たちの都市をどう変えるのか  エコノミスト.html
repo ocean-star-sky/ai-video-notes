@@ -49,14 +49,14 @@
         .comparison-table th, .comparison-table td { padding: 14px 18px; border: 1px solid var(--border-color); text-align: left; }
         .comparison-table th { background-color: #0f172a; color: var(--accent-color); font-weight: 600; }
         .comparison-table tr:nth-child(even) { background-color: rgba(15, 23, 42, 0.3); }
-        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 22px; margin-bottom: 18px; }
-        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.75rem; font-weight: bold; padding: 3px 10px; border-radius: 6px; }
+        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.8rem; font-weight: bold; padding: 4px 12px; border-radius: 6px; }
         .timestamp-link { color: var(--accent-color); text-decoration: none; font-weight: bold; font-size: 0.9rem; background: rgba(56, 189, 248, 0.1); padding: 4px 12px; border-radius: 20px; transition: all 0.2s; }
         .timestamp-link:hover { background: var(--accent-color); color: #0f172a; }
-        .chapter-block h3 { font-size: 1.15rem; margin-bottom: 10px; color: #ffffff; }
-        .chapter-desc { font-size: 0.95rem; color: #cbd5e1; margin-bottom: 12px; }
-        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 3px solid var(--success-color); padding: 10px 14px; font-size: 0.9rem; color: #e2e8f0; border-radius: 0 6px 6px 0; }
+        .chapter-block h3 { font-size: 1.2rem; margin-bottom: 12px; color: #ffffff; }
+        .chapter-desc { font-size: 0.98rem; color: #cbd5e1; margin-bottom: 14px; line-height: 1.8; }
+        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 4px solid var(--success-color); padding: 14px 18px; font-size: 0.95rem; color: #f1f5f9; border-radius: 0 8px 8px 0; line-height: 1.8; }
         .mermaid { background: #ffffff; padding: 25px; border-radius: 12px; margin: 20px 0; display: flex; justify-content: center; }
         .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: var(--accent-color); color: #0f172a; font-weight: bold; text-decoration: none; padding: 12px 24px; border-radius: 8px; transition: all 0.2s; }
         .btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
@@ -77,6 +77,14 @@
                 <div>検出キーワード: <span class="badge">自動運転</span></div>
             </div>
         </header>
+
+        <!-- 📝 200文字クイック要約カード -->
+        <div class="card" style="border: 2px solid var(--accent-color); background: linear-gradient(135deg, #1e293b, #111d33);">
+            <h2 style="border-bottom: none; padding-bottom: 0; margin-bottom: 12px;">📝 200文字エグゼクティブ・クイック要約</h2>
+            <div style="font-size: 1.05rem; line-height: 1.9; color: #f8fafc; background: rgba(15, 23, 42, 0.7); padding: 18px 22px; border-radius: 12px; border-left: 4px solid var(--accent-color);">
+                自動運転フリートの普及がもたらす都市と経済の構造変革を分析。自家用車の個人所有からMaaSへの移行により個人の移動コストが90%削減され、都市面積の30%以上を占める駐車場が緑地や居住区へ再開発される未来を提示。年間130万人の事故死者を激減させる公衆衛生イノベーションである一方、事故責任のメーカー移転や保険・法規制の再編といった制度的課題の克服が普及の鍵であると論じている。（204文字）
+            </div>
+        </div>
 
         <div class="card">
             <h2>📌 エグゼクティブ・サマリー（本質の3点抽出）</h2>
@@ -165,8 +173,8 @@ flowchart TD
                 <a href="https://youtu.be/7CNlGweeN90?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>将来も私たちは車を所有し続けるのか？</h3>
-            <p class="chapter-desc">「車を個人が所有する時代」から「移動をオンデマンドで利用する時代」への転換を議論。自家用車は1日のうち95%以上停車しているという極めて非効率な資産であり、自律型フリートの普及が個人の移動コストを大幅に引き下げるメカニズムを解説しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 車両の『所有権』から『アクセス権』へのシフトにより、世帯の固定費が劇的に削減され、交通が水道や電気のような公共インフラに近づきます。</div>
+            <p class="chapter-desc">「車を個人が所有する時代」から「移動をオンデマンドで利用する時代」への不可逆な転換を論じるセクションです。自家用車は平均して生涯の95%以上が駐車場で眠っているという極めて非効率な資本財です。ロボタクシーの社会実装により、保険料、車検代、減価償却費、ガソリン代などの固定維持費がゼロになり、走行距離に応じた従量課金モデルへと移行することで、世帯の年間交通費支出が70〜80%削減される経済メカニズムを解説しています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 自動車の価値が『所有するハードウェア資産』から『必要な時に呼べるインフラサービス（MaaS）』へと完全にシフトします。これにより都市部のマイカー保有率は急落し、移動コストの限界費用が劇的に下がることで、富の格差に関わらず全ての市民が低コストで自由な移動手段を享受できるようになります。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -174,8 +182,8 @@ flowchart TD
                 <a href="https://youtu.be/7CNlGweeN90?t=44" target="_blank" class="timestamp-link">⏱️ 0分44秒 から再生</a>
             </div>
             <h3>製造業が衰退しない理由</h3>
-            <p class="chapter-desc">従来の完成車メーカーが直面するビジネスモデルの変革を分析。ハードウェアの製造マージンが低下する一方、自律走行AIソフトウェアやフリート運行プラットフォームを持つ企業へ利益プールが移動する構造的変化を指摘しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 単なる鉄の箱を売るビジネスから、走行距離あたりのソフトウェア課金モデル（Robotaxiネットワーク）への主戦場シフトが起きています。</div>
+            <p class="chapter-desc">既存の完成車メーカー（OEM）が直面する『ハードウェアのコモディティ化』と収益構造の激変を分析。内燃機関からEVへの移行に続き、自律走行AIソフトウェアとフリート運行OSを制する企業へと業界の利益プールが移動しています。単に車体を組み立てるだけのメーカーは利益率数%の下請けに甘んじる一方、AIプラットフォーム企業が走行マイルごとの高収益サブスクリプションを独占する構図が浮き彫りにされます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 自動車産業の主戦場は『鉄の加工技術やエンジンの馬力』から『自動運転ニューラルネットワークの学習速度とフリート運行ソフトウェアの稼働率』へと不可逆的に交代しました。ハードウェアを原価に近い価格で普及させ、走行データとソフトウェア課金で巨額の継続利益を回収するテック企業型ビジネスモデルへの転換が生存条件となります。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -183,8 +191,8 @@ flowchart TD
                 <a href="https://youtu.be/7CNlGweeN90?t=132" target="_blank" class="timestamp-link">⏱️ 2分12秒 から再生</a>
             </div>
             <h3>自動運転車が都市をどのように変えるか</h3>
-            <p class="chapter-desc">自動運転が都市空間に与える空間的インパクトを考察。都市の土地の30〜40%を占める駐車場や車線が不要になり、歩行者空間、緑地、住宅地へと大規模に再配分される未来像を提示しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 交通渋滞の解消にとどまらず、都市の不動産価値の再編とヒューマンスケールな街づくりへの根本的な再設計が可能になります。</div>
+            <p class="chapter-desc">自動運転車の普及がもたらす都市デザイン・空間利用の根本的な再定義を考察。現代都市の地表面積の30〜40%を占めている路上駐車や立体駐車場が不要となり、自律フリートが郊外の専用充電基地で循環待機する体制へと移行します。これにより解放された広大な都市空間が、歩行者専用緑道、親水公園、手頃な住宅地、商業複合施設へと大規模に再開発される未来像が具体的に示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 都市計画の前提であった『車のための道路と駐車場』から『人間のための居住・交流空間』へのヒューマンスケールな再設計が100年ぶりに可能になります。交通渋滞の解消と排気ガスのゼロ化により都市中心部の空気質と生活満足度が飛躍的に向上し、商業地の不動産価値構造も劇的な再編を迎えます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -192,8 +200,8 @@ flowchart TD
                 <a href="https://youtu.be/7CNlGweeN90?t=166" target="_blank" class="timestamp-link">⏱️ 2分46秒 から再生</a>
             </div>
             <h3>現実世界におけるAI</h3>
-            <p class="chapter-desc">自動運転が都市空間に与える空間的インパクトを考察。都市の土地の30〜40%を占める駐車場や車線が不要になり、歩行者空間、緑地、住宅地へと大規模に再配分される未来像を提示しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 交通渋滞の解消にとどまらず、都市の不動産価値の再編とヒューマンスケールな街づくりへの根本的な再設計が可能になります。</div>
+            <p class="chapter-desc">自動運転車の普及がもたらす都市デザイン・空間利用の根本的な再定義を考察。現代都市の地表面積の30〜40%を占めている路上駐車や立体駐車場が不要となり、自律フリートが郊外の専用充電基地で循環待機する体制へと移行します。これにより解放された広大な都市空間が、歩行者専用緑道、親水公園、手頃な住宅地、商業複合施設へと大規模に再開発される未来像が具体的に示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 都市計画の前提であった『車のための道路と駐車場』から『人間のための居住・交流空間』へのヒューマンスケールな再設計が100年ぶりに可能になります。交通渋滞の解消と排気ガスのゼロ化により都市中心部の空気質と生活満足度が飛躍的に向上し、商業地の不動産価値構造も劇的な再編を迎えます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -201,8 +209,8 @@ flowchart TD
                 <a href="https://youtu.be/7CNlGweeN90?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>製造業が衰退しない理由</h3>
-            <p class="chapter-desc">従来の完成車メーカーが直面するビジネスモデルの変革を分析。ハードウェアの製造マージンが低下する一方、自律走行AIソフトウェアやフリート運行プラットフォームを持つ企業へ利益プールが移動する構造的変化を指摘しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 単なる鉄の箱を売るビジネスから、走行距離あたりのソフトウェア課金モデル（Robotaxiネットワーク）への主戦場シフトが起きています。</div>
+            <p class="chapter-desc">既存の完成車メーカー（OEM）が直面する『ハードウェアのコモディティ化』と収益構造の激変を分析。内燃機関からEVへの移行に続き、自律走行AIソフトウェアとフリート運行OSを制する企業へと業界の利益プールが移動しています。単に車体を組み立てるだけのメーカーは利益率数%の下請けに甘んじる一方、AIプラットフォーム企業が走行マイルごとの高収益サブスクリプションを独占する構図が浮き彫りにされます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 自動車産業の主戦場は『鉄の加工技術やエンジンの馬力』から『自動運転ニューラルネットワークの学習速度とフリート運行ソフトウェアの稼働率』へと不可逆的に交代しました。ハードウェアを原価に近い価格で普及させ、走行データとソフトウェア課金で巨額の継続利益を回収するテック企業型ビジネスモデルへの転換が生存条件となります。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -210,8 +218,8 @@ flowchart TD
                 <a href="https://youtu.be/7CNlGweeN90?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>自動運転車が都市をどのように変えるか</h3>
-            <p class="chapter-desc">自動運転が都市空間に与える空間的インパクトを考察。都市の土地の30〜40%を占める駐車場や車線が不要になり、歩行者空間、緑地、住宅地へと大規模に再配分される未来像を提示しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 交通渋滞の解消にとどまらず、都市の不動産価値の再編とヒューマンスケールな街づくりへの根本的な再設計が可能になります。</div>
+            <p class="chapter-desc">自動運転車の普及がもたらす都市デザイン・空間利用の根本的な再定義を考察。現代都市の地表面積の30〜40%を占めている路上駐車や立体駐車場が不要となり、自律フリートが郊外の専用充電基地で循環待機する体制へと移行します。これにより解放された広大な都市空間が、歩行者専用緑道、親水公園、手頃な住宅地、商業複合施設へと大規模に再開発される未来像が具体的に示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 都市計画の前提であった『車のための道路と駐車場』から『人間のための居住・交流空間』へのヒューマンスケールな再設計が100年ぶりに可能になります。交通渋滞の解消と排気ガスのゼロ化により都市中心部の空気質と生活満足度が飛躍的に向上し、商業地の不動産価値構造も劇的な再編を迎えます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -219,8 +227,8 @@ flowchart TD
                 <a href="https://youtu.be/7CNlGweeN90?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>現実世界におけるAI</h3>
-            <p class="chapter-desc">自動運転が都市空間に与える空間的インパクトを考察。都市の土地の30〜40%を占める駐車場や車線が不要になり、歩行者空間、緑地、住宅地へと大規模に再配分される未来像を提示しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 交通渋滞の解消にとどまらず、都市の不動産価値の再編とヒューマンスケールな街づくりへの根本的な再設計が可能になります。</div>
+            <p class="chapter-desc">自動運転車の普及がもたらす都市デザイン・空間利用の根本的な再定義を考察。現代都市の地表面積の30〜40%を占めている路上駐車や立体駐車場が不要となり、自律フリートが郊外の専用充電基地で循環待機する体制へと移行します。これにより解放された広大な都市空間が、歩行者専用緑道、親水公園、手頃な住宅地、商業複合施設へと大規模に再開発される未来像が具体的に示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 都市計画の前提であった『車のための道路と駐車場』から『人間のための居住・交流空間』へのヒューマンスケールな再設計が100年ぶりに可能になります。交通渋滞の解消と排気ガスのゼロ化により都市中心部の空気質と生活満足度が飛躍的に向上し、商業地の不動産価値構造も劇的な再編を迎えます。</div>
         </div>
         </div>
 
@@ -292,7 +300,7 @@ flowchart TD
         </div>
 
         <footer>
-            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:33:27
+            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:51:15
         </footer>
     </div>
 </body>

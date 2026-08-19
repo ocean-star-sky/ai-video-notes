@@ -49,14 +49,14 @@
         .comparison-table th, .comparison-table td { padding: 14px 18px; border: 1px solid var(--border-color); text-align: left; }
         .comparison-table th { background-color: #0f172a; color: var(--accent-color); font-weight: 600; }
         .comparison-table tr:nth-child(even) { background-color: rgba(15, 23, 42, 0.3); }
-        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 22px; margin-bottom: 18px; }
-        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.75rem; font-weight: bold; padding: 3px 10px; border-radius: 6px; }
+        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.8rem; font-weight: bold; padding: 4px 12px; border-radius: 6px; }
         .timestamp-link { color: var(--accent-color); text-decoration: none; font-weight: bold; font-size: 0.9rem; background: rgba(56, 189, 248, 0.1); padding: 4px 12px; border-radius: 20px; transition: all 0.2s; }
         .timestamp-link:hover { background: var(--accent-color); color: #0f172a; }
-        .chapter-block h3 { font-size: 1.15rem; margin-bottom: 10px; color: #ffffff; }
-        .chapter-desc { font-size: 0.95rem; color: #cbd5e1; margin-bottom: 12px; }
-        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 3px solid var(--success-color); padding: 10px 14px; font-size: 0.9rem; color: #e2e8f0; border-radius: 0 6px 6px 0; }
+        .chapter-block h3 { font-size: 1.2rem; margin-bottom: 12px; color: #ffffff; }
+        .chapter-desc { font-size: 0.98rem; color: #cbd5e1; margin-bottom: 14px; line-height: 1.8; }
+        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 4px solid var(--success-color); padding: 14px 18px; font-size: 0.95rem; color: #f1f5f9; border-radius: 0 8px 8px 0; line-height: 1.8; }
         .mermaid { background: #ffffff; padding: 25px; border-radius: 12px; margin: 20px 0; display: flex; justify-content: center; }
         .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: var(--accent-color); color: #0f172a; font-weight: bold; text-decoration: none; padding: 12px 24px; border-radius: 8px; transition: all 0.2s; }
         .btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
@@ -77,6 +77,14 @@
                 <div>検出キーワード: <span class="badge">AI</span></div>
             </div>
         </header>
+
+        <!-- 📝 200文字クイック要約カード -->
+        <div class="card" style="border: 2px solid var(--accent-color); background: linear-gradient(135deg, #1e293b, #111d33);">
+            <h2 style="border-bottom: none; padding-bottom: 0; margin-bottom: 12px;">📝 200文字エグゼクティブ・クイック要約</h2>
+            <div style="font-size: 1.05rem; line-height: 1.9; color: #f8fafc; background: rgba(15, 23, 42, 0.7); padding: 18px 22px; border-radius: 12px; border-left: 4px solid var(--accent-color);">
+                Microsoftが描く全ソフトウェアのAIアプリ化とエンタープライズ業務変革のロードマップ。GitHub Copilot SDKの提供により、あらゆるアプリケーションへのAIエージェント組み込みを容易にし、コード生成から運用までの開発ライフサイクルを自動化。単なるツールの導入を超え、業務プロセス全体の再設計による定量的ROIの創出が企業のAIシフトの成否を分けると提言。（200文字）
+            </div>
+        </div>
 
         <div class="card">
             <h2>📌 エグゼクティブ・サマリー（本質の3点抽出）</h2>
@@ -164,8 +172,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>AI is not a tool</h3>
-            <p class="chapter-desc">『AI is not a tool』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> AI is not a toolにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『AI is not a tool』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AI is not a toolにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -173,8 +181,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=160" target="_blank" class="timestamp-link">⏱️ 2分40秒 から再生</a>
             </div>
             <h3>The third shift: Multi-agent AI</h3>
-            <p class="chapter-desc">『The third shift: Multi-agent AI』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> The third shift: Multi-agent AIにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『The third shift: Multi-agent AI』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> The third shift: Multi-agent AIにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -182,8 +190,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=307" target="_blank" class="timestamp-link">⏱️ 5分07秒 から再生</a>
             </div>
             <h3>Why leaders feel AI anxiety</h3>
-            <p class="chapter-desc">『Why leaders feel AI anxiety』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Why leaders feel AI anxietyにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Why leaders feel AI anxiety』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Why leaders feel AI anxietyにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -191,8 +199,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=662" target="_blank" class="timestamp-link">⏱️ 11分02秒 から再生</a>
             </div>
             <h3>The productivity trap</h3>
-            <p class="chapter-desc">『The productivity trap』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> The productivity trapにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『The productivity trap』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> The productivity trapにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -200,8 +208,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=896" target="_blank" class="timestamp-link">⏱️ 14分56秒 から再生</a>
             </div>
             <h3>Three skills for the AI age</h3>
-            <p class="chapter-desc">『Three skills for the AI age』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Three skills for the AI ageにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Three skills for the AI age』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Three skills for the AI ageにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -209,8 +217,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=1234" target="_blank" class="timestamp-link">⏱️ 20分34秒 から再生</a>
             </div>
             <h3>Why AI transformation is a people problem</h3>
-            <p class="chapter-desc">『Why AI transformation is a people problem』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Why AI transformation is a people problemにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Why AI transformation is a people problem』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Why AI transformation is a people problemにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -218,8 +226,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=1503" target="_blank" class="timestamp-link">⏱️ 25分03秒 から再生</a>
             </div>
             <h3>Managing an AI agent workforce</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -227,8 +235,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=1680" target="_blank" class="timestamp-link">⏱️ 28分00秒 から再生</a>
             </div>
             <h3>Building an AI layer for your company</h3>
-            <p class="chapter-desc">『Building an AI layer for your company』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Building an AI layer for your companyにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Building an AI layer for your company』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Building an AI layer for your companyにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -236,8 +244,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=2021" target="_blank" class="timestamp-link">⏱️ 33分41秒 から再生</a>
             </div>
             <h3>The exponential pace of AI change</h3>
-            <p class="chapter-desc">『The exponential pace of AI change』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> The exponential pace of AI changeにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『The exponential pace of AI change』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> The exponential pace of AI changeにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -245,8 +253,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=2292" target="_blank" class="timestamp-link">⏱️ 38分12秒 から再生</a>
             </div>
             <h3>What leaders should do in the next 30 days</h3>
-            <p class="chapter-desc">『What leaders should do in the next 30 days』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> What leaders should do in the next 30 daysにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『What leaders should do in the next 30 days』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> What leaders should do in the next 30 daysにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -254,8 +262,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>The third shift: Multi-agent AI</h3>
-            <p class="chapter-desc">『The third shift: Multi-agent AI』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> The third shift: Multi-agent AIにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『The third shift: Multi-agent AI』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> The third shift: Multi-agent AIにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -263,8 +271,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Why leaders feel AI anxiety</h3>
-            <p class="chapter-desc">『Why leaders feel AI anxiety』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Why leaders feel AI anxietyにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Why leaders feel AI anxiety』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Why leaders feel AI anxietyにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -272,8 +280,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>The productivity trap</h3>
-            <p class="chapter-desc">『The productivity trap』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> The productivity trapにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『The productivity trap』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> The productivity trapにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -281,8 +289,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Three skills for the AI age</h3>
-            <p class="chapter-desc">『Three skills for the AI age』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Three skills for the AI ageにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Three skills for the AI age』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Three skills for the AI ageにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -290,8 +298,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Why AI transformation is a people problem</h3>
-            <p class="chapter-desc">『Why AI transformation is a people problem』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Why AI transformation is a people problemにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Why AI transformation is a people problem』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Why AI transformation is a people problemにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -299,8 +307,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Managing an AI agent workforce</h3>
-            <p class="chapter-desc">汎用人工知能（AGI）の到達時期と技術的ブレイクスルーのタイムラインを予測。言語モデルの推論能力向上と物理世界での自己学習が合流するポイントを分析しています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 2030年頃までにAIの総知能が全人類の知能の総和を凌駕し、あらゆる科学研究や技術開発の速度が非連続に加速すると予想されています。</div>
+            <p class="chapter-desc">汎用人工知能（AGI）および超知能（ASI）の到達タイムラインと、それが全産業に引き起こす非連続な技術爆発を分析。言語モデルの推論能力（Reasoning）の向上に加え、物理世界での自己対戦型強化学習が組み合わさることで、AI自身がAIのコードを書き、半導体を設計し、新しい物理法則を発見する『知能の自己進化ループ』が2030年前後に完成するという予測が展開されます。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> AGIの到達は『特定ツールの性能向上』ではなく『世界中の研究開発とイノベーションの速度が数千倍に加速する特異点』を意味します。知能の獲得コストが実質ゼロになることで、核融合発電、常温超伝導、老化の克服といった人類史上未解決の難問が数年単位で次々と解決されるフェーズに突入します。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -308,8 +316,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>Building an AI layer for your company</h3>
-            <p class="chapter-desc">『Building an AI layer for your company』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Building an AI layer for your companyにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『Building an AI layer for your company』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Building an AI layer for your companyにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -317,8 +325,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>The exponential pace of AI change</h3>
-            <p class="chapter-desc">『The exponential pace of AI change』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> The exponential pace of AI changeにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『The exponential pace of AI change』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> The exponential pace of AI changeにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         <div class="chapter-block">
             <div class="chapter-header">
@@ -326,8 +334,8 @@ flowchart TD
                 <a href="https://youtu.be/cazd1z4Eseo?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
             <h3>What leaders should do in the next 30 days</h3>
-            <p class="chapter-desc">『What leaders should do in the next 30 days』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> What leaders should do in the next 30 daysにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+            <p class="chapter-desc">『What leaders should do in the next 30 days』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> What leaders should do in the next 30 daysにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
         </div>
         </div>
 
@@ -399,7 +407,7 @@ GitHub Copilot SDKの登場により、開発者は自社製アプリやサー�
         </div>
 
         <footer>
-            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:33:15
+            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:51:03
         </footer>
     </div>
 </body>

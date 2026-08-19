@@ -86,15 +86,74 @@
         .card-channel { font-size: 0.8rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase; margin-bottom: 6px; }
         .card-title { font-size: 1.05rem; font-weight: bold; line-height: 1.4; margin-bottom: 12px; color: #ffffff; flex-grow: 1; }
         .card-tags { margin-bottom: 10px; }
-        .badge { display: inline-block; background: #334155; color: #94a3b8; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; margin-right: 4px; font-weight: bold; }
-        .card-date { font-size: 0.75rem; color: var(--text-sub); }
+        .badge { display: inline-block; background: #334155; color: #cbd5e1; padding: 3px 8px; border-radius: 6px; font-size: 0.72rem; margin-right: 4px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+        .badge:hover { background: var(--accent-color); color: #0f172a; }
+
+        /* タブ・コントロール */
+        .tab-bar {
+            display: flex; gap: 12px; margin-bottom: 25px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; flex-wrap: wrap; align-items: center; justify-content: space-between;
+        }
+        .tab-group { display: flex; gap: 8px; }
+        .tab-btn {
+            background: #1e293b; color: var(--text-sub); border: 1px solid var(--border-color); padding: 8px 18px; border-radius: 25px; cursor: pointer; font-size: 0.95rem; font-weight: 600; transition: all 0.2s;
+        }
+        .tab-btn:hover { background: #334155; color: #ffffff; }
+        .tab-btn.active { background: var(--accent-color); color: #0f172a; border-color: var(--accent-color); }
+        .export-btn {
+            background: rgba(56, 189, 248, 0.1); color: var(--accent-color); border: 1px solid rgba(56, 189, 248, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; font-weight: 600;
+        }
+        .export-btn:hover { background: var(--accent-color); color: #0f172a; }
+
+        .portal-card.is-starred { border-color: #fbbf24; box-shadow: 0 0 15px rgba(251, 191, 36, 0.2); }
+        .portal-card.is-read { opacity: 0.65; }
+        .portal-card.is-read:hover { opacity: 1; }
+
+        .star-btn {
+            position: absolute; top: 10px; right: 10px; background: rgba(15, 23, 42, 0.85); border: 1px solid #475569; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; backdrop-filter: blur(4px);
+        }
+        .star-btn:hover { transform: scale(1.15); background: #0f172a; border-color: #fbbf24; }
+        .star-btn.active { background: #fbbf24; color: #000; border-color: #fbbf24; }
+        
+        .read-btn {
+            position: absolute; top: 10px; left: 10px; background: rgba(15, 23, 42, 0.85); border: 1px solid #475569; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; backdrop-filter: blur(4px);
+        }
+        .read-btn:hover { transform: scale(1.15); border-color: var(--success-color); }
+        .read-btn.active { background: var(--success-color); color: #000; border-color: var(--success-color); }
+
+        .card-link { text-decoration: none; color: inherit; display: block; }
+        .card-meta-bar { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .card-date { font-size: 0.78rem; color: var(--text-sub); }
+        .memo-btn {
+            background: transparent; color: var(--text-sub); border: 1px solid var(--border-color); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; transition: all 0.2s;
+        }
+        .memo-btn:hover { border-color: var(--accent-color); color: #ffffff; }
+
+        .user-memo-preview {
+            font-size: 0.8rem; color: #fbbf24; background: rgba(251, 191, 36, 0.1); border-left: 3px solid #fbbf24; padding: 6px 10px; border-radius: 4px; margin-top: 10px; display: none; line-height: 1.4;
+        }
+
+        /* メモ用モーダル */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 1000;
+        }
+        .modal-content {
+            background: #1e293b; border: 1px solid var(--border-color); border-radius: 16px; padding: 25px; width: 90%; max-width: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        .modal-title { font-size: 1.1rem; font-weight: bold; margin-bottom: 12px; color: #ffffff; }
+        .memo-textarea {
+            width: 100%; height: 120px; background: #0f172a; border: 1px solid var(--border-color); border-radius: 10px; padding: 12px; color: #ffffff; font-size: 0.95rem; outline: none; margin-bottom: 15px; resize: vertical;
+        }
+        .modal-actions { display: flex; justify-content: flex-end; gap: 10px; }
+        .modal-save-btn { background: var(--accent-color); color: #0f172a; font-weight: bold; border: none; padding: 8px 18px; border-radius: 8px; cursor: pointer; }
+        .modal-close-btn { background: #334155; color: #ffffff; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; }
+
         footer { text-align: center; margin-top: 50px; color: var(--text-sub); font-size: 0.85rem; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>📚 AI Video Intelligence ポータル</h1>
+            <h1>📚 AI Video Intelligence ポータル＆マイストック</h1>
             <p class="subtitle">世界のトップAIリーダー＆最先端テック動画の体系的ナレッジベース</p>
         </header>
 
@@ -131,235 +190,373 @@
             </div>
         </div>
 
+        <!-- タブ＆ストック操作バー -->
+        <div class="tab-bar">
+            <div class="tab-group">
+                <button class="tab-btn active" id="tab-all" onclick="switchTab('all')">📚 全動画 (16)</button>
+                <button class="tab-btn" id="tab-starred" onclick="switchTab('starred')">⭐ マイストック (<span id="starredCount">0</span>)</button>
+                <button class="tab-btn" id="tab-read" onclick="switchTab('read')">✅ 読了 (<span id="readCount">0</span>)</button>
+            </div>
+            <button class="export-btn" onclick="exportStarredMarkdown()">📤 マイストックをMarkdownコピー</button>
+        </div>
+
         <div class="stats-bar">
-            <span id="cardCount">蓄積レポート: 16 件</span>
-            <span>💡 各カードをクリックすると詳細図解レポートが開きます</span>
+            <span id="cardCount">表示中: 16 件</span>
+            <span>💡 ⭐でマイストックに保存 / ✅で読了管理 / 📝でメモを記録</span>
         </div>
 
         <div class="portal-grid" id="portalGrid">
             
-        <div class="portal-card" data-title="gtc sj 2026：ヘルスケアロボティクスのためのフィジカルai ― シミュレーション主導の設計と開発の加速 nvidia (jensen huang)">
-            <a href="2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアロボティクスのためのフィジカルAI  シミュレーション主導の設計と開.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-rRkucx0KwcI" data-id="rRkucx0KwcI" data-title="gtc sj 2026：ヘルスケアロボティクスのためのフィジカルai ― シミュレーション主導の設計と開発の加速 nvidia (jensen huang) ['ai'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアロボティクスのためのフィジカルAI  シミュレーション主導の設計と開.html">
                     <img src="https://img.youtube.com/vi/rRkucx0KwcI/hqdefault.jpg" alt="GTC SJ 2026：ヘルスケアロボティクスのためのフィジカルAI ― シミュレーション主導の設計と開発の加速" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-rRkucx0KwcI" onclick="toggleStar('rRkucx0KwcI', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-rRkucx0KwcI" onclick="toggleRead('rRkucx0KwcI', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアロボティクスのためのフィジカルAI  シミュレーション主導の設計と開.html" class="card-link">
                     <span class="card-channel">NVIDIA (Jensen Huang)</span>
                     <h3 class="card-title">GTC SJ 2026：ヘルスケアロボティクスのためのフィジカルAI ― シミュレーション主導の設計と開発の加速</h3>
-                    <div class="card-tags"><span class="badge">ai</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('ai', event)">ai</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('rRkucx0KwcI', 'GTC SJ 2026：ヘルスケアロボティクスのためのフィジカルAI ― シミュレーション主導の設計と開発の加速', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-rRkucx0KwcI"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="【フル対談】イーロン・マスク：ai・agiと超豊かさの時代（2036年）へのロードマップ the economist">
-            <a href="FEATURED_AI_The_XuoqKYxDHVc.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-XuoqKYxDHVc" data-id="XuoqKYxDHVc" data-title="【フル対談】イーロン・マスク：ai・agiと超豊かさの時代（2036年）へのロードマップ the economist ['AI', 'AGI', 'ROBOTICS', 'ENERGY'] ">
+            <div class="thumb-container">
+                <a href="FEATURED_AI_The_XuoqKYxDHVc.html">
                     <img src="https://img.youtube.com/vi/XuoqKYxDHVc/hqdefault.jpg" alt="【フル対談】イーロン・マスク：AI・AGIと超豊かさの時代（2036年）へのロードマップ" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-XuoqKYxDHVc" onclick="toggleStar('XuoqKYxDHVc', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-XuoqKYxDHVc" onclick="toggleRead('XuoqKYxDHVc', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="FEATURED_AI_The_XuoqKYxDHVc.html" class="card-link">
                     <span class="card-channel">The Economist</span>
                     <h3 class="card-title">【フル対談】イーロン・マスク：AI・AGIと超豊かさの時代（2036年）へのロードマップ</h3>
-                    <div class="card-tags"><span class="badge">AI</span><span class="badge">AGI</span><span class="badge">ROBOTICS</span><span class="badge">ENERGY</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('AI', event)">AI</span><span class="badge" onclick="filterByTag('AGI', event)">AGI</span><span class="badge" onclick="filterByTag('ROBOTICS', event)">ROBOTICS</span><span class="badge" onclick="filterByTag('ENERGY', event)">ENERGY</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('XuoqKYxDHVc', '【フル対談】イーロン・マスク：AI・AGIと超豊かさの時代（2036年）へのロードマップ', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-XuoqKYxDHVc"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="tesla home: home energy management, powered by ai tesla (elon musk)">
-            <a href="2026-08-19_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-8aGMLbS3NAo" data-id="8aGMLbS3NAo" data-title="tesla home: home energy management, powered by ai tesla (elon musk) ['ai'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html">
                     <img src="https://img.youtube.com/vi/8aGMLbS3NAo/hqdefault.jpg" alt="Tesla Home: Home Energy Management, Powered by AI" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-8aGMLbS3NAo" onclick="toggleStar('8aGMLbS3NAo', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-8aGMLbS3NAo" onclick="toggleRead('8aGMLbS3NAo', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html" class="card-link">
                     <span class="card-channel">Tesla (Elon Musk)</span>
                     <h3 class="card-title">Tesla Home: Home Energy Management, Powered by AI</h3>
-                    <div class="card-tags"><span class="badge">ai</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('ai', event)">ai</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('8aGMLbS3NAo', 'Tesla Home: Home Energy Management, Powered by AI', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-8aGMLbS3NAo"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="openai specvideo agentplugin v08 hd openai (sam altman)">
-            <a href="2026-08-19_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-UaeWJK_vv-Y" data-id="UaeWJK_vv-Y" data-title="openai specvideo agentplugin v08 hd openai (sam altman) ['ai', 'agent'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html">
                     <img src="https://img.youtube.com/vi/UaeWJK_vv-Y/hqdefault.jpg" alt="OpenAI SpecVideo AgentPlugin v08 HD" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-UaeWJK_vv-Y" onclick="toggleStar('UaeWJK_vv-Y', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-UaeWJK_vv-Y" onclick="toggleRead('UaeWJK_vv-Y', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html" class="card-link">
                     <span class="card-channel">OpenAI (Sam Altman)</span>
                     <h3 class="card-title">OpenAI SpecVideo AgentPlugin v08 HD</h3>
-                    <div class="card-tags"><span class="badge">ai</span><span class="badge">agent</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('ai', event)">ai</span><span class="badge" onclick="filterByTag('agent', event)">agent</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('UaeWJK_vv-Y', 'OpenAI SpecVideo AgentPlugin v08 HD', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-UaeWJK_vv-Y"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="robots working together with gemini robotics 2 google deepmind (demis hassabis)">
-            <a href="2026-08-19_AI_Google_Robots working together with Gemini Robotics 2.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-fo9WirRIaVs" data-id="fo9WirRIaVs" data-title="robots working together with gemini robotics 2 google deepmind (demis hassabis) ['robot', 'robotics', 'gemini'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_Google_Robots working together with Gemini Robotics 2.html">
                     <img src="https://img.youtube.com/vi/fo9WirRIaVs/hqdefault.jpg" alt="Robots working together with Gemini Robotics 2" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-fo9WirRIaVs" onclick="toggleStar('fo9WirRIaVs', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-fo9WirRIaVs" onclick="toggleRead('fo9WirRIaVs', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_Google_Robots working together with Gemini Robotics 2.html" class="card-link">
                     <span class="card-channel">Google DeepMind (Demis Hassabis)</span>
                     <h3 class="card-title">Robots working together with Gemini Robotics 2</h3>
-                    <div class="card-tags"><span class="badge">robot</span><span class="badge">robotics</span><span class="badge">gemini</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('robot', event)">robot</span><span class="badge" onclick="filterByTag('robotics', event)">robotics</span><span class="badge" onclick="filterByTag('gemini', event)">gemini</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('fo9WirRIaVs', 'Robots working together with Gemini Robotics 2', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-fo9WirRIaVs"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="その画像がai生成かどうかを見分ける方法 google (sundar pichai)">
-            <a href="2026-08-19_AI_Google_その画像がAI生成かどうかを見分ける方法.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-Sm7OTow3mcY" data-id="Sm7OTow3mcY" data-title="その画像がai生成かどうかを見分ける方法 google (sundar pichai) ['ai'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_Google_その画像がAI生成かどうかを見分ける方法.html">
                     <img src="https://img.youtube.com/vi/Sm7OTow3mcY/hqdefault.jpg" alt="その画像がAI生成かどうかを見分ける方法" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-Sm7OTow3mcY" onclick="toggleStar('Sm7OTow3mcY', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-Sm7OTow3mcY" onclick="toggleRead('Sm7OTow3mcY', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_Google_その画像がAI生成かどうかを見分ける方法.html" class="card-link">
                     <span class="card-channel">Google (Sundar Pichai)</span>
                     <h3 class="card-title">その画像がAI生成かどうかを見分ける方法</h3>
-                    <div class="card-tags"><span class="badge">ai</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('ai', event)">ai</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('Sm7OTow3mcY', 'その画像がAI生成かどうかを見分ける方法', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-Sm7OTow3mcY"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="gtc sj 2026：ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合 nvidia (jensen huang)">
-            <a href="2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-pmiN5Nj1-K8" data-id="pmiN5Nj1-K8" data-title="gtc sj 2026：ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合 nvidia (jensen huang) ['gtc'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合.html">
                     <img src="https://img.youtube.com/vi/pmiN5Nj1-K8/hqdefault.jpg" alt="GTC SJ 2026：ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-pmiN5Nj1-K8" onclick="toggleStar('pmiN5Nj1-K8', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-pmiN5Nj1-K8" onclick="toggleRead('pmiN5Nj1-K8', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合.html" class="card-link">
                     <span class="card-channel">NVIDIA (Jensen Huang)</span>
                     <h3 class="card-title">GTC SJ 2026：ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合</h3>
-                    <div class="card-tags"><span class="badge">gtc</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('gtc', event)">gtc</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('pmiN5Nj1-K8', 'GTC SJ 2026：ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-pmiN5Nj1-K8"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="誰もが手にする未来：アメリカのすべての視覚障害を持つ退役軍人にaiグラスを無償提供 meta (mark zuckerberg / yann lecun)">
-            <a href="2026-08-19_AI_Meta_誰もが手にする未来アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-gatpk6BhN5w" data-id="gatpk6BhN5w" data-title="誰もが手にする未来：アメリカのすべての視覚障害を持つ退役軍人にaiグラスを無償提供 meta (mark zuckerberg / yann lecun) ['ai'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_Meta_誰もが手にする未来アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供.html">
                     <img src="https://img.youtube.com/vi/gatpk6BhN5w/hqdefault.jpg" alt="誰もが手にする未来：アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-gatpk6BhN5w" onclick="toggleStar('gatpk6BhN5w', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-gatpk6BhN5w" onclick="toggleRead('gatpk6BhN5w', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_Meta_誰もが手にする未来アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供.html" class="card-link">
                     <span class="card-channel">Meta (Mark Zuckerberg / Yann LeCun)</span>
                     <h3 class="card-title">誰もが手にする未来：アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供</h3>
-                    <div class="card-tags"><span class="badge">ai</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('ai', event)">ai</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('gatpk6BhN5w', '誰もが手にする未来：アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-gatpk6BhN5w"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="the ai shift most companies didn't see coming microsoft (satya nadella / mustafa suleyman)">
-            <a href="2026-08-19_AI_Microsoft_The AI shift most companies didnt see coming.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-cazd1z4Eseo" data-id="cazd1z4Eseo" data-title="the ai shift most companies didn't see coming microsoft (satya nadella / mustafa suleyman) ['ai'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_Microsoft_The AI shift most companies didnt see coming.html">
                     <img src="https://img.youtube.com/vi/cazd1z4Eseo/hqdefault.jpg" alt="The AI shift most companies didn't see coming" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-cazd1z4Eseo" onclick="toggleStar('cazd1z4Eseo', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-cazd1z4Eseo" onclick="toggleRead('cazd1z4Eseo', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_Microsoft_The AI shift most companies didnt see coming.html" class="card-link">
                     <span class="card-channel">Microsoft (Satya Nadella / Mustafa Suleyman)</span>
                     <h3 class="card-title">The AI shift most companies didn't see coming</h3>
-                    <div class="card-tags"><span class="badge">ai</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('ai', event)">ai</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('cazd1z4Eseo', 'The AI shift most companies didn't see coming', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-cazd1z4Eseo"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="github copilot sdkで、あらゆるアイデアをaiアプリにしよう microsoft developer">
-            <a href="2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-QLKcF0j6bVA" data-id="QLKcF0j6bVA" data-title="github copilot sdkで、あらゆるアイデアをaiアプリにしよう microsoft developer ['ai', 'copilot'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html">
                     <img src="https://img.youtube.com/vi/QLKcF0j6bVA/hqdefault.jpg" alt="GitHub Copilot SDKで、あらゆるアイデアをAIアプリにしよう" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-QLKcF0j6bVA" onclick="toggleStar('QLKcF0j6bVA', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-QLKcF0j6bVA" onclick="toggleRead('QLKcF0j6bVA', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html" class="card-link">
                     <span class="card-channel">Microsoft Developer</span>
                     <h3 class="card-title">GitHub Copilot SDKで、あらゆるアイデアをAIアプリにしよう</h3>
-                    <div class="card-tags"><span class="badge">ai</span><span class="badge">copilot</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('ai', event)">ai</span><span class="badge" onclick="filterByTag('copilot', event)">copilot</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('QLKcF0j6bVA', 'GitHub Copilot SDKで、あらゆるアイデアをAIアプリにしよう', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-QLKcF0j6bVA"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="galileo: the most advanced balance trainer on earth (mind blowing)🚀🧠 figure ai (brett adcock / 人型ロボット)">
-            <a href="2026-08-19_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-uQd809adb58" data-id="uQd809adb58" data-title="galileo: the most advanced balance trainer on earth (mind blowing)🚀🧠 figure ai (brett adcock / 人型ロボット) ['ai'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html">
                     <img src="https://img.youtube.com/vi/uQd809adb58/hqdefault.jpg" alt="Galileo: The Most Advanced Balance Trainer on Earth (Mind Blowing)🚀🧠" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-uQd809adb58" onclick="toggleStar('uQd809adb58', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-uQd809adb58" onclick="toggleRead('uQd809adb58', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html" class="card-link">
                     <span class="card-channel">Figure AI (Brett Adcock / 人型ロボット)</span>
                     <h3 class="card-title">Galileo: The Most Advanced Balance Trainer on Earth (Mind Blowing)🚀🧠</h3>
-                    <div class="card-tags"><span class="badge">ai</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('ai', event)">ai</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('uQd809adb58', 'Galileo: The Most Advanced Balance Trainer on Earth (Mind Blowing)🚀🧠', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-uQd809adb58"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="コーディングエージェントのベンチマーク：scale aiリサーチ・ミートアップ（nyc）2026/08/13 scale ai (alexandr wang)">
-            <a href="2026-08-19_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-j9Qr5aUfqNU" data-id="j9Qr5aUfqNU" data-title="コーディングエージェントのベンチマーク：scale aiリサーチ・ミートアップ（nyc）2026/08/13 scale ai (alexandr wang) ['ai'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html">
                     <img src="https://img.youtube.com/vi/j9Qr5aUfqNU/hqdefault.jpg" alt="コーディングエージェントのベンチマーク：Scale AIリサーチ・ミートアップ（NYC）2026/08/13" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-j9Qr5aUfqNU" onclick="toggleStar('j9Qr5aUfqNU', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-j9Qr5aUfqNU" onclick="toggleRead('j9Qr5aUfqNU', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html" class="card-link">
                     <span class="card-channel">Scale AI (Alexandr Wang)</span>
                     <h3 class="card-title">コーディングエージェントのベンチマーク：Scale AIリサーチ・ミートアップ（NYC）2026/08/13</h3>
-                    <div class="card-tags"><span class="badge">ai</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('ai', event)">ai</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('j9Qr5aUfqNU', 'コーディングエージェントのベンチマーク：Scale AIリサーチ・ミートアップ（NYC）2026/08/13', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-j9Qr5aUfqNU"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="自動運転車は私たちの都市をどう変えるのか？ | エコノミスト the economist">
-            <a href="2026-08-19_AI_The_自動運転車は私たちの都市をどう変えるのか  エコノミスト.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-7CNlGweeN90" data-id="7CNlGweeN90" data-title="自動運転車は私たちの都市をどう変えるのか？ | エコノミスト the economist ['自動運転'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_The_自動運転車は私たちの都市をどう変えるのか  エコノミスト.html">
                     <img src="https://img.youtube.com/vi/7CNlGweeN90/hqdefault.jpg" alt="自動運転車は私たちの都市をどう変えるのか？ | エコノミスト" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-7CNlGweeN90" onclick="toggleStar('7CNlGweeN90', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-7CNlGweeN90" onclick="toggleRead('7CNlGweeN90', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_The_自動運転車は私たちの都市をどう変えるのか  エコノミスト.html" class="card-link">
                     <span class="card-channel">The Economist</span>
                     <h3 class="card-title">自動運転車は私たちの都市をどう変えるのか？ | エコノミスト</h3>
-                    <div class="card-tags"><span class="badge">自動運転</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('自動運転', event)">自動運転</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('7CNlGweeN90', '自動運転車は私たちの都市をどう変えるのか？ | エコノミスト', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-7CNlGweeN90"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="jensen huang: nvidia - the $4 trillion company & the ai revolution | lex fridman podcast #494 lex fridman (ceo徹底対談)">
-            <a href="2026-08-19_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-vif8NQcjVf0" data-id="vif8NQcjVf0" data-title="jensen huang: nvidia - the $4 trillion company & the ai revolution | lex fridman podcast #494 lex fridman (ceo徹底対談) ['ai'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html">
                     <img src="https://img.youtube.com/vi/vif8NQcjVf0/hqdefault.jpg" alt="Jensen Huang: NVIDIA - The $4 Trillion Company & the AI Revolution | Lex Fridman Podcast #494" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-vif8NQcjVf0" onclick="toggleStar('vif8NQcjVf0', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-vif8NQcjVf0" onclick="toggleRead('vif8NQcjVf0', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html" class="card-link">
                     <span class="card-channel">Lex Fridman (CEO徹底対談)</span>
                     <h3 class="card-title">Jensen Huang: NVIDIA - The $4 Trillion Company & the AI Revolution | Lex Fridman Podcast #494</h3>
-                    <div class="card-tags"><span class="badge">ai</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('ai', event)">ai</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('vif8NQcjVf0', 'Jensen Huang: NVIDIA - The $4 Trillion Company & the AI Revolution | Lex Fridman Podcast #494', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-vif8NQcjVf0"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="ryan greenblatt – what happens once ai can automate ai research? dwarkesh patel (最深技術対談)">
-            <a href="2026-08-19_AI_Dwarkesh_Ryan Greenblatt  What happens once AI can automate.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card--RXD4bTuFTo" data-id="-RXD4bTuFTo" data-title="ryan greenblatt – what happens once ai can automate ai research? dwarkesh patel (最深技術対談) ['ai'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_Dwarkesh_Ryan Greenblatt  What happens once AI can automate.html">
                     <img src="https://img.youtube.com/vi/-RXD4bTuFTo/hqdefault.jpg" alt="Ryan Greenblatt – What happens once AI can automate AI research?" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star--RXD4bTuFTo" onclick="toggleStar('-RXD4bTuFTo', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read--RXD4bTuFTo" onclick="toggleRead('-RXD4bTuFTo', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_Dwarkesh_Ryan Greenblatt  What happens once AI can automate.html" class="card-link">
                     <span class="card-channel">Dwarkesh Patel (最深技術対談)</span>
                     <h3 class="card-title">Ryan Greenblatt – What happens once AI can automate AI research?</h3>
-                    <div class="card-tags"><span class="badge">ai</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('ai', event)">ai</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('-RXD4bTuFTo', 'Ryan Greenblatt – What happens once AI can automate AI research?', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview--RXD4bTuFTo"></div>
+            </div>
         </div>
         
-        <div class="portal-card" data-title="マイケル・クラシオス：ホワイトハウスのai戦略の内側 y combinator (aiスタートアップ)">
-            <a href="2026-08-19_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html">
-                <div class="thumb-container">
+        <div class="portal-card" id="card-zLUZclThLhU" data-id="zLUZclThLhU" data-title="マイケル・クラシオス：ホワイトハウスのai戦略の内側 y combinator (aiスタートアップ) ['ai'] ">
+            <div class="thumb-container">
+                <a href="2026-08-19_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html">
                     <img src="https://img.youtube.com/vi/zLUZclThLhU/hqdefault.jpg" alt="マイケル・クラシオス：ホワイトハウスのAI戦略の内側" loading="lazy">
-                </div>
-                <div class="card-content">
+                </a>
+                <button class="star-btn" id="star-zLUZclThLhU" onclick="toggleStar('zLUZclThLhU', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-zLUZclThLhU" onclick="toggleRead('zLUZclThLhU', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-19_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html" class="card-link">
                     <span class="card-channel">Y Combinator (AIスタートアップ)</span>
                     <h3 class="card-title">マイケル・クラシオス：ホワイトハウスのAI戦略の内側</h3>
-                    <div class="card-tags"><span class="badge">ai</span></div>
-                    <div class="card-date">📅 2026-08-19</div>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('ai', event)">ai</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-19</span>
+                    <button class="memo-btn" onclick="openMemoModal('zLUZclThLhU', 'マイケル・クラシオス：ホワイトハウスのAI戦略の内側', event)">📝 メモ</button>
                 </div>
-            </a>
+                <div class="user-memo-preview" id="memo-preview-zLUZclThLhU"></div>
+            </div>
         </div>
         
         </div>
@@ -369,8 +566,197 @@
         </footer>
     </div>
 
+    <!-- メモ用モーダル -->
+    <div class="modal-overlay" id="memoModal" onclick="if(event.target===this) closeMemoModal()">
+        <div class="modal-content">
+            <div class="modal-title" id="modalVideoTitle">📝 メモを記録</div>
+            <textarea id="memoInput" class="memo-textarea" placeholder="この動画に関する気づき、実践アクション、重要ポイントなどをメモ..."></textarea>
+            <div class="modal-actions">
+                <button class="modal-close-btn" onclick="closeMemoModal()">キャンセル</button>
+                <button class="modal-save-btn" onclick="saveMemo()">💾 保存する</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         const libraryData = [{"video_id": "rRkucx0KwcI", "title": "GTC SJ 2026：ヘルスケアロボティクスのためのフィジカルAI ― シミュレーション主導の設計と開発の加速", "channel": "NVIDIA (Jensen Huang)", "filename": "2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアロボティクスのためのフィジカルAI  シミュレーション主導の設計と開.html", "date": "2026-08-19", "tags": ["ai"], "chapters": []}, {"video_id": "XuoqKYxDHVc", "title": "【フル対談】イーロン・マスク：AI・AGIと超豊かさの時代（2036年）へのロードマップ", "channel": "The Economist", "filename": "FEATURED_AI_The_XuoqKYxDHVc.html", "date": "2026-08-19", "tags": ["AI", "AGI", "ROBOTICS", "ENERGY"], "chapters": ["AIは5年後には人間より賢くなる", "AI企業はどのように自主規制を行うべきか", "中国はAI分野のリーダーになるのか？", "イーロン・マスク氏、サム・アルトマン氏とAI企業のボスたちについて語る", "仕事は選択肢になる", "一人の人間がこれほど大きな権力を持つべきなのか？", "スターリンクとウクライナ戦争", "政治に関わりすぎた", "マスク氏：USAIDの予算削減で死者は出ていない", "ヨーロッパ、極右、そしてイギリスの内戦", "マスク氏：私は人種差別主義者ではない", "マスク氏について人々が最も誤解していることは何か？"]}, {"video_id": "8aGMLbS3NAo", "title": "Tesla Home: Home Energy Management, Powered by AI", "channel": "Tesla (Elon Musk)", "filename": "2026-08-19_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html", "date": "2026-08-19", "tags": ["ai"], "chapters": []}, {"video_id": "UaeWJK_vv-Y", "title": "OpenAI SpecVideo AgentPlugin v08 HD", "channel": "OpenAI (Sam Altman)", "filename": "2026-08-19_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html", "date": "2026-08-19", "tags": ["ai", "agent"], "chapters": ["エージェントパッケージに標準が必要な理由", "Agent Pluginsの概要", "パッケージ構造、スキル、MCPサーバー", "製品間での移植性", "スコープと利用開始方法"]}, {"video_id": "fo9WirRIaVs", "title": "Robots working together with Gemini Robotics 2", "channel": "Google DeepMind (Demis Hassabis)", "filename": "2026-08-19_AI_Google_Robots working together with Gemini Robotics 2.html", "date": "2026-08-19", "tags": ["robot", "robotics", "gemini"], "chapters": []}, {"video_id": "Sm7OTow3mcY", "title": "その画像がAI生成かどうかを見分ける方法", "channel": "Google (Sundar Pichai)", "filename": "2026-08-19_AI_Google_その画像がAI生成かどうかを見分ける方法.html", "date": "2026-08-19", "tags": ["ai"], "chapters": []}, {"video_id": "pmiN5Nj1-K8", "title": "GTC SJ 2026：ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合", "channel": "NVIDIA (Jensen Huang)", "filename": "2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合.html", "date": "2026-08-19", "tags": ["gtc"], "chapters": []}, {"video_id": "gatpk6BhN5w", "title": "誰もが手にする未来：アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供", "channel": "Meta (Mark Zuckerberg / Yann LeCun)", "filename": "2026-08-19_AI_Meta_誰もが手にする未来アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供.html", "date": "2026-08-19", "tags": ["ai"], "chapters": []}, {"video_id": "cazd1z4Eseo", "title": "The AI shift most companies didn't see coming", "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)", "filename": "2026-08-19_AI_Microsoft_The AI shift most companies didnt see coming.html", "date": "2026-08-19", "tags": ["ai"], "chapters": ["AIは道具ではない", "第 3 のシフト: マルチエージェント AI", "なぜリーダーはAIに不安を感じるのか", "生産性の罠", "AI時代の3つのスキル", "AI 変革が人々の問題となる理由", "AI エージェントの労働力の管理", "あなたの会社の AI レイヤーを構築する", "AI の急激な変化", "リーダーが今後 30 日間にすべきこと"]}, {"video_id": "QLKcF0j6bVA", "title": "GitHub Copilot SDKで、あらゆるアイデアをAIアプリにしよう", "channel": "Microsoft Developer", "filename": "2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html", "date": "2026-08-19", "tags": ["ai", "copilot"], "chapters": []}, {"video_id": "uQd809adb58", "title": "Galileo: The Most Advanced Balance Trainer on Earth (Mind Blowing)🚀🧠", "channel": "Figure AI (Brett Adcock / 人型ロボット)", "filename": "2026-08-19_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html", "date": "2026-08-19", "tags": ["ai"], "chapters": []}, {"video_id": "j9Qr5aUfqNU", "title": "コーディングエージェントのベンチマーク：Scale AIリサーチ・ミートアップ（NYC）2026/08/13", "channel": "Scale AI (Alexandr Wang)", "filename": "2026-08-19_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html", "date": "2026-08-19", "tags": ["ai"], "chapters": []}, {"video_id": "7CNlGweeN90", "title": "自動運転車は私たちの都市をどう変えるのか？ | エコノミスト", "channel": "The Economist", "filename": "2026-08-19_AI_The_自動運転車は私たちの都市をどう変えるのか  エコノミスト.html", "date": "2026-08-19", "tags": ["自動運転"], "chapters": ["将来も私たちは車を所有し続けるのか？", "製造業が衰退しない理由", "自動運転車が都市をどのように変えるか", "現実世界におけるAI"]}, {"video_id": "vif8NQcjVf0", "title": "Jensen Huang: NVIDIA - The $4 Trillion Company & the AI Revolution | Lex Fridman Podcast #494", "channel": "Lex Fridman (CEO徹底対談)", "filename": "2026-08-19_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html", "date": "2026-08-19", "tags": ["ai"], "chapters": ["導入", "究極の共同設計とラックスケールエンジニアリング", "Jensen が NVIDIA をどのように運営しているか", "AI スケーリングの法則", "AI スケーリングの法則の最大の障害", "サプライチェーン", "メモリ", "力", "エロンと巨像", "エンジニアリングとリーダーシップに対するジェンセンのアプローチ", "中国", "TSMCと台湾", "NVIDIAの堀", "宇宙のAIデータセンター", "NVIDIA の価値は 10 兆ドルになるでしょうか?", "プレッシャーの下でのリーダーシップ", "ビデオゲーム", "AGI タイムライン", "プログラミングの未来", "意識", "死亡"]}, {"video_id": "-RXD4bTuFTo", "title": "Ryan Greenblatt – What happens once AI can automate AI research?", "channel": "Dwarkesh Patel (最深技術対談)", "filename": "2026-08-19_AI_Dwarkesh_Ryan Greenblatt  What happens once AI can automate.html", "date": "2026-08-19", "tags": ["ai"], "chapters": ["AI の研究開発は再帰的な自己改善を可能にするのに十分検証可能ですか?", "AIの進歩は人間の専門家データがボトルネックになっているのでしょうか?", "トークン価格の横ばいとスケーリング減速の示唆", "AI がトレーニングできないスキル: AI にはそれが必要なのでしょうか?", "誰に合わせますか？", "AIが人間を共謀し騙す最近の事件", "何が問題になる可能性がありますか?具体的なシナリオ", "報酬ハッキングから乗っ取りまで"]}, {"video_id": "zLUZclThLhU", "title": "マイケル・クラシオス：ホワイトハウスのAI戦略の内側", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-19_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html", "date": "2026-08-19", "tags": ["ai"], "chapters": ["マイケル・クラツィオスが AI 政策と公共サービスについて語る", "シリコンバレーからホワイトハウスへの転身", "テクノロジー政策は実際にどのように作られるのか", "ホワイトハウスにおけるオープンソースAIの戦略的意義", "ワシントンのAIに対する見方が違う", "半年ごとに変わるテクノロジーを規制する", "どの AI リスクが過大評価されていますか?", "小さな技術者にテーブルの席を与える", "既存の堀を作らない規制", "Born Free vs. Born in Captivity Technologies", "ホワイトハウスで働くというのは実際どのようなものなのか", "アメリカ科学の新たな黄金時代", "量子、議会、知財、そして次に起こること", "技術者が公共サービスを検討すべき理由"]}];
+        let currentTab = 'all';
+        let activeMemoVid = null;
+
+        const STORAGE_STARRED = 'ai_notes_starred';
+        const STORAGE_READ = 'ai_notes_read';
+        const STORAGE_MEMOS = 'ai_notes_memos';
+
+        function getStoredList(key) {
+            try { return JSON.parse(localStorage.getItem(key)) || []; } catch(e) { return []; }
+        }
+        function setStoredList(key, arr) {
+            localStorage.setItem(key, JSON.stringify(arr));
+        }
+        function getStoredObj(key) {
+            try { return JSON.parse(localStorage.getItem(key)) || {}; } catch(e) { return {}; }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const starTarget = params.get('star');
+            if (starTarget) {
+                let stars = getStoredList(STORAGE_STARRED);
+                if (!stars.includes(starTarget)) {
+                    stars.push(starTarget);
+                    setStoredList(STORAGE_STARRED, stars);
+                }
+            }
+            updateUIState();
+        });
+
+        function toggleStar(vid, e) {
+            if (e) e.stopPropagation();
+            let stars = getStoredList(STORAGE_STARRED);
+            if (stars.includes(vid)) {
+                stars = stars.filter(id => id !== vid);
+            } else {
+                stars.push(vid);
+            }
+            setStoredList(STORAGE_STARRED, stars);
+            updateUIState();
+        }
+
+        function toggleRead(vid, e) {
+            if (e) e.stopPropagation();
+            let reads = getStoredList(STORAGE_READ);
+            if (reads.includes(vid)) {
+                reads = reads.filter(id => id !== vid);
+            } else {
+                reads.push(vid);
+            }
+            setStoredList(STORAGE_READ, reads);
+            updateUIState();
+        }
+
+        function openMemoModal(vid, title, e) {
+            if (e) e.stopPropagation();
+            activeMemoVid = vid;
+            document.getElementById('modalVideoTitle').innerText = '📝 メモ: ' + title.substring(0, 30) + '...';
+            const memos = getStoredObj(STORAGE_MEMOS);
+            document.getElementById('memoInput').value = memos[vid] || '';
+            document.getElementById('memoModal').style.display = 'flex';
+        }
+
+        function closeMemoModal() {
+            document.getElementById('memoModal').style.display = 'none';
+            activeMemoVid = null;
+        }
+
+        function saveMemo() {
+            if (!activeMemoVid) return;
+            const text = document.getElementById('memoInput').value.trim();
+            const memos = getStoredObj(STORAGE_MEMOS);
+            if (text) {
+                memos[activeMemoVid] = text;
+            } else {
+                delete memos[activeMemoVid];
+            }
+            localStorage.setItem(STORAGE_MEMOS, JSON.stringify(memos));
+            closeMemoModal();
+            updateUIState();
+        }
+
+        function switchTab(tab) {
+            currentTab = tab;
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('tab-' + tab).classList.add('active');
+            updateUIState();
+        }
+
+        function updateUIState() {
+            const stars = getStoredList(STORAGE_STARRED);
+            const reads = getStoredList(STORAGE_READ);
+            const memos = getStoredObj(STORAGE_MEMOS);
+
+            document.getElementById('starredCount').innerText = stars.length;
+            document.getElementById('readCount').innerText = reads.length;
+
+            let visibleCount = 0;
+            document.querySelectorAll('.portal-card').forEach(card => {
+                const vid = card.getAttribute('data-id');
+                const isStar = stars.includes(vid);
+                const isRead = reads.includes(vid);
+                const memoText = memos[vid] || '';
+
+                const starBtn = document.getElementById('star-' + vid);
+                if (starBtn) {
+                    if (isStar) starBtn.classList.add('active');
+                    else starBtn.classList.remove('active');
+                }
+                const readBtn = document.getElementById('read-' + vid);
+                if (readBtn) {
+                    if (isRead) readBtn.classList.add('active');
+                    else readBtn.classList.remove('active');
+                }
+
+                if (isStar) card.classList.add('is-starred');
+                else card.classList.remove('is-starred');
+
+                if (isRead) card.classList.add('is-read');
+                else card.classList.remove('is-read');
+
+                const memoPreview = document.getElementById('memo-preview-' + vid);
+                if (memoPreview) {
+                    if (memoText) {
+                        memoPreview.innerText = '💡 メモ: ' + memoText;
+                        memoPreview.style.display = 'block';
+                    } else {
+                        memoPreview.style.display = 'none';
+                    }
+                }
+
+                let show = true;
+                if (currentTab === 'starred' && !isStar) show = false;
+                if (currentTab === 'read' && !isRead) show = false;
+
+                card.style.display = show ? 'flex' : 'none';
+                if (show) visibleCount++;
+            });
+
+            document.getElementById('cardCount').innerText = `表示中: ${visibleCount} 件`;
+        }
+
+        function exportStarredMarkdown() {
+            const stars = getStoredList(STORAGE_STARRED);
+            const memos = getStoredObj(STORAGE_MEMOS);
+            if (stars.length === 0) {
+                alert('まだ⭐マイストックに保存された動画がありません。カード右上の⭐を押して追加してください！');
+                return;
+            }
+
+            const starredItems = libraryData.filter(item => stars.includes(item.video_id));
+            let md = `# 🌟 マイAIインテリジェンス・ストック一覧 (${starredItems.length}件)\n\n`;
+            md += `生成日: ${new Date().toLocaleDateString('ja-JP')}\n\n`;
+
+            starredItems.forEach((item, idx) => {
+                md += `### ${idx + 1}. [${item.title}](https://ocean-star-sky.github.io/ai-video-notes/${encodeURIComponent(item.filename)})\n`;
+                md += `- **チャンネル**: ${item.channel}\n`;
+                md += `- **公開日**: ${item.date}\n`;
+                md += `- **YouTube公式**: https://www.youtube.com/watch?v=${item.video_id}\n`;
+                if (memos[item.video_id]) {
+                    md += `- **💡 個人メモ**: ${memos[item.video_id]}\n`;
+                }
+                md += `\n`;
+            });
+
+            navigator.clipboard.writeText(md).then(() => {
+                alert(`📋 ${starredItems.length}件のマイストックをMarkdown形式でクリップボードにコピーしました！\nNotionやObsidian、メモ帳にそのまま貼り付けできます。`);
+            }).catch(() => {
+                alert('コピーに失敗しました。');
+            });
+        }
+
+        function filterByTag(tag, e) {
+            if (e) e.stopPropagation();
+            document.getElementById('chatInput').value = tag;
+            askAI();
+        }
 
         function quickAsk(text) {
             document.getElementById('chatInput').value = text;
@@ -445,18 +831,6 @@
                         <span style="color: var(--accent-color); font-weight: bold;">レポートを開く →</span>
                     </a>
                 `).join('');
-
-                const cards = document.querySelectorAll('.portal-card');
-                cards.forEach(card => {
-                    const title = card.getAttribute('data-title');
-                    if (matches.some(m => title.includes(m.item.video_id.toLowerCase()) || title.includes(m.item.title.toLowerCase().slice(0, 10)))) {
-                        card.style.borderColor = 'var(--accent-color)';
-                        card.style.boxShadow = '0 0 15px rgba(56, 189, 248, 0.4)';
-                    } else {
-                        card.style.borderColor = 'var(--border-color)';
-                        card.style.boxShadow = 'none';
-                    }
-                });
             }, 300);
         }
     </script>

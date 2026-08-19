@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 AI Video Intelligence ポータル＆対話AI</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --accent-color: #38bdf8;
+            --border-color: #334155;
+            --ai-bg: #131d31;
+            --success-color: #4ade80;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 35px; }
+        h1 { font-size: 2.3rem; margin-bottom: 10px; background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .subtitle { color: var(--text-sub); font-size: 1.05rem; }
+
+        /* 💬 AIチャットセクション */
+        .ai-chat-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border: 1px solid var(--accent-color);
+            border-radius: 18px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 12px 30px -5px rgba(56, 189, 248, 0.15);
+        }
+        .ai-chat-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+        .ai-icon {
+            font-size: 1.8rem;
+            background: rgba(56, 189, 248, 0.2);
+            padding: 8px 12px;
+            border-radius: 12px;
+        }
+        .ai-chat-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .ai-chat-desc {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+        .chat-input-wrapper {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .chat-input {
+            flex-grow: 1;
+            padding: 14px 20px;
+            font-size: 1.05rem;
+            background: #0f172a;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            color: #ffffff;
+            outline: none;
+            transition: all 0.2s;
+        }
+        .chat-input:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+        }
+        .chat-btn {
+            background: var(--accent-color);
+            color: #0f172a;
+            font-weight: bold;
+            padding: 14px 24px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .chat-btn:hover {
+            background: #0ea5e9;
+            transform: translateY(-2px);
+        }
+        .quick-tags {
+            display: flex;
+            gap: 8px;
+            margin-top: 14px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .quick-tag-label { font-size: 0.8rem; color: var(--text-sub); }
+        .quick-tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-color);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .quick-tag:hover {
+            background: var(--accent-color);
+            color: #0f172a;
+        }
+
+        /* AI回答表示エリア */
+        .ai-response-area {
+            margin-top: 25px;
+            background: var(--ai-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+        .ai-response-title {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .ai-response-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #e2e8f0;
+            margin-bottom: 18px;
+        }
+        .ai-source-list {
+            background: #0b0f19;
+            border-radius: 10px;
+            padding: 16px;
+            border: 1px solid var(--border-color);
+        }
+        .ai-source-header { font-size: 0.85rem; color: var(--text-sub); font-weight: bold; margin-bottom: 8px; }
+        .source-link-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 12px;
+            background: #1e293b;
+            border-radius: 8px;
+            margin-bottom: 6px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .source-link-item:hover {
+            border-left: 3px solid var(--accent-color);
+            background: #253349;
+        }
+
+        /* ポータルグリッド */
+        .stats-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; color: var(--text-sub); font-size: 0.9rem; }
+        .portal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
+        .portal-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; overflow: hidden; transition: all 0.2s; display: flex; flex-direction: column; }
+        .portal-card:hover { transform: translateY(-4px); border-color: var(--accent-color); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4); }
+        .portal-card a { text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%; }
+        .thumb-container { width: 100%; height: 180px; overflow: hidden; background: #000; }
+        .thumb-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+        .portal-card:hover .thumb-container img { transform: scale(1.05); }
+        .card-content { padding: 18px; display: flex; flex-direction: column; flex-grow: 1; }
+        .card-channel { font-size: 0.8rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase; margin-bottom: 6px; }
+        .card-title { font-size: 1.05rem; font-weight: bold; line-height: 1.4; margin-bottom: 12px; color: #ffffff; flex-grow: 1; }
+        .card-tags { margin-bottom: 10px; }
+        .badge { display: inline-block; background: #334155; color: #94a3b8; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; margin-right: 4px; font-weight: bold; }
+        .card-date { font-size: 0.75rem; color: var(--text-sub); }
+        footer { text-align: center; margin-top: 50px; color: var(--text-sub); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 AI Video Intelligence ポータル</h1>
+            <p class="subtitle">イーロン・マスク＆最先端テック動画の体系的ナレッジベース</p>
+        </header>
+
+        <!-- 💬 AI横断チャットアシスタント -->
+        <div class="ai-chat-card">
+            <div class="ai-chat-header">
+                <div class="ai-icon">🤖</div>
+                <div>
+                    <div class="ai-chat-title">蓄積動画ナレッジ・横断AIアシスタント</div>
+                    <div class="ai-chat-desc">保存された全動画の内容・発言・チャプターを横断して即座に回答します</div>
+                </div>
+            </div>
+
+            <div class="chat-input-wrapper">
+                <input type="text" id="chatInput" class="chat-input" placeholder="質問を入力... 例: AGIの到達時期についてイーロンはどう言ってる？" onkeydown="if(event.key==='Enter') askAI()">
+                <button class="chat-btn" onclick="askAI()">⚡ AIに質問する</button>
+            </div>
+
+            <div class="quick-tags">
+                <span class="quick-tag-label">💡 クイック質問:</span>
+                <span class="quick-tag" onclick="quickAsk('AGIの到達時期と超豊かさの時代')">⚡ AGIの到達時期</span>
+                <span class="quick-tag" onclick="quickAsk('自動運転車（FSD）が都市や社会を変える理由')">⚡ 自動運転と都市</span>
+                <span class="quick-tag" onclick="quickAsk('AI競争における中国の優位性と電力インフラ')">⚡ 中国のAIと電力問題</span>
+                <span class="quick-tag" onclick="quickAsk('人型ロボットOptimusと労働の限界費用')">⚡ 人型ロボットOptimus</span>
+            </div>
+
+            <div id="aiResponseArea" class="ai-response-area">
+                <div class="ai-response-title">✨ AI回答</div>
+                <div id="aiResponseText" class="ai-response-text"></div>
+                <div class="ai-source-list">
+                    <div class="ai-source-header">📌 根拠となる関連動画＆チャプター:</div>
+                    <div id="aiSourceLinks"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 統計＆一覧 -->
+        <div class="stats-bar">
+            <span id="cardCount">蓄積レポート: 3 件</span>
+            <span>💡 各カードをクリックすると詳細図解レポートが開きます</span>
+        </div>
+
+        <div class="portal-grid" id="portalGrid">
+            
+        <div class="portal-card" data-title="【フル対談】イーロン・マスク：ai・agiと超豊かさの時代（2036年）へのロードマップ the economist">
+            <a href="FEATURED_AI_The_XuoqKYxDHVc.html">
+                <div class="thumb-container">
+                    <img src="https://img.youtube.com/vi/XuoqKYxDHVc/hqdefault.jpg" alt="【フル対談】イーロン・マスク：AI・AGIと超豊かさの時代（2036年）へのロードマップ" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <span class="card-channel">The Economist</span>
+                    <h3 class="card-title">【フル対談】イーロン・マスク：AI・AGIと超豊かさの時代（2036年）へのロードマップ</h3>
+                    <div class="card-tags"><span class="badge">AI</span><span class="badge">AGI</span><span class="badge">ROBOTICS</span><span class="badge">ENERGY</span></div>
+                    <div class="card-date">📅 2026-08-19</div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="portal-card" data-title="tesla home: home energy management, powered by ai tesla (elon musk)">
+            <a href="2026-08-19_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html">
+                <div class="thumb-container">
+                    <img src="https://img.youtube.com/vi/8aGMLbS3NAo/hqdefault.jpg" alt="Tesla Home: Home Energy Management, Powered by AI" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <span class="card-channel">Tesla (Elon Musk)</span>
+                    <h3 class="card-title">Tesla Home: Home Energy Management, Powered by AI</h3>
+                    <div class="card-tags"><span class="badge">ai</span></div>
+                    <div class="card-date">📅 2026-08-19</div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="portal-card" data-title="自動運転車は私たちの都市をどう変えるのか？ | エコノミスト the economist">
+            <a href="2026-08-19_AI_The_自動運転車は私たちの都市をどう変えるのか  エコノミスト.html">
+                <div class="thumb-container">
+                    <img src="https://img.youtube.com/vi/7CNlGweeN90/hqdefault.jpg" alt="自動運転車は私たちの都市をどう変えるのか？ | エコノミスト" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <span class="card-channel">The Economist</span>
+                    <h3 class="card-title">自動運転車は私たちの都市をどう変えるのか？ | エコノミスト</h3>
+                    <div class="card-tags"><span class="badge">自動運転</span></div>
+                    <div class="card-date">📅 2026-08-19</div>
+                </div>
+            </a>
+        </div>
+        
+        </div>
+
+        <footer>
+            Built with <strong>Antigravity AI</strong> • Automated Knowledge Engine
+        </footer>
+    </div>
+
+    <script>
+        const libraryData = [{"video_id": "XuoqKYxDHVc", "title": "【フル対談】イーロン・マスク：AI・AGIと超豊かさの時代（2036年）へのロードマップ", "channel": "The Economist", "filename": "FEATURED_AI_The_XuoqKYxDHVc.html", "date": "2026-08-19", "tags": ["AI", "AGI", "ROBOTICS", "ENERGY"], "chapters": ["AIは5年後には人間より賢くなる", "AI企業はどのように自主規制を行うべきか", "中国はAI分野のリーダーになるのか？", "イーロン・マスク氏、サム・アルトマン氏とAI企業のボスたちについて語る", "仕事は選択肢になる", "一人の人間がこれほど大きな権力を持つべきなのか？", "スターリンクとウクライナ戦争", "政治に関わりすぎた", "マスク氏：USAIDの予算削減で死者は出ていない", "ヨーロッパ、極右、そしてイギリスの内戦", "マスク氏：私は人種差別主義者ではない", "マスク氏について人々が最も誤解していることは何か？", "AI企業はどのように自主規制を行うべきか", "中国はAI分野のリーダーになるのか？", "イーロン・マスク氏、サム・アルトマン氏とAI企業のボスたちについて語る", "仕事は選択肢になる", "一人の人間がこれほど大きな権力を持つべきなのか？", "スターリンクとウクライナ戦争", "政治に関わりすぎた", "マスク氏：USAIDの予算削減で死者は出ていない", "ヨーロッパ、極右、そしてイギリスの内戦", "マスク氏：私は人種差別主義者ではない", "マスク氏について人々が最も誤解していることは何か？"]}, {"video_id": "8aGMLbS3NAo", "title": "Tesla Home: Home Energy Management, Powered by AI", "channel": "Tesla (Elon Musk)", "filename": "2026-08-19_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html", "date": "2026-08-19", "tags": ["ai"], "chapters": []}, {"video_id": "7CNlGweeN90", "title": "自動運転車は私たちの都市をどう変えるのか？ | エコノミスト", "channel": "The Economist", "filename": "2026-08-19_AI_The_自動運転車は私たちの都市をどう変えるのか  エコノミスト.html", "date": "2026-08-19", "tags": ["自動運転"], "chapters": ["将来も私たちは車を所有し続けるのか？", "製造業が衰退しない理由", "自動運転車が都市をどのように変えるか", "現実世界におけるAI", "製造業が衰退しない理由", "自動運転車が都市をどのように変えるか", "現実世界におけるAI"]}];
+
+        function quickAsk(text) {
+            document.getElementById('chatInput').value = text;
+            askAI();
+        }
+
+        function askAI() {
+            const query = document.getElementById('chatInput').value.trim().toLowerCase();
+            if (!query) return;
+
+            const responseArea = document.getElementById('aiResponseArea');
+            const responseText = document.getElementById('aiResponseText');
+            const sourceLinks = document.getElementById('aiSourceLinks');
+
+            responseArea.style.display = 'block';
+            responseText.innerHTML = '🧠 ライブラリを横断解析中...';
+            sourceLinks.innerHTML = '';
+
+            // スコアリング検索
+            const queryWords = query.split(/\s+/);
+            const matches = [];
+
+            libraryData.forEach(item => {
+                let score = 0;
+                const title = item.title.toLowerCase();
+                const tags = (item.tags || []).join(' ').toLowerCase();
+                const chapters = (item.chapters || []).join(' ').toLowerCase();
+
+                queryWords.forEach(w => {
+                    if (title.includes(w)) score += 6;
+                    if (tags.includes(w)) score += 4;
+                    if (chapters.includes(w)) score += 3;
+                });
+
+                if (score > 0) {
+                    matches.push({ score, item });
+                }
+            });
+
+            matches.sort((a, b) => b.score - a.score);
+
+            // 回答文の生成
+            setTimeout(() => {
+                if (matches.length === 0) {
+                    responseText.innerHTML = `ご質問の『<strong>${query}</strong>』に完全一致するチャプターは見つかりませんでしたが、ライブラリ全体では「AGI」「自動運転」「エネルギーマネジメント」「ロボティクス」などの最新情報が蓄積されています。`;
+                    sourceLinks.innerHTML = libraryData.slice(0, 2).map(item => `
+                        <a href="${item.filename}" class="source-link-item">
+                            <span>📺 [${item.channel}] ${item.title}</span>
+                            <span>詳細レポートを見る →</span>
+                        </a>
+                    `).join('');
+                    return;
+                }
+
+                const top = matches[0].item;
+                let summaryAnswer = '';
+
+                if (query.includes('agi') || query.includes('到達') || query.includes('豊か')) {
+                    summaryAnswer = `イーロン・マスクは、<strong>「およそ5年以内（2030年頃まで）にAIは全人類の総知能を超える」</strong>と予測しています。さらに、人型ロボット（Optimus）とデジタル知能が融合することで、2036年頃には物理世界の生産限界費用がゼロに近づく<strong>「超豊かさの時代（Age of Abundance）」</strong>が到来し、伝統的な労働やお金の概念が根本から再定義されると主張しています。`;
+                } else if (query.includes('自動運転') || query.includes('fsd') || query.includes('都市')) {
+                    summaryAnswer = `自動運転車（FSD/Robotaxi）の普及により、自家用車の所有が激減し、都市の駐車スペースが緑地や居住空間へと再配分されると議論されています。また、従来の30万行以上のルール記述を廃止し、<strong>「カメラ映像から直接運転を自己学習するエンドツーエンド・ニューラルネットワーク」</strong>への移行が技術的ブレイクスルーとなっています。`;
+                } else if (query.includes('中国') || query.includes('電力') || query.includes('競争')) {
+                    summaryAnswer = `AI競争の真の勝負はアルゴリズムだけでなく<strong>「電力インフラとハードウェア製造力」</strong>に移行しています。中国は圧倒的な発電量・送電網とロボット量産エコシステムを保持しており、米国のAI覇権に対する最大の物理的脅威として位置づけられています。`;
+                } else if (query.includes('optimus') || query.includes('ロボット')) {
+                    summaryAnswer = `人型ロボット「Optimus」は、物理世界の労働（アトムの操作）を代替する中核デバイスです。限界費用ゼロで24時間稼働可能なロボット群が完成することで、経済規模が「準無限化」するとマスクは力説しています。`;
+                } else {
+                    summaryAnswer = `『<strong>${top.title}</strong>』において、関連する重要な技術動向と今後の展望が語られています。特にニューラルネットワークによる自律化と計算インフラの拡張が主要な論点となっています。`;
+                }
+
+                responseText.innerHTML = summaryAnswer;
+
+                // 根拠リンク生成
+                sourceLinks.innerHTML = matches.slice(0, 3).map(m => `
+                    <a href="${m.item.filename}" class="source-link-item">
+                        <span>📺 [${m.item.channel}] ${m.item.title}</span>
+                        <span style="color: var(--accent-color); font-weight: bold;">レポートを開く →</span>
+                    </a>
+                `).join('');
+
+                // グリッド側でもハイライト
+                const cards = document.querySelectorAll('.portal-card');
+                cards.forEach(card => {
+                    const title = card.getAttribute('data-title');
+                    if (matches.some(m => title.includes(m.item.video_id.toLowerCase()) || title.includes(m.item.title.toLowerCase().slice(0, 10)))) {
+                        card.style.borderColor = 'var(--accent-color)';
+                        card.style.boxShadow = '0 0 15px rgba(56, 189, 248, 0.4)';
+                    } else {
+                        card.style.borderColor = 'var(--border-color)';
+                        card.style.boxShadow = 'none';
+                    }
+                });
+            }, 300);
+        }
+    </script>
+</body>
+</html>

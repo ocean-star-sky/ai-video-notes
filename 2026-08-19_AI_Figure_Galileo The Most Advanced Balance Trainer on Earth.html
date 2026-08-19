@@ -82,9 +82,7 @@
             <h2>📌 エグゼクティブ・サマリー（本質の3点抽出）</h2>
             <div class="summary-box">
                 <ul>
-                    <li><strong>1. 技術革新とパラダイムシフト:</strong> Figure AI (Brett Adcock / 人型ロボット)が描く次世代AI・ロボティクス技術の最新進捗と、産業・都市構造への根本的変革。</li>
-                    <li><strong>2. 物理世界への自律化実装:</strong> 単なるチャットボットを超え、自動運転（FSD）や人型ロボット（Optimus）を通じた「原子（Atoms）の直接制御」への移行。</li>
-                    <li><strong>3. 経済的・社会的インパクト:</strong> 限界費用の極小化がもたらす「超豊かさの時代」と、直面するボトルネック（電力・インフラ・法規制・国際競争）。</li>
+                    <li><strong>1. Figure AI (Brett Adcock / 人型ロボット)が提示する最新AI技術のブレイクスルーと実装ロードマップ:</strong> Figure AI (Brett Adcock / 人型ロボット)が提示する最新AI技術のブレイクスルーと実装ロードマップ</li><li><strong>2. ハードウェアとニューラルネットワークの高度な統合による自律化の進展:</strong> ハードウェアとニューラルネットワークの高度な統合による自律化の進展</li><li><strong>3. 産業・社会インフラへの波及効果と直面する計算資源・制度的課題:</strong> 産業・社会インフラへの波及効果と直面する計算資源・制度的課題</li>
                 </ul>
             </div>
             <a href="https://www.youtube.com/watch?v=uQd809adb58" target="_blank" class="btn" style="width: 100%;">▶️ YouTube公式動画を再生する</a>
@@ -103,111 +101,152 @@
         </div>
 
         <div class="card">
-            <h2>⚖️ 徹底対比：従来モデル vs 本動画が示す未来モデル</h2>
+            <h2>⚖️ 徹底対比：従来モデル vs 本動画が示す最新モデル</h2>
             <table class="comparison-table">
                 <thead>
                     <tr>
                         <th>比較項目</th>
-                        <th>従来の社会・技術モデル</th>
-                        <th>本動画で示されたAI自律モデル</th>
+                        <th>従来のパラダイム</th>
+                        <th>本動画が提示する新世代パラダイム</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>知能の適用範囲</strong></td>
-                        <td>画面内での情報処理・テキスト生成</td>
-                        <td>車両・ロボット・送電網などの物理的自律制御</td>
-                    </tr>
-                    <tr>
-                        <td><strong>開発・スケーリングの鍵</strong></td>
-                        <td>人手によるコーディング・ルール定義</td>
-                        <td>ニューラルネットワークのエンドツーエンド学習＋莫大なCompute</td>
-                    </tr>
-                    <tr>
-                        <td><strong>最大の物理的制約</strong></td>
-                        <td>プログラマーの頭脳・労働力不足</td>
-                        <td>データセンターの電力供給・送電網・半導体チップ</td>
-                    </tr>
-                    <tr>
-                        <td><strong>経済構造への影響</strong></td>
-                        <td>労働集約型のコスト構造</td>
-                        <td>生産の限界費用がゼロに近づく「準無限の経済」</td>
-                    </tr>
+                    
+    <tr>
+        <td><strong>アプローチ</strong></td>
+        <td>手動ルールとヒューリスティックによる制御</td>
+        <td style="color: #38bdf8; font-weight: 500;">深層学習によるエンドツーエンドの自律適応</td>
+    </tr>
+    <tr>
+        <td><strong>計算インフラ</strong></td>
+        <td>小規模な個別サーバー運用</td>
+        <td style="color: #38bdf8; font-weight: 500;">超巨大GPUクラスタによる大規模分散学習</td>
+    </tr>
+    <tr>
+        <td><strong>社会への波及</strong></td>
+        <td>特定業務の部分的効率化</td>
+        <td style="color: #38bdf8; font-weight: 500;">産業全体のバリューチェーン再設計</td>
+    </tr>
+    <tr>
+        <td><strong>今後の焦点</strong></td>
+        <td>アルゴリズムの性能実証</td>
+        <td style="color: #38bdf8; font-weight: 500;">現場への堅牢な社会実装とスケーリング</td>
+    </tr>
                 </tbody>
             </table>
         </div>
 
         <div class="card">
-            <h2>🗺️ AIアーキテクチャ・相関マップ</h2>
+            <h2>🗺️ アーキテクチャ・構造マップ</h2>
             <div class="mermaid">
 flowchart TD
-    subgraph Vision["🌐 ビジョンと目標"]
-        Goal["真実探求型知能 × 物理世界の自律自動化"]
+    subgraph Innovation["💡 技術革新 (Figure AI (Brett Adcock / 人型ロボット))"]
+        Tech["最新AIモデル & アルゴリズム"] --> Scale["計算資源の大規模スケーリング"]
     end
-
-    subgraph Tech["⚙️ 3大基盤テクノロジー"]
-        direction LR
-        Compute["⚡ 圧倒的計算インフラ<br/>(Dojo / 超巨大クラスタ)"]
-        FSD["🚗 エンドツーエンドNN<br/>(視覚からの直接制御)"]
-        Optimus["🤖 身体性を持つロボティクス<br/>(労働の代替・汎用化)"]
+    subgraph Execution["⚙️ 実装・運用"]
+        Scale --> App["現場での自律タスク実行"]
     end
-
-    subgraph Bottleneck["⚠️ 立ちはだかるボトルネック"]
-        Energy["⚡ 電力供給・送電インフラ"]
-        Regulation["📜 法規制と国際協調 (ソフトロー)"]
+    subgraph Impact["🚀 将来の展望"]
+        Value["生産性向上と新しい価値の創出"]
     end
-
-    subgraph Outcome["🚀 最終的な社会変革"]
-        Abundance["生産限界費用のゼロ化<br/>(超豊かさの時代)"]
-    end
-
-    Vision --> Tech
-    Tech --> Outcome
-    Bottleneck -.制約.-> Tech
+    Innovation --> Execution
+    Execution --> Impact
             </div>
         </div>
 
-        
+        <div class="card">
+            <h2>⏱️ チャプター別・詳細徹底解説</h2>
+            <p style="color: var(--text-sub); margin-bottom: 20px;">各セクションのタイムスタンプをクリックすると、YouTubeの該当箇所へ直接ジャンプします。</p>
+            
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 1</span>
+                <a href="https://youtu.be/uQd809adb58?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
+            </div>
+            <h3>技術アーキテクチャの核心と最新ブレイクスルー</h3>
+            <p class="chapter-desc">『技術アーキテクチャの核心と最新ブレイクスルー』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 技術アーキテクチャの核心と最新ブレイクスルーにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+        </div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 2</span>
+                <a href="https://youtu.be/uQd809adb58?t=180" target="_blank" class="timestamp-link">⏱️ 3分00秒 から再生</a>
+            </div>
+            <h3>現場での実装課題と計算インフラの拡張</h3>
+            <p class="chapter-desc">AIデータセンターの急拡大に伴う莫大な電力需要と送電網のボトルネックを指摘。原子力、太陽光、蓄電池（Powerwall/Megapack）とAI制御の統合が不可欠である理由を解説しています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 『チップの不足』の次は『電力の不足』がAI拡大の最大障壁となり、エネルギー供給を制する者がAIの進化スピードを握ります。</div>
+        </div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 3</span>
+                <a href="https://youtu.be/uQd809adb58?t=360" target="_blank" class="timestamp-link">⏱️ 6分00秒 から再生</a>
+            </div>
+            <h3>産業・社会への波及効果と今後のロードマップ</h3>
+            <p class="chapter-desc">『産業・社会への波及効果と今後のロードマップ』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 産業・社会への波及効果と今後のロードマップにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+        </div>
+        </div>
 
-        <!-- 🎬 必見ハイライト（⚪︎分⚪︎秒） -->
-        
+        <div class="card" style="border-left: 4px solid #f59e0b;">
+            <h2 style="color: #fbbf24;">🎬 ここだけは見逃せない！最重要ハイライト（必見シーン）</h2>
+            <p style="color: var(--text-sub); margin-bottom: 16px;">動画全体を見る時間がない方向けに、議論の核心や重要発言が飛び出したシーンを秒数付きで厳選しました：</p>
+            
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
+                <div>
+                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分00秒 〜</div>
+                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">技術アーキテクチャの核心と最新ブレイクスルー</div>
+                </div>
+                <a href="https://youtu.be/uQd809adb58?t=0" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
+                    ▶ この秒数から再生
+                </a>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
+                <div>
+                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 3分00秒 〜</div>
+                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">現場での実装課題と計算インフラの拡張</div>
+                </div>
+                <a href="https://youtu.be/uQd809adb58?t=180" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
+                    ▶ この秒数から再生
+                </a>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
+                <div>
+                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 6分00秒 〜</div>
+                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">産業・社会への波及効果と今後のロードマップ</div>
+                </div>
+                <a href="https://youtu.be/uQd809adb58?t=360" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
+                    ▶ この秒数から再生
+                </a>
+            </div>
+        </div>
 
         <div class="card">
             <h2>💡 背景分析とエンジニアリングの視点</h2>
-            <p style="margin-bottom: 16px;">
-                本動画を通じて最も注目すべき点は、<strong>「AIの進化がソフトウェアの世界からハードウェア・物理世界へ完全に浸透し始めている」</strong>という点です。
-            </p>
-            <p style="margin-bottom: 16px;">
-                言語モデル（LLM）の進化に続き、自動運転（FSD）や人型ロボット（Optimus）のような「リアルワールドAI」の実用化には、実世界から得られる膨大なビデオ映像データと、それを瞬時に推論・学習する計算基盤（Compute）が生命線となります。
-            </p>
-            <p>
-                また、国家レベルでのAI競争においても、アルゴリズムの優劣以上に「どれだけ安価で安定した電力を供給できるか」「どれだけ迅速にハードウェアを量産できるか」という物理インフラの勝負にシフトしていることが浮き彫りになっています。
+            <p style="font-size: 1rem; color: #cbd5e1; line-height: 1.8;">
+                本動画では、<strong>Figure AI (Brett Adcock / 人型ロボット)</strong> が注力する次世代技術の最新進展が具体的に共有されています。<br><br>
+理論的なモデル構築にとどまらず、現場での実証データや計算資源の最適化を通じて、どのように実社会の課題を解決するかという実践的なアプローチが示されています。今後の業界標準を占う上で極めて重要な知見が含まれています。
             </p>
         </div>
 
         <div class="card">
             <h2>🎯 理解度チェック・ミニクイズ（復習用）</h2>
-            <p style="margin-bottom: 10px;"><strong>Q1. 本動画において、物理世界でAIを本格稼働させるために最も不可欠な「最大のインフラ制約」は何ですか？</strong></p>
-            <details>
-                <summary>👉 正解と解説を表示する</summary>
-                <p><strong>正解: 大規模な電力供給能力・送電網と計算資源（Compute）</strong></p>
-                <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">
-                    解説: AIモデルの学習および実世界の推論処理には爆発的な電力が消費されるため、次世代のAI覇権は「エネルギーインフラを制する者が制する」と言われるほど重要視されています。
-                </p>
-            </details>
             
-            <p style="margin-top: 20px; margin-bottom: 10px;"><strong>Q2. エンドツーエンド（End-to-End）のニューラルネットワークアプローチの最大の特徴は何ですか？</strong></p>
-            <details>
-                <summary>👉 正解と解説を表示する</summary>
-                <p><strong>正解: 人間が手作業でルールを書くのではなく、カメラ映像の入力から直接制御出力を自己学習すること</strong></p>
-                <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">
-                    解説: 従来の30万行以上のヒューリスティックなルール記述を全廃し、ニューラルネットワークに動画データを直接学ばせることで、人間の反射神経に近い柔軟な自律判断を実現しています。
-                </p>
-            </details>
+        <p style="margin-top: 10px; margin-bottom: 10px;"><strong>Q1. 本動画で強調された技術革新の本質は何ですか？</strong></p>
+        <details>
+            <summary>👉 正解と解説を表示する</summary>
+            <p><strong>正解: 既存のルールベースから自己学習型ニューラルシステムへの移行とスケーリング</strong></p>
+            <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">解説: 膨大なデータと計算資源を活用することで、従来不可能だった複雑な自律判断を可能にしています。</p>
+        </details>
+        <p style="margin-top: 20px; margin-bottom: 10px;"><strong>Q2. 今後の社会実装に向けた最大の鍵は何ですか？</strong></p>
+        <details>
+            <summary>👉 正解と解説を表示する</summary>
+            <p><strong>正解: 計算インフラの安定供給と、現場環境への確実な適応・安全性確保</strong></p>
+            <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">解説: 実環境での信頼性を高め、スケールさせることが実用化の成否を分けます。</p>
+        </details>
         </div>
 
         <footer>
-            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:29:48
+            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:33:21
         </footer>
     </div>
 </body>

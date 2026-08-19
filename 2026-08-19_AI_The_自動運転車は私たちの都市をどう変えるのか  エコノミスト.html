@@ -82,9 +82,7 @@
             <h2>📌 エグゼクティブ・サマリー（本質の3点抽出）</h2>
             <div class="summary-box">
                 <ul>
-                    <li><strong>1. 技術革新とパラダイムシフト:</strong> The Economistが描く次世代AI・ロボティクス技術の最新進捗と、産業・都市構造への根本的変革。</li>
-                    <li><strong>2. 物理世界への自律化実装:</strong> 単なるチャットボットを超え、自動運転（FSD）や人型ロボット（Optimus）を通じた「原子（Atoms）の直接制御」への移行。</li>
-                    <li><strong>3. 経済的・社会的インパクト:</strong> 限界費用の極小化がもたらす「超豊かさの時代」と、直面するボトルネック（電力・インフラ・法規制・国際競争）。</li>
+                    <li><strong>1. 自動運転:</strong> 自動運転（Robotaxi）の普及に伴う自家用車所有率の激減と移動コストの90%削減</li><li><strong>2. 都市空間の30〜40%を占める駐車場や車線の撤廃と、緑地・居住区への大規模な再配分:</strong> 都市空間の30〜40%を占める駐車場や車線の撤廃と、緑地・居住区への大規模な再配分</li><li><strong>3. 年間130万人以上の交通事故死者を激減させる公衆衛生イノベーションと法的責任のシフト:</strong> 年間130万人以上の交通事故死者を激減させる公衆衛生イノベーションと法的責任のシフト</li>
                 </ul>
             </div>
             <a href="https://www.youtube.com/watch?v=7CNlGweeN90" target="_blank" class="btn" style="width: 100%;">▶️ YouTube公式動画を再生する</a>
@@ -103,233 +101,198 @@
         </div>
 
         <div class="card">
-            <h2>⚖️ 徹底対比：従来モデル vs 本動画が示す未来モデル</h2>
+            <h2>⚖️ 徹底対比：従来モデル vs 本動画が示す最新モデル</h2>
             <table class="comparison-table">
                 <thead>
                     <tr>
                         <th>比較項目</th>
-                        <th>従来の社会・技術モデル</th>
-                        <th>本動画で示されたAI自律モデル</th>
+                        <th>従来のパラダイム</th>
+                        <th>本動画が提示する新世代パラダイム</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>知能の適用範囲</strong></td>
-                        <td>画面内での情報処理・テキスト生成</td>
-                        <td>車両・ロボット・送電網などの物理的自律制御</td>
-                    </tr>
-                    <tr>
-                        <td><strong>開発・スケーリングの鍵</strong></td>
-                        <td>人手によるコーディング・ルール定義</td>
-                        <td>ニューラルネットワークのエンドツーエンド学習＋莫大なCompute</td>
-                    </tr>
-                    <tr>
-                        <td><strong>最大の物理的制約</strong></td>
-                        <td>プログラマーの頭脳・労働力不足</td>
-                        <td>データセンターの電力供給・送電網・半導体チップ</td>
-                    </tr>
-                    <tr>
-                        <td><strong>経済構造への影響</strong></td>
-                        <td>労働集約型のコスト構造</td>
-                        <td>生産の限界費用がゼロに近づく「準無限の経済」</td>
-                    </tr>
+                    
+    <tr>
+        <td><strong>移動の提供形態</strong></td>
+        <td>個人による車両の購入・所有（稼働率わずか4%）</td>
+        <td style="color: #38bdf8; font-weight: 500;">オンデマンドの自律走行フリート利用（24時間連続稼働）</td>
+    </tr>
+    <tr>
+        <td><strong>都市インフラの使われ方</strong></td>
+        <td>広大な駐車場、重層立体駐車場、多車線の道路</td>
+        <td style="color: #38bdf8; font-weight: 500;">歩行者優先空間、緑道、住宅・商業エリアへの再開発</td>
+    </tr>
+    <tr>
+        <td><strong>事故責任の所在</strong></td>
+        <td>運転手個人の過失責任・任意保険</td>
+        <td style="color: #38bdf8; font-weight: 500;">自動運転アルゴリズム・車両OEMの製造物責任</td>
+    </tr>
+    <tr>
+        <td><strong>産業の利益構造</strong></td>
+        <td>完成車の売り切りハードウェアビジネス</td>
+        <td style="color: #38bdf8; font-weight: 500;">走行距離あたりのソフトウェア課金・運行プラットフォーム</td>
+    </tr>
                 </tbody>
             </table>
         </div>
 
         <div class="card">
-            <h2>🗺️ AIアーキテクチャ・相関マップ</h2>
+            <h2>🗺️ アーキテクチャ・構造マップ</h2>
             <div class="mermaid">
 flowchart TD
-    subgraph Vision["🌐 ビジョンと目標"]
-        Goal["真実探求型知能 × 物理世界の自律自動化"]
+    subgraph Mobility["🚗 移動のパラダイムシフト"]
+        Ownership["自家用車の個人所有 (高コスト・低稼働)"] --> MaaS["自動運転フリート (オンデマンド・限界費用低下)"]
     end
-
-    subgraph Tech["⚙️ 3大基盤テクノロジー"]
-        direction LR
-        Compute["⚡ 圧倒的計算インフラ<br/>(Dojo / 超巨大クラスタ)"]
-        FSD["🚗 エンドツーエンドNN<br/>(視覚からの直接制御)"]
-        Optimus["🤖 身体性を持つロボティクス<br/>(労働の代替・汎用化)"]
+    subgraph Urban["🏙️ 都市空間の再設計"]
+        Parking["広大な駐車場・渋滞車線"] --> Green["歩行者緑道・住居・再開発スペース"]
     end
-
-    subgraph Bottleneck["⚠️ 立ちはだかるボトルネック"]
-        Energy["⚡ 電力供給・送電インフラ"]
-        Regulation["📜 法規制と国際協調 (ソフトロー)"]
+    subgraph Impact["🚀 社会的便益"]
+        Safety["交通事故死亡率 90%削減"]
+        Cost["個人の年間交通費 80%削減"]
     end
-
-    subgraph Outcome["🚀 最終的な社会変革"]
-        Abundance["生産限界費用のゼロ化<br/>(超豊かさの時代)"]
-    end
-
-    Vision --> Tech
-    Tech --> Outcome
-    Bottleneck -.制約.-> Tech
+    Mobility --> Urban
+    Urban --> Impact
             </div>
         </div>
 
-        
         <div class="card">
             <h2>⏱️ チャプター別・詳細徹底解説</h2>
             <p style="color: var(--text-sub); margin-bottom: 20px;">各セクションのタイムスタンプをクリックすると、YouTubeの該当箇所へ直接ジャンプします。</p>
             
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 1</span>
-                    <a href="https://youtu.be/7CNlGweeN90?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
-                </div>
-                <h3>将来も私たちは車を所有し続けるのか？</h3>
-                <p class="chapter-desc">「車を個人が所有する時代」から「移動をオンデマンドで利用する時代」への転換を議論。自家用車は1日のうち95%以上停車しているという極めて非効率な資産であり、自律型フリートの普及が個人の移動コストを大幅に引き下げるメカニズムを解説しています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 車両の『所有権』から『アクセス権』へのシフトにより、世帯の固定費が劇的に削減され、交通が水道や電気のような公共インフラに近づきます。</div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 1</span>
+                <a href="https://youtu.be/7CNlGweeN90?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
-            
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 2</span>
-                    <a href="https://youtu.be/7CNlGweeN90?t=44" target="_blank" class="timestamp-link">⏱️ 0分44秒 から再生</a>
-                </div>
-                <h3>製造業が衰退しない理由</h3>
-                <p class="chapter-desc">従来の完成車メーカーが直面するビジネスモデルの変革を分析。ハードウェアの製造マージンが低下する一方、自律走行AIソフトウェアやフリート運行プラットフォームを持つ企業へ利益プールが移動する構造的変化を指摘しています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 単なる鉄の箱を売るビジネスから、走行距離あたりのソフトウェア課金モデル（Robotaxiネットワーク）への主戦場シフトが起きています。</div>
-            </div>
-            
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 3</span>
-                    <a href="https://youtu.be/7CNlGweeN90?t=132" target="_blank" class="timestamp-link">⏱️ 2分12秒 から再生</a>
-                </div>
-                <h3>自動運転車が都市をどのように変えるか</h3>
-                <p class="chapter-desc">自動運転が都市空間に与える空間的インパクトを考察。都市の土地の30〜40%を占める駐車場や車線が不要になり、歩行者空間、緑地、住宅地へと大規模に再配分される未来像を提示しています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 交通渋滞の解消にとどまらず、都市の不動産価値の再編とヒューマンスケールな街づくりへの根本的な再設計が可能になります。</div>
-            </div>
-            
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 4</span>
-                    <a href="https://youtu.be/7CNlGweeN90?t=166" target="_blank" class="timestamp-link">⏱️ 2分46秒 から再生</a>
-                </div>
-                <h3>現実世界におけるAI</h3>
-                <p class="chapter-desc">自動運転が都市空間に与える空間的インパクトを考察。都市の土地の30〜40%を占める駐車場や車線が不要になり、歩行者空間、緑地、住宅地へと大規模に再配分される未来像を提示しています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 交通渋滞の解消にとどまらず、都市の不動産価値の再編とヒューマンスケールな街づくりへの根本的な再設計が可能になります。</div>
-            </div>
-            
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 5</span>
-                    <a href="https://youtu.be/7CNlGweeN90?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
-                </div>
-                <h3>製造業が衰退しない理由</h3>
-                <p class="chapter-desc">従来の完成車メーカーが直面するビジネスモデルの変革を分析。ハードウェアの製造マージンが低下する一方、自律走行AIソフトウェアやフリート運行プラットフォームを持つ企業へ利益プールが移動する構造的変化を指摘しています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 単なる鉄の箱を売るビジネスから、走行距離あたりのソフトウェア課金モデル（Robotaxiネットワーク）への主戦場シフトが起きています。</div>
-            </div>
-            
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 6</span>
-                    <a href="https://youtu.be/7CNlGweeN90?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
-                </div>
-                <h3>自動運転車が都市をどのように変えるか</h3>
-                <p class="chapter-desc">自動運転が都市空間に与える空間的インパクトを考察。都市の土地の30〜40%を占める駐車場や車線が不要になり、歩行者空間、緑地、住宅地へと大規模に再配分される未来像を提示しています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 交通渋滞の解消にとどまらず、都市の不動産価値の再編とヒューマンスケールな街づくりへの根本的な再設計が可能になります。</div>
-            </div>
-            
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 7</span>
-                    <a href="https://youtu.be/7CNlGweeN90?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
-                </div>
-                <h3>現実世界におけるAI</h3>
-                <p class="chapter-desc">自動運転が都市空間に与える空間的インパクトを考察。都市の土地の30〜40%を占める駐車場や車線が不要になり、歩行者空間、緑地、住宅地へと大規模に再配分される未来像を提示しています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 交通渋滞の解消にとどまらず、都市の不動産価値の再編とヒューマンスケールな街づくりへの根本的な再設計が可能になります。</div>
-            </div>
-            
+            <h3>将来も私たちは車を所有し続けるのか？</h3>
+            <p class="chapter-desc">「車を個人が所有する時代」から「移動をオンデマンドで利用する時代」への転換を議論。自家用車は1日のうち95%以上停車しているという極めて非効率な資産であり、自律型フリートの普及が個人の移動コストを大幅に引き下げるメカニズムを解説しています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 車両の『所有権』から『アクセス権』へのシフトにより、世帯の固定費が劇的に削減され、交通が水道や電気のような公共インフラに近づきます。</div>
         </div>
-        
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 2</span>
+                <a href="https://youtu.be/7CNlGweeN90?t=44" target="_blank" class="timestamp-link">⏱️ 0分44秒 から再生</a>
+            </div>
+            <h3>製造業が衰退しない理由</h3>
+            <p class="chapter-desc">従来の完成車メーカーが直面するビジネスモデルの変革を分析。ハードウェアの製造マージンが低下する一方、自律走行AIソフトウェアやフリート運行プラットフォームを持つ企業へ利益プールが移動する構造的変化を指摘しています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 単なる鉄の箱を売るビジネスから、走行距離あたりのソフトウェア課金モデル（Robotaxiネットワーク）への主戦場シフトが起きています。</div>
+        </div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 3</span>
+                <a href="https://youtu.be/7CNlGweeN90?t=132" target="_blank" class="timestamp-link">⏱️ 2分12秒 から再生</a>
+            </div>
+            <h3>自動運転車が都市をどのように変えるか</h3>
+            <p class="chapter-desc">自動運転が都市空間に与える空間的インパクトを考察。都市の土地の30〜40%を占める駐車場や車線が不要になり、歩行者空間、緑地、住宅地へと大規模に再配分される未来像を提示しています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 交通渋滞の解消にとどまらず、都市の不動産価値の再編とヒューマンスケールな街づくりへの根本的な再設計が可能になります。</div>
+        </div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 4</span>
+                <a href="https://youtu.be/7CNlGweeN90?t=166" target="_blank" class="timestamp-link">⏱️ 2分46秒 から再生</a>
+            </div>
+            <h3>現実世界におけるAI</h3>
+            <p class="chapter-desc">自動運転が都市空間に与える空間的インパクトを考察。都市の土地の30〜40%を占める駐車場や車線が不要になり、歩行者空間、緑地、住宅地へと大規模に再配分される未来像を提示しています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 交通渋滞の解消にとどまらず、都市の不動産価値の再編とヒューマンスケールな街づくりへの根本的な再設計が可能になります。</div>
+        </div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 5</span>
+                <a href="https://youtu.be/7CNlGweeN90?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
+            </div>
+            <h3>製造業が衰退しない理由</h3>
+            <p class="chapter-desc">従来の完成車メーカーが直面するビジネスモデルの変革を分析。ハードウェアの製造マージンが低下する一方、自律走行AIソフトウェアやフリート運行プラットフォームを持つ企業へ利益プールが移動する構造的変化を指摘しています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 単なる鉄の箱を売るビジネスから、走行距離あたりのソフトウェア課金モデル（Robotaxiネットワーク）への主戦場シフトが起きています。</div>
+        </div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 6</span>
+                <a href="https://youtu.be/7CNlGweeN90?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
+            </div>
+            <h3>自動運転車が都市をどのように変えるか</h3>
+            <p class="chapter-desc">自動運転が都市空間に与える空間的インパクトを考察。都市の土地の30〜40%を占める駐車場や車線が不要になり、歩行者空間、緑地、住宅地へと大規模に再配分される未来像を提示しています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 交通渋滞の解消にとどまらず、都市の不動産価値の再編とヒューマンスケールな街づくりへの根本的な再設計が可能になります。</div>
+        </div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 7</span>
+                <a href="https://youtu.be/7CNlGweeN90?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
+            </div>
+            <h3>現実世界におけるAI</h3>
+            <p class="chapter-desc">自動運転が都市空間に与える空間的インパクトを考察。都市の土地の30〜40%を占める駐車場や車線が不要になり、歩行者空間、緑地、住宅地へと大規模に再配分される未来像を提示しています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 交通渋滞の解消にとどまらず、都市の不動産価値の再編とヒューマンスケールな街づくりへの根本的な再設計が可能になります。</div>
+        </div>
+        </div>
 
-        <!-- 🎬 必見ハイライト（⚪︎分⚪︎秒） -->
-        
         <div class="card" style="border-left: 4px solid #f59e0b;">
             <h2 style="color: #fbbf24;">🎬 ここだけは見逃せない！最重要ハイライト（必見シーン）</h2>
             <p style="color: var(--text-sub); margin-bottom: 16px;">動画全体を見る時間がない方向けに、議論の核心や重要発言が飛び出したシーンを秒数付きで厳選しました：</p>
             
-                <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                    <div>
-                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分00秒 〜</div>
-                        <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">将来も私たちは車を所有し続けるのか？</div>
-                    </div>
-                    <a href="https://youtu.be/7CNlGweeN90?t=0" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                        ▶ この秒数から再生
-                    </a>
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
+                <div>
+                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分00秒 〜</div>
+                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">将来も私たちは車を所有し続けるのか？</div>
                 </div>
-                
-                <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                    <div>
-                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分44秒 〜</div>
-                        <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">製造業が衰退しない理由</div>
-                    </div>
-                    <a href="https://youtu.be/7CNlGweeN90?t=44" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                        ▶ この秒数から再生
-                    </a>
+                <a href="https://youtu.be/7CNlGweeN90?t=0" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
+                    ▶ この秒数から再生
+                </a>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
+                <div>
+                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分44秒 〜</div>
+                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">製造業が衰退しない理由</div>
                 </div>
-                
-                <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                    <div>
-                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 2分12秒 〜</div>
-                        <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">自動運転車が都市をどのように変えるか</div>
-                    </div>
-                    <a href="https://youtu.be/7CNlGweeN90?t=132" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                        ▶ この秒数から再生
-                    </a>
+                <a href="https://youtu.be/7CNlGweeN90?t=44" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
+                    ▶ この秒数から再生
+                </a>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
+                <div>
+                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 2分12秒 〜</div>
+                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">自動運転車が都市をどのように変えるか</div>
                 </div>
-                
-                <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                    <div>
-                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 2分46秒 〜</div>
-                        <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">現実世界におけるAI</div>
-                    </div>
-                    <a href="https://youtu.be/7CNlGweeN90?t=166" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                        ▶ この秒数から再生
-                    </a>
+                <a href="https://youtu.be/7CNlGweeN90?t=132" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
+                    ▶ この秒数から再生
+                </a>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
+                <div>
+                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 2分46秒 〜</div>
+                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">現実世界におけるAI</div>
                 </div>
-                
+                <a href="https://youtu.be/7CNlGweeN90?t=166" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
+                    ▶ この秒数から再生
+                </a>
+            </div>
         </div>
-        
 
         <div class="card">
             <h2>💡 背景分析とエンジニアリングの視点</h2>
-            <p style="margin-bottom: 16px;">
-                本動画を通じて最も注目すべき点は、<strong>「AIの進化がソフトウェアの世界からハードウェア・物理世界へ完全に浸透し始めている」</strong>という点です。
-            </p>
-            <p style="margin-bottom: 16px;">
-                言語モデル（LLM）の進化に続き、自動運転（FSD）や人型ロボット（Optimus）のような「リアルワールドAI」の実用化には、実世界から得られる膨大なビデオ映像データと、それを瞬時に推論・学習する計算基盤（Compute）が生命線となります。
-            </p>
-            <p>
-                また、国家レベルでのAI競争においても、アルゴリズムの優劣以上に「どれだけ安価で安定した電力を供給できるか」「どれだけ迅速にハードウェアを量産できるか」という物理インフラの勝負にシフトしていることが浮き彫りになっています。
+            <p style="font-size: 1rem; color: #cbd5e1; line-height: 1.8;">
+                本動画は、自動運転技術（Autonomous Vehicles）が単なる「ドライバーの省力化」にとどまらず、100年以上続いた「自動車社会と都市構造の前提」を根本から再定義することを示しています。<br><br>
+自家用車は1日のうち95%以上停車している極めて非効率な資本資産です。ロボタクシーによる移動のサービス化（MaaS）が実現すると、駐車場需要が激減し、都市中心部の不動産価値や生活導線が劇的に変化します。また、年間130万人を超える世界の交通事故死者の大半がヒューマンエラーであるため、自律走行は今世紀最大の公衆衛生改革とも言えます。
             </p>
         </div>
 
         <div class="card">
             <h2>🎯 理解度チェック・ミニクイズ（復習用）</h2>
-            <p style="margin-bottom: 10px;"><strong>Q1. 本動画において、物理世界でAIを本格稼働させるために最も不可欠な「最大のインフラ制約」は何ですか？</strong></p>
-            <details>
-                <summary>👉 正解と解説を表示する</summary>
-                <p><strong>正解: 大規模な電力供給能力・送電網と計算資源（Compute）</strong></p>
-                <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">
-                    解説: AIモデルの学習および実世界の推論処理には爆発的な電力が消費されるため、次世代のAI覇権は「エネルギーインフラを制する者が制する」と言われるほど重要視されています。
-                </p>
-            </details>
             
-            <p style="margin-top: 20px; margin-bottom: 10px;"><strong>Q2. エンドツーエンド（End-to-End）のニューラルネットワークアプローチの最大の特徴は何ですか？</strong></p>
-            <details>
-                <summary>👉 正解と解説を表示する</summary>
-                <p><strong>正解: 人間が手作業でルールを書くのではなく、カメラ映像の入力から直接制御出力を自己学習すること</strong></p>
-                <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">
-                    解説: 従来の30万行以上のヒューリスティックなルール記述を全廃し、ニューラルネットワークに動画データを直接学ばせることで、人間の反射神経に近い柔軟な自律判断を実現しています。
-                </p>
-            </details>
+        <p style="margin-top: 10px; margin-bottom: 10px;"><strong>Q1. 自動運転の普及によって都市空間に起こる最大の構造変化は何ですか？</strong></p>
+        <details>
+            <summary>👉 正解と解説を表示する</summary>
+            <p><strong>正解: 駐車場や車線スペースが不要になり、緑地や居住区へと大規模に再開発されること</strong></p>
+            <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">解説: 自家用車の所有が減りフリートが常時稼働するため、都市面積の30〜40%を占める駐車場需要が激減します。</p>
+        </details>
+        <p style="margin-top: 20px; margin-bottom: 10px;"><strong>Q2. 事故発生時の法的責任の所在はどのように変化すると議論されていますか？</strong></p>
+        <details>
+            <summary>👉 正解と解説を表示する</summary>
+            <p><strong>正解: 運転手個人の過失責任から、自律システムや車両メーカーの製造物責任へ移行する</strong></p>
+            <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">解説: 人間が運転から完全に手を引くため、保険や責任の主体がソフトウェア開発元へとシフトします。</p>
+        </details>
         </div>
 
         <footer>
-            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:29:54
+            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:33:27
         </footer>
     </div>
 </body>

@@ -74,7 +74,7 @@
             <h1>OpenAI SpecVideo AgentPlugin v08 HD</h1>
             <div class="meta-info">
                 <span>📅 収録/公開日: 2026年08月19日</span>
-                <div>検出キーワード: <span class="badge">AI</span></div>
+                <div>検出キーワード: <span class="badge">AI</span><span class="badge">AGENT</span></div>
             </div>
         </header>
 
@@ -82,9 +82,7 @@
             <h2>📌 エグゼクティブ・サマリー（本質の3点抽出）</h2>
             <div class="summary-box">
                 <ul>
-                    <li><strong>1. 技術革新とパラダイムシフト:</strong> OpenAI (Sam Altman)が描く次世代AI・ロボティクス技術の最新進捗と、産業・都市構造への根本的変革。</li>
-                    <li><strong>2. 物理世界への自律化実装:</strong> 単なるチャットボットを超え、自動運転（FSD）や人型ロボット（Optimus）を通じた「原子（Atoms）の直接制御」への移行。</li>
-                    <li><strong>3. 経済的・社会的インパクト:</strong> 限界費用の極小化がもたらす「超豊かさの時代」と、直面するボトルネック（電力・インフラ・法規制・国際競争）。</li>
+                    <li><strong>1. OpenAIが目指す「自律型AIエージェント:</strong> OpenAIが目指す「自律型AIエージェント（Agent）」とプラグインエコシステムの本格展開</li><li><strong>2. 単なるテキスト応答を超え、APIやツールを自在に操作して複雑なタスクを完遂する自律性:</strong> 単なるテキスト応答を超え、APIやツールを自在に操作して複雑なタスクを完遂する自律性</li><li><strong>3. フロンティアモデルの推論能力向上と、開発者コミュニティへのSDK/ツールキットの提供:</strong> フロンティアモデルの推論能力向上と、開発者コミュニティへのSDK/ツールキットの提供</li>
                 </ul>
             </div>
             <a href="https://www.youtube.com/watch?v=UaeWJK_vv-Y" target="_blank" class="btn" style="width: 100%;">▶️ YouTube公式動画を再生する</a>
@@ -103,253 +101,215 @@
         </div>
 
         <div class="card">
-            <h2>⚖️ 徹底対比：従来モデル vs 本動画が示す未来モデル</h2>
+            <h2>⚖️ 徹底対比：従来モデル vs 本動画が示す最新モデル</h2>
             <table class="comparison-table">
                 <thead>
                     <tr>
                         <th>比較項目</th>
-                        <th>従来の社会・技術モデル</th>
-                        <th>本動画で示されたAI自律モデル</th>
+                        <th>従来のパラダイム</th>
+                        <th>本動画が提示する新世代パラダイム</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>知能の適用範囲</strong></td>
-                        <td>画面内での情報処理・テキスト生成</td>
-                        <td>車両・ロボット・送電網などの物理的自律制御</td>
-                    </tr>
-                    <tr>
-                        <td><strong>開発・スケーリングの鍵</strong></td>
-                        <td>人手によるコーディング・ルール定義</td>
-                        <td>ニューラルネットワークのエンドツーエンド学習＋莫大なCompute</td>
-                    </tr>
-                    <tr>
-                        <td><strong>最大の物理的制約</strong></td>
-                        <td>プログラマーの頭脳・労働力不足</td>
-                        <td>データセンターの電力供給・送電網・半導体チップ</td>
-                    </tr>
-                    <tr>
-                        <td><strong>経済構造への影響</strong></td>
-                        <td>労働集約型のコスト構造</td>
-                        <td>生産の限界費用がゼロに近づく「準無限の経済」</td>
-                    </tr>
+                    
+    <tr>
+        <td><strong>AIの役割</strong></td>
+        <td>質問に対してテキストで答える対話チャットボット</td>
+        <td style="color: #38bdf8; font-weight: 500;">ユーザーの指示を受けて外部ツールやPCを自律操作するエージェント</td>
+    </tr>
+    <tr>
+        <td><strong>実行能力</strong></td>
+        <td>知識の検索・要約・文章生成に限定</td>
+        <td style="color: #38bdf8; font-weight: 500;">コードの記述・テスト・デプロイ・API連携の全自動実行</td>
+    </tr>
+    <tr>
+        <td><strong>システム連携</strong></td>
+        <td>単独のWebインターフェース</td>
+        <td style="color: #38bdf8; font-weight: 500;">プラグインやSDKを通じたあらゆる業務システムとの直接統合</td>
+    </tr>
+    <tr>
+        <td><strong>進化の方向性</strong></td>
+        <td>パラメータ数の単純拡大</td>
+        <td style="color: #38bdf8; font-weight: 500;">推論時計算量（Reasoning Compute）とツール利用能力の最適化</td>
+    </tr>
                 </tbody>
             </table>
         </div>
 
         <div class="card">
-            <h2>🗺️ AIアーキテクチャ・相関マップ</h2>
+            <h2>🗺️ アーキテクチャ・構造マップ</h2>
             <div class="mermaid">
 flowchart TD
-    subgraph Vision["🌐 ビジョンと目標"]
-        Goal["真実探求型知能 × 物理世界の自律自動化"]
+    subgraph Core["🧠 フロンティア知能"]
+        Model["高度推論モデル (GPT / o-series)"]
     end
-
-    subgraph Tech["⚙️ 3大基盤テクノロジー"]
-        direction LR
-        Compute["⚡ 圧倒的計算インフラ<br/>(Dojo / 超巨大クラスタ)"]
-        FSD["🚗 エンドツーエンドNN<br/>(視覚からの直接制御)"]
-        Optimus["🤖 身体性を持つロボティクス<br/>(労働の代替・汎用化)"]
+    subgraph Agent["⚙️ 自律エージェント層"]
+        Plugin["Agent Plugin / SDK"] --> ToolUse["外部API & 開発ツールの直接操作"]
     end
-
-    subgraph Bottleneck["⚠️ 立ちはだかるボトルネック"]
-        Energy["⚡ 電力供給・送電インフラ"]
-        Regulation["📜 法規制と国際協調 (ソフトロー)"]
+    subgraph Value["🚀 ユーザー価値"]
+        Execution["タスクの完全自律完遂<br/>(コード作成・分析・運用)"]
     end
-
-    subgraph Outcome["🚀 最終的な社会変革"]
-        Abundance["生産限界費用のゼロ化<br/>(超豊かさの時代)"]
-    end
-
-    Vision --> Tech
-    Tech --> Outcome
-    Bottleneck -.制約.-> Tech
+    Core --> Agent
+    Agent --> Value
             </div>
         </div>
 
-        
         <div class="card">
             <h2>⏱️ チャプター別・詳細徹底解説</h2>
             <p style="color: var(--text-sub); margin-bottom: 20px;">各セクションのタイムスタンプをクリックすると、YouTubeの該当箇所へ直接ジャンプします。</p>
             
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 1</span>
-                    <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
-                </div>
-                <h3>エージェントパッケージに標準が必要な理由</h3>
-                <p class="chapter-desc">『エージェントパッケージに標準が必要な理由』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> エージェントパッケージに標準が必要な理由における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 1</span>
+                <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
             </div>
-            
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 2</span>
-                    <a href="https://youtu.be/UaeWJK_vv-Y?t=20" target="_blank" class="timestamp-link">⏱️ 0分20秒 から再生</a>
-                </div>
-                <h3>Agent Pluginsの概要</h3>
-                <p class="chapter-desc">『Agent Pluginsの概要』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Agent Pluginsの概要における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
-            </div>
-            
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 3</span>
-                    <a href="https://youtu.be/UaeWJK_vv-Y?t=39" target="_blank" class="timestamp-link">⏱️ 0分39秒 から再生</a>
-                </div>
-                <h3>パッケージ構造、スキル、MCPサーバー</h3>
-                <p class="chapter-desc">『パッケージ構造、スキル、MCPサーバー』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> パッケージ構造、スキル、MCPサーバーにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
-            </div>
-            
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 4</span>
-                    <a href="https://youtu.be/UaeWJK_vv-Y?t=63" target="_blank" class="timestamp-link">⏱️ 1分03秒 から再生</a>
-                </div>
-                <h3>製品間での移植性</h3>
-                <p class="chapter-desc">『製品間での移植性』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 製品間での移植性における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
-            </div>
-            
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 5</span>
-                    <a href="https://youtu.be/UaeWJK_vv-Y?t=79" target="_blank" class="timestamp-link">⏱️ 1分19秒 から再生</a>
-                </div>
-                <h3>スコープと利用開始方法</h3>
-                <p class="chapter-desc">事故発生時の法的責任と保険の仕組みの移行を解説。個人の過失責任から、車両・ソフトウェアメーカーの製造物責任への移転に伴う法整備と社会的合意形成の課題を掘り下げています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 『誰が責任を負うのか』という法的枠組みの明確化と、規制当局による安全基準の標準化が社会実装の最終的な鍵となります。</div>
-            </div>
-            
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 6</span>
-                    <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
-                </div>
-                <h3>Agent Pluginsの概要</h3>
-                <p class="chapter-desc">『Agent Pluginsの概要』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Agent Pluginsの概要における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
-            </div>
-            
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 7</span>
-                    <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
-                </div>
-                <h3>パッケージ構造、スキル、MCPサーバー</h3>
-                <p class="chapter-desc">『パッケージ構造、スキル、MCPサーバー』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> パッケージ構造、スキル、MCPサーバーにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
-            </div>
-            
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 8</span>
-                    <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
-                </div>
-                <h3>製品間での移植性</h3>
-                <p class="chapter-desc">『製品間での移植性』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 製品間での移植性における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
-            </div>
-            
-            <div class="chapter-block">
-                <div class="chapter-header">
-                    <span class="chapter-badge">セクション 9</span>
-                    <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
-                </div>
-                <h3>スコープと利用開始方法</h3>
-                <p class="chapter-desc">事故発生時の法的責任と保険の仕組みの移行を解説。個人の過失責任から、車両・ソフトウェアメーカーの製造物責任への移転に伴う法整備と社会的合意形成の課題を掘り下げています。</p>
-                <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 『誰が責任を負うのか』という法的枠組みの明確化と、規制当局による安全基準の標準化が社会実装の最終的な鍵となります。</div>
-            </div>
-            
+            <h3>エージェントパッケージに標準が必要な理由</h3>
+            <p class="chapter-desc">『エージェントパッケージに標準が必要な理由』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> エージェントパッケージに標準が必要な理由における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
         </div>
-        
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 2</span>
+                <a href="https://youtu.be/UaeWJK_vv-Y?t=20" target="_blank" class="timestamp-link">⏱️ 0分20秒 から再生</a>
+            </div>
+            <h3>Agent Pluginsの概要</h3>
+            <p class="chapter-desc">『Agent Pluginsの概要』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Agent Pluginsの概要における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+        </div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 3</span>
+                <a href="https://youtu.be/UaeWJK_vv-Y?t=39" target="_blank" class="timestamp-link">⏱️ 0分39秒 から再生</a>
+            </div>
+            <h3>パッケージ構造、スキル、MCPサーバー</h3>
+            <p class="chapter-desc">『パッケージ構造、スキル、MCPサーバー』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> パッケージ構造、スキル、MCPサーバーにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+        </div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 4</span>
+                <a href="https://youtu.be/UaeWJK_vv-Y?t=63" target="_blank" class="timestamp-link">⏱️ 1分03秒 から再生</a>
+            </div>
+            <h3>製品間での移植性</h3>
+            <p class="chapter-desc">『製品間での移植性』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 製品間での移植性における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+        </div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 5</span>
+                <a href="https://youtu.be/UaeWJK_vv-Y?t=79" target="_blank" class="timestamp-link">⏱️ 1分19秒 から再生</a>
+            </div>
+            <h3>スコープと利用開始方法</h3>
+            <p class="chapter-desc">事故発生時の法的責任と保険の仕組みの移行を解説。個人の過失責任から、車両・ソフトウェアメーカーの製造物責任への移転に伴う法整備と社会的合意形成の課題を掘り下げています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 『誰が責任を負うのか』という法的枠組みの明確化と、規制当局による安全基準の標準化が社会実装の最終的な鍵となります。</div>
+        </div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 6</span>
+                <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
+            </div>
+            <h3>Agent Pluginsの概要</h3>
+            <p class="chapter-desc">『Agent Pluginsの概要』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> Agent Pluginsの概要における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+        </div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 7</span>
+                <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
+            </div>
+            <h3>パッケージ構造、スキル、MCPサーバー</h3>
+            <p class="chapter-desc">『パッケージ構造、スキル、MCPサーバー』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> パッケージ構造、スキル、MCPサーバーにおける課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+        </div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 8</span>
+                <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
+            </div>
+            <h3>製品間での移植性</h3>
+            <p class="chapter-desc">『製品間での移植性』に焦点を当て、関連する技術仕様、現場での課題、そして市場への影響を具体的に解説。既存の常識を覆す新しいアプローチと実践的なデータが提示されています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 製品間での移植性における課題を解決することで、システム全体の自律性と効率性が次の次元へとスケールします。</div>
+        </div>
+        <div class="chapter-block">
+            <div class="chapter-header">
+                <span class="chapter-badge">セクション 9</span>
+                <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
+            </div>
+            <h3>スコープと利用開始方法</h3>
+            <p class="chapter-desc">事故発生時の法的責任と保険の仕組みの移行を解説。個人の過失責任から、車両・ソフトウェアメーカーの製造物責任への移転に伴う法整備と社会的合意形成の課題を掘り下げています。</p>
+            <div class="key-point-box">💡 <strong>ここでの核心ポイント:</strong> 『誰が責任を負うのか』という法的枠組みの明確化と、規制当局による安全基準の標準化が社会実装の最終的な鍵となります。</div>
+        </div>
+        </div>
 
-        <!-- 🎬 必見ハイライト（⚪︎分⚪︎秒） -->
-        
         <div class="card" style="border-left: 4px solid #f59e0b;">
             <h2 style="color: #fbbf24;">🎬 ここだけは見逃せない！最重要ハイライト（必見シーン）</h2>
             <p style="color: var(--text-sub); margin-bottom: 16px;">動画全体を見る時間がない方向けに、議論の核心や重要発言が飛び出したシーンを秒数付きで厳選しました：</p>
             
-                <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                    <div>
-                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分00秒 〜</div>
-                        <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">エージェントパッケージに標準が必要な理由</div>
-                    </div>
-                    <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                        ▶ この秒数から再生
-                    </a>
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
+                <div>
+                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分00秒 〜</div>
+                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">エージェントパッケージに標準が必要な理由</div>
                 </div>
-                
-                <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                    <div>
-                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分20秒 〜</div>
-                        <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">Agent Pluginsの概要</div>
-                    </div>
-                    <a href="https://youtu.be/UaeWJK_vv-Y?t=20" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                        ▶ この秒数から再生
-                    </a>
+                <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
+                    ▶ この秒数から再生
+                </a>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
+                <div>
+                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分20秒 〜</div>
+                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">Agent Pluginsの概要</div>
                 </div>
-                
-                <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                    <div>
-                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分39秒 〜</div>
-                        <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">パッケージ構造、スキル、MCPサーバー</div>
-                    </div>
-                    <a href="https://youtu.be/UaeWJK_vv-Y?t=39" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                        ▶ この秒数から再生
-                    </a>
+                <a href="https://youtu.be/UaeWJK_vv-Y?t=20" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
+                    ▶ この秒数から再生
+                </a>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
+                <div>
+                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分39秒 〜</div>
+                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">パッケージ構造、スキル、MCPサーバー</div>
                 </div>
-                
-                <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                    <div>
-                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 1分03秒 〜</div>
-                        <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">製品間での移植性</div>
-                    </div>
-                    <a href="https://youtu.be/UaeWJK_vv-Y?t=63" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                        ▶ この秒数から再生
-                    </a>
+                <a href="https://youtu.be/UaeWJK_vv-Y?t=39" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
+                    ▶ この秒数から再生
+                </a>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
+                <div>
+                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 1分03秒 〜</div>
+                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">製品間での移植性</div>
                 </div>
-                
+                <a href="https://youtu.be/UaeWJK_vv-Y?t=63" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
+                    ▶ この秒数から再生
+                </a>
+            </div>
         </div>
-        
 
         <div class="card">
             <h2>💡 背景分析とエンジニアリングの視点</h2>
-            <p style="margin-bottom: 16px;">
-                本動画を通じて最も注目すべき点は、<strong>「AIの進化がソフトウェアの世界からハードウェア・物理世界へ完全に浸透し始めている」</strong>という点です。
-            </p>
-            <p style="margin-bottom: 16px;">
-                言語モデル（LLM）の進化に続き、自動運転（FSD）や人型ロボット（Optimus）のような「リアルワールドAI」の実用化には、実世界から得られる膨大なビデオ映像データと、それを瞬時に推論・学習する計算基盤（Compute）が生命線となります。
-            </p>
-            <p>
-                また、国家レベルでのAI競争においても、アルゴリズムの優劣以上に「どれだけ安価で安定した電力を供給できるか」「どれだけ迅速にハードウェアを量産できるか」という物理インフラの勝負にシフトしていることが浮き彫りになっています。
+            <p style="font-size: 1rem; color: #cbd5e1; line-height: 1.8;">
+                OpenAIの最新アップデートが示す最大の潮流は、「チャットボットから自律型エージェントへの進化」です。<br><br>
+これまでのAIはユーザーの質問に文章で答える受動的な存在でしたが、AgentPluginやエージェントSDKの導入により、AI自身が計画を立て、必要なAPIを呼び出し、エラーがあれば自己修復しながら複数ステップのタスクを完了できるようになります。これにより、ソフトウェアエンジニアリングやオフィス業務の自動化が異次元の段階へと進みます。
             </p>
         </div>
 
         <div class="card">
             <h2>🎯 理解度チェック・ミニクイズ（復習用）</h2>
-            <p style="margin-bottom: 10px;"><strong>Q1. 本動画において、物理世界でAIを本格稼働させるために最も不可欠な「最大のインフラ制約」は何ですか？</strong></p>
-            <details>
-                <summary>👉 正解と解説を表示する</summary>
-                <p><strong>正解: 大規模な電力供給能力・送電網と計算資源（Compute）</strong></p>
-                <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">
-                    解説: AIモデルの学習および実世界の推論処理には爆発的な電力が消費されるため、次世代のAI覇権は「エネルギーインフラを制する者が制する」と言われるほど重要視されています。
-                </p>
-            </details>
             
-            <p style="margin-top: 20px; margin-bottom: 10px;"><strong>Q2. エンドツーエンド（End-to-End）のニューラルネットワークアプローチの最大の特徴は何ですか？</strong></p>
-            <details>
-                <summary>👉 正解と解説を表示する</summary>
-                <p><strong>正解: 人間が手作業でルールを書くのではなく、カメラ映像の入力から直接制御出力を自己学習すること</strong></p>
-                <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">
-                    解説: 従来の30万行以上のヒューリスティックなルール記述を全廃し、ニューラルネットワークに動画データを直接学ばせることで、人間の反射神経に近い柔軟な自律判断を実現しています。
-                </p>
-            </details>
+        <p style="margin-top: 10px; margin-bottom: 10px;"><strong>Q1. 自律型AIエージェント（Agent）と従来のチャットボットの決定的な違いは何ですか？</strong></p>
+        <details>
+            <summary>👉 正解と解説を表示する</summary>
+            <p><strong>正解: 単に答えるだけでなく、外部ツールやAPIを操作して一連のタスクを自律的にやり切る点</strong></p>
+            <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">解説: 計画策定・ツール実行・自己検証をループで行い、目的を達成する自律性がエージェントの本質です。</p>
+        </details>
+        <p style="margin-top: 20px; margin-bottom: 10px;"><strong>Q2. エージェント機能の普及によって最も恩恵を受ける領域はどこですか？</strong></p>
+        <details>
+            <summary>👉 正解と解説を表示する</summary>
+            <p><strong>正解: ソフトウェア開発・データ分析・定型的な業務プロセスの全自動化</strong></p>
+            <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">解説: 人間が手作業で行っていた複数のツールをまたぐ複雑なオペレーションがワンコマンドで完結します。</p>
+        </details>
         </div>
 
         <footer>
-            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:29:22
+            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-19 15:32:55
         </footer>
     </div>
 </body>

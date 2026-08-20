@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📚 AI Video Intelligence ポータル＆対話AI</title>
+    <title>📚 AI Video Intelligence ポータル＆メガトレンド</title>
     <style>
         :root {
             --bg-color: #0b0f19;
@@ -11,6 +11,7 @@
             --text-main: #f8fafc;
             --text-sub: #94a3b8;
             --accent-color: #38bdf8;
+            --accent-orange: #fb923c;
             --border-color: #334155;
             --ai-bg: #131d31;
             --success-color: #4ade80;
@@ -24,34 +25,104 @@
             line-height: 1.6;
         }
         .container { max-width: 1100px; margin: 0 auto; }
-        header { text-align: center; margin-bottom: 35px; }
+        header { text-align: center; margin-bottom: 30px; }
         h1 { font-size: 2.3rem; margin-bottom: 10px; background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .subtitle { color: var(--text-sub); font-size: 1.05rem; }
+
+        .audio-player-card {
+            background: linear-gradient(135deg, #1e1b4b, #0f172a);
+            border: 2px solid #6366f1;
+            border-radius: 18px;
+            padding: 24px 28px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.25);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .audio-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+        .audio-title-wrap { display: flex; align-items: center; gap: 12px; }
+        .audio-icon { font-size: 2rem; background: rgba(99, 102, 241, 0.2); padding: 6px 12px; border-radius: 12px; }
+        .audio-title { font-size: 1.25rem; font-weight: bold; color: #ffffff; }
+        .audio-desc { font-size: 0.85rem; color: #a5b4fc; }
+        .audio-controls-row { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+        .play-audio-btn {
+            background: #6366f1; color: #ffffff; font-weight: bold; padding: 12px 24px;
+            border-radius: 12px; border: none; cursor: pointer; font-size: 1rem; display: flex; align-items: center; gap: 8px; transition: all 0.2s;
+        }
+        .play-audio-btn:hover { background: #4f46e5; transform: scale(1.03); }
+        .speed-btn-group { display: flex; gap: 6px; }
+        .speed-btn {
+            background: rgba(255,255,255,0.08); color: #cbd5e1; border: 1px solid #475569;
+            padding: 6px 12px; border-radius: 8px; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;
+        }
+        .speed-btn.active { background: #6366f1; color: #ffffff; border-color: #6366f1; font-weight: bold; }
+        .audio-script-toggle {
+            background: transparent; color: #94a3b8; border: none; font-size: 0.85rem; cursor: pointer; text-decoration: underline; margin-left: auto;
+        }
+        .audio-script-box {
+            background: rgba(15, 23, 42, 0.8); border: 1px solid #334155; border-radius: 12px; padding: 16px; font-size: 0.95rem; line-height: 1.8; color: #e2e8f0; display: none; margin-top: 5px;
+        }
+
+        .macro-trend-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border: 1px solid var(--accent-orange);
+            border-radius: 18px;
+            padding: 26px 30px;
+            margin-bottom: 35px;
+            box-shadow: 0 10px 25px -5px rgba(251, 146, 60, 0.15);
+        }
+        .macro-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 1px solid rgba(251, 146, 60, 0.2); padding-bottom: 12px; }
+        .macro-title { font-size: 1.35rem; font-weight: bold; color: #ffffff; display: flex; align-items: center; gap: 10px; }
+        .macro-date-badge { background: rgba(251, 146, 60, 0.15); color: var(--accent-orange); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        .trend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; }
+        .trend-item {
+            background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 18px; border-top: 3px solid var(--accent-orange);
+        }
+        .trend-tag { font-size: 0.8rem; font-weight: bold; color: var(--accent-orange); margin-bottom: 6px; }
+        .trend-h3 { font-size: 1.05rem; font-weight: bold; color: #ffffff; margin-bottom: 8px; line-height: 1.4; }
+        .trend-p { font-size: 0.88rem; color: #cbd5e1; line-height: 1.7; }
+
+        .topic-hub-section { margin-bottom: 35px; }
+        .topic-hub-title { font-size: 1.15rem; font-weight: bold; color: var(--accent-color); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .topic-btn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+        .topic-btn {
+            background: #1e293b; border: 1px solid var(--border-color); border-radius: 12px; padding: 14px 16px; text-align: left; cursor: pointer; transition: all 0.2s; display: flex; flex-direction: column; gap: 4px; color: inherit;
+        }
+        .topic-btn:hover, .topic-btn.active {
+            background: #253349; border-color: var(--accent-color); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(56, 189, 248, 0.15);
+        }
+        .topic-btn.active { border-width: 2px; }
+        .topic-btn-header { font-size: 0.95rem; font-weight: bold; color: #ffffff; display: flex; align-items: center; gap: 6px; }
+        .topic-btn-sub { font-size: 0.78rem; color: var(--text-sub); }
+        .topic-summary-box {
+            margin-top: 15px; background: rgba(56, 189, 248, 0.08); border-left: 4px solid var(--accent-color); border-radius: 8px; padding: 14px 18px; font-size: 0.92rem; color: #e2e8f0; line-height: 1.7; display: none;
+        }
 
         .ai-chat-card {
             background: linear-gradient(145deg, #1e293b, #0f172a);
             border: 1px solid var(--accent-color);
             border-radius: 18px;
-            padding: 30px;
-            margin-bottom: 40px;
+            padding: 26px 30px;
+            margin-bottom: 35px;
             box-shadow: 0 12px 30px -5px rgba(56, 189, 248, 0.15);
         }
-        .ai-chat-header { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+        .ai-chat-header { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; }
         .ai-icon { font-size: 1.8rem; background: rgba(56, 189, 248, 0.2); padding: 8px 12px; border-radius: 12px; }
-        .ai-chat-title { font-size: 1.3rem; font-weight: bold; color: #ffffff; }
-        .ai-chat-desc { font-size: 0.9rem; color: var(--text-sub); }
-        .chat-input-wrapper { display: flex; gap: 12px; margin-top: 15px; }
+        .ai-chat-title { font-size: 1.25rem; font-weight: bold; color: #ffffff; }
+        .ai-chat-desc { font-size: 0.88rem; color: var(--text-sub); }
+        .chat-input-wrapper { display: flex; gap: 12px; margin-top: 12px; }
         .chat-input {
-            flex-grow: 1; padding: 14px 20px; font-size: 1.05rem; background: #0f172a;
+            flex-grow: 1; padding: 14px 20px; font-size: 1rem; background: #0f172a;
             border: 1px solid var(--border-color); border-radius: 12px; color: #ffffff; outline: none; transition: all 0.2s;
         }
         .chat-input:focus { border-color: var(--accent-color); box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2); }
         .chat-btn {
             background: var(--accent-color); color: #0f172a; font-weight: bold; padding: 14px 24px;
-            border-radius: 12px; border: none; cursor: pointer; font-size: 1rem; transition: all 0.2s; white-space: nowrap;
+            border-radius: 12px; border: none; cursor: pointer; font-size: 0.95rem; transition: all 0.2s; white-space: nowrap;
         }
         .chat-btn:hover { background: #0ea5e9; transform: translateY(-2px); }
-        .quick-tags { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; align-items: center; }
+        .quick-tags { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
         .quick-tag-label { font-size: 0.8rem; color: var(--text-sub); }
         .quick-tag {
             background: rgba(56, 189, 248, 0.1); color: var(--accent-color); border: 1px solid rgba(56, 189, 248, 0.3);
@@ -60,26 +131,41 @@
         .quick-tag:hover { background: var(--accent-color); color: #0f172a; }
 
         .ai-response-area {
-            margin-top: 25px; background: var(--ai-bg); border: 1px solid var(--border-color);
-            border-radius: 14px; padding: 24px; display: none; animation: fadeIn 0.3s ease-in-out;
+            margin-top: 20px; background: var(--ai-bg); border: 1px solid var(--border-color);
+            border-radius: 14px; padding: 22px; display: none; animation: fadeIn 0.3s ease-in-out;
         }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
-        .ai-response-title { font-weight: bold; color: var(--accent-color); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-        .ai-response-text { font-size: 1rem; line-height: 1.8; color: #e2e8f0; margin-bottom: 18px; }
-        .ai-source-list { background: #0b0f19; border-radius: 10px; padding: 16px; border: 1px solid var(--border-color); }
+        .ai-response-title { font-weight: bold; color: var(--accent-color); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .ai-response-text { font-size: 0.98rem; line-height: 1.8; color: #e2e8f0; margin-bottom: 16px; }
+        .ai-source-list { background: #0b0f19; border-radius: 10px; padding: 14px; border: 1px solid var(--border-color); }
         .ai-source-header { font-size: 0.85rem; color: var(--text-sub); font-weight: bold; margin-bottom: 8px; }
         .source-link-item {
             display: flex; align-items: center; justify-content: space-between; padding: 8px 12px;
-            background: #1e293b; border-radius: 8px; margin-bottom: 6px; text-decoration: none; color: var(--text-main); font-size: 0.9rem; transition: all 0.2s;
+            background: #1e293b; border-radius: 8px; margin-bottom: 6px; text-decoration: none; color: var(--text-main); font-size: 0.88rem; transition: all 0.2s;
         }
         .source-link-item:hover { border-left: 3px solid var(--accent-color); background: #253349; }
 
-        .stats-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; color: var(--text-sub); font-size: 0.9rem; }
+        .tab-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
+        .tab-group { display: flex; gap: 8px; }
+        .tab-btn {
+            background: #1e293b; color: var(--text-sub); border: 1px solid var(--border-color);
+            padding: 8px 16px; border-radius: 10px; cursor: pointer; font-size: 0.9rem; font-weight: 500; transition: all 0.2s;
+        }
+        .tab-btn:hover, .tab-btn.active { background: #334155; color: #ffffff; border-color: var(--accent-color); }
+        .tab-btn.active { font-weight: bold; }
+        .export-btn {
+            background: rgba(56, 189, 248, 0.15); color: var(--accent-color); border: 1px solid var(--accent-color);
+            padding: 8px 16px; border-radius: 10px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s;
+        }
+        .export-btn:hover { background: var(--accent-color); color: #0f172a; }
+
+        .stats-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; color: var(--text-sub); font-size: 0.88rem; }
         .portal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
-        .portal-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; overflow: hidden; transition: all 0.2s; display: flex; flex-direction: column; }
+        .portal-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; overflow: hidden; transition: all 0.2s; display: flex; flex-direction: column; position: relative; }
         .portal-card:hover { transform: translateY(-4px); border-color: var(--accent-color); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4); }
-        .portal-card a { text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%; }
-        .thumb-container { width: 100%; height: 180px; overflow: hidden; background: #000; }
+        .portal-card.is-starred { border-color: #fbbf24; }
+        .portal-card.is-read { opacity: 0.75; }
+        .thumb-container { width: 100%; height: 180px; overflow: hidden; background: #000; position: relative; }
         .thumb-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
         .portal-card:hover .thumb-container img { transform: scale(1.05); }
         .card-content { padding: 18px; display: flex; flex-direction: column; flex-grow: 1; }
@@ -207,7 +293,7 @@
 
         <div class="portal-grid" id="portalGrid">
             
-        <div class="portal-card" id="card-8aGMLbS3NAo" data-id="8aGMLbS3NAo" data-title="【テスラ】aiによる家庭用エネルギー自律管理システムの全貌 【テスラ】aiによる家庭用エネルギー自律管理システムの全貌 tesla (elon musk) ['ai'] ">
+        <div class="portal-card cat-infra" id="card-8aGMLbS3NAo" data-id="8aGMLbS3NAo" data-title="【テスラ】aiによる家庭用エネルギー自律管理システムの全貌 【テスラ】aiによる家庭用エネルギー自律管理システムの全貌 tesla (elon musk) ['ai'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html">
                     <img src="https://img.youtube.com/vi/8aGMLbS3NAo/hqdefault.jpg" alt="【テスラ】AIによる家庭用エネルギー自律管理システムの全貌" loading="lazy">
@@ -229,7 +315,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-UaeWJK_vv-Y" data-id="UaeWJK_vv-Y" data-title="【openai】自律型aiエージェントプラグイン（agentplugin）仕様と開発 【openai】自律型aiエージェントプラグイン（agentplugin）仕様と開発 openai (sam altman) ['ai', 'agent'] ">
+        <div class="portal-card cat-agent" id="card-UaeWJK_vv-Y" data-id="UaeWJK_vv-Y" data-title="【openai】自律型aiエージェントプラグイン（agentplugin）仕様と開発 【openai】自律型aiエージェントプラグイン（agentplugin）仕様と開発 openai (sam altman) ['ai', 'agent'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html">
                     <img src="https://img.youtube.com/vi/UaeWJK_vv-Y/hqdefault.jpg" alt="【OpenAI】自律型AIエージェントプラグイン（AgentPlugin）仕様と開発" loading="lazy">
@@ -251,7 +337,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-fo9WirRIaVs" data-id="fo9WirRIaVs" data-title="【google deepmind】gemini roboticsによる複数ロボットの自律協調動作 【google deepmind】gemini roboticsによる複数ロボットの自律協調動作 google deepmind (demis hassabis) ['robot', 'robotics', 'gemini'] ">
+        <div class="portal-card cat-physical" id="card-fo9WirRIaVs" data-id="fo9WirRIaVs" data-title="【google deepmind】gemini roboticsによる複数ロボットの自律協調動作 【google deepmind】gemini roboticsによる複数ロボットの自律協調動作 google deepmind (demis hassabis) ['robot', 'robotics', 'gemini'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Google_Robots working together with Gemini Robotics 2.html">
                     <img src="https://img.youtube.com/vi/fo9WirRIaVs/hqdefault.jpg" alt="【Google DeepMind】Gemini Roboticsによる複数ロボットの自律協調動作" loading="lazy">
@@ -273,7 +359,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-Sm7OTow3mcY" data-id="Sm7OTow3mcY" data-title="【google】その画像がai生成かどうかを見分ける方法 【google】その画像がai生成かどうかを見分ける方法 google (sundar pichai) ['ai'] ">
+        <div class="portal-card cat-agent" id="card-Sm7OTow3mcY" data-id="Sm7OTow3mcY" data-title="【google】その画像がai生成かどうかを見分ける方法 【google】その画像がai生成かどうかを見分ける方法 google (sundar pichai) ['ai'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Google_その画像がAI生成かどうかを見分ける方法.html">
                     <img src="https://img.youtube.com/vi/Sm7OTow3mcY/hqdefault.jpg" alt="【Google】その画像がAI生成かどうかを見分ける方法" loading="lazy">
@@ -295,7 +381,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-pmiN5Nj1-K8" data-id="pmiN5Nj1-K8" data-title="【nvidia】ヘルスケアの再創造 ― デジタル知能と物理的自律性の融合 【nvidia】ヘルスケアの再創造 ― デジタル知能と物理的自律性の融合 nvidia (jensen huang) ['gtc'] ">
+        <div class="portal-card cat-physical cat-infra" id="card-pmiN5Nj1-K8" data-id="pmiN5Nj1-K8" data-title="【nvidia】ヘルスケアの再創造 ― デジタル知能と物理的自律性の融合 【nvidia】ヘルスケアの再創造 ― デジタル知能と物理的自律性の融合 nvidia (jensen huang) ['gtc'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_NVIDIA_GTC SJ 2026ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合.html">
                     <img src="https://img.youtube.com/vi/pmiN5Nj1-K8/hqdefault.jpg" alt="【NVIDIA】ヘルスケアの再創造 ― デジタル知能と物理的自律性の融合" loading="lazy">
@@ -317,7 +403,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-gatpk6BhN5w" data-id="gatpk6BhN5w" data-title="【meta】アメリカの全視覚障害退役軍人へaiグラスを無償提供 【meta】アメリカの全視覚障害退役軍人へaiグラスを無償提供 meta (mark zuckerberg / yann lecun) ['ai'] ">
+        <div class="portal-card cat-agent" id="card-gatpk6BhN5w" data-id="gatpk6BhN5w" data-title="【meta】アメリカの全視覚障害退役軍人へaiグラスを無償提供 【meta】アメリカの全視覚障害退役軍人へaiグラスを無償提供 meta (mark zuckerberg / yann lecun) ['ai'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Meta_誰もが手にする未来アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供.html">
                     <img src="https://img.youtube.com/vi/gatpk6BhN5w/hqdefault.jpg" alt="【Meta】アメリカの全視覚障害退役軍人へAIグラスを無償提供" loading="lazy">
@@ -339,7 +425,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-cazd1z4Eseo" data-id="cazd1z4Eseo" data-title="【マイクロソフト】大半の企業が見落としているaiシフトの本質と企業変革 【マイクロソフト】大半の企業が見落としているaiシフトの本質と企業変革 microsoft (satya nadella / mustafa suleyman) ['ai'] ">
+        <div class="portal-card cat-agent" id="card-cazd1z4Eseo" data-id="cazd1z4Eseo" data-title="【マイクロソフト】大半の企業が見落としているaiシフトの本質と企業変革 【マイクロソフト】大半の企業が見落としているaiシフトの本質と企業変革 microsoft (satya nadella / mustafa suleyman) ['ai'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Microsoft_The AI shift most companies didnt see coming.html">
                     <img src="https://img.youtube.com/vi/cazd1z4Eseo/hqdefault.jpg" alt="【マイクロソフト】大半の企業が見落としているAIシフトの本質と企業変革" loading="lazy">
@@ -361,7 +447,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-KykyglY1W4g" data-id="KykyglY1W4g" data-title="【マイクロソフト】開発者のためのsqlとai連携の実践ガイド 【マイクロソフト】開発者のためのsqlとai連携の実践ガイド microsoft developer ['ai'] ">
+        <div class="portal-card cat-agent" id="card-KykyglY1W4g" data-id="KykyglY1W4g" data-title="【マイクロソフト】開発者のためのsqlとai連携の実践ガイド 【マイクロソフト】開発者のためのsqlとai連携の実践ガイド microsoft developer ['ai'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Microsoft_SQL and AI for Developers in Action.html">
                     <img src="https://img.youtube.com/vi/KykyglY1W4g/hqdefault.jpg" alt="【マイクロソフト】開発者のためのSQLとAI連携の実践ガイド" loading="lazy">
@@ -383,7 +469,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-uQd809adb58" data-id="uQd809adb58" data-title="【figure ai】世界最高峰の人型ロボット二足歩行バランストレーナー「galileo」 【figure ai】世界最高峰の人型ロボット二足歩行バランストレーナー「galileo」 figure ai (brett adcock / 人型ロボット) ['ai'] ">
+        <div class="portal-card cat-physical" id="card-uQd809adb58" data-id="uQd809adb58" data-title="【figure ai】世界最高峰の人型ロボット二足歩行バランストレーナー「galileo」 【figure ai】世界最高峰の人型ロボット二足歩行バランストレーナー「galileo」 figure ai (brett adcock / 人型ロボット) ['ai'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html">
                     <img src="https://img.youtube.com/vi/uQd809adb58/hqdefault.jpg" alt="【Figure AI】世界最高峰の人型ロボット二足歩行バランストレーナー「Galileo」" loading="lazy">
@@ -405,7 +491,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-j9Qr5aUfqNU" data-id="j9Qr5aUfqNU" data-title="【scale ai】最先端コーディングエージェントの実力ベンチマーク徹底分析 【scale ai】最先端コーディングエージェントの実力ベンチマーク徹底分析 scale ai (alexandr wang) ['ai'] ">
+        <div class="portal-card cat-agent cat-infra" id="card-j9Qr5aUfqNU" data-id="j9Qr5aUfqNU" data-title="【scale ai】最先端コーディングエージェントの実力ベンチマーク徹底分析 【scale ai】最先端コーディングエージェントの実力ベンチマーク徹底分析 scale ai (alexandr wang) ['ai'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html">
                     <img src="https://img.youtube.com/vi/j9Qr5aUfqNU/hqdefault.jpg" alt="【Scale AI】最先端コーディングエージェントの実力ベンチマーク徹底分析" loading="lazy">
@@ -427,7 +513,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-7CNlGweeN90" data-id="7CNlGweeN90" data-title="【エコノミスト】自動運転車（ロボタクシー）は都市と経済をどう変えるのか？ 【エコノミスト】自動運転車（ロボタクシー）は都市と経済をどう変えるのか？ the economist ['自動運転'] ">
+        <div class="portal-card cat-physical cat-strategy" id="card-7CNlGweeN90" data-id="7CNlGweeN90" data-title="【エコノミスト】自動運転車（ロボタクシー）は都市と経済をどう変えるのか？ 【エコノミスト】自動運転車（ロボタクシー）は都市と経済をどう変えるのか？ the economist ['自動運転'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_The_自動運転車は私たちの都市をどう変えるのか  エコノミスト.html">
                     <img src="https://img.youtube.com/vi/7CNlGweeN90/hqdefault.jpg" alt="【エコノミスト】自動運転車（ロボタクシー）は都市と経済をどう変えるのか？" loading="lazy">
@@ -449,7 +535,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-vif8NQcjVf0" data-id="vif8NQcjVf0" data-title="【徹底対談】ジェンスン・ファン：nvidiaの4兆ドル企業への軌跡とai革命 【徹底対談】ジェンスン・ファン：nvidiaの4兆ドル企業への軌跡とai革命 lex fridman (ceo徹底対談) ['ai'] ">
+        <div class="portal-card cat-physical cat-infra" id="card-vif8NQcjVf0" data-id="vif8NQcjVf0" data-title="【徹底対談】ジェンスン・ファン：nvidiaの4兆ドル企業への軌跡とai革命 【徹底対談】ジェンスン・ファン：nvidiaの4兆ドル企業への軌跡とai革命 lex fridman (ceo徹底対談) ['ai'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html">
                     <img src="https://img.youtube.com/vi/vif8NQcjVf0/hqdefault.jpg" alt="【徹底対談】ジェンスン・ファン：NVIDIAの4兆ドル企業への軌跡とAI革命" loading="lazy">
@@ -471,7 +557,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card--RXD4bTuFTo" data-id="-RXD4bTuFTo" data-title="【徹底対談】aiがai研究そのものを完全自動化した世界で何が起きるか？ 【徹底対談】aiがai研究そのものを完全自動化した世界で何が起きるか？ dwarkesh patel (最深技術対談) ['ai'] ">
+        <div class="portal-card cat-infra" id="card--RXD4bTuFTo" data-id="-RXD4bTuFTo" data-title="【徹底対談】aiがai研究そのものを完全自動化した世界で何が起きるか？ 【徹底対談】aiがai研究そのものを完全自動化した世界で何が起きるか？ dwarkesh patel (最深技術対談) ['ai'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Dwarkesh_Ryan Greenblatt  What happens once AI can automate.html">
                     <img src="https://img.youtube.com/vi/-RXD4bTuFTo/hqdefault.jpg" alt="【徹底対談】AIがAI研究そのものを完全自動化した世界で何が起きるか？" loading="lazy">
@@ -493,7 +579,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-zLUZclThLhU" data-id="zLUZclThLhU" data-title="【y combinator】元ホワイトハウスctoマイケル・クラシオスが語る米国の国家ai戦略 【y combinator】元ホワイトハウスctoマイケル・クラシオスが語る米国の国家ai戦略 y combinator (aiスタートアップ) ['ai'] ">
+        <div class="portal-card cat-strategy" id="card-zLUZclThLhU" data-id="zLUZclThLhU" data-title="【y combinator】元ホワイトハウスctoマイケル・クラシオスが語る米国の国家ai戦略 【y combinator】元ホワイトハウスctoマイケル・クラシオスが語る米国の国家ai戦略 y combinator (aiスタートアップ) ['ai'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html">
                     <img src="https://img.youtube.com/vi/zLUZclThLhU/hqdefault.jpg" alt="【Y Combinator】元ホワイトハウスCTOマイケル・クラシオスが語る米国の国家AI戦略" loading="lazy">
@@ -515,7 +601,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-F3INH9wZXoQ" data-id="F3INH9wZXoQ" data-title="【y combinator】なぜフィジカルaiが次なる巨大プラットフォームシフトなのか 【y combinator】なぜフィジカルaiが次なる巨大プラットフォームシフトなのか y combinator (aiスタートアップ) ['AI', 'PhysicalAI', 'Robotics', 'YC'] ">
+        <div class="portal-card cat-physical cat-strategy" id="card-F3INH9wZXoQ" data-id="F3INH9wZXoQ" data-title="【y combinator】なぜフィジカルaiが次なる巨大プラットフォームシフトなのか 【y combinator】なぜフィジカルaiが次なる巨大プラットフォームシフトなのか y combinator (aiスタートアップ) ['AI', 'PhysicalAI', 'Robotics', 'YC'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Y_なぜフィジカルAIが次なるプラットフォームシフトなのか.html">
                     <img src="https://img.youtube.com/vi/F3INH9wZXoQ/hqdefault.jpg" alt="【Y Combinator】なぜフィジカルAIが次なる巨大プラットフォームシフトなのか" loading="lazy">
@@ -537,7 +623,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-vb1Gcn10enw" data-id="vb1Gcn10enw" data-title="【y combinator】aiトップ研究所が「オブザーバビリティ（可観測性）」で実践すること 【y combinator】aiトップ研究所が「オブザーバビリティ（可観測性）」で実践すること y combinator (aiスタートアップ) ['AI', 'Observability', 'Eval', 'TopLabs'] ">
+        <div class="portal-card cat-strategy" id="card-vb1Gcn10enw" data-id="vb1Gcn10enw" data-title="【y combinator】aiトップ研究所が「オブザーバビリティ（可観測性）」で実践すること 【y combinator】aiトップ研究所が「オブザーバビリティ（可観測性）」で実践すること y combinator (aiスタートアップ) ['AI', 'Observability', 'Eval', 'TopLabs'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Y_AIトップ研究所が「オブザーバビリティ」で実際に取り組んでいること.html">
                     <img src="https://img.youtube.com/vi/vb1Gcn10enw/hqdefault.jpg" alt="【Y Combinator】AIトップ研究所が「オブザーバビリティ（可観測性）」で実践すること" loading="lazy">
@@ -559,7 +645,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-DbBnd9PYob4" data-id="DbBnd9PYob4" data-title="【y combinator】モデル非依存プラットフォームの優位性とマルチモデル戦略 【y combinator】モデル非依存プラットフォームの優位性とマルチモデル戦略 y combinator (aiスタートアップ) ['AI', 'ModelAgnostic', 'Architecture', 'Startups'] ">
+        <div class="portal-card cat-strategy" id="card-DbBnd9PYob4" data-id="DbBnd9PYob4" data-title="【y combinator】モデル非依存プラットフォームの優位性とマルチモデル戦略 【y combinator】モデル非依存プラットフォームの優位性とマルチモデル戦略 y combinator (aiスタートアップ) ['AI', 'ModelAgnostic', 'Architecture', 'Startups'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Y_モデルに依存しないAIプラットフォームは、どの単一の研究室も勝てないという賭けに出ている。.html">
                     <img src="https://img.youtube.com/vi/DbBnd9PYob4/hqdefault.jpg" alt="【Y Combinator】モデル非依存プラットフォームの優位性とマルチモデル戦略" loading="lazy">
@@ -581,7 +667,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-VbqaL_eHhKY" data-id="VbqaL_eHhKY" data-title="【y combinator】デザイン責任者が教える、生成aiを活用した次世代ui/uxデザイン手法 【y combinator】デザイン責任者が教える、生成aiを活用した次世代ui/uxデザイン手法 y combinator (aiスタートアップ) ['AI', 'Design', 'UIUX', 'YC'] ">
+        <div class="portal-card cat-agent cat-strategy" id="card-VbqaL_eHhKY" data-id="VbqaL_eHhKY" data-title="【y combinator】デザイン責任者が教える、生成aiを活用した次世代ui/uxデザイン手法 【y combinator】デザイン責任者が教える、生成aiを活用した次世代ui/uxデザイン手法 y combinator (aiスタートアップ) ['AI', 'Design', 'UIUX', 'YC'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Y_YCのデザイン責任者が教える、AIを活用したデザイン手法.html">
                     <img src="https://img.youtube.com/vi/VbqaL_eHhKY/hqdefault.jpg" alt="【Y Combinator】デザイン責任者が教える、生成AIを活用した次世代UI/UXデザイン手法" loading="lazy">
@@ -603,7 +689,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-rRkucx0KwcI" data-id="rRkucx0KwcI" data-title="【nvidia】ヘルスケアロボティクスのためのフィジカルai 【nvidia】ヘルスケアロボティクスのためのフィジカルai nvidia (jensen huang) ['ai'] ">
+        <div class="portal-card cat-physical cat-infra" id="card-rRkucx0KwcI" data-id="rRkucx0KwcI" data-title="【nvidia】ヘルスケアロボティクスのためのフィジカルai 【nvidia】ヘルスケアロボティクスのためのフィジカルai nvidia (jensen huang) ['ai'] ">
             <div class="thumb-container">
                 <a href="2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアロボティクスのためのフィジカルAI  シミュレーション主導の設計と開.html">
                     <img src="https://img.youtube.com/vi/rRkucx0KwcI/hqdefault.jpg" alt="【NVIDIA】ヘルスケアロボティクスのためのフィジカルAI" loading="lazy">
@@ -625,7 +711,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-QLKcF0j6bVA" data-id="QLKcF0j6bVA" data-title="【マイクロソフト】github copilot sdkで、あらゆるアイデアをaiアプリにしよう 【マイクロソフト】github copilot sdkで、あらゆるアイデアをaiアプリにしよう microsoft developer ['ai', 'copilot'] ">
+        <div class="portal-card cat-agent" id="card-QLKcF0j6bVA" data-id="QLKcF0j6bVA" data-title="【マイクロソフト】github copilot sdkで、あらゆるアイデアをaiアプリにしよう 【マイクロソフト】github copilot sdkで、あらゆるアイデアをaiアプリにしよう microsoft developer ['ai', 'copilot'] ">
             <div class="thumb-container">
                 <a href="2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html">
                     <img src="https://img.youtube.com/vi/QLKcF0j6bVA/hqdefault.jpg" alt="【マイクロソフト】GitHub Copilot SDKで、あらゆるアイデアをAIアプリにしよう" loading="lazy">
@@ -647,7 +733,7 @@
             </div>
         </div>
         
-        <div class="portal-card" id="card-XuoqKYxDHVc" data-id="XuoqKYxDHVc" data-title="【フル対談】イーロン・マスク：ai・agiと超豊かさの時代（2036年）へのロードマップ 【フル対談】イーロン・マスク：ai・agiと超豊かさの時代（2036年）へのロードマップ the economist ['AI', 'AGI', 'ROBOTICS', 'ENERGY'] ">
+        <div class="portal-card cat-strategy" id="card-XuoqKYxDHVc" data-id="XuoqKYxDHVc" data-title="【フル対談】イーロン・マスク：ai・agiと超豊かさの時代（2036年）へのロードマップ 【フル対談】イーロン・マスク：ai・agiと超豊かさの時代（2036年）へのロードマップ the economist ['AI', 'AGI', 'ROBOTICS', 'ENERGY'] ">
             <div class="thumb-container">
                 <a href="FEATURED_AI_The_XuoqKYxDHVc.html">
                     <img src="https://img.youtube.com/vi/XuoqKYxDHVc/hqdefault.jpg" alt="【フル対談】イーロン・マスク：AI・AGIと超豊かさの時代（2036年）へのロードマップ" loading="lazy">

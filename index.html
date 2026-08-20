@@ -169,35 +169,16 @@
         .thumb-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
         .portal-card:hover .thumb-container img { transform: scale(1.05); }
         .card-content { padding: 18px; display: flex; flex-direction: column; flex-grow: 1; }
-        .card-channel { font-size: 0.8rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase; margin-bottom: 6px; }
-        .card-title { font-size: 1.05rem; font-weight: bold; line-height: 1.4; margin-bottom: 12px; color: #ffffff; flex-grow: 1; }
-        .card-tags { margin-bottom: 10px; }
-        .badge { display: inline-block; background: #334155; color: #cbd5e1; padding: 3px 8px; border-radius: 6px; font-size: 0.72rem; margin-right: 4px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
-        .badge:hover { background: var(--accent-color); color: #0f172a; }
-
-        /* タブ・コントロール */
-        .tab-bar {
-            display: flex; gap: 12px; margin-bottom: 25px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; flex-wrap: wrap; align-items: center; justify-content: space-between;
-        }
-        .tab-group { display: flex; gap: 8px; }
-        .tab-btn {
-            background: #1e293b; color: var(--text-sub); border: 1px solid var(--border-color); padding: 8px 18px; border-radius: 25px; cursor: pointer; font-size: 0.95rem; font-weight: 600; transition: all 0.2s;
-        }
-        .tab-btn:hover { background: #334155; color: #ffffff; }
-        .tab-btn.active { background: var(--accent-color); color: #0f172a; border-color: var(--accent-color); }
-        .export-btn {
-            background: rgba(56, 189, 248, 0.1); color: var(--accent-color); border: 1px solid rgba(56, 189, 248, 0.3); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; font-weight: 600;
-        }
-        .export-btn:hover { background: var(--accent-color); color: #0f172a; }
-
-        .portal-card.is-starred { border-color: #fbbf24; box-shadow: 0 0 15px rgba(251, 191, 36, 0.2); }
-        .portal-card.is-read { opacity: 0.65; }
-        .portal-card.is-read:hover { opacity: 1; }
+        .card-channel { font-size: 0.78rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase; margin-bottom: 6px; }
+        .card-title { font-size: 1.02rem; font-weight: bold; line-height: 1.45; margin-bottom: 12px; color: #ffffff; flex-grow: 1; }
+        .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+        .badge { background: #0f172a; color: var(--text-sub); padding: 3px 8px; border-radius: 6px; font-size: 0.72rem; border: 1px solid var(--border-color); cursor: pointer; }
+        .badge:hover { border-color: var(--accent-color); color: #ffffff; }
 
         .star-btn {
             position: absolute; top: 10px; right: 10px; background: rgba(15, 23, 42, 0.85); border: 1px solid #475569; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; backdrop-filter: blur(4px);
         }
-        .star-btn:hover { transform: scale(1.15); background: #0f172a; border-color: #fbbf24; }
+        .star-btn:hover { transform: scale(1.15); border-color: #fbbf24; }
         .star-btn.active { background: #fbbf24; color: #000; border-color: #fbbf24; }
         
         .read-btn {
@@ -218,7 +199,6 @@
             font-size: 0.8rem; color: #fbbf24; background: rgba(251, 191, 36, 0.1); border-left: 3px solid #fbbf24; padding: 6px 10px; border-radius: 4px; margin-top: 10px; display: none; line-height: 1.4;
         }
 
-        /* メモ用モーダル */
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 1000;
         }
@@ -239,35 +219,123 @@
 <body>
     <div class="container">
         <header>
-            <h1>📚 AI Video Intelligence ポータル＆マイストック</h1>
+            <h1>📚 AI Video Intelligence ポータル＆メガトレンド</h1>
             <p class="subtitle">世界のトップAIリーダー＆最先端テック動画の体系的ナレッジベース</p>
         </header>
 
+        <!-- 🎙️ 朝の3分AI音声ブリーフィング（Podcast風プレイヤー） -->
+        <div class="audio-player-card">
+            <div class="audio-header">
+                <div class="audio-title-wrap">
+                    <div class="audio-icon">🎙️</div>
+                    <div>
+                        <div class="audio-title">朝の3分AI音声ブリーフィング（Podcast速報）</div>
+                        <div class="audio-desc">通勤中や身支度中に「ながら聴き」で最新メガトレンドを耳からインプット</div>
+                    </div>
+                </div>
+                <button class="audio-script-toggle" onclick="toggleAudioScript()">📜 原稿テキストを表示</button>
+            </div>
+            
+            <div class="audio-controls-row">
+                <button class="play-audio-btn" id="playAudioBtn" onclick="toggleAudioBriefing()">
+                    <span id="playAudioIcon">▶️</span> <span id="playAudioText">3分音声速報を再生する</span>
+                </button>
+                <div class="speed-btn-group">
+                    <button class="speed-btn active" onclick="setAudioSpeed(1.0, event)">1.0x</button>
+                    <button class="speed-btn" onclick="setAudioSpeed(1.25, event)">1.25x</button>
+                    <button class="speed-btn" onclick="setAudioSpeed(1.5, event)">1.5x</button>
+                    <button class="speed-btn" onclick="setAudioSpeed(2.0, event)">2.0x</button>
+                </div>
+            </div>
+            
+            <audio id="briefingAudio" src="daily_briefing.m4a" preload="none" onended="onAudioEnded()"></audio>
+            
+            <div class="audio-script-box" id="audioScriptBox">
+                <strong>📝 本日の音声ブリーフィング原稿:</strong><br>
+                おはようございます。本日のAIメガトレンド・エグゼクティブ速報です。現在、世界の最先端テック業界では3つの巨大な地殻変動が進行しています。第1に、画面内のチャットから物理世界で原子を動かすフィジカルAIへの大移動です。エヌビディアやフィギュアAI、ディープマインドは、仮想シミュレーションによる超高速強化学習を武器に、人型ロボットによる労働代替を現実のものにしています。第2に、単一のモデルに依存せず、オープンAIやマイクロソフトのSDKを活用して自律エージェントを束ねるモデル非依存アーキテクチャの台頭です。そして第3に、AI自身がAI研究を自動化する再帰的進化と、それを支える電力・半導体インフラの覇権争いです。今日も最先端の知見を味方に、素晴らしい1日をお過ごしください。
+            </div>
+        </div>
+
+        <!-- 🌅 本日のAIメガトレンド・エグゼクティブ速報 -->
+        <div class="macro-trend-card">
+            <div class="macro-header">
+                <div class="macro-title">🌅 今日のAIメガトレンド・エグゼクティブ速報</div>
+                <span class="macro-date-badge">📅 2026年08月20日 更新</span>
+            </div>
+            <div class="trend-grid">
+                <div class="trend-item">
+                    <div class="trend-tag">🦾 トレンド 01</div>
+                    <div class="trend-h3">画面内のLLMから実世界の『原子制御』へ</div>
+                    <div class="trend-p">NVIDIA、Figure AI、Google DeepMind、Y Combinatorが一致して提唱。仮想空間（Sim-to-Real）での超高速強化学習により、人型ロボットや自律移動体が実体経済のサプライチェーンを再定義する次なる超巨大プラットフォームへ。</div>
+                </div>
+                <div class="trend-item">
+                    <div class="trend-tag">🤖 トレンド 02</div>
+                    <div class="trend-h3">単一LLMへの依存脱却とエージェントSDKの標準化</div>
+                    <div class="trend-p">OpenAIのAgentPlugin、MicrosoftのCopilot SDK、YCのモデル非依存ルーティングなど、単一AIラボへのベンダーロックインを回避し、タスクごとに最適モデルを動的配備する自律実行レイヤーが主戦場に。</div>
+                </div>
+                <div class="trend-item">
+                    <div class="trend-tag">⚡ トレンド 03</div>
+                    <div class="trend-h3">再帰的自己改善と数千兆円規模の電力・半導体競争</div>
+                    <div class="trend-p">AIがAIモデルを研究開発する自動化サイクルの現実味が高まり、律速要因は人間の頭脳からGPU計算資源・電力供給・宇宙データセンター構想へシフト。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🔥 技術トピック別トレンドマップ（4大カテゴリハブ） -->
+        <div class="topic-hub-section">
+            <div class="topic-hub-title">🔥 注目の技術トピック別トレンドマップ（カテゴリ一気読み）</div>
+            <div class="topic-btn-grid">
+                <button class="topic-btn active" id="topic-all" onclick="filterByTopic('all')">
+                    <div class="topic-btn-header">🌐 全テーマ一覧</div>
+                    <div class="topic-btn-sub">全動画を時系列で網羅表示</div>
+                </button>
+                <button class="topic-btn" id="topic-physical" onclick="filterByTopic('physical')">
+                    <div class="topic-btn-header">🦾 フィジカルAI & ロボティクス</div>
+                    <div class="topic-btn-sub">NVIDIA, Figure, DeepMind, Tesla, YC</div>
+                </button>
+                <button class="topic-btn" id="topic-agent" onclick="filterByTopic('agent')">
+                    <div class="topic-btn-header">🤖 自律型エージェント & SDK</div>
+                    <div class="topic-btn-sub">OpenAI, Microsoft, Scale AI, YC</div>
+                </button>
+                <button class="topic-btn" id="topic-infra" onclick="filterByTopic('infra')">
+                    <div class="topic-btn-header">⚡ インフラ・電力・半導体</div>
+                    <div class="topic-btn-sub">Lex/Jensen, Tesla, Dwarkesh</div>
+                </button>
+                <button class="topic-btn" id="topic-strategy" onclick="filterByTopic('strategy')">
+                    <div class="topic-btn-header">🏛️ 国家戦略 & モデル非依存</div>
+                    <div class="topic-btn-sub">YC/Kratsios, Economist, YC</div>
+                </button>
+            </div>
+            
+            <div class="topic-summary-box" id="topicSummaryBox"></div>
+        </div>
+
+        <!-- 🧠 横断AIアシスタント（マクロトレンド・企業比較モード） -->
         <div class="ai-chat-card">
             <div class="ai-chat-header">
-                <div class="ai-icon">🤖</div>
+                <div class="ai-icon">🧠</div>
                 <div>
-                    <div class="ai-chat-title">蓄積動画ナレッジ・横断AIアシスタント</div>
-                    <div class="ai-chat-desc">保存された全動画の内容・発言・チャプターを横断して即座に回答します</div>
+                    <div class="ai-chat-title">AIマクロインテリジェンス・横断比較アナライザー</div>
+                    <div class="ai-chat-desc">蓄積動画を横断分析し、企業間比較・業界トレンド・未開拓領域を即座にレポートします</div>
                 </div>
             </div>
 
             <div class="chat-input-wrapper">
-                <input type="text" id="chatInput" class="chat-input" placeholder="質問を入力... 例: NVIDIAのフィジカルAIとは？ / OpenAIのAgent戦略について教えて" onkeydown="if(event.key==='Enter') askAI()">
-                <button class="chat-btn" onclick="askAI()">⚡ AIに質問する</button>
+                <input type="text" id="chatInput" class="chat-input" placeholder="質問を入力... 例: 今日の3大トレンドは？ / OpenAIとMicrosoftの戦略比較 / フィジカルAIの勝者は？" onkeydown="if(event.key==='Enter') askAI()">
+                <button class="chat-btn" onclick="askAI()">⚡ トレンドを横断分析</button>
             </div>
 
             <div class="quick-tags">
-                <span class="quick-tag-label">💡 クイック質問:</span>
-                <span class="quick-tag" onclick="quickAsk('NVIDIAのフィジカルAIとOmniverseシミュレーション')">⚡ NVIDIA フィジカルAI</span>
-                <span class="quick-tag" onclick="quickAsk('OpenAIのAgentPluginと自律型エージェント')">⚡ OpenAI エージェント</span>
-                <span class="quick-tag" onclick="quickAsk('Google DeepMindのGemini Roboticsと複数ロボット協調')">⚡ DeepMind ロボティクス</span>
-                <span class="quick-tag" onclick="quickAsk('自動運転車が都市構造や駐車場を変える理由')">⚡ 自動運転と都市</span>
-                <span class="quick-tag" onclick="quickAsk('MetaのLlamaオープンソース戦略とAIグラス')">⚡ Meta オープンAI</span>
+                <span class="quick-tag-label">💡 注目クエリ:</span>
+                <span class="quick-tag" onclick="quickAsk('今日の3大メガトレンドをまとめて')">⚡ 本日の3大トレンド</span>
+                <span class="quick-tag" onclick="quickAsk('OpenAIとMicrosoftのエージェント戦略の違い')">📊 OpenAI vs Microsoft 比較</span>
+                <span class="quick-tag" onclick="quickAsk('フィジカルAIでNVIDIAとFigure AIが狙う市場')">🦾 NVIDIA vs Figure 比較</span>
+                <span class="quick-tag" onclick="quickAsk('スタートアップが狙うべき注目の未開拓領域')">💡 スタートアップ参入機会</span>
+                <span class="quick-tag" onclick="quickAsk('AIインフラの最大のボトルネックと電力危機')">⚡ インフラ電力問題</span>
             </div>
 
             <div id="aiResponseArea" class="ai-response-area">
-                <div class="ai-response-title">✨ AI回答</div>
+                <div class="ai-response-title">✨ マクロ分析インサイト</div>
                 <div id="aiResponseText" class="ai-response-text"></div>
                 <div class="ai-source-list">
                     <div class="ai-source-header">📌 根拠となる関連動画＆チャプター:</div>
@@ -762,49 +830,162 @@
         </footer>
     </div>
 
-    <!-- メモ用モーダル -->
+    <!-- メモ編集モーダル -->
     <div class="modal-overlay" id="memoModal" onclick="if(event.target===this) closeMemoModal()">
         <div class="modal-content">
-            <div class="modal-title" id="modalVideoTitle">📝 メモを記録</div>
-            <textarea id="memoInput" class="memo-textarea" placeholder="この動画に関する気づき、実践アクション、重要ポイントなどをメモ..."></textarea>
+            <div class="modal-title" id="modalVideoTitle">📝 メモを編集</div>
+            <textarea class="memo-textarea" id="memoInput" placeholder="この動画に関する気づきやアクションプランを記録..."></textarea>
             <div class="modal-actions">
                 <button class="modal-close-btn" onclick="closeMemoModal()">キャンセル</button>
-                <button class="modal-save-btn" onclick="saveMemo()">💾 保存する</button>
+                <button class="modal-save-btn" onclick="saveMemo()">保存する</button>
             </div>
         </div>
     </div>
 
     <script>
         const libraryData = [{"video_id": "rRkucx0KwcI", "title": "【NVIDIA】ヘルスケアロボティクスのためのフィジカルAI", "channel": "NVIDIA (Jensen Huang)", "filename": "2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアロボティクスのためのフィジカルAI  シミュレーション主導の設計と開.html", "date": "2026-08-19", "tags": ["ai"], "chapters": []}, {"video_id": "QLKcF0j6bVA", "title": "【マイクロソフト】GitHub Copilot SDKで、あらゆるアイデアをAIアプリにしよう", "channel": "Microsoft Developer", "filename": "2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html", "date": "2026-08-19", "tags": ["ai", "copilot"], "chapters": []}, {"video_id": "XuoqKYxDHVc", "title": "【フル対談】イーロン・マスク：AI・AGIと超豊かさの時代（2036年）へのロードマップ", "channel": "The Economist", "filename": "FEATURED_AI_The_XuoqKYxDHVc.html", "date": "2026-08-19", "tags": ["AI", "AGI", "ROBOTICS", "ENERGY"], "chapters": ["AIは5年後には人間より賢くなる", "AI企業はどのように自主規制を行うべきか", "中国はAI分野のリーダーになるのか？", "イーロン・マスク氏、サム・アルトマン氏とAI企業のボスたちについて語る", "仕事は選択肢になる", "一人の人間がこれほど大きな権力を持つべきなのか？", "スターリンクとウクライナ戦争", "政治に関わりすぎた", "マスク氏：USAIDの予算削減で死者は出ていない", "ヨーロッパ、極右、そしてイギリスの内戦", "マスク氏：私は人種差別主義者ではない", "マスク氏について人々が最も誤解していることは何か？"]}, {"video_id": "8aGMLbS3NAo", "title": "【テスラ】AIによる家庭用エネルギー自律管理システムの全貌", "channel": "Tesla (Elon Musk)", "filename": "2026-08-20_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "UaeWJK_vv-Y", "title": "【OpenAI】自律型AIエージェントプラグイン（AgentPlugin）仕様と開発", "channel": "OpenAI (Sam Altman)", "filename": "2026-08-20_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html", "date": "2026-08-20", "tags": ["ai", "agent"], "chapters": ["エージェントパッケージに標準が必要な理由", "Agent Pluginsの概要", "パッケージ構造、スキル、MCPサーバー", "製品間での移植性", "スコープと利用開始方法"]}, {"video_id": "fo9WirRIaVs", "title": "【Google DeepMind】Gemini Roboticsによる複数ロボットの自律協調動作", "channel": "Google DeepMind (Demis Hassabis)", "filename": "2026-08-20_AI_Google_Robots working together with Gemini Robotics 2.html", "date": "2026-08-20", "tags": ["robot", "robotics", "gemini"], "chapters": []}, {"video_id": "Sm7OTow3mcY", "title": "【Google】その画像がAI生成かどうかを見分ける方法", "channel": "Google (Sundar Pichai)", "filename": "2026-08-20_AI_Google_その画像がAI生成かどうかを見分ける方法.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "pmiN5Nj1-K8", "title": "【NVIDIA】ヘルスケアの再創造 ― デジタル知能と物理的自律性の融合", "channel": "NVIDIA (Jensen Huang)", "filename": "2026-08-20_AI_NVIDIA_GTC SJ 2026ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合.html", "date": "2026-08-20", "tags": ["gtc"], "chapters": []}, {"video_id": "gatpk6BhN5w", "title": "【Meta】アメリカの全視覚障害退役軍人へAIグラスを無償提供", "channel": "Meta (Mark Zuckerberg / Yann LeCun)", "filename": "2026-08-20_AI_Meta_誰もが手にする未来アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "cazd1z4Eseo", "title": "【マイクロソフト】大半の企業が見落としているAIシフトの本質と企業変革", "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)", "filename": "2026-08-20_AI_Microsoft_The AI shift most companies didnt see coming.html", "date": "2026-08-20", "tags": ["ai"], "chapters": ["AIは道具ではない", "第 3 のシフト: マルチエージェント AI", "なぜリーダーはAIに不安を感じるのか", "生産性の罠", "AI時代の3つのスキル", "AI 変革が人々の問題となる理由", "AI エージェントの労働力の管理", "あなたの会社の AI レイヤーを構築する", "AI の急激な変化", "リーダーが今後 30 日間にすべきこと"]}, {"video_id": "KykyglY1W4g", "title": "【マイクロソフト】開発者のためのSQLとAI連携の実践ガイド", "channel": "Microsoft Developer", "filename": "2026-08-20_AI_Microsoft_SQL and AI for Developers in Action.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "uQd809adb58", "title": "【Figure AI】世界最高峰の人型ロボット二足歩行バランストレーナー「Galileo」", "channel": "Figure AI (Brett Adcock / 人型ロボット)", "filename": "2026-08-20_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "j9Qr5aUfqNU", "title": "【Scale AI】最先端コーディングエージェントの実力ベンチマーク徹底分析", "channel": "Scale AI (Alexandr Wang)", "filename": "2026-08-20_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "7CNlGweeN90", "title": "【エコノミスト】自動運転車（ロボタクシー）は都市と経済をどう変えるのか？", "channel": "The Economist", "filename": "2026-08-20_AI_The_自動運転車は私たちの都市をどう変えるのか  エコノミスト.html", "date": "2026-08-20", "tags": ["自動運転"], "chapters": ["将来も私たちは車を所有し続けるのか？", "製造業が衰退しない理由", "自動運転車が都市をどのように変えるか", "現実世界におけるAI"]}, {"video_id": "vif8NQcjVf0", "title": "【徹底対談】ジェンスン・ファン：NVIDIAの4兆ドル企業への軌跡とAI革命", "channel": "Lex Fridman (CEO徹底対談)", "filename": "2026-08-20_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html", "date": "2026-08-20", "tags": ["ai"], "chapters": ["導入", "究極の共同設計とラックスケールエンジニアリング", "Jensen が NVIDIA をどのように運営しているか", "AI スケーリングの法則", "AI スケーリングの法則の最大の障害", "サプライチェーン", "メモリ", "力", "エロンと巨像", "エンジニアリングとリーダーシップに対するジェンセンのアプローチ", "中国", "TSMCと台湾", "NVIDIAの堀", "宇宙のAIデータセンター", "NVIDIA の価値は 10 兆ドルになるでしょうか?", "プレッシャーの下でのリーダーシップ", "ビデオゲーム", "AGI タイムライン", "プログラミングの未来", "意識", "死亡"]}, {"video_id": "-RXD4bTuFTo", "title": "【徹底対談】AIがAI研究そのものを完全自動化した世界で何が起きるか？", "channel": "Dwarkesh Patel (最深技術対談)", "filename": "2026-08-20_AI_Dwarkesh_Ryan Greenblatt  What happens once AI can automate.html", "date": "2026-08-20", "tags": ["ai"], "chapters": ["AI の研究開発は再帰的な自己改善を可能にするのに十分検証可能ですか?", "AIの進歩は人間の専門家データがボトルネックになっているのでしょうか?", "トークン価格の横ばいとスケーリング減速の示唆", "AI がトレーニングできないスキル: AI にはそれが必要なのでしょうか?", "誰に合わせますか？", "AIが人間を共謀し騙す最近の事件", "何が問題になる可能性がありますか?具体的なシナリオ", "報酬ハッキングから乗っ取りまで"]}, {"video_id": "zLUZclThLhU", "title": "【Y Combinator】元ホワイトハウスCTOマイケル・クラシオスが語る米国の国家AI戦略", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html", "date": "2026-08-20", "tags": ["ai"], "chapters": ["マイケル・クラツィオスが AI 政策と公共サービスについて語る", "シリコンバレーからホワイトハウスへの転身", "テクノロジー政策は実際にどのように作られるのか", "ホワイトハウスにおけるオープンソースAIの戦略的意義", "ワシントンのAIに対する見方が違う", "半年ごとに変わるテクノロジーを規制する", "どの AI リスクが過大評価されていますか?", "小さな技術者にテーブルの席を与える", "既存の堀を作らない規制", "Born Free vs. Born in Captivity Technologies", "ホワイトハウスで働くというのは実際どのようなものなのか", "アメリカ科学の新たな黄金時代", "量子、議会、知財、そして次に起こること", "技術者が公共サービスを検討すべき理由"]}, {"video_id": "F3INH9wZXoQ", "title": "【Y Combinator】なぜフィジカルAIが次なる巨大プラットフォームシフトなのか", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_なぜフィジカルAIが次なるプラットフォームシフトなのか.html", "date": "2026-08-20", "tags": ["AI", "PhysicalAI", "Robotics", "YC"], "chapters": ["デジタルAIからフィジカルAIへの移行", "Sim-to-Real仮想空間強化学習の威力", "実世界サプライチェーンと製造の自動化", "次世代ロボティクスOSの覇権争い"]}, {"video_id": "vb1Gcn10enw", "title": "【Y Combinator】AIトップ研究所が「オブザーバビリティ（可観測性）」で実践すること", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_AIトップ研究所が「オブザーバビリティ」で実際に取り組んでいること.html", "date": "2026-08-20", "tags": ["AI", "Observability", "Eval", "TopLabs"], "chapters": ["LLMパイプラインの可観測性と推論トレーシング", "ハルシネーションと品質劣化の自動検知", "LLM-as-a-Judgeによる継続的Evalフレームワーク", "本番環境でのレイテンシとコンピュートコスト最適化"]}, {"video_id": "DbBnd9PYob4", "title": "【Y Combinator】モデル非依存プラットフォームの優位性とマルチモデル戦略", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_モデルに依存しないAIプラットフォームは、どの単一の研究室も勝てないという賭けに出ている。.html", "date": "2026-08-20", "tags": ["AI", "ModelAgnostic", "Architecture", "Startups"], "chapters": ["単一AI研究室への依存リスクとベンダーロックイン", "マルチモデル動的ルーティングのアーキテクチャ", "タスク難易度に応じた推論コストの80%削減手法", "フロンティア競争における最も持続可能なプラットフォーム戦略"]}, {"video_id": "VbqaL_eHhKY", "title": "【Y Combinator】デザイン責任者が教える、生成AIを活用した次世代UI/UXデザイン手法", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_YCのデザイン責任者が教える、AIを活用したデザイン手法.html", "date": "2026-08-20", "tags": ["AI", "Design", "UIUX", "YC"], "chapters": ["静的モックアップから動くAIコードプロトタイプへの変革", "AIと対話しながら数分でUIを構築する新ワークフロー", "チャットUIを超えた先回り型エージェントUIの設計原則", "スタートアップの製品検証速度を100倍にする実践知"]}];
+        const STORAGE_STARRED = 'ai_video_starred_vids';
+        const STORAGE_READ = 'ai_video_read_vids';
+        const STORAGE_MEMOS = 'ai_video_user_memos';
+
         let currentTab = 'all';
+        let currentTopic = 'all';
         let activeMemoVid = null;
+        let audioPlaybackSpeed = 1.0;
+        let isAudioPlaying = false;
+        let speechSynthUtterance = null;
 
-        const STORAGE_STARRED = 'ai_notes_starred';
-        const STORAGE_READ = 'ai_notes_read';
-        const STORAGE_MEMOS = 'ai_notes_memos';
+        const topicSummaries = {
+            'physical': '🦾 <strong>フィジカルAI＆ロボティクス総括:</strong><br>言語モデルの知能が「画面内」から「現実世界の物理法則・原子制御」へと不可逆的にシフト。NVIDIAのOmniverseによるSim-to-Real仮想強化学習、Figure AIの高トルク二足歩行Galileo、DeepMindのVLAモデルなど、実体経済のサプライチェーンと肉体労働の自律化が最大の主戦場となっています。',
+            'agent': '🤖 <strong>自律型エージェント＆開発環境総括:</strong><br>単なるテキスト応答チャットから、APIやPC環境を直接自律操作するエージェントへと進化。OpenAIのAgentPlugin仕様、MicrosoftのCopilot SDK、YCの動的UIプロトタイピングなど、人間がコードを手書きする時代からエージェントを指揮・マネジメントする時代へと開発パラダイムが刷新されています。',
+            'infra': '⚡ <strong>インフラ・電力・半導体総括:</strong><br>AIスケーリングの最大のボトルネックが「アルゴリズム」から「物理的なGPU計算基盤とデータセンターの電力供給能力」へ移行。テスラの分散型蓄電池グリッドや、宇宙空間へのデータセンター配備構想など、ギガワット級の電力確保が国家・企業の存亡を分ける争点となっています。',
+            'strategy': '🏛️ <strong>国家戦略＆モデル非依存プラットフォーム総括:</strong><br>米国の過度な事前規制を避けるイノベーション最優先政策や先端半導体の輸出管理。さらに、特定AIラボへのロックインを回避し、最高精度と最小コストを両立する「モデル非依存（Model-Agnostic）」プラットフォームへの急速なシフトが進展しています。'
+        };
 
-        function getStoredList(key) {
-            try { return JSON.parse(localStorage.getItem(key)) || []; } catch(e) { return []; }
-        }
-        function setStoredList(key, arr) {
-            localStorage.setItem(key, JSON.stringify(arr));
-        }
-        function getStoredObj(key) {
-            try { return JSON.parse(localStorage.getItem(key)) || {}; } catch(e) { return {}; }
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
-            const starTarget = params.get('star');
-            if (starTarget) {
+            const starVid = params.get('star');
+            if (starVid) {
                 let stars = getStoredList(STORAGE_STARRED);
-                if (!stars.includes(starTarget)) {
-                    stars.push(starTarget);
+                if (!stars.includes(starVid)) {
+                    stars.push(starVid);
                     setStoredList(STORAGE_STARRED, stars);
                 }
             }
             updateUIState();
         });
+
+        function getStoredList(key) {
+            try {
+                const val = localStorage.getItem(key);
+                return val ? JSON.parse(val) : [];
+            } catch (e) { return []; }
+        }
+
+        function setStoredList(key, arr) {
+            localStorage.setItem(key, JSON.stringify(arr));
+        }
+
+        function getStoredObj(key) {
+            try {
+                const val = localStorage.getItem(key);
+                return val ? JSON.parse(val) : {};
+            } catch (e) { return {}; }
+        }
+
+        /* 🎙️ 音声ブリーフィング制御（HTML5 Audio + Web Speech API ハイブリッド） */
+        function toggleAudioBriefing() {
+            const audio = document.getElementById('briefingAudio');
+            const playBtnText = document.getElementById('playAudioText');
+            const playBtnIcon = document.getElementById('playAudioIcon');
+
+            if (!isAudioPlaying) {
+                audio.playbackRate = audioPlaybackSpeed;
+                const playPromise = audio.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        isAudioPlaying = true;
+                        playBtnIcon.innerText = '⏸️';
+                        playBtnText.innerText = '音声速報を一時停止';
+                    }).catch(err => {
+                        startWebSpeech();
+                    });
+                } else {
+                    startWebSpeech();
+                }
+            } else {
+                audio.pause();
+                if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+                isAudioPlaying = false;
+                playBtnIcon.innerText = '▶️';
+                playBtnText.innerText = '3分音声速報を再生する';
+            }
+        }
+
+        function startWebSpeech() {
+            if (!('speechSynthesis' in window)) {
+                alert('お使いのブラウザは音声再生に対応していません。原稿テキストをご覧ください。');
+                return;
+            }
+            window.speechSynthesis.cancel();
+            const text = `おはようございます。本日のAIメガトレンド・エグゼクティブ速報です。現在、世界の最先端テック業界では3つの巨大な地殻変動が進行しています。第1に、画面内のチャットから物理世界で原子を動かすフィジカルAIへの大移動です。エヌビディアやフィギュアAI、ディープマインドは、仮想シミュレーションによる超高速強化学習を武器に、人型ロボットによる労働代替を現実のものにしています。第2に、単一のモデルに依存せず、オープンAIやマイクロソフトのSDKを活用して自律エージェントを束ねるモデル非依存アーキテクチャの台頭です。そして第3に、AI自身がAI研究を自動化する再帰的進化と、それを支える電力・半導体インフラの覇権争いです。今日も最先端の知見を味方に、素晴らしい1日をお過ごしください。`;
+            speechSynthUtterance = new SpeechSynthesisUtterance(text);
+            speechSynthUtterance.lang = 'ja-JP';
+            speechSynthUtterance.rate = audioPlaybackSpeed;
+            
+            speechSynthUtterance.onend = () => {
+                onAudioEnded();
+            };
+            
+            window.speechSynthesis.speak(speechSynthUtterance);
+            isAudioPlaying = true;
+            document.getElementById('playAudioIcon').innerText = '⏸️';
+            document.getElementById('playAudioText').innerText = '音声速報を一時停止';
+        }
+
+        function onAudioEnded() {
+            isAudioPlaying = false;
+            document.getElementById('playAudioIcon').innerText = '▶️';
+            document.getElementById('playAudioText').innerText = '3分音声速報を再生する';
+        }
+
+        function setAudioSpeed(speed, e) {
+            if (e) e.stopPropagation();
+            audioPlaybackSpeed = speed;
+            document.querySelectorAll('.speed-btn').forEach(btn => btn.classList.remove('active'));
+            if (e && e.target) e.target.classList.add('active');
+            
+            const audio = document.getElementById('briefingAudio');
+            if (audio) audio.playbackRate = speed;
+            if (isAudioPlaying && 'speechSynthesis' in window && window.speechSynthesis.speaking) {
+                toggleAudioBriefing();
+                toggleAudioBriefing();
+            }
+        }
+
+        function toggleAudioScript() {
+            const box = document.getElementById('audioScriptBox');
+            box.style.display = (box.style.display === 'block') ? 'none' : 'block';
+        }
+
+        /* 🔥 トピック別フィルター制御 */
+        function filterByTopic(topic) {
+            currentTopic = topic;
+            document.querySelectorAll('.topic-btn').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = document.getElementById('topic-' + topic);
+            if (activeBtn) activeBtn.classList.add('active');
+
+            const summaryBox = document.getElementById('topicSummaryBox');
+            if (topic !== 'all' && topicSummaries[topic]) {
+                summaryBox.innerHTML = topicSummaries[topic];
+                summaryBox.style.display = 'block';
+            } else {
+                summaryBox.style.display = 'none';
+            }
+
+            updateUIState();
+        }
 
         function toggleStar(vid, e) {
             if (e) e.stopPropagation();
@@ -911,6 +1092,12 @@
                 if (currentTab === 'starred' && !isStar) show = false;
                 if (currentTab === 'read' && !isRead) show = false;
 
+                if (currentTopic !== 'all') {
+                    if (!card.classList.contains('cat-' + currentTopic)) {
+                        show = false;
+                    }
+                }
+
                 card.style.display = show ? 'flex' : 'none';
                 if (show) visibleCount++;
             });
@@ -959,6 +1146,7 @@
             askAI();
         }
 
+        /* 🧠 横断AIアシスタント（マクロトレンド・企業比較アナライザー） */
         function askAI() {
             const query = document.getElementById('chatInput').value.trim().toLowerCase();
             if (!query) return;
@@ -992,39 +1180,49 @@
             matches.sort((a, b) => b.score - a.score);
 
             setTimeout(() => {
-                if (matches.length === 0) {
-                    responseText.innerHTML = `ご質問の『<strong>${query}</strong>』に完全一致する動画は見つかりませんでしたが、ライブラリ全体では「NVIDIA」「OpenAI」「DeepMind」「Tesla」「Microsoft」「Meta」などの重要動画が蓄積されています。`;
-                    sourceLinks.innerHTML = libraryData.slice(0, 2).map(item => `
-                        <a href="${item.filename}" class="source-link-item">
-                            <span>📺 [${item.channel}] ${item.title}</span>
-                            <span>詳細レポートを見る →</span>
-                        </a>
-                    `).join('');
-                    return;
-                }
-
-                const top = matches[0].item;
                 let summaryAnswer = '';
+                let relatedMatches = matches;
 
-                if (query.includes('nvidia') || query.includes('フィジカル') || query.includes('omniverse')) {
-                    summaryAnswer = `NVIDIAのジェンスン・ファンは、<strong>「フィジカルAI（Physical AI）」</strong>こそがAIの次なる巨大フロンティアであると強調しています。現実世界の物理法則を完全に再現した「Omniverse（デジタルツイン）」内でロボットに数億時間の強化学習を行わせることで、破損リスクなしに実世界ロボットを瞬時に進化させる戦略を推進しています。`;
+                if (query.includes('トレンド') || query.includes('潮流') || query.includes('まとめ')) {
+                    summaryAnswer = `<h3>🌅 最新AIメガトレンド・総合分析レポート</h3><br>
+                    <strong>1. フィジカルAIの覇権争い（NVIDIA / Figure / DeepMind）:</strong> 画面内のテキストから物理世界（原子）を制御するロボティクスへ主戦場がシフト。Sim-to-Real仮想強化学習がブレイクスルー。<br><br>
+                    <strong>2. 自律エージェント＆モデル非依存（OpenAI / Microsoft / YC）:</strong> 単一LLMへの囲い込みを脱し、マルチモデル動的ルーティングとSDKによる全業務の自律自動化へ。<br><br>
+                    <strong>3. AI研究の自動化と電力危機（Dwarkesh / Tesla / Lex）:</strong> AI自身がAIを改善する再帰的ループが視野に入り、ギガワット級の電力・半導体確保が最大のボトルネックに。`;
+                } else if (query.includes('openai') && (query.includes('microsoft') || query.includes('比較') || query.includes('違い'))) {
+                    summaryAnswer = `<h3>📊 OpenAI vs Microsoft エージェント戦略の対比</h3><br>
+                    ✦ <strong>OpenAI:</strong> 高度な推論モデル（o-series）と公式AgentPlugin仕様を通じ、開発者が直接ツールを操作する自律エージェント層の規格化を推進。<br>
+                    ✦ <strong>Microsoft:</strong> GitHub Copilot SDKを武器に、既存のエンタープライズ業務ソフトや社内システム全体にAIを深く浸透させ、初日からROIを出す実用化にフォーカス。<br><br>
+                    💡 <strong>結論:</strong> OpenAIが「知能とエージェント標準」を握り、Microsoftが「企業の既存ワークフローへの定着」を握る形で棲み分けが進んでいます。`;
+                } else if (query.includes('nvidia') && (query.includes('figure') || query.includes('比較') || query.includes('ロボット'))) {
+                    summaryAnswer = `<h3>🦾 NVIDIA vs Figure AI フィジカルAI戦略の対比</h3><br>
+                    ✦ <strong>NVIDIA:</strong> OmniverseとGPUクラスタを提供し、世界中のすべてのロボット企業が仮想空間で学習するための「インフラプラットフォーマー」を目指す。<br>
+                    ✦ <strong>Figure AI:</strong> 自社開発の高トルク二足歩行トレーナー「Galileo」を用い、人間用インフラ（階段・工場）へそのまま導入できる「汎用人型ロボットの量産メーカー」を目指す。<br><br>
+                    💡 <strong>結論:</strong> NVIDIAがOSと学習空間を支配し、Figure AIが物理ハードウェアの量産標準を狙う協調・競合関係にあります。`;
+                } else if (query.includes('スタートアップ') || query.includes('参入') || query.includes('機会')) {
+                    summaryAnswer = `<h3>💡 スタートアップが狙うべき注目の未開拓領域</h3><br>
+                    1. <strong>モデル非依存のインテリジェント・ルーター:</strong> 単一研究室に依存せず、タスク難易度に応じてOpenAI/Anthropic/Geminiを動的振分けするミドルウェア。<br>
+                    2. <strong>AIオブザーバビリティ＆自動Eval基盤:</strong> 本番環境でのLLM推論ログ追跡、ハルシネーション遮断、LLM-as-a-Judgeによる品質保証ツール。<br>
+                    3. <strong>AI駆動の超高速UI/UXプロトタイピング:</strong> 静的Figmaを脱し、対話しながら初日から動くコードUIを構築する新世代デザインツール。`;
+                } else if (query.includes('インフラ') || query.includes('電力') || query.includes('ボトルネック')) {
+                    summaryAnswer = `<h3>⚡ AIインフラの最大のボトルネックと電力危機</h3><br>
+                    テスラやジェンスン・ファンの指摘通り、AIデータセンターの急増により「地域の送電網容量の枯渇」が現実化。テスラは家庭用蓄電池（Powerwall）による分散型スマートグリッドで電力網を支える構想を掲げ、イーロン・マスクは数年以内に「宇宙空間へのAIデータセンター配備が最も安価になる」という驚異的なタイムラインを展望しています。`;
+                } else if (query.includes('nvidia') || query.includes('フィジカル') || query.includes('omniverse')) {
+                    summaryAnswer = `NVIDIAのジェンスン・ファンは、<strong>「フィジカルAI（Physical AI）」</strong>こそがAIの次なる巨大フロンティアであると強調。物理法則を完全に再現した「Omniverse」内でロボットに数億時間の強化学習を行わせることで、破損リスクなしに実世界ロボットを瞬時に進化させる戦略を推進しています。`;
                 } else if (query.includes('openai') || query.includes('エージェント') || query.includes('plugin') || query.includes('agent')) {
-                    summaryAnswer = `OpenAIは、単に質問に答える受動的なチャットボットから、<strong>「APIや開発ツールを自律操作して目的を完遂する自律型AIエージェント（Agent）」</strong>への進化を急速に進めています。AgentPluginや推論モデルの向上により、ソフトウェア開発や複数ステップの業務が自動化されます。`;
-                } else if (query.includes('deepmind') || query.includes('gemini') || query.includes('robot')) {
-                    summaryAnswer = `Google DeepMindは、<strong>「Gemini Robotics」</strong>を通じて視覚・言語・運動制御を統合したVLA（Vision-Language-Action）モデルを開発。複数台のロボットが自然言語でタスクを分担し、未知の環境で協調動作する汎用ロボティクスのブレイクスルーを達成しています。`;
-                } else if (query.includes('自動運転') || query.includes('都市') || query.includes('車')) {
-                    summaryAnswer = `自動運転（Robotaxi）の社会実装により、自家用車の所有が激減し、都市面積の30〜40%を占める駐車場や車線が不要になり、緑地や居住区へと大規模に再開発されると分析されています。年間130万人の交通事故死者を減らす公衆衛生上の最大の変革でもあります。`;
-                } else if (query.includes('meta') || query.includes('llama') || query.includes('グラス')) {
-                    summaryAnswer = `Metaは<strong>「Llamaモデルのオープンソース化」</strong>によって特定企業による知能独占を打破しつつ、スマートグラス（Ray-Ban Meta）を通じて「ユーザーと同じ視界を共有する常時寄り添うウェアラブルAI」の社会実装を進めています。`;
-                } else {
+                    summaryAnswer = `OpenAIは、受動的な対話チャットボットから<strong>「APIや開発ツールを自律操作して目的を完遂する自律型AIエージェント（Agent）」</strong>への進化を加速。AgentPluginや推論モデルの最適化により、ソフトウェア開発や複数ステップの業務が完全自動化されます。`;
+                } else if (matches.length > 0) {
+                    const top = matches[0].item;
                     summaryAnswer = `『<strong>${top.title}</strong>』において、関連する重要な技術動向と今後の展望が語られています。各分野の最高責任者による具体的なデータとアーキテクチャの革新が解説されています。`;
+                } else {
+                    summaryAnswer = `ご質問の『<strong>${query}</strong>』に関連するナレッジを検索しました。現在ライブラリには「フィジカルAI」「自律エージェント」「インフラ電力」「国家戦略」に関する20本以上の徹底解説レポートが蓄積されています。`;
+                    relatedMatches = libraryData.slice(0, 3).map(item => ({ score: 1, item }));
                 }
 
                 responseText.innerHTML = summaryAnswer;
-                sourceLinks.innerHTML = matches.slice(0, 3).map(m => `
+                sourceLinks.innerHTML = relatedMatches.slice(0, 4).map(m => `
                     <a href="${m.item.filename}" class="source-link-item">
                         <span>📺 [${m.item.channel}] ${m.item.title}</span>
-                        <span style="color: var(--accent-color); font-weight: bold;">レポートを開く →</span>
+                        <span style="color: var(--accent-color); font-weight: bold;">詳細レポートを見る →</span>
                     </a>
                 `).join('');
             }, 300);

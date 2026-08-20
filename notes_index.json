@@ -11,6 +11,18 @@
     "chapters": []
   },
   {
+    "video_id": "QLKcF0j6bVA",
+    "title": "GitHub Copilot SDKで、あらゆるアイデアをAIアプリにしよう",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html",
+    "date": "2026-08-19",
+    "tags": [
+      "ai",
+      "copilot"
+    ],
+    "chapters": []
+  },
+  {
     "video_id": "XuoqKYxDHVc",
     "title": "【フル対談】イーロン・マスク：AI・AGIと超豊かさの時代（2036年）へのロードマップ",
     "channel": "The Economist",
@@ -41,8 +53,8 @@
     "video_id": "8aGMLbS3NAo",
     "title": "Tesla Home: Home Energy Management, Powered by AI",
     "channel": "Tesla (Elon Musk)",
-    "filename": "2026-08-19_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html",
-    "date": "2026-08-19",
+    "filename": "2026-08-20_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html",
+    "date": "2026-08-20",
     "tags": [
       "ai"
     ],
@@ -52,8 +64,8 @@
     "video_id": "UaeWJK_vv-Y",
     "title": "OpenAI SpecVideo AgentPlugin v08 HD",
     "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-19_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html",
-    "date": "2026-08-19",
+    "filename": "2026-08-20_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html",
+    "date": "2026-08-20",
     "tags": [
       "ai",
       "agent"
@@ -70,8 +82,8 @@
     "video_id": "fo9WirRIaVs",
     "title": "Robots working together with Gemini Robotics 2",
     "channel": "Google DeepMind (Demis Hassabis)",
-    "filename": "2026-08-19_AI_Google_Robots working together with Gemini Robotics 2.html",
-    "date": "2026-08-19",
+    "filename": "2026-08-20_AI_Google_Robots working together with Gemini Robotics 2.html",
+    "date": "2026-08-20",
     "tags": [
       "robot",
       "robotics",
@@ -83,8 +95,8 @@
     "video_id": "Sm7OTow3mcY",
     "title": "その画像がAI生成かどうかを見分ける方法",
     "channel": "Google (Sundar Pichai)",
-    "filename": "2026-08-19_AI_Google_その画像がAI生成かどうかを見分ける方法.html",
-    "date": "2026-08-19",
+    "filename": "2026-08-20_AI_Google_その画像がAI生成かどうかを見分ける方法.html",
+    "date": "2026-08-20",
     "tags": [
       "ai"
     ],
@@ -94,8 +106,8 @@
     "video_id": "pmiN5Nj1-K8",
     "title": "GTC SJ 2026：ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合",
     "channel": "NVIDIA (Jensen Huang)",
-    "filename": "2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合.html",
-    "date": "2026-08-19",
+    "filename": "2026-08-20_AI_NVIDIA_GTC SJ 2026ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合.html",
+    "date": "2026-08-20",
     "tags": [
       "gtc"
     ],
@@ -105,8 +117,8 @@
     "video_id": "gatpk6BhN5w",
     "title": "誰もが手にする未来：アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供",
     "channel": "Meta (Mark Zuckerberg / Yann LeCun)",
-    "filename": "2026-08-19_AI_Meta_誰もが手にする未来アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供.html",
-    "date": "2026-08-19",
+    "filename": "2026-08-20_AI_Meta_誰もが手にする未来アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供.html",
+    "date": "2026-08-20",
     "tags": [
       "ai"
     ],
@@ -116,8 +128,8 @@
     "video_id": "cazd1z4Eseo",
     "title": "The AI shift most companies didn't see coming",
     "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
-    "filename": "2026-08-19_AI_Microsoft_The AI shift most companies didnt see coming.html",
-    "date": "2026-08-19",
+    "filename": "2026-08-20_AI_Microsoft_The AI shift most companies didnt see coming.html",
+    "date": "2026-08-20",
     "tags": [
       "ai"
     ],
@@ -135,14 +147,13 @@
     ]
   },
   {
-    "video_id": "QLKcF0j6bVA",
-    "title": "GitHub Copilot SDKで、あらゆるアイデアをAIアプリにしよう",
+    "video_id": "KykyglY1W4g",
+    "title": "SQL and AI for Developers in Action",
     "channel": "Microsoft Developer",
-    "filename": "2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html",
-    "date": "2026-08-19",
+    "filename": "2026-08-20_AI_Microsoft_SQL and AI for Developers in Action.html",
+    "date": "2026-08-20",
     "tags": [
-      "ai",
-      "copilot"
+      "ai"
     ],
     "chapters": []
   },
@@ -150,8 +161,8 @@
     "video_id": "uQd809adb58",
     "title": "Galileo: The Most Advanced Balance Trainer on Earth (Mind Blowing)🚀🧠",
     "channel": "Figure AI (Brett Adcock / 人型ロボット)",
-    "filename": "2026-08-19_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html",
-    "date": "2026-08-19",
+    "filename": "2026-08-20_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html",
+    "date": "2026-08-20",
     "tags": [
       "ai"
     ],
@@ -161,8 +172,8 @@
     "video_id": "j9Qr5aUfqNU",
     "title": "コーディングエージェントのベンチマーク：Scale AIリサーチ・ミートアップ（NYC）2026/08/13",
     "channel": "Scale AI (Alexandr Wang)",
-    "filename": "2026-08-19_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html",
-    "date": "2026-08-19",
+    "filename": "2026-08-20_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html",
+    "date": "2026-08-20",
     "tags": [
       "ai"
     ],
@@ -172,8 +183,8 @@
     "video_id": "7CNlGweeN90",
     "title": "自動運転車は私たちの都市をどう変えるのか？ | エコノミスト",
     "channel": "The Economist",
-    "filename": "2026-08-19_AI_The_自動運転車は私たちの都市をどう変えるのか  エコノミスト.html",
-    "date": "2026-08-19",
+    "filename": "2026-08-20_AI_The_自動運転車は私たちの都市をどう変えるのか  エコノミスト.html",
+    "date": "2026-08-20",
     "tags": [
       "自動運転"
     ],
@@ -188,8 +199,8 @@
     "video_id": "vif8NQcjVf0",
     "title": "Jensen Huang: NVIDIA - The $4 Trillion Company & the AI Revolution | Lex Fridman Podcast #494",
     "channel": "Lex Fridman (CEO徹底対談)",
-    "filename": "2026-08-19_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html",
-    "date": "2026-08-19",
+    "filename": "2026-08-20_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html",
+    "date": "2026-08-20",
     "tags": [
       "ai"
     ],
@@ -221,8 +232,8 @@
     "video_id": "-RXD4bTuFTo",
     "title": "Ryan Greenblatt – What happens once AI can automate AI research?",
     "channel": "Dwarkesh Patel (最深技術対談)",
-    "filename": "2026-08-19_AI_Dwarkesh_Ryan Greenblatt  What happens once AI can automate.html",
-    "date": "2026-08-19",
+    "filename": "2026-08-20_AI_Dwarkesh_Ryan Greenblatt  What happens once AI can automate.html",
+    "date": "2026-08-20",
     "tags": [
       "ai"
     ],
@@ -241,8 +252,8 @@
     "video_id": "zLUZclThLhU",
     "title": "マイケル・クラシオス：ホワイトハウスのAI戦略の内側",
     "channel": "Y Combinator (AIスタートアップ)",
-    "filename": "2026-08-19_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html",
-    "date": "2026-08-19",
+    "filename": "2026-08-20_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html",
+    "date": "2026-08-20",
     "tags": [
       "ai"
     ],

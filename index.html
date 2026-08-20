@@ -12,9 +12,11 @@
             --text-sub: #94a3b8;
             --accent-color: #38bdf8;
             --accent-orange: #fb923c;
+            --accent-green: #4ade80;
+            --accent-purple: #a855f7;
             --border-color: #334155;
             --ai-bg: #131d31;
-            --success-color: #4ade80;
+            --table-header: #1e1b4b;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -24,21 +26,22 @@
             padding: 40px 20px;
             line-height: 1.6;
         }
-        .container { max-width: 1100px; margin: 0 auto; }
+        .container { max-width: 1150px; margin: 0 auto; }
         header { text-align: center; margin-bottom: 30px; }
         h1 { font-size: 2.3rem; margin-bottom: 10px; background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .subtitle { color: var(--text-sub); font-size: 1.05rem; }
 
+        /* 🎙️ 音声ブリーフィングプレイヤー */
         .audio-player-card {
             background: linear-gradient(135deg, #1e1b4b, #0f172a);
             border: 2px solid #6366f1;
             border-radius: 18px;
-            padding: 24px 28px;
+            padding: 22px 28px;
             margin-bottom: 30px;
             box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.25);
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 14px;
         }
         .audio-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
         .audio-title-wrap { display: flex; align-items: center; gap: 12px; }
@@ -64,18 +67,19 @@
             background: rgba(15, 23, 42, 0.8); border: 1px solid #334155; border-radius: 12px; padding: 16px; font-size: 0.95rem; line-height: 1.8; color: #e2e8f0; display: none; margin-top: 5px;
         }
 
+        /* 🌅 メガトレンド・ダイジェストカード */
         .macro-trend-card {
             background: linear-gradient(145deg, #1e293b, #0f172a);
             border: 1px solid var(--accent-orange);
             border-radius: 18px;
-            padding: 26px 30px;
+            padding: 24px 28px;
             margin-bottom: 35px;
             box-shadow: 0 10px 25px -5px rgba(251, 146, 60, 0.15);
         }
-        .macro-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 1px solid rgba(251, 146, 60, 0.2); padding-bottom: 12px; }
+        .macro-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; border-bottom: 1px solid rgba(251, 146, 60, 0.2); padding-bottom: 12px; }
         .macro-title { font-size: 1.35rem; font-weight: bold; color: #ffffff; display: flex; align-items: center; gap: 10px; }
         .macro-date-badge { background: rgba(251, 146, 60, 0.15); color: var(--accent-orange); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
-        .trend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; }
+        .trend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px; }
         .trend-item {
             background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 18px; border-top: 3px solid var(--accent-orange);
         }
@@ -83,31 +87,85 @@
         .trend-h3 { font-size: 1.05rem; font-weight: bold; color: #ffffff; margin-bottom: 8px; line-height: 1.4; }
         .trend-p { font-size: 0.88rem; color: #cbd5e1; line-height: 1.7; }
 
-        .topic-hub-section { margin-bottom: 35px; }
-        .topic-hub-title { font-size: 1.15rem; font-weight: bold; color: var(--accent-color); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
-        .topic-btn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+        /* 🔥 技術トピック別トレンドマップ（5大カテゴリハブ） */
+        .topic-hub-section { margin-bottom: 40px; }
+        .topic-hub-title-wrap { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 8px; }
+        .topic-hub-title { font-size: 1.25rem; font-weight: bold; color: var(--accent-color); display: flex; align-items: center; gap: 8px; }
+        .topic-hub-badge { font-size: 0.8rem; background: rgba(56, 189, 248, 0.15); color: var(--accent-color); padding: 4px 10px; border-radius: 20px; }
+        .topic-btn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin-bottom: 18px; }
         .topic-btn {
-            background: #1e293b; border: 1px solid var(--border-color); border-radius: 12px; padding: 14px 16px; text-align: left; cursor: pointer; transition: all 0.2s; display: flex; flex-direction: column; gap: 4px; color: inherit;
+            background: #1e293b; border: 1px solid var(--border-color); border-radius: 12px; padding: 14px; text-align: left; cursor: pointer; transition: all 0.2s; display: flex; flex-direction: column; gap: 4px; color: inherit;
         }
         .topic-btn:hover, .topic-btn.active {
             background: #253349; border-color: var(--accent-color); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(56, 189, 248, 0.15);
         }
-        .topic-btn.active { border-width: 2px; }
-        .topic-btn-header { font-size: 0.95rem; font-weight: bold; color: #ffffff; display: flex; align-items: center; gap: 6px; }
-        .topic-btn-sub { font-size: 0.78rem; color: var(--text-sub); }
-        .topic-summary-box {
-            margin-top: 15px; background: rgba(56, 189, 248, 0.08); border-left: 4px solid var(--accent-color); border-radius: 8px; padding: 14px 18px; font-size: 0.92rem; color: #e2e8f0; line-height: 1.7; display: none;
+        .topic-btn.active { border-width: 2px; border-color: var(--accent-color); }
+        .topic-btn-header { font-size: 0.92rem; font-weight: bold; color: #ffffff; display: flex; align-items: center; gap: 6px; }
+        .topic-btn-sub { font-size: 0.76rem; color: var(--text-sub); }
+
+        /* 🗺️ リッチな構造化インテリジェンス・トレンドマップコンテナ */
+        .trend-map-container {
+            background: #131d31; border: 1px solid var(--border-color); border-radius: 16px; padding: 26px; display: none; animation: fadeIn 0.3s ease-in-out; margin-bottom: 30px;
+        }
+        .trend-map-title { font-size: 1.3rem; font-weight: bold; color: #ffffff; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
+        .trend-map-summary { font-size: 0.95rem; color: #cbd5e1; line-height: 1.8; margin-bottom: 22px; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+        /* 6大インテリジェンス・グリッド */
+        .intel-section-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; margin-bottom: 20px; }
+        .intel-box {
+            background: #0f172a; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 10px;
+        }
+        .intel-box-header { font-size: 0.95rem; font-weight: bold; color: var(--accent-color); display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 8px; }
+
+        /* 技術レイヤーフロー */
+        .layer-flow { display: flex; flex-direction: column; gap: 8px; }
+        .layer-item {
+            background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(255,255,255,0.05); border-left: 3px solid var(--accent-color); border-radius: 6px; padding: 8px 12px; font-size: 0.85rem; line-height: 1.5;
+        }
+        .layer-name { font-weight: bold; color: #ffffff; margin-bottom: 2px; }
+        .layer-desc { font-size: 0.78rem; color: var(--text-sub); }
+
+        /* プレイヤーマトリクス表 */
+        .matrix-table { width: 100%; border-collapse: collapse; margin-top: 5px; font-size: 0.82rem; }
+        .matrix-table th { background: #1e1b4b; color: #a5b4fc; text-align: left; padding: 8px 10px; border-radius: 4px; font-weight: 600; }
+        .matrix-table td { padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; line-height: 1.5; vertical-align: top; }
+        .matrix-table tr:hover td { background: rgba(255,255,255,0.02); }
+        .matrix-player { font-weight: bold; color: #ffffff; }
+
+        /* タイムライン */
+        .timeline-list { display: flex; flex-direction: column; gap: 10px; margin-top: 5px; }
+        .timeline-step { display: flex; gap: 12px; }
+        .timeline-badge { background: rgba(56, 189, 248, 0.15); color: var(--accent-color); font-weight: bold; padding: 4px 8px; border-radius: 6px; font-size: 0.75rem; height: fit-content; white-space: nowrap; }
+        .timeline-content { font-size: 0.82rem; color: #cbd5e1; line-height: 1.5; }
+        .timeline-title { font-weight: bold; color: #ffffff; margin-bottom: 2px; }
+
+        /* ボトルネック＆参入機会 */
+        .opportunity-box {
+            background: rgba(74, 222, 128, 0.05); border: 1px solid rgba(74, 222, 128, 0.2); border-radius: 8px; padding: 12px; font-size: 0.85rem; line-height: 1.6; color: #dcfce7;
+        }
+        .bottleneck-box {
+            background: rgba(251, 146, 60, 0.05); border: 1px solid rgba(251, 146, 60, 0.2); border-radius: 8px; padding: 12px; font-size: 0.85rem; line-height: 1.6; color: #ffedd5;
         }
 
+        /* 必見動画キュレーション */
+        .curated-video-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin-top: 8px; }
+        .curated-video-card {
+            background: #1e293b; border: 1px solid var(--border-color); border-radius: 8px; padding: 10px 12px; text-decoration: none; color: inherit; transition: all 0.2s; display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .curated-video-card:hover { border-color: var(--accent-color); background: #253349; transform: translateY(-2px); }
+        .curated-video-title { font-size: 0.85rem; font-weight: bold; color: #ffffff; line-height: 1.4; margin-bottom: 6px; }
+        .curated-video-footer { font-size: 0.75rem; color: var(--accent-color); display: flex; justify-content: space-between; font-weight: 600; }
+
+        /* 🧠 対話AIアシスタント */
         .ai-chat-card {
             background: linear-gradient(145deg, #1e293b, #0f172a);
             border: 1px solid var(--accent-color);
             border-radius: 18px;
-            padding: 26px 30px;
+            padding: 24px 28px;
             margin-bottom: 35px;
             box-shadow: 0 12px 30px -5px rgba(56, 189, 248, 0.15);
         }
-        .ai-chat-header { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; }
+        .ai-chat-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
         .ai-icon { font-size: 1.8rem; background: rgba(56, 189, 248, 0.2); padding: 8px 12px; border-radius: 12px; }
         .ai-chat-title { font-size: 1.25rem; font-weight: bold; color: #ffffff; }
         .ai-chat-desc { font-size: 0.88rem; color: var(--text-sub); }
@@ -145,6 +203,7 @@
         }
         .source-link-item:hover { border-left: 3px solid var(--accent-color); background: #253349; }
 
+        /* タブ＆ストック操作バー */
         .tab-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
         .tab-group { display: flex; gap: 8px; }
         .tab-btn {
@@ -184,8 +243,8 @@
         .read-btn {
             position: absolute; top: 10px; left: 10px; background: rgba(15, 23, 42, 0.85); border: 1px solid #475569; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; backdrop-filter: blur(4px);
         }
-        .read-btn:hover { transform: scale(1.15); border-color: var(--success-color); }
-        .read-btn.active { background: var(--success-color); color: #000; border-color: var(--success-color); }
+        .read-btn:hover { transform: scale(1.15); border-color: var(--accent-green); }
+        .read-btn.active { background: var(--accent-green); color: #000; border-color: var(--accent-green); }
 
         .card-link { text-decoration: none; color: inherit; display: block; }
         .card-meta-bar { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.05); }
@@ -199,6 +258,7 @@
             font-size: 0.8rem; color: #fbbf24; background: rgba(251, 191, 36, 0.1); border-left: 3px solid #fbbf24; padding: 6px 10px; border-radius: 4px; margin-top: 10px; display: none; line-height: 1.4;
         }
 
+        /* メモ用モーダル */
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 1000;
         }
@@ -281,9 +341,13 @@
             </div>
         </div>
 
-        <!-- 🔥 技術トピック別トレンドマップ（4大カテゴリハブ） -->
+        <!-- 🔥 技術トピック別トレンドマップ（5大カテゴリハブ） -->
         <div class="topic-hub-section">
-            <div class="topic-hub-title">🔥 注目の技術トピック別トレンドマップ（カテゴリ一気読み）</div>
+            <div class="topic-hub-title-wrap">
+                <div class="topic-hub-title">🗺️ 注目の技術トピック別トレンドマップ（エグゼクティブ・インテリジェンス）</div>
+                <span class="topic-hub-badge">💡 タップすると詳細な勢力図・ロードマップ・構造分析が展開</span>
+            </div>
+            
             <div class="topic-btn-grid">
                 <button class="topic-btn active" id="topic-all" onclick="filterByTopic('all')">
                     <div class="topic-btn-header">🌐 全テーマ一覧</div>
@@ -291,23 +355,28 @@
                 </button>
                 <button class="topic-btn" id="topic-physical" onclick="filterByTopic('physical')">
                     <div class="topic-btn-header">🦾 フィジカルAI & ロボティクス</div>
-                    <div class="topic-btn-sub">NVIDIA, Figure, DeepMind, Tesla, YC</div>
+                    <div class="topic-btn-sub">NVIDIA, Figure, DeepMind, Tesla</div>
                 </button>
                 <button class="topic-btn" id="topic-agent" onclick="filterByTopic('agent')">
-                    <div class="topic-btn-header">🤖 自律型エージェント & SDK</div>
-                    <div class="topic-btn-sub">OpenAI, Microsoft, Scale AI, YC</div>
+                    <div class="topic-btn-header">🤖 自律エージェント & 開発環境</div>
+                    <div class="topic-btn-sub">OpenAI, Microsoft, Scale AI</div>
                 </button>
                 <button class="topic-btn" id="topic-infra" onclick="filterByTopic('infra')">
-                    <div class="topic-btn-header">⚡ インフラ・電力・半導体</div>
-                    <div class="topic-btn-sub">Lex/Jensen, Tesla, Dwarkesh</div>
+                    <div class="topic-btn-header">⚡ インフラ・電力・宇宙</div>
+                    <div class="topic-btn-sub">Tesla, Jensen/Lex, Dwarkesh</div>
                 </button>
                 <button class="topic-btn" id="topic-strategy" onclick="filterByTopic('strategy')">
                     <div class="topic-btn-header">🏛️ 国家戦略 & モデル非依存</div>
-                    <div class="topic-btn-sub">YC/Kratsios, Economist, YC</div>
+                    <div class="topic-btn-sub">YC/Kratsios, Economist, Top Labs</div>
+                </button>
+                <button class="topic-btn" id="topic-design" onclick="filterByTopic('design')">
+                    <div class="topic-btn-header">🎨 AIデザイン & UI/UX</div>
+                    <div class="topic-btn-sub">YC Design, 動的プロトタイプ</div>
                 </button>
             </div>
             
-            <div class="topic-summary-box" id="topicSummaryBox"></div>
+            <!-- リッチなトレンドマップ詳細表示エリア -->
+            <div class="trend-map-container" id="trendMapContainer"></div>
         </div>
 
         <!-- 🧠 横断AIアシスタント（マクロトレンド・企業比較モード） -->
@@ -735,7 +804,7 @@
             </div>
         </div>
         
-        <div class="portal-card cat-agent cat-strategy" id="card-VbqaL_eHhKY" data-id="VbqaL_eHhKY" data-title="【y combinator】デザイン責任者が教える、生成aiを活用した次世代ui/uxデザイン手法 【y combinator】デザイン責任者が教える、生成aiを活用した次世代ui/uxデザイン手法 y combinator (aiスタートアップ) ['AI', 'Design', 'UIUX', 'YC'] ">
+        <div class="portal-card cat-strategy cat-design" id="card-VbqaL_eHhKY" data-id="VbqaL_eHhKY" data-title="【y combinator】デザイン責任者が教える、生成aiを活用した次世代ui/uxデザイン手法 【y combinator】デザイン責任者が教える、生成aiを活用した次世代ui/uxデザイン手法 y combinator (aiスタートアップ) ['AI', 'Design', 'UIUX', 'YC'] ">
             <div class="thumb-container">
                 <a href="2026-08-20_AI_Y_YCのデザイン責任者が教える、AIを活用したデザイン手法.html">
                     <img src="https://img.youtube.com/vi/VbqaL_eHhKY/hqdefault.jpg" alt="【Y Combinator】デザイン責任者が教える、生成AIを活用した次世代UI/UXデザイン手法" loading="lazy">
@@ -855,11 +924,142 @@
         let isAudioPlaying = false;
         let speechSynthUtterance = null;
 
-        const topicSummaries = {
-            'physical': '🦾 <strong>フィジカルAI＆ロボティクス総括:</strong><br>言語モデルの知能が「画面内」から「現実世界の物理法則・原子制御」へと不可逆的にシフト。NVIDIAのOmniverseによるSim-to-Real仮想強化学習、Figure AIの高トルク二足歩行Galileo、DeepMindのVLAモデルなど、実体経済のサプライチェーンと肉体労働の自律化が最大の主戦場となっています。',
-            'agent': '🤖 <strong>自律型エージェント＆開発環境総括:</strong><br>単なるテキスト応答チャットから、APIやPC環境を直接自律操作するエージェントへと進化。OpenAIのAgentPlugin仕様、MicrosoftのCopilot SDK、YCの動的UIプロトタイピングなど、人間がコードを手書きする時代からエージェントを指揮・マネジメントする時代へと開発パラダイムが刷新されています。',
-            'infra': '⚡ <strong>インフラ・電力・半導体総括:</strong><br>AIスケーリングの最大のボトルネックが「アルゴリズム」から「物理的なGPU計算基盤とデータセンターの電力供給能力」へ移行。テスラの分散型蓄電池グリッドや、宇宙空間へのデータセンター配備構想など、ギガワット級の電力確保が国家・企業の存亡を分ける争点となっています。',
-            'strategy': '🏛️ <strong>国家戦略＆モデル非依存プラットフォーム総括:</strong><br>米国の過度な事前規制を避けるイノベーション最優先政策や先端半導体の輸出管理。さらに、特定AIラボへのロックインを回避し、最高精度と最小コストを両立する「モデル非依存（Model-Agnostic）」プラットフォームへの急速なシフトが進展しています。'
+        /* 🗺️ 6大構造化インテリジェンス・トレンドマップデータ */
+        const richTopicMaps = {
+            'physical': {
+                title: '🦾 フィジカルAI & 人型ロボティクス（Physical AI & Robotics）',
+                summary: '言語モデルの知能が「画面内のテキスト処理」から「現実世界の物理法則・原子（Atoms）の直接制御」へと不可逆的にシフト。仮想シミュレーション（Sim-to-Real）による数億時間の超高速強化学習と、高トルク・高身体性ハードウェアの融合により、製造・物流・医療・家庭労働など実体経済のバリューチェーン全体を再定義する次なる超巨大プラットフォームです。',
+                layers: [
+                    { name: '1. 物理シミュレーション & 学習空間', desc: 'NVIDIA Omniverse / Sim-to-Real仮想環境。破損リスクなしに並列で数億時間のロボット強化学習を実行。' },
+                    { name: '2. 身体性マルチモーダル基盤（VLA）', desc: 'Google DeepMind Gemini Robotics / 視覚・言語・運動制御を統合し、自然言語でタスクを理解・自律実行。' },
+                    { name: '3. 汎用ロボティクス・ハードウェア', desc: 'Figure AI (Galileo) / Tesla Optimus。高トルク二足歩行、繊細な手先操作、人間用施設への直接適応。' },
+                    { name: '4. 産業アプリケーション・現場統合', desc: '自動車・半導体工場、倉庫物流、手術支援ロボット、無人配送・自動運転（Robotaxi）。' }
+                ],
+                matrix: [
+                    { player: 'NVIDIA', role: 'インフラ & 学習OS', strength: 'OmniverseとGPUクラスタによる世界標準シミュレーション環境', target: '全ロボットメーカーのOS支配' },
+                    { player: 'Figure AI', role: '汎用人型ロボット量産', strength: '自社開発の革新バランストレーナー「Galileo」と驚異的な製造速度', target: '工場・サプライチェーンの労働代替' },
+                    { player: 'Google DeepMind', role: 'VLA基盤モデル研究', strength: 'Gemini Roboticsによる複数ロボットの言語協調動作・未知環境適応', target: '汎用身体性知能の標準モデル' },
+                    { player: 'Tesla', role: '垂直統合ハード&FSD', strength: '自社製アクチュエータ、車載ビジョンAIとOptimusの学習共通化', target: '数百万台規模の民生・工場ロボット量産' }
+                ],
+                timeline: [
+                    { phase: '2026年 (現在)', title: '特定産業ラインでの実証配備', desc: '自動車工場・物流拠点での反復作業や部品運搬。Sim-to-Real精度の飛躍的向上。' },
+                    { phase: '2027-2028年', title: '複数ロボット協調 & 半自律運用', desc: '自然言語指示によるチーム作業、未知の障害物や環境変化へのリアルタイム自己修正。' },
+                    { phase: '2030年', title: '一般家庭・建設現場への本格普及', desc: '1台数万ドル以下の量産化と、人間の肉体労働全般を代替するフィジカルAI経済の確立。' }
+                ],
+                bottleneck: '⚠️ <strong>最大の壁:</strong> 物理シミュレーションと実世界の摩擦・触覚差（Reality Gap）、およびバッテリー駆動時間とアクチュエータの熱処理。',
+                opportunity: '💡 <strong>スタートアップ勝機:</strong> ロボット用センサーデータ収集・ラベリング基盤、特定業界向け（介護・外食・農業）の特化型自律制御ミドルウェア。',
+                curated_vids: [
+                    { title: '【NVIDIA】ヘルスケアロボティクスのためのフィジカルAI', file: '2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアロボティクスのためのフィジカルAI  シミュレーション主導の設計と開.html', tag: 'NVIDIA' },
+                    { title: '【Figure AI】世界最強のバランストレーナーGalileo', file: '2026-08-19_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html', tag: 'Figure AI' },
+                    { title: '【Google DeepMind】Gemini Robotics複数ロボ協調', file: '2026-08-19_AI_Google_Robots working together with Gemini Robotics 2.html', tag: 'DeepMind' }
+                ]
+            },
+            'agent': {
+                title: '🤖 自律型エージェント & 開発スタック（Autonomous Agents & Developer Stack）',
+                summary: '受動的なテキストチャットの時代は終わり、自律的にAPI、ターミナル、PC操作、社内DBを連動させてゴールを完遂する「自律型AIエージェント」がソフトウェア産業の主役に。単一LLMへのプロンプト入力から、AgentPlugin・MCP（Model Context Protocol）・Copilot SDKを通じたマルチエージェント協調オーケストレーションへと開発基盤が刷新されています。',
+                layers: [
+                    { name: '1. 高度推論エンジン（Frontier Models）', desc: 'OpenAI o-series / Claude 3.5 Sonnet。思考の連鎖（Chain of Thought）による多段階推論と計画策定。' },
+                    { name: '2. エージェント相互接続仕様（Protocols）', desc: 'OpenAI AgentPlugin / Anthropic MCP / ツール定義、権限境界、ステート管理の標準化。' },
+                    { name: '3. エンタープライズSDK & 実行環境', desc: 'GitHub Copilot SDK / Microsoft Agent Framework。既存の社内ワークフローへの安全な埋め込み。' },
+                    { name: '4. 評価・ベンチマーク・オブザーバビリティ', desc: 'Scale AI SWE Atlas / 本番環境での推論トレース、タスク達成率の定量的Eval。' }
+                ],
+                matrix: [
+                    { player: 'OpenAI', role: 'エージェント規格 & 推論標準', strength: 'AgentPlugin仕様の提唱と最先端推論モデルによる実行力', target: '全AIエージェントの基本プラットフォーム' },
+                    { player: 'Microsoft', role: '企業業務ワークフロー定着', strength: 'Copilot SDKとGitHub/Officeの既存顧客基盤への圧倒的統合力', target: '全エンタープライズソフトウェアのAI化' },
+                    { player: 'Scale AI', role: 'ベンチマーク & 信頼性保証', strength: 'SWE Atlasや実務タスク評価（Eval）基盤による客観的品質測定', target: '企業のAI導入における品質監査標準' }
+                ],
+                timeline: [
+                    { phase: '2026年 (現在)', title: 'コーディング & 特定ワークフロー自律化', desc: 'PR作成、バグ修正、データ抽出などの単一職務タスクをエージェントが自律完遂。' },
+                    { phase: '2027-2028年', title: 'マルチエージェント協調組織の稼働', desc: 'PM・デザイナー・エンジニア・QAの各専門エージェントが協調して新機能を自動リリース。' },
+                    { phase: '2030年', title: '自律企業オペレーション（Autonomous Ops）', desc: '顧客サポートから経理、インフラ運用まで日常業務の90%がエージェント群により自律執行。' }
+                ],
+                bottleneck: '⚠️ <strong>最大の壁:</strong> エージェントの自律ループ中に発生するエラーの自己修復能力限界、および本番環境での安全なアクセス権限（Guardrails）制御。',
+                opportunity: '💡 <strong>スタートアップ勝機:</strong> エージェント専用のサンドボックス実行環境、マルチエージェント間通信プロトコル、特定業務向け自動Evalフレームワーク。',
+                curated_vids: [
+                    { title: '【OpenAI】自律型AIエージェントプラグイン仕様', file: '2026-08-19_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html', tag: 'OpenAI' },
+                    { title: '【マイクロソフト】GitHub Copilot SDKの全貌', file: '2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html', tag: 'Microsoft' },
+                    { title: '【Scale AI】コーディングエージェントの最新ベンチマーク', file: '2026-08-19_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html', tag: 'Scale AI' }
+                ]
+            },
+            'infra': {
+                title: '⚡ 半導体・電力・宇宙インフラ（Compute, Power & Infrastructure）',
+                summary: 'AIスケーリングの律速段階が「アルゴリズムの研究」から「物理的なGPU半導体供給とギガワット級データセンターの電力確保」へと完全に移行。テスラの分散型蓄電池網（Powerwall/Megapack）、送電網の逼迫、そしてイーロン・マスクが提言する「宇宙空間へのデータセンター配備」など、エネルギーと宇宙インフラを制する者がAI覇権を握る時代に突入しました。',
+                layers: [
+                    { name: '1. 半導体 & 超高速ファブリック', desc: 'NVIDIA Blackwell/Rubin, Spectrum-X Ethernet。数万基GPUの超低遅延クラスタ接続。' },
+                    { name: '2. データセンター電力 & 冷却', desc: '液冷（Liquid Cooling）システム、数ギガワット規模の専用受電設備。' },
+                    { name: '3. 分散型エネルギー & スマートグリッド', desc: 'Tesla Megapack / Powerwall / 地域の送電網負荷を分散・平準化するAI自律電力管理。' },
+                    { name: '4. 次世代フロンティア（宇宙配備）', desc: 'Starshipによる打ち上げコスト極小化 ➔ 太陽光常時発電・極低温冷却が可能な宇宙軌道上DC。' }
+                ],
+                matrix: [
+                    { player: 'NVIDIA (Jensen)', role: 'AI Factory半導体覇権', strength: 'GPU・ネットワーク・CUDAエコシステムの圧倒的独占と年次刷新サイクル', target: '世界のAIコンピュート基盤の支配' },
+                    { player: 'Tesla (Elon Musk)', role: 'エネルギー & 宇宙垂直統合', strength: '分散型蓄電池グリッド＋SpaceX Starshipによる宇宙データセンター配備能力', target: 'ギガワット電力制約の突破と宇宙DC' },
+                    { player: 'Dylan Patel / Dwarkesh', role: '半導体・電力サプライチェーン分析', strength: '世界中のデータセンター電力枯渇、CoWoSパッケージング供給制約の定量的解明', target: 'インフラボトルネックの啓発' }
+                ],
+                timeline: [
+                    { phase: '2026年 (現在)', title: '地域送電網の枯渇と液冷標準化', desc: '既存の電力網へのデータセンター増設が限界に達し、自家発電や蓄電池併設が必須に。' },
+                    { phase: '2027-2028年', title: '小型原子炉（SMR）& 再エネ直結', desc: 'マイクロソフトやAmazon等による原子力直結型データセンターの稼働開始。' },
+                    { phase: '2030年', title: '宇宙軌道上データセンター実証', desc: 'Starshipの低コスト打ち上げにより、冷却不要・24時間太陽光の宇宙コンピュートが始動。' }
+                ],
+                bottleneck: '⚠️ <strong>最大の壁:</strong> 地球上での電力供給許可（送電網接続に数年待ち）と、熱密度が極限に達した半導体クラスタの冷却コスト。',
+                opportunity: '💡 <strong>スタートアップ勝機:</strong> AI専用の推論最適化チップ（LPPU）、データセンター向けAI冷却制御ソフト、再生可能エネルギー最適マッチング。',
+                curated_vids: [
+                    { title: '【テスラ】AIによる家庭用エネルギー自律管理システムの全貌', file: '2026-08-20_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html', tag: 'Tesla' },
+                    { title: '【Dwarkesh】36ヶ月後には宇宙空間がAI配備に最も安価になる', file: '2026-08-20_AI_Dwarkesh_イーロンマスク  36か月後にはAIを置くのに最も安い場所は宇宙になる.html', tag: 'Dwarkesh' },
+                    { title: '【Lex】ジェンスン・ファン：4兆ドル企業NVIDIAとAIファクトリー', file: '2026-08-19_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html', tag: 'NVIDIA' }
+                ]
+            },
+            'strategy': {
+                title: '🏛️ 国家AI戦略 & モデル非依存プラットフォーム（Sovereign AI & Model-Agnostic）',
+                summary: '米中の国家間AI覇権競争が激化する一方で、民間企業では「特定の単一AI研究室（OpenAI等）に社運を賭けるリスク」を回避する「モデル非依存（Model-Agnostic）」アーキテクチャが主流に。政府の事前規制緩和方針、輸出規制、そして本番環境でのオブザーバビリティ（可観測性）と動的ルーティングがビジネスの勝敗を決定づけています。',
+                layers: [
+                    { name: '1. 国家政策 & 地政学的規制', desc: '米国国家AIイニシアチブ（Kratsios）/ 輸出管理と事前規制緩和によるイノベーション加速。' },
+                    { name: '2. モデル非依存インテリジェント・ルーター', desc: 'タスク難易度・コスト・レイテンシに応じてOpenAI/Claude/Gemini/Llamaを最適動的振分け。' },
+                    { name: '3. オブザーバビリティ & 自動Eval', desc: '本番環境での推論トレース、ハルシネーション遮断、LLM-as-a-Judgeによる常時品質監視。' },
+                    { name: '4. ソブリンAI（Sovereign AI）', desc: '各国・各企業が独自データと主権を守るためのオンプレミス・オープンモデル運用。' }
+                ],
+                matrix: [
+                    { player: 'ホワイトハウス (Kratsios)', role: '国家AIイニシアチブ', strength: '欧州型事前規制を排し、オープンソース擁護と先端半導体防衛を両立', target: '米国の技術覇権維持と経済安全保障' },
+                    { player: 'YC Model-Agnostic陣営', role: 'マルチモデル抽象化', strength: '単一AIラボへのベンダーロックインを完全排除する次世代アーキテクチャ', target: '企業向け最高精度×最小コストの実現' },
+                    { player: 'Top AI Labs', role: '本番オブザーバビリティ', strength: '分散トレーシングとリアルタイムEvalによるエンタープライズ品質保証', target: 'LLMの非決定性克服と本番信頼性' }
+                ],
+                timeline: [
+                    { phase: '2026年 (現在)', title: 'マルチモデル動的ルーティングの定着', desc: '単一プロバイダー依存の脱却。軽負荷は小型モデル、難問は推論モデルへ自動振分け。' },
+                    { phase: '2027-2028年', title: 'ソブリンAIと業界特化Evalの標準化', desc: '金融・医療・防衛における自国インフラ内モデル運用と法適合性（Compliance）自動化。' },
+                    { phase: '2030年', title: '自律ガバナンスと分散知能ネットワーク', desc: '世界規模でのモデル間相互チェックと、AI主導による法務・安全規制のリアルタイム運用。' }
+                ],
+                bottleneck: '⚠️ <strong>最大の壁:</strong> 国家間の規制分断（データローカライゼーション）と、モデル更新に伴う既存プロンプトの予期せぬ挙動変化。',
+                opportunity: '💡 <strong>スタートアップ勝機:</strong> ベンダーロックインなしのエンタープライズAIゲートウェイ、リアルタイムAIセキュリティ＆ガバナンス監査ツール。',
+                curated_vids: [
+                    { title: '【YC】マイケル・クラシオス：ホワイトハウスのAI戦略の内側', file: '2026-08-19_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html', tag: 'YC / Policy' },
+                    { title: '【YC】モデルに依存しないAIプラットフォームの圧倒的優位性', file: '2026-08-20_AI_Y_モデルに依存しないAIプラットフォームは、どの単一の研究室も勝てないという賭けに出ている。.html', tag: 'YC Platform' },
+                    { title: '【YC】AIトップ研究所が「オブザーバビリティ」で取り組むこと', file: '2026-08-20_AI_Y_AIトップ研究所が「オブザーバビリティ」で実際に取り組んでいること.html', tag: 'Top Labs' }
+                ]
+            },
+            'design': {
+                title: '🎨 AI駆動プロダクトデザイン & UI/UXパラダイム（AI-First Product Design & UX）',
+                summary: '生成AIの台頭により、静的なFigmaワイヤーフレームを描いてエンジニアに渡す従来のデザイン分業体制が完全に終焉。デザイナー自身がAIと対話し、初日から動くコードUIを構築・検証する高速プロトタイピングが標準に。さらに、受動的なチャットボットUIを超え、AIが文脈を察知して先回りする「自律アシスト型インターフェース」の設計が競争軸となっています。',
+                layers: [
+                    { name: '1. 要求仕様・自然言語デザイン指示', desc: 'プロンプト対話による意図・ユーザージャーニーの即時コード化。' },
+                    { name: '2. 動的コードUI即時生成エンジン', desc: 'Figmaの静的モックを介さず、初日からReact/HTML等の動くコンポーネントを自動生成。' },
+                    { name: '3. 先回り型コンテキストUI（Proactive UX）', desc: 'テキスト入力を求めず、ユーザーの行動履歴や状況から最適なアクションを先回り提示。' },
+                    { name: '4. リアルタイム・ユーザー行動検証', desc: '実動プロトタイプをユーザーに触らせ、数分単位でデザインを対話修正する超高速イテレーション。' }
+                ],
+                matrix: [
+                    { player: 'YC Design (Garry Tan等)', role: 'AIファーストデザイン手法', strength: '静的モックの廃止と動くコードUIによる100倍速の検証サイクル提唱', target: '次世代スタートアップの開発文化変革' },
+                    { player: '新世代AI UIツール群', role: '動的コンポーネント生成', strength: 'プロンプトから本番品質のフロントエンドコードをリアルタイム出力', target: 'デザインとエンジニアリングの境界融解' }
+                ],
+                timeline: [
+                    { phase: '2026年 (現在)', title: '動くプロトタイプの初日作成', desc: 'デザイナーがAIツールを用いて数分で動作するUIを作成し、仮説検証を実施。' },
+                    { phase: '2027-2028年', title: 'パーソナライズ動的UIの普及', desc: 'ユーザーごとのスキルレベルや目的に応じて画面レイアウトがリアルタイムに自己生成。' },
+                    { phase: '2030年', title: 'ゼロUI & アンビエント・インテリジェンス', desc: '画面操作すら不要に。視線・音声・ウェアラブルによる意図予測と環境統合型UI。' }
+                ],
+                bottleneck: '⚠️ <strong>最大の壁:</strong> AI生成UIにおけるブランド一貫性の維持、およびコンポーネント間のデザインシステム厳密準拠。',
+                opportunity: '💡 <strong>スタートアップ勝機:</strong> ブランドガイドラインを強制適用するAIデザインリンター、ユーザー行動に応じてUIを動的自己変形させるフロントエンドSDK。',
+                curated_vids: [
+                    { title: '【YC】デザイン責任者が教える、AIを活用したデザイン手法', file: '2026-08-20_AI_Y_YCのデザイン責任者が教える、AIを活用したデザイン手法.html', tag: 'YC Design' },
+                    { title: '【YC】How To Design In The Agent Era', file: '2026-08-20_AI_Y_How To Design In The Agent Era.html', tag: 'Agent UI' }
+                ]
+            }
         };
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -969,19 +1169,116 @@
             box.style.display = (box.style.display === 'block') ? 'none' : 'block';
         }
 
-        /* 🔥 トピック別フィルター制御 */
+        /* 🔥 リッチな技術トピック別トレンドマップ展開制御 */
         function filterByTopic(topic) {
             currentTopic = topic;
             document.querySelectorAll('.topic-btn').forEach(btn => btn.classList.remove('active'));
             const activeBtn = document.getElementById('topic-' + topic);
             if (activeBtn) activeBtn.classList.add('active');
 
-            const summaryBox = document.getElementById('topicSummaryBox');
-            if (topic !== 'all' && topicSummaries[topic]) {
-                summaryBox.innerHTML = topicSummaries[topic];
-                summaryBox.style.display = 'block';
+            const container = document.getElementById('trendMapContainer');
+            
+            if (topic === 'all' || !richTopicMaps[topic]) {
+                container.style.display = 'none';
+                container.innerHTML = '';
             } else {
-                summaryBox.style.display = 'none';
+                const data = richTopicMaps[topic];
+                
+                // レイヤーHTML
+                const layersHtml = data.layers.map(l => `
+                    <div class="layer-item">
+                        <div class="layer-name">${l.name}</div>
+                        <div class="layer-desc">${l.desc}</div>
+                    </div>
+                `).join('');
+
+                // プレイヤーマトリクス表HTML
+                const matrixRowsHtml = data.matrix.map(m => `
+                    <tr>
+                        <td class="matrix-player">${m.player}</td>
+                        <td><span style="color:var(--accent-color); font-weight:600;">${m.role}</span></td>
+                        <td>${m.strength}</td>
+                        <td><span style="color:var(--accent-orange);">${m.target}</span></td>
+                    </tr>
+                `).join('');
+
+                // タイムラインHTML
+                const timelineHtml = data.timeline.map(t => `
+                    <div class="timeline-step">
+                        <div class="timeline-badge">${t.phase}</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">${t.title}</div>
+                            <div>${t.desc}</div>
+                        </div>
+                    </div>
+                `).join('');
+
+                // 必見動画HTML
+                const curatedHtml = data.curated_vids.map(v => `
+                    <a href="${v.file}" class="curated-video-card">
+                        <div class="curated-video-title">${v.title}</div>
+                        <div class="curated-video-footer">
+                            <span>📌 ${v.tag}</span>
+                            <span>詳細レポート →</span>
+                        </div>
+                    </a>
+                `).join('');
+
+                container.innerHTML = `
+                    <div class="trend-map-title">
+                        <span>${data.title}</span>
+                        <span style="font-size:0.8rem; font-weight:normal; color:var(--text-sub);">💡 業界構造 & 勢力図分析</span>
+                    </div>
+                    <div class="trend-map-summary">${data.summary}</div>
+
+                    <div class="intel-section-grid">
+                        <div class="intel-box">
+                            <div class="intel-box-header">🗺️ 1. 技術スタック・レイヤー構造</div>
+                            <div class="layer-flow">${layersHtml}</div>
+                        </div>
+
+                        <div class="intel-box">
+                            <div class="intel-box-header">📈 2. 2026-2030年 技術進化タイムライン</div>
+                            <div class="timeline-list">${timelineHtml}</div>
+                        </div>
+                    </div>
+
+                    <div class="intel-box" style="margin-bottom:18px;">
+                        <div class="intel-box-header">⚔️ 3. 主要プレイヤー勢力図 & 対立マトリクス</div>
+                        <div style="overflow-x: auto;">
+                            <table class="matrix-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width:18%;">企業・研究室</th>
+                                        <th style="width:22%;">ポジショニング</th>
+                                        <th style="width:35%;">強み・コア技術</th>
+                                        <th style="width:25%;">狙う市場・ゴール</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${matrixRowsHtml}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="intel-section-grid">
+                        <div class="intel-box">
+                            <div class="intel-box-header">⚡ 4. 最大のボトルネック</div>
+                            <div class="bottleneck-box">${data.bottleneck}</div>
+                        </div>
+                        <div class="intel-box">
+                            <div class="intel-box-header">💡 5. スタートアップ参入機会</div>
+                            <div class="opportunity-box">${data.opportunity}</div>
+                        </div>
+                    </div>
+
+                    <div class="intel-box" style="margin-top:18px;">
+                        <div class="intel-box-header">📺 6. このトピックを理解するための必見コア動画</div>
+                        <div class="curated-video-row">${curatedHtml}</div>
+                    </div>
+                `;
+                container.style.display = 'block';
             }
 
             updateUIState();

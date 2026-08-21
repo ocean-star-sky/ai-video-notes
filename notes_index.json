@@ -349,5 +349,89 @@
       "チャットUIを超えた先回り型エージェントUIの設計原則",
       "スタートアップの製品検証速度を100倍にする実践知"
     ]
+  },
+  {
+    "video_id": "VihWpoINpgE",
+    "title": "【NVIDIA】メガワットあたりの秒間トークン数を最大化する：NVIDIA Vera Rubinの経済性",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-21_AI_NVIDIA_NVIDIAメガワットあたりの秒間トークン数を最大化するNVIDIA Vera Rubinの経済性.html",
+    "date": "2026-08-21",
+    "tags": [
+      "NVIDIA",
+      "Rubin",
+      "GPU",
+      "Compute",
+      "Energy",
+      "AIファクトリー"
+    ],
+    "chapters": [
+      "AIファクトリーにおけるエネルギー効率の壁",
+      "Vera Rubinアーキテクチャの全貌",
+      "メガワットあたり秒間トークン数の極大化",
+      "次世代データセンターの経済モデル"
+    ]
+  },
+  {
+    "video_id": "XjSJ6ybS9I8",
+    "title": "【OpenAI】ChatGPT Workでビジネスの問いから戦略資料を作成する方法",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-21_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html",
+    "date": "2026-08-21",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "Work",
+      "Agent",
+      "Strategy",
+      "生産性"
+    ],
+    "chapters": [
+      "ChatGPT Workの概要と新機能",
+      "ビジネス戦略課題の構造化プロンプト",
+      "データ統合と戦略スライドの自動生成",
+      "エンタープライズでのROI最大化"
+    ]
+  },
+  {
+    "video_id": "bSp-foRDH5M",
+    "title": "【Google】Google Antigravity 2.0を使ってアプリ開発やタスクの自動化を行う方法",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-21_AI_Google_GoogleGoogle Antigravity 20を使ってアプリ開発やタスクの自動化を行う方法.html",
+    "date": "2026-08-21",
+    "tags": [
+      "Google",
+      "Antigravity",
+      "Agent",
+      "Coding",
+      "Automation",
+      "Gemini"
+    ],
+    "chapters": [
+      "Antigravity 2.0アーキテクチャの革新",
+      "自律エージェントによるフルスタック開発",
+      "ブラウザ操作とツール連携の自動化",
+      "次世代自律開発のワークフロー"
+    ]
+  },
+  {
+    "video_id": "NqQnHWa-Vxs",
+    "title": "【テスラ】Autobidder | Tesla MegapackによるAI電力自律取引",
+    "channel": "Tesla (Elon Musk)",
+    "filename": "2026-08-21_AI_Tesla_テスラAutobidder  Tesla MegapackによるAI電力自律取引.html",
+    "date": "2026-08-21",
+    "tags": [
+      "Tesla",
+      "Autobidder",
+      "Megapack",
+      "Energy",
+      "SmartGrid",
+      "AI"
+    ],
+    "chapters": [
+      "AIによる電力市場のリアルタイム自律入札",
+      "Megapackと送電網安定化アルゴリズム",
+      "データセンター電力危機を救う分散型蓄電池",
+      "テスラ・エネルギー部門の指数関数的成長"
+    ]
   }
 ]

@@ -13,35 +13,21 @@
             --accent-color: #38bdf8;
             --accent-orange: #fb923c;
             --accent-green: #4ade80;
-            --accent-purple: #a855f7;
             --border-color: #334155;
             --ai-bg: #131d31;
-            --table-header: #1e1b4b;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            padding: 40px 20px;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", Meiryo, sans-serif;
+            background-color: var(--bg-color); color: var(--text-main); padding: 40px 20px; line-height: 1.6;
         }
         .container { max-width: 1150px; margin: 0 auto; }
         header { text-align: center; margin-bottom: 30px; }
         h1 { font-size: 2.3rem; margin-bottom: 10px; background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .subtitle { color: var(--text-sub); font-size: 1.05rem; }
 
-        /* 🎙️ 音声ブリーフィングプレイヤー */
         .audio-player-card {
-            background: linear-gradient(135deg, #1e1b4b, #0f172a);
-            border: 2px solid #6366f1;
-            border-radius: 18px;
-            padding: 22px 28px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.25);
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
+            background: linear-gradient(135deg, #1e1b4b, #0f172a); border: 2px solid #6366f1; border-radius: 18px; padding: 22px 28px; margin-bottom: 30px; box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.25); display: flex; flex-direction: column; gap: 14px;
         }
         .audio-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
         .audio-title-wrap { display: flex; align-items: center; gap: 12px; }
@@ -50,44 +36,29 @@
         .audio-desc { font-size: 0.85rem; color: #a5b4fc; }
         .audio-controls-row { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
         .play-audio-btn {
-            background: #6366f1; color: #ffffff; font-weight: bold; padding: 12px 24px;
-            border-radius: 12px; border: none; cursor: pointer; font-size: 1rem; display: flex; align-items: center; gap: 8px; transition: all 0.2s;
+            background: #6366f1; color: #ffffff; font-weight: bold; padding: 12px 24px; border-radius: 12px; border: none; cursor: pointer; font-size: 1rem; display: flex; align-items: center; gap: 8px; transition: all 0.2s;
         }
         .play-audio-btn:hover { background: #4f46e5; transform: scale(1.03); }
         .speed-btn-group { display: flex; gap: 6px; }
         .speed-btn {
-            background: rgba(255,255,255,0.08); color: #cbd5e1; border: 1px solid #475569;
-            padding: 6px 12px; border-radius: 8px; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;
+            background: rgba(255,255,255,0.08); color: #cbd5e1; border: 1px solid #475569; padding: 6px 12px; border-radius: 8px; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;
         }
         .speed-btn.active { background: #6366f1; color: #ffffff; border-color: #6366f1; font-weight: bold; }
-        .audio-script-toggle {
-            background: transparent; color: #94a3b8; border: none; font-size: 0.85rem; cursor: pointer; text-decoration: underline; margin-left: auto;
-        }
-        .audio-script-box {
-            background: rgba(15, 23, 42, 0.8); border: 1px solid #334155; border-radius: 12px; padding: 16px; font-size: 0.95rem; line-height: 1.8; color: #e2e8f0; display: none; margin-top: 5px;
-        }
+        .audio-script-toggle { background: transparent; color: #94a3b8; border: none; font-size: 0.85rem; cursor: pointer; text-decoration: underline; margin-left: auto; }
+        .audio-script-box { background: rgba(15, 23, 42, 0.8); border: 1px solid #334155; border-radius: 12px; padding: 16px; font-size: 0.95rem; line-height: 1.8; color: #e2e8f0; display: none; margin-top: 5px; }
 
-        /* 🌅 メガトレンド・ダイジェストカード */
         .macro-trend-card {
-            background: linear-gradient(145deg, #1e293b, #0f172a);
-            border: 1px solid var(--accent-orange);
-            border-radius: 18px;
-            padding: 24px 28px;
-            margin-bottom: 35px;
-            box-shadow: 0 10px 25px -5px rgba(251, 146, 60, 0.15);
+            background: linear-gradient(145deg, #1e293b, #0f172a); border: 1px solid var(--accent-orange); border-radius: 18px; padding: 24px 28px; margin-bottom: 35px; box-shadow: 0 10px 25px -5px rgba(251, 146, 60, 0.15);
         }
         .macro-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; border-bottom: 1px solid rgba(251, 146, 60, 0.2); padding-bottom: 12px; }
         .macro-title { font-size: 1.35rem; font-weight: bold; color: #ffffff; display: flex; align-items: center; gap: 10px; }
         .macro-date-badge { background: rgba(251, 146, 60, 0.15); color: var(--accent-orange); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
         .trend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px; }
-        .trend-item {
-            background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 18px; border-top: 3px solid var(--accent-orange);
-        }
+        .trend-item { background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 18px; border-top: 3px solid var(--accent-orange); }
         .trend-tag { font-size: 0.8rem; font-weight: bold; color: var(--accent-orange); margin-bottom: 6px; }
         .trend-h3 { font-size: 1.05rem; font-weight: bold; color: #ffffff; margin-bottom: 8px; line-height: 1.4; }
         .trend-p { font-size: 0.88rem; color: #cbd5e1; line-height: 1.7; }
 
-        /* 🔥 技術トピック別トレンドマップ（5大カテゴリハブ） */
         .topic-hub-section { margin-bottom: 40px; }
         .topic-hub-title-wrap { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 8px; }
         .topic-hub-title { font-size: 1.25rem; font-weight: bold; color: var(--accent-color); display: flex; align-items: center; gap: 8px; }
@@ -103,51 +74,37 @@
         .topic-btn-header { font-size: 0.92rem; font-weight: bold; color: #ffffff; display: flex; align-items: center; gap: 6px; }
         .topic-btn-sub { font-size: 0.76rem; color: var(--text-sub); }
 
-        /* 🗺️ リッチな構造化インテリジェンス・トレンドマップコンテナ */
         .trend-map-container {
             background: #131d31; border: 1px solid var(--border-color); border-radius: 16px; padding: 26px; display: none; animation: fadeIn 0.3s ease-in-out; margin-bottom: 30px;
         }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
         .trend-map-title { font-size: 1.3rem; font-weight: bold; color: #ffffff; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
         .trend-map-summary { font-size: 0.95rem; color: #cbd5e1; line-height: 1.8; margin-bottom: 22px; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); }
 
-        /* 6大インテリジェンス・グリッド */
         .intel-section-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; margin-bottom: 20px; }
-        .intel-box {
-            background: #0f172a; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 10px;
-        }
+        .intel-box { background: #0f172a; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 10px; }
         .intel-box-header { font-size: 0.95rem; font-weight: bold; color: var(--accent-color); display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 8px; }
 
-        /* 技術レイヤーフロー */
         .layer-flow { display: flex; flex-direction: column; gap: 8px; }
-        .layer-item {
-            background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(255,255,255,0.05); border-left: 3px solid var(--accent-color); border-radius: 6px; padding: 8px 12px; font-size: 0.85rem; line-height: 1.5;
-        }
+        .layer-item { background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(255,255,255,0.05); border-left: 3px solid var(--accent-color); border-radius: 6px; padding: 8px 12px; font-size: 0.85rem; line-height: 1.5; }
         .layer-name { font-weight: bold; color: #ffffff; margin-bottom: 2px; }
         .layer-desc { font-size: 0.78rem; color: var(--text-sub); }
 
-        /* プレイヤーマトリクス表 */
         .matrix-table { width: 100%; border-collapse: collapse; margin-top: 5px; font-size: 0.82rem; }
         .matrix-table th { background: #1e1b4b; color: #a5b4fc; text-align: left; padding: 8px 10px; border-radius: 4px; font-weight: 600; }
         .matrix-table td { padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; line-height: 1.5; vertical-align: top; }
         .matrix-table tr:hover td { background: rgba(255,255,255,0.02); }
         .matrix-player { font-weight: bold; color: #ffffff; }
 
-        /* タイムライン */
         .timeline-list { display: flex; flex-direction: column; gap: 10px; margin-top: 5px; }
         .timeline-step { display: flex; gap: 12px; }
         .timeline-badge { background: rgba(56, 189, 248, 0.15); color: var(--accent-color); font-weight: bold; padding: 4px 8px; border-radius: 6px; font-size: 0.75rem; height: fit-content; white-space: nowrap; }
         .timeline-content { font-size: 0.82rem; color: #cbd5e1; line-height: 1.5; }
         .timeline-title { font-weight: bold; color: #ffffff; margin-bottom: 2px; }
 
-        /* ボトルネック＆参入機会 */
-        .opportunity-box {
-            background: rgba(74, 222, 128, 0.05); border: 1px solid rgba(74, 222, 128, 0.2); border-radius: 8px; padding: 12px; font-size: 0.85rem; line-height: 1.6; color: #dcfce7;
-        }
-        .bottleneck-box {
-            background: rgba(251, 146, 60, 0.05); border: 1px solid rgba(251, 146, 60, 0.2); border-radius: 8px; padding: 12px; font-size: 0.85rem; line-height: 1.6; color: #ffedd5;
-        }
+        .opportunity-box { background: rgba(74, 222, 128, 0.05); border: 1px solid rgba(74, 222, 128, 0.2); border-radius: 8px; padding: 12px; font-size: 0.85rem; line-height: 1.6; color: #dcfce7; }
+        .bottleneck-box { background: rgba(251, 146, 60, 0.05); border: 1px solid rgba(251, 146, 60, 0.2); border-radius: 8px; padding: 12px; font-size: 0.85rem; line-height: 1.6; color: #ffedd5; }
 
-        /* 必見動画キュレーション */
         .curated-video-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin-top: 8px; }
         .curated-video-card {
             background: #1e293b; border: 1px solid var(--border-color); border-radius: 8px; padding: 10px 12px; text-decoration: none; color: inherit; transition: all 0.2s; display: flex; flex-direction: column; justify-content: space-between;
@@ -156,14 +113,8 @@
         .curated-video-title { font-size: 0.85rem; font-weight: bold; color: #ffffff; line-height: 1.4; margin-bottom: 6px; }
         .curated-video-footer { font-size: 0.75rem; color: var(--accent-color); display: flex; justify-content: space-between; font-weight: 600; }
 
-        /* 🧠 対話AIアシスタント */
         .ai-chat-card {
-            background: linear-gradient(145deg, #1e293b, #0f172a);
-            border: 1px solid var(--accent-color);
-            border-radius: 18px;
-            padding: 24px 28px;
-            margin-bottom: 35px;
-            box-shadow: 0 12px 30px -5px rgba(56, 189, 248, 0.15);
+            background: linear-gradient(145deg, #1e293b, #0f172a); border: 1px solid var(--accent-color); border-radius: 18px; padding: 24px 28px; margin-bottom: 35px; box-shadow: 0 12px 30px -5px rgba(56, 189, 248, 0.15);
         }
         .ai-chat-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
         .ai-icon { font-size: 1.8rem; background: rgba(56, 189, 248, 0.2); padding: 8px 12px; border-radius: 12px; }
@@ -171,50 +122,41 @@
         .ai-chat-desc { font-size: 0.88rem; color: var(--text-sub); }
         .chat-input-wrapper { display: flex; gap: 12px; margin-top: 12px; }
         .chat-input {
-            flex-grow: 1; padding: 14px 20px; font-size: 1rem; background: #0f172a;
-            border: 1px solid var(--border-color); border-radius: 12px; color: #ffffff; outline: none; transition: all 0.2s;
+            flex-grow: 1; padding: 14px 20px; font-size: 1rem; background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; color: #ffffff; outline: none; transition: all 0.2s;
         }
         .chat-input:focus { border-color: var(--accent-color); box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2); }
         .chat-btn {
-            background: var(--accent-color); color: #0f172a; font-weight: bold; padding: 14px 24px;
-            border-radius: 12px; border: none; cursor: pointer; font-size: 0.95rem; transition: all 0.2s; white-space: nowrap;
+            background: var(--accent-color); color: #0f172a; font-weight: bold; padding: 14px 24px; border-radius: 12px; border: none; cursor: pointer; font-size: 0.95rem; transition: all 0.2s; white-space: nowrap;
         }
         .chat-btn:hover { background: #0ea5e9; transform: translateY(-2px); }
         .quick-tags { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
         .quick-tag-label { font-size: 0.8rem; color: var(--text-sub); }
         .quick-tag {
-            background: rgba(56, 189, 248, 0.1); color: var(--accent-color); border: 1px solid rgba(56, 189, 248, 0.3);
-            padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;
+            background: rgba(56, 189, 248, 0.1); color: var(--accent-color); border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;
         }
         .quick-tag:hover { background: var(--accent-color); color: #0f172a; }
 
         .ai-response-area {
-            margin-top: 20px; background: var(--ai-bg); border: 1px solid var(--border-color);
-            border-radius: 14px; padding: 22px; display: none; animation: fadeIn 0.3s ease-in-out;
+            margin-top: 20px; background: var(--ai-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 22px; display: none; animation: fadeIn 0.3s ease-in-out;
         }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
         .ai-response-title { font-weight: bold; color: var(--accent-color); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
         .ai-response-text { font-size: 0.98rem; line-height: 1.8; color: #e2e8f0; margin-bottom: 16px; }
         .ai-source-list { background: #0b0f19; border-radius: 10px; padding: 14px; border: 1px solid var(--border-color); }
         .ai-source-header { font-size: 0.85rem; color: var(--text-sub); font-weight: bold; margin-bottom: 8px; }
         .source-link-item {
-            display: flex; align-items: center; justify-content: space-between; padding: 8px 12px;
-            background: #1e293b; border-radius: 8px; margin-bottom: 6px; text-decoration: none; color: var(--text-main); font-size: 0.88rem; transition: all 0.2s;
+            display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; background: #1e293b; border-radius: 8px; margin-bottom: 6px; text-decoration: none; color: var(--text-main); font-size: 0.88rem; transition: all 0.2s;
         }
         .source-link-item:hover { border-left: 3px solid var(--accent-color); background: #253349; }
 
-        /* タブ＆ストック操作バー */
         .tab-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
         .tab-group { display: flex; gap: 8px; }
         .tab-btn {
-            background: #1e293b; color: var(--text-sub); border: 1px solid var(--border-color);
-            padding: 8px 16px; border-radius: 10px; cursor: pointer; font-size: 0.9rem; font-weight: 500; transition: all 0.2s;
+            background: #1e293b; color: var(--text-sub); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 10px; cursor: pointer; font-size: 0.9rem; font-weight: 500; transition: all 0.2s;
         }
         .tab-btn:hover, .tab-btn.active { background: #334155; color: #ffffff; border-color: var(--accent-color); }
         .tab-btn.active { font-weight: bold; }
         .export-btn {
-            background: rgba(56, 189, 248, 0.15); color: var(--accent-color); border: 1px solid var(--accent-color);
-            padding: 8px 16px; border-radius: 10px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s;
+            background: rgba(56, 189, 248, 0.15); color: var(--accent-color); border: 1px solid var(--accent-color); padding: 8px 16px; border-radius: 10px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s;
         }
         .export-btn:hover { background: var(--accent-color); color: #0f172a; }
 
@@ -249,30 +191,20 @@
         .card-link { text-decoration: none; color: inherit; display: block; }
         .card-meta-bar { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.05); }
         .card-date { font-size: 0.78rem; color: var(--text-sub); }
-        .memo-btn {
-            background: transparent; color: var(--text-sub); border: 1px solid var(--border-color); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; transition: all 0.2s;
-        }
+        .memo-btn { background: transparent; color: var(--text-sub); border: 1px solid var(--border-color); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
         .memo-btn:hover { border-color: var(--accent-color); color: #ffffff; }
 
-        .user-memo-preview {
-            font-size: 0.8rem; color: #fbbf24; background: rgba(251, 191, 36, 0.1); border-left: 3px solid #fbbf24; padding: 6px 10px; border-radius: 4px; margin-top: 10px; display: none; line-height: 1.4;
-        }
+        .user-memo-preview { font-size: 0.8rem; color: #fbbf24; background: rgba(251, 191, 36, 0.1); border-left: 3px solid #fbbf24; padding: 6px 10px; border-radius: 4px; margin-top: 10px; display: none; line-height: 1.4; }
 
-        /* メモ用モーダル */
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 1000;
         }
-        .modal-content {
-            background: #1e293b; border: 1px solid var(--border-color); border-radius: 16px; padding: 25px; width: 90%; max-width: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        }
+        .modal-content { background: #1e293b; border: 1px solid var(--border-color); border-radius: 16px; padding: 25px; width: 90%; max-width: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
         .modal-title { font-size: 1.1rem; font-weight: bold; margin-bottom: 12px; color: #ffffff; }
-        .memo-textarea {
-            width: 100%; height: 120px; background: #0f172a; border: 1px solid var(--border-color); border-radius: 10px; padding: 12px; color: #ffffff; font-size: 0.95rem; outline: none; margin-bottom: 15px; resize: vertical;
-        }
+        .memo-textarea { width: 100%; height: 120px; background: #0f172a; border: 1px solid var(--border-color); border-radius: 10px; padding: 12px; color: #ffffff; font-size: 0.95rem; outline: none; margin-bottom: 15px; resize: vertical; }
         .modal-actions { display: flex; justify-content: flex-end; gap: 10px; }
         .modal-save-btn { background: var(--accent-color); color: #0f172a; font-weight: bold; border: none; padding: 8px 18px; border-radius: 8px; cursor: pointer; }
         .modal-close-btn { background: #334155; color: #ffffff; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; }
-
         footer { text-align: center; margin-top: 50px; color: var(--text-sub); font-size: 0.85rem; }
     </style>
 </head>
@@ -283,7 +215,7 @@
             <p class="subtitle">世界のトップAIリーダー＆最先端テック動画の体系的ナレッジベース</p>
         </header>
 
-        <!-- 🎙️ 朝の3分AI音声ブリーフィング（Podcast風プレイヤー） -->
+        <!-- 🎙️ 朝の3分AI音声ブリーフィング（Podcastプレイヤー） -->
         <div class="audio-player-card">
             <div class="audio-header">
                 <div class="audio-title-wrap">
@@ -309,7 +241,6 @@
             </div>
             
             <audio id="briefingAudio" src="daily_briefing.m4a" preload="none" onended="onAudioEnded()"></audio>
-            
             <div class="audio-script-box" id="audioScriptBox">
                 <strong>📝 本日の音声ブリーフィング原稿:</strong><br>
                 おはようございます。本日のAIメガトレンド・エグゼクティブ速報です。現在、世界の最先端テック業界では3つの巨大な地殻変動が進行しています。第1に、画面内のチャットから物理世界で原子を動かすフィジカルAIへの大移動です。エヌビディアやフィギュアAI、ディープマインドは、仮想シミュレーションによる超高速強化学習を武器に、人型ロボットによる労働代替を現実のものにしています。第2に、単一のモデルに依存せず、オープンAIやマイクロソフトのSDKを活用して自律エージェントを束ねるモデル非依存アーキテクチャの台頭です。そして第3に、AI自身がAI研究を自動化する再帰的進化と、それを支える電力・半導体インフラの覇権争いです。今日も最先端の知見を味方に、素晴らしい1日をお過ごしください。
@@ -375,11 +306,10 @@
                 </button>
             </div>
             
-            <!-- リッチなトレンドマップ詳細表示エリア -->
             <div class="trend-map-container" id="trendMapContainer"></div>
         </div>
 
-        <!-- 🧠 横断AIアシスタント（マクロトレンド・企業比較モード） -->
+        <!-- 🧠 横断AIアシスタント -->
         <div class="ai-chat-card">
             <div class="ai-chat-header">
                 <div class="ai-icon">🧠</div>
@@ -388,12 +318,10 @@
                     <div class="ai-chat-desc">蓄積動画を横断分析し、企業間比較・業界トレンド・未開拓領域を即座にレポートします</div>
                 </div>
             </div>
-
             <div class="chat-input-wrapper">
                 <input type="text" id="chatInput" class="chat-input" placeholder="質問を入力... 例: 今日の3大トレンドは？ / OpenAIとMicrosoftの戦略比較 / フィジカルAIの勝者は？" onkeydown="if(event.key==='Enter') askAI()">
                 <button class="chat-btn" onclick="askAI()">⚡ トレンドを横断分析</button>
             </div>
-
             <div class="quick-tags">
                 <span class="quick-tag-label">💡 注目クエリ:</span>
                 <span class="quick-tag" onclick="quickAsk('今日の3大メガトレンドをまとめて')">⚡ 本日の3大トレンド</span>
@@ -402,7 +330,6 @@
                 <span class="quick-tag" onclick="quickAsk('スタートアップが狙うべき注目の未開拓領域')">💡 スタートアップ参入機会</span>
                 <span class="quick-tag" onclick="quickAsk('AIインフラの最大のボトルネックと電力危機')">⚡ インフラ電力問題</span>
             </div>
-
             <div id="aiResponseArea" class="ai-response-area">
                 <div class="ai-response-title">✨ マクロ分析インサイト</div>
                 <div id="aiResponseText" class="ai-response-text"></div>
@@ -416,7 +343,7 @@
         <!-- タブ＆ストック操作バー -->
         <div class="tab-bar">
             <div class="tab-group">
-                <button class="tab-btn active" id="tab-all" onclick="switchTab('all')">📚 全動画 (25)</button>
+                <button class="tab-btn active" id="tab-all" onclick="switchTab('all')">📚 全動画 (37)</button>
                 <button class="tab-btn" id="tab-starred" onclick="switchTab('starred')">⭐ マイストック (<span id="starredCount">0</span>)</button>
                 <button class="tab-btn" id="tab-read" onclick="switchTab('read')">✅ 読了 (<span id="readCount">0</span>)</button>
             </div>
@@ -424,12 +351,276 @@
         </div>
 
         <div class="stats-bar">
-            <span id="cardCount">表示中: 25 件</span>
+            <span id="cardCount">表示中: 37 件</span>
             <span>💡 ⭐でマイストックに保存 / ✅で読了管理 / 📝でメモを記録</span>
         </div>
 
         <div class="portal-grid" id="portalGrid">
             
+        <div class="portal-card cat-agent" id="card-Nm5e9ok8dIg" data-id="Nm5e9ok8dIg" data-title="【google】国立公園で解明！世界で最も検索されている自然の疑問 | searching for 【google】国立公園で解明！世界で最も検索されている自然の疑問 | searching for google (sundar pichai) ['ai'] ">
+            <div class="thumb-container">
+                <a href="2026-08-23_AI_Google_Google国立公園で解明世界で最も検索されている自然の疑問  Searching For.html">
+                    <img src="https://img.youtube.com/vi/Nm5e9ok8dIg/hqdefault.jpg" alt="【Google】国立公園で解明！世界で最も検索されている自然の疑問 | Searching For" loading="lazy">
+                </a>
+                <button class="star-btn" id="star-Nm5e9ok8dIg" onclick="toggleStar('Nm5e9ok8dIg', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-Nm5e9ok8dIg" onclick="toggleRead('Nm5e9ok8dIg', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-23_AI_Google_Google国立公園で解明世界で最も検索されている自然の疑問  Searching For.html" class="card-link">
+                    <span class="card-channel">Google (Sundar Pichai)</span>
+                    <h3 class="card-title">【Google】国立公園で解明！世界で最も検索されている自然の疑問 | Searching For</h3>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('ai', event)">ai</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-23</span>
+                    <button class="memo-btn" onclick="openMemoModal('Nm5e9ok8dIg', '【Google】国立公園で解明！世界で最も検索されている自然の疑問 | Searching For', event)">📝 メモ</button>
+                </div>
+                <div class="user-memo-preview" id="memo-preview-Nm5e9ok8dIg"></div>
+            </div>
+        </div>
+        
+        <div class="portal-card cat-agent cat-design" id="card-5062_E26pJE" data-id="5062_E26pJE" data-title="【マイクロソフト】build reusable copilot workflows with skills and agents 【マイクロソフト】build reusable copilot workflows with skills and agents microsoft developer ['agent', 'copilot'] ">
+            <div class="thumb-container">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトBuild Reusable Copilot Workflows with Skill.html">
+                    <img src="https://img.youtube.com/vi/5062_E26pJE/hqdefault.jpg" alt="【マイクロソフト】Build Reusable Copilot Workflows with Skills and Agents" loading="lazy">
+                </a>
+                <button class="star-btn" id="star-5062_E26pJE" onclick="toggleStar('5062_E26pJE', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-5062_E26pJE" onclick="toggleRead('5062_E26pJE', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトBuild Reusable Copilot Workflows with Skill.html" class="card-link">
+                    <span class="card-channel">Microsoft Developer</span>
+                    <h3 class="card-title">【マイクロソフト】Build Reusable Copilot Workflows with Skills and Agents</h3>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('agent', event)">agent</span><span class="badge" onclick="filterByTag('copilot', event)">copilot</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-23</span>
+                    <button class="memo-btn" onclick="openMemoModal('5062_E26pJE', '【マイクロソフト】Build Reusable Copilot Workflows with Skills and Agents', event)">📝 メモ</button>
+                </div>
+                <div class="user-memo-preview" id="memo-preview-5062_E26pJE"></div>
+            </div>
+        </div>
+        
+        <div class="portal-card cat-agent" id="card-5RdcjCOC1Rk" data-id="5RdcjCOC1Rk" data-title="【マイクロソフト】github copilotとbootstrapでポートフォリオをモダンに刷新しよう 【マイクロソフト】github copilotとbootstrapでポートフォリオをモダンに刷新しよう microsoft developer ['copilot'] ">
+            <div class="thumb-container">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトGitHub CopilotとBootstrapでポートフォリオをモダンに刷新しよう.html">
+                    <img src="https://img.youtube.com/vi/5RdcjCOC1Rk/hqdefault.jpg" alt="【マイクロソフト】GitHub CopilotとBootstrapでポートフォリオをモダンに刷新しよう" loading="lazy">
+                </a>
+                <button class="star-btn" id="star-5RdcjCOC1Rk" onclick="toggleStar('5RdcjCOC1Rk', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-5RdcjCOC1Rk" onclick="toggleRead('5RdcjCOC1Rk', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトGitHub CopilotとBootstrapでポートフォリオをモダンに刷新しよう.html" class="card-link">
+                    <span class="card-channel">Microsoft Developer</span>
+                    <h3 class="card-title">【マイクロソフト】GitHub CopilotとBootstrapでポートフォリオをモダンに刷新しよう</h3>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('copilot', event)">copilot</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-23</span>
+                    <button class="memo-btn" onclick="openMemoModal('5RdcjCOC1Rk', '【マイクロソフト】GitHub CopilotとBootstrapでポートフォリオをモダンに刷新しよう', event)">📝 メモ</button>
+                </div>
+                <div class="user-memo-preview" id="memo-preview-5RdcjCOC1Rk"></div>
+            </div>
+        </div>
+        
+        <div class="portal-card cat-agent cat-design" id="card-ecbNPzagCCo" data-id="ecbNPzagCCo" data-title="【マイクロソフト】build a portfolio website from your resume with github copilot 【マイクロソフト】build a portfolio website from your resume with github copilot microsoft developer ['copilot'] ">
+            <div class="thumb-container">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトBuild a Portfolio Website from Your Resume .html">
+                    <img src="https://img.youtube.com/vi/ecbNPzagCCo/hqdefault.jpg" alt="【マイクロソフト】Build a Portfolio Website from Your Resume with GitHub Copilot" loading="lazy">
+                </a>
+                <button class="star-btn" id="star-ecbNPzagCCo" onclick="toggleStar('ecbNPzagCCo', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-ecbNPzagCCo" onclick="toggleRead('ecbNPzagCCo', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトBuild a Portfolio Website from Your Resume .html" class="card-link">
+                    <span class="card-channel">Microsoft Developer</span>
+                    <h3 class="card-title">【マイクロソフト】Build a Portfolio Website from Your Resume with GitHub Copilot</h3>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('copilot', event)">copilot</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-23</span>
+                    <button class="memo-btn" onclick="openMemoModal('ecbNPzagCCo', '【マイクロソフト】Build a Portfolio Website from Your Resume with GitHub Copilot', event)">📝 メモ</button>
+                </div>
+                <div class="user-memo-preview" id="memo-preview-ecbNPzagCCo"></div>
+            </div>
+        </div>
+        
+        <div class="portal-card cat-agent" id="card-37I7qkgEl9U" data-id="37I7qkgEl9U" data-title="【マイクロソフト】github copilotの最適化：より良い結果を、より少ないトークンで 【マイクロソフト】github copilotの最適化：より良い結果を、より少ないトークンで microsoft developer ['copilot', 'トークン'] ">
+            <div class="thumb-container">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトGitHub Copilotの最適化より良い結果をより少ないトークンで.html">
+                    <img src="https://img.youtube.com/vi/37I7qkgEl9U/hqdefault.jpg" alt="【マイクロソフト】GitHub Copilotの最適化：より良い結果を、より少ないトークンで" loading="lazy">
+                </a>
+                <button class="star-btn" id="star-37I7qkgEl9U" onclick="toggleStar('37I7qkgEl9U', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-37I7qkgEl9U" onclick="toggleRead('37I7qkgEl9U', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトGitHub Copilotの最適化より良い結果をより少ないトークンで.html" class="card-link">
+                    <span class="card-channel">Microsoft Developer</span>
+                    <h3 class="card-title">【マイクロソフト】GitHub Copilotの最適化：より良い結果を、より少ないトークンで</h3>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('copilot', event)">copilot</span><span class="badge" onclick="filterByTag('トークン', event)">トークン</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-23</span>
+                    <button class="memo-btn" onclick="openMemoModal('37I7qkgEl9U', '【マイクロソフト】GitHub Copilotの最適化：より良い結果を、より少ないトークンで', event)">📝 メモ</button>
+                </div>
+                <div class="user-memo-preview" id="memo-preview-37I7qkgEl9U"></div>
+            </div>
+        </div>
+        
+        <div class="portal-card cat-agent" id="card-R-Cc3t1twEE" data-id="R-Cc3t1twEE" data-title="【マイクロソフト】github copilotとstudent developer packを使ってみよう 【マイクロソフト】github copilotとstudent developer packを使ってみよう microsoft developer ['copilot'] ">
+            <div class="thumb-container">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトGitHub CopilotとStudent Developer Packを使ってみよ.html">
+                    <img src="https://img.youtube.com/vi/R-Cc3t1twEE/hqdefault.jpg" alt="【マイクロソフト】GitHub CopilotとStudent Developer Packを使ってみよう" loading="lazy">
+                </a>
+                <button class="star-btn" id="star-R-Cc3t1twEE" onclick="toggleStar('R-Cc3t1twEE', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-R-Cc3t1twEE" onclick="toggleRead('R-Cc3t1twEE', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトGitHub CopilotとStudent Developer Packを使ってみよ.html" class="card-link">
+                    <span class="card-channel">Microsoft Developer</span>
+                    <h3 class="card-title">【マイクロソフト】GitHub CopilotとStudent Developer Packを使ってみよう</h3>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('copilot', event)">copilot</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-23</span>
+                    <button class="memo-btn" onclick="openMemoModal('R-Cc3t1twEE', '【マイクロソフト】GitHub CopilotとStudent Developer Packを使ってみよう', event)">📝 メモ</button>
+                </div>
+                <div class="user-memo-preview" id="memo-preview-R-Cc3t1twEE"></div>
+            </div>
+        </div>
+        
+        <div class="portal-card cat-agent" id="card-PuuF4_ngRNE" data-id="PuuF4_ngRNE" data-title="【マイクロソフト】bring your own model within the github copilot app 【マイクロソフト】bring your own model within the github copilot app microsoft developer ['copilot'] ">
+            <div class="thumb-container">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトBring Your Own Model Within the GitHub Copi.html">
+                    <img src="https://img.youtube.com/vi/PuuF4_ngRNE/hqdefault.jpg" alt="【マイクロソフト】Bring Your Own Model Within the GitHub Copilot App" loading="lazy">
+                </a>
+                <button class="star-btn" id="star-PuuF4_ngRNE" onclick="toggleStar('PuuF4_ngRNE', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-PuuF4_ngRNE" onclick="toggleRead('PuuF4_ngRNE', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトBring Your Own Model Within the GitHub Copi.html" class="card-link">
+                    <span class="card-channel">Microsoft Developer</span>
+                    <h3 class="card-title">【マイクロソフト】Bring Your Own Model Within the GitHub Copilot App</h3>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('copilot', event)">copilot</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-23</span>
+                    <button class="memo-btn" onclick="openMemoModal('PuuF4_ngRNE', '【マイクロソフト】Bring Your Own Model Within the GitHub Copilot App', event)">📝 メモ</button>
+                </div>
+                <div class="user-memo-preview" id="memo-preview-PuuF4_ngRNE"></div>
+            </div>
+        </div>
+        
+        <div class="portal-card cat-agent" id="card-Xj_fklwLfTI" data-id="Xj_fklwLfTI" data-title="【マイクロソフト】スマートフォンからgithub copilotをリモート操作する方法 【マイクロソフト】スマートフォンからgithub copilotをリモート操作する方法 microsoft developer ['copilot'] ">
+            <div class="thumb-container">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトスマートフォンからGitHub Copilotをリモート操作する方法.html">
+                    <img src="https://img.youtube.com/vi/Xj_fklwLfTI/hqdefault.jpg" alt="【マイクロソフト】スマートフォンからGitHub Copilotをリモート操作する方法" loading="lazy">
+                </a>
+                <button class="star-btn" id="star-Xj_fklwLfTI" onclick="toggleStar('Xj_fklwLfTI', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-Xj_fklwLfTI" onclick="toggleRead('Xj_fklwLfTI', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトスマートフォンからGitHub Copilotをリモート操作する方法.html" class="card-link">
+                    <span class="card-channel">Microsoft Developer</span>
+                    <h3 class="card-title">【マイクロソフト】スマートフォンからGitHub Copilotをリモート操作する方法</h3>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('copilot', event)">copilot</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-23</span>
+                    <button class="memo-btn" onclick="openMemoModal('Xj_fklwLfTI', '【マイクロソフト】スマートフォンからGitHub Copilotをリモート操作する方法', event)">📝 メモ</button>
+                </div>
+                <div class="user-memo-preview" id="memo-preview-Xj_fklwLfTI"></div>
+            </div>
+        </div>
+        
+        <div class="portal-card cat-agent" id="card-XhVJWYAH3o0" data-id="XhVJWYAH3o0" data-title="【マイクロソフト】extend github copilot with tools and mcp servers 【マイクロソフト】extend github copilot with tools and mcp servers microsoft developer ['copilot', 'mcp'] ">
+            <div class="thumb-container">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトExtend GitHub Copilot with Tools and MCP Se.html">
+                    <img src="https://img.youtube.com/vi/XhVJWYAH3o0/hqdefault.jpg" alt="【マイクロソフト】Extend GitHub Copilot with Tools and MCP Servers" loading="lazy">
+                </a>
+                <button class="star-btn" id="star-XhVJWYAH3o0" onclick="toggleStar('XhVJWYAH3o0', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-XhVJWYAH3o0" onclick="toggleRead('XhVJWYAH3o0', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトExtend GitHub Copilot with Tools and MCP Se.html" class="card-link">
+                    <span class="card-channel">Microsoft Developer</span>
+                    <h3 class="card-title">【マイクロソフト】Extend GitHub Copilot with Tools and MCP Servers</h3>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('copilot', event)">copilot</span><span class="badge" onclick="filterByTag('mcp', event)">mcp</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-23</span>
+                    <button class="memo-btn" onclick="openMemoModal('XhVJWYAH3o0', '【マイクロソフト】Extend GitHub Copilot with Tools and MCP Servers', event)">📝 メモ</button>
+                </div>
+                <div class="user-memo-preview" id="memo-preview-XhVJWYAH3o0"></div>
+            </div>
+        </div>
+        
+        <div class="portal-card cat-agent" id="card-dGdrVULgciY" data-id="dGdrVULgciY" data-title="【マイクロソフト】copilotでパーソナルブランドを構築しよう | シリーズ予告編 【マイクロソフト】copilotでパーソナルブランドを構築しよう | シリーズ予告編 microsoft developer ['copilot'] ">
+            <div class="thumb-container">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトCopilotでパーソナルブランドを構築しよう  シリーズ予告編.html">
+                    <img src="https://img.youtube.com/vi/dGdrVULgciY/hqdefault.jpg" alt="【マイクロソフト】Copilotでパーソナルブランドを構築しよう | シリーズ予告編" loading="lazy">
+                </a>
+                <button class="star-btn" id="star-dGdrVULgciY" onclick="toggleStar('dGdrVULgciY', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-dGdrVULgciY" onclick="toggleRead('dGdrVULgciY', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトCopilotでパーソナルブランドを構築しよう  シリーズ予告編.html" class="card-link">
+                    <span class="card-channel">Microsoft Developer</span>
+                    <h3 class="card-title">【マイクロソフト】Copilotでパーソナルブランドを構築しよう | シリーズ予告編</h3>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('copilot', event)">copilot</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-23</span>
+                    <button class="memo-btn" onclick="openMemoModal('dGdrVULgciY', '【マイクロソフト】Copilotでパーソナルブランドを構築しよう | シリーズ予告編', event)">📝 メモ</button>
+                </div>
+                <div class="user-memo-preview" id="memo-preview-dGdrVULgciY"></div>
+            </div>
+        </div>
+        
+        <div class="portal-card cat-physical cat-agent" id="card-0p0RvpNHi_U" data-id="0p0RvpNHi_U" data-title="【マイクロソフト】configure github copilot: settings, sessions, and modes 【マイクロソフト】configure github copilot: settings, sessions, and modes microsoft developer ['copilot'] ">
+            <div class="thumb-container">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトConfigure GitHub Copilot Settings Sessions .html">
+                    <img src="https://img.youtube.com/vi/0p0RvpNHi_U/hqdefault.jpg" alt="【マイクロソフト】Configure GitHub Copilot: Settings, Sessions, and Modes" loading="lazy">
+                </a>
+                <button class="star-btn" id="star-0p0RvpNHi_U" onclick="toggleStar('0p0RvpNHi_U', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-0p0RvpNHi_U" onclick="toggleRead('0p0RvpNHi_U', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-23_AI_Microsoft_マイクロソフトConfigure GitHub Copilot Settings Sessions .html" class="card-link">
+                    <span class="card-channel">Microsoft Developer</span>
+                    <h3 class="card-title">【マイクロソフト】Configure GitHub Copilot: Settings, Sessions, and Modes</h3>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('copilot', event)">copilot</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-23</span>
+                    <button class="memo-btn" onclick="openMemoModal('0p0RvpNHi_U', '【マイクロソフト】Configure GitHub Copilot: Settings, Sessions, and Modes', event)">📝 メモ</button>
+                </div>
+                <div class="user-memo-preview" id="memo-preview-0p0RvpNHi_U"></div>
+            </div>
+        </div>
+        
+        <div class="portal-card cat-strategy" id="card-ARdnl2kjmRU" data-id="ARdnl2kjmRU" data-title="【エコノミスト】ユヴァル・ノア・ハラリが語るaiの未来の危険性 | the economist 【エコノミスト】ユヴァル・ノア・ハラリが語るaiの未来の危険性 | the economist the economist ['ai'] ">
+            <div class="thumb-container">
+                <a href="2026-08-23_AI_The_エコノミストユヴァルノアハラリが語るAIの未来の危険性  The Economist.html">
+                    <img src="https://img.youtube.com/vi/ARdnl2kjmRU/hqdefault.jpg" alt="【エコノミスト】ユヴァル・ノア・ハラリが語るAIの未来の危険性 | The Economist" loading="lazy">
+                </a>
+                <button class="star-btn" id="star-ARdnl2kjmRU" onclick="toggleStar('ARdnl2kjmRU', event)" title="マイストックに追加/解除">⭐</button>
+                <button class="read-btn" id="read-ARdnl2kjmRU" onclick="toggleRead('ARdnl2kjmRU', event)" title="読了マーク">✅</button>
+            </div>
+            <div class="card-content">
+                <a href="2026-08-23_AI_The_エコノミストユヴァルノアハラリが語るAIの未来の危険性  The Economist.html" class="card-link">
+                    <span class="card-channel">The Economist</span>
+                    <h3 class="card-title">【エコノミスト】ユヴァル・ノア・ハラリが語るAIの未来の危険性 | The Economist</h3>
+                </a>
+                <div class="card-tags"><span class="badge" onclick="filterByTag('ai', event)">ai</span></div>
+                <div class="card-meta-bar">
+                    <span class="card-date">📅 2026-08-23</span>
+                    <button class="memo-btn" onclick="openMemoModal('ARdnl2kjmRU', '【エコノミスト】ユヴァル・ノア・ハラリが語るAIの未来の危険性 | The Economist', event)">📝 メモ</button>
+                </div>
+                <div class="user-memo-preview" id="memo-preview-ARdnl2kjmRU"></div>
+            </div>
+        </div>
+        
         <div class="portal-card cat-physical cat-infra" id="card-VihWpoINpgE" data-id="VihWpoINpgE" data-title="【nvidia】メガワットあたりの秒間トークン数を最大化する：nvidia vera rubinの経済性 【nvidia】メガワットあたりの秒間トークン数を最大化する：nvidia vera rubinの経済性 nvidia (jensen huang) ['NVIDIA', 'Rubin', 'GPU', 'Compute', 'Energy', 'AIファクトリー'] ">
             <div class="thumb-container">
                 <a href="2026-08-21_AI_NVIDIA_NVIDIAメガワットあたりの秒間トークン数を最大化するNVIDIA Vera Rubinの経済性.html">
@@ -987,7 +1178,6 @@
         </footer>
     </div>
 
-    <!-- メモ編集モーダル -->
     <div class="modal-overlay" id="memoModal" onclick="if(event.target===this) closeMemoModal()">
         <div class="modal-content">
             <div class="modal-title" id="modalVideoTitle">📝 メモを編集</div>
@@ -1000,7 +1190,8 @@
     </div>
 
     <script>
-        const libraryData = [{"video_id": "rRkucx0KwcI", "title": "【NVIDIA】ヘルスケアロボティクスのためのフィジカルAI", "channel": "NVIDIA (Jensen Huang)", "filename": "2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアロボティクスのためのフィジカルAI  シミュレーション主導の設計と開.html", "date": "2026-08-19", "tags": ["ai"], "chapters": []}, {"video_id": "QLKcF0j6bVA", "title": "【マイクロソフト】GitHub Copilot SDKで、あらゆるアイデアをAIアプリにしよう", "channel": "Microsoft Developer", "filename": "2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html", "date": "2026-08-19", "tags": ["ai", "copilot"], "chapters": []}, {"video_id": "XuoqKYxDHVc", "title": "【フル対談】イーロン・マスク：AI・AGIと超豊かさの時代（2036年）へのロードマップ", "channel": "The Economist", "filename": "FEATURED_AI_The_XuoqKYxDHVc.html", "date": "2026-08-19", "tags": ["AI", "AGI", "ROBOTICS", "ENERGY"], "chapters": ["AIは5年後には人間より賢くなる", "AI企業はどのように自主規制を行うべきか", "中国はAI分野のリーダーになるのか？", "イーロン・マスク氏、サム・アルトマン氏とAI企業のボスたちについて語る", "仕事は選択肢になる", "一人の人間がこれほど大きな権力を持つべきなのか？", "スターリンクとウクライナ戦争", "政治に関わりすぎた", "マスク氏：USAIDの予算削減で死者は出ていない", "ヨーロッパ、極右、そしてイギリスの内戦", "マスク氏：私は人種差別主義者ではない", "マスク氏について人々が最も誤解していることは何か？"]}, {"video_id": "8aGMLbS3NAo", "title": "【テスラ】AIによる家庭用エネルギー自律管理システムの全貌", "channel": "Tesla (Elon Musk)", "filename": "2026-08-20_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "UaeWJK_vv-Y", "title": "【OpenAI】自律型AIエージェントプラグイン（AgentPlugin）仕様と開発", "channel": "OpenAI (Sam Altman)", "filename": "2026-08-20_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html", "date": "2026-08-20", "tags": ["ai", "agent"], "chapters": ["エージェントパッケージに標準が必要な理由", "Agent Pluginsの概要", "パッケージ構造、スキル、MCPサーバー", "製品間での移植性", "スコープと利用開始方法"]}, {"video_id": "fo9WirRIaVs", "title": "【Google DeepMind】Gemini Roboticsによる複数ロボットの自律協調動作", "channel": "Google DeepMind (Demis Hassabis)", "filename": "2026-08-20_AI_Google_Robots working together with Gemini Robotics 2.html", "date": "2026-08-20", "tags": ["robot", "robotics", "gemini"], "chapters": []}, {"video_id": "Sm7OTow3mcY", "title": "【Google】その画像がAI生成かどうかを見分ける方法", "channel": "Google (Sundar Pichai)", "filename": "2026-08-20_AI_Google_その画像がAI生成かどうかを見分ける方法.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "pmiN5Nj1-K8", "title": "【NVIDIA】ヘルスケアの再創造 ― デジタル知能と物理的自律性の融合", "channel": "NVIDIA (Jensen Huang)", "filename": "2026-08-20_AI_NVIDIA_GTC SJ 2026ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合.html", "date": "2026-08-20", "tags": ["gtc"], "chapters": []}, {"video_id": "gatpk6BhN5w", "title": "【Meta】アメリカの全視覚障害退役軍人へAIグラスを無償提供", "channel": "Meta (Mark Zuckerberg / Yann LeCun)", "filename": "2026-08-20_AI_Meta_誰もが手にする未来アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "cazd1z4Eseo", "title": "【マイクロソフト】大半の企業が見落としているAIシフトの本質と企業変革", "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)", "filename": "2026-08-20_AI_Microsoft_The AI shift most companies didnt see coming.html", "date": "2026-08-20", "tags": ["ai"], "chapters": ["AIは道具ではない", "第 3 のシフト: マルチエージェント AI", "なぜリーダーはAIに不安を感じるのか", "生産性の罠", "AI時代の3つのスキル", "AI 変革が人々の問題となる理由", "AI エージェントの労働力の管理", "あなたの会社の AI レイヤーを構築する", "AI の急激な変化", "リーダーが今後 30 日間にすべきこと"]}, {"video_id": "KykyglY1W4g", "title": "【マイクロソフト】開発者のためのSQLとAI連携の実践ガイド", "channel": "Microsoft Developer", "filename": "2026-08-20_AI_Microsoft_SQL and AI for Developers in Action.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "uQd809adb58", "title": "【Figure AI】世界最高峰の人型ロボット二足歩行バランストレーナー「Galileo」", "channel": "Figure AI (Brett Adcock / 人型ロボット)", "filename": "2026-08-20_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "j9Qr5aUfqNU", "title": "【Scale AI】最先端コーディングエージェントの実力ベンチマーク徹底分析", "channel": "Scale AI (Alexandr Wang)", "filename": "2026-08-20_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "7CNlGweeN90", "title": "【エコノミスト】自動運転車（ロボタクシー）は都市と経済をどう変えるのか？", "channel": "The Economist", "filename": "2026-08-20_AI_The_自動運転車は私たちの都市をどう変えるのか  エコノミスト.html", "date": "2026-08-20", "tags": ["自動運転"], "chapters": ["将来も私たちは車を所有し続けるのか？", "製造業が衰退しない理由", "自動運転車が都市をどのように変えるか", "現実世界におけるAI"]}, {"video_id": "vif8NQcjVf0", "title": "【徹底対談】ジェンスン・ファン：NVIDIAの4兆ドル企業への軌跡とAI革命", "channel": "Lex Fridman (CEO徹底対談)", "filename": "2026-08-20_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html", "date": "2026-08-20", "tags": ["ai"], "chapters": ["導入", "究極の共同設計とラックスケールエンジニアリング", "Jensen が NVIDIA をどのように運営しているか", "AI スケーリングの法則", "AI スケーリングの法則の最大の障害", "サプライチェーン", "メモリ", "力", "エロンと巨像", "エンジニアリングとリーダーシップに対するジェンセンのアプローチ", "中国", "TSMCと台湾", "NVIDIAの堀", "宇宙のAIデータセンター", "NVIDIA の価値は 10 兆ドルになるでしょうか?", "プレッシャーの下でのリーダーシップ", "ビデオゲーム", "AGI タイムライン", "プログラミングの未来", "意識", "死亡"]}, {"video_id": "-RXD4bTuFTo", "title": "【徹底対談】AIがAI研究そのものを完全自動化した世界で何が起きるか？", "channel": "Dwarkesh Patel (最深技術対談)", "filename": "2026-08-20_AI_Dwarkesh_Ryan Greenblatt  What happens once AI can automate.html", "date": "2026-08-20", "tags": ["ai"], "chapters": ["AI の研究開発は再帰的な自己改善を可能にするのに十分検証可能ですか?", "AIの進歩は人間の専門家データがボトルネックになっているのでしょうか?", "トークン価格の横ばいとスケーリング減速の示唆", "AI がトレーニングできないスキル: AI にはそれが必要なのでしょうか?", "誰に合わせますか？", "AIが人間を共謀し騙す最近の事件", "何が問題になる可能性がありますか?具体的なシナリオ", "報酬ハッキングから乗っ取りまで"]}, {"video_id": "zLUZclThLhU", "title": "【Y Combinator】元ホワイトハウスCTOマイケル・クラシオスが語る米国の国家AI戦略", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html", "date": "2026-08-20", "tags": ["ai"], "chapters": ["マイケル・クラツィオスが AI 政策と公共サービスについて語る", "シリコンバレーからホワイトハウスへの転身", "テクノロジー政策は実際にどのように作られるのか", "ホワイトハウスにおけるオープンソースAIの戦略的意義", "ワシントンのAIに対する見方が違う", "半年ごとに変わるテクノロジーを規制する", "どの AI リスクが過大評価されていますか?", "小さな技術者にテーブルの席を与える", "既存の堀を作らない規制", "Born Free vs. Born in Captivity Technologies", "ホワイトハウスで働くというのは実際どのようなものなのか", "アメリカ科学の新たな黄金時代", "量子、議会、知財、そして次に起こること", "技術者が公共サービスを検討すべき理由"]}, {"video_id": "F3INH9wZXoQ", "title": "【Y Combinator】なぜフィジカルAIが次なる巨大プラットフォームシフトなのか", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_なぜフィジカルAIが次なるプラットフォームシフトなのか.html", "date": "2026-08-20", "tags": ["AI", "PhysicalAI", "Robotics", "YC"], "chapters": ["デジタルAIからフィジカルAIへの移行", "Sim-to-Real仮想空間強化学習の威力", "実世界サプライチェーンと製造の自動化", "次世代ロボティクスOSの覇権争い"]}, {"video_id": "vb1Gcn10enw", "title": "【Y Combinator】AIトップ研究所が「オブザーバビリティ（可観測性）」で実践すること", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_AIトップ研究所が「オブザーバビリティ」で実際に取り組んでいること.html", "date": "2026-08-20", "tags": ["AI", "Observability", "Eval", "TopLabs"], "chapters": ["LLMパイプラインの可観測性と推論トレーシング", "ハルシネーションと品質劣化の自動検知", "LLM-as-a-Judgeによる継続的Evalフレームワーク", "本番環境でのレイテンシとコンピュートコスト最適化"]}, {"video_id": "DbBnd9PYob4", "title": "【Y Combinator】モデル非依存プラットフォームの優位性とマルチモデル戦略", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_モデルに依存しないAIプラットフォームは、どの単一の研究室も勝てないという賭けに出ている。.html", "date": "2026-08-20", "tags": ["AI", "ModelAgnostic", "Architecture", "Startups"], "chapters": ["単一AI研究室への依存リスクとベンダーロックイン", "マルチモデル動的ルーティングのアーキテクチャ", "タスク難易度に応じた推論コストの80%削減手法", "フロンティア競争における最も持続可能なプラットフォーム戦略"]}, {"video_id": "VbqaL_eHhKY", "title": "【Y Combinator】デザイン責任者が教える、生成AIを活用した次世代UI/UXデザイン手法", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_YCのデザイン責任者が教える、AIを活用したデザイン手法.html", "date": "2026-08-20", "tags": ["AI", "Design", "UIUX", "YC"], "chapters": ["静的モックアップから動くAIコードプロトタイプへの変革", "AIと対話しながら数分でUIを構築する新ワークフロー", "チャットUIを超えた先回り型エージェントUIの設計原則", "スタートアップの製品検証速度を100倍にする実践知"]}, {"video_id": "VihWpoINpgE", "title": "【NVIDIA】メガワットあたりの秒間トークン数を最大化する：NVIDIA Vera Rubinの経済性", "channel": "NVIDIA (Jensen Huang)", "filename": "2026-08-21_AI_NVIDIA_NVIDIAメガワットあたりの秒間トークン数を最大化するNVIDIA Vera Rubinの経済性.html", "date": "2026-08-21", "tags": ["NVIDIA", "Rubin", "GPU", "Compute", "Energy", "AIファクトリー"], "chapters": ["AIファクトリーにおけるエネルギー効率の壁", "Vera Rubinアーキテクチャの全貌", "メガワットあたり秒間トークン数の極大化", "次世代データセンターの経済モデル"]}, {"video_id": "XjSJ6ybS9I8", "title": "【OpenAI】ChatGPT Workでビジネスの問いから戦略資料を作成する方法", "channel": "OpenAI (Sam Altman)", "filename": "2026-08-21_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html", "date": "2026-08-21", "tags": ["OpenAI", "ChatGPT", "Work", "Agent", "Strategy", "生産性"], "chapters": ["ChatGPT Workの概要と新機能", "ビジネス戦略課題の構造化プロンプト", "データ統合と戦略スライドの自動生成", "エンタープライズでのROI最大化"]}, {"video_id": "bSp-foRDH5M", "title": "【Google】Google Antigravity 2.0を使ってアプリ開発やタスクの自動化を行う方法", "channel": "Google (Sundar Pichai)", "filename": "2026-08-21_AI_Google_GoogleGoogle Antigravity 20を使ってアプリ開発やタスクの自動化を行う方法.html", "date": "2026-08-21", "tags": ["Google", "Antigravity", "Agent", "Coding", "Automation", "Gemini"], "chapters": ["Antigravity 2.0アーキテクチャの革新", "自律エージェントによるフルスタック開発", "ブラウザ操作とツール連携の自動化", "次世代自律開発のワークフロー"]}, {"video_id": "NqQnHWa-Vxs", "title": "【テスラ】Autobidder | Tesla MegapackによるAI電力自律取引", "channel": "Tesla (Elon Musk)", "filename": "2026-08-21_AI_Tesla_テスラAutobidder  Tesla MegapackによるAI電力自律取引.html", "date": "2026-08-21", "tags": ["Tesla", "Autobidder", "Megapack", "Energy", "SmartGrid", "AI"], "chapters": ["AIによる電力市場のリアルタイム自律入札", "Megapackと送電網安定化アルゴリズム", "データセンター電力危機を救う分散型蓄電池", "テスラ・エネルギー部門の指数関数的成長"]}];
+        const libraryData = [{"video_id": "rRkucx0KwcI", "title": "【NVIDIA】ヘルスケアロボティクスのためのフィジカルAI", "channel": "NVIDIA (Jensen Huang)", "filename": "2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアロボティクスのためのフィジカルAI  シミュレーション主導の設計と開.html", "date": "2026-08-19", "tags": ["ai"], "chapters": []}, {"video_id": "QLKcF0j6bVA", "title": "【マイクロソフト】GitHub Copilot SDKで、あらゆるアイデアをAIアプリにしよう", "channel": "Microsoft Developer", "filename": "2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html", "date": "2026-08-19", "tags": ["ai", "copilot"], "chapters": []}, {"video_id": "XuoqKYxDHVc", "title": "【フル対談】イーロン・マスク：AI・AGIと超豊かさの時代（2036年）へのロードマップ", "channel": "The Economist", "filename": "FEATURED_AI_The_XuoqKYxDHVc.html", "date": "2026-08-19", "tags": ["AI", "AGI", "ROBOTICS", "ENERGY"], "chapters": ["AIは5年後には人間より賢くなる", "AI企業はどのように自主規制を行うべきか", "中国はAI分野のリーダーになるのか？", "イーロン・マスク氏、サム・アルトマン氏とAI企業のボスたちについて語る", "仕事は選択肢になる", "一人の人間がこれほど大きな権力を持つべきなのか？", "スターリンクとウクライナ戦争", "政治に関わりすぎた", "マスク氏：USAIDの予算削減で死者は出ていない", "ヨーロッパ、極右、そしてイギリスの内戦", "マスク氏：私は人種差別主義者ではない", "マスク氏について人々が最も誤解していることは何か？"]}, {"video_id": "8aGMLbS3NAo", "title": "【テスラ】AIによる家庭用エネルギー自律管理システムの全貌", "channel": "Tesla (Elon Musk)", "filename": "2026-08-20_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "UaeWJK_vv-Y", "title": "【OpenAI】自律型AIエージェントプラグイン（AgentPlugin）仕様と開発", "channel": "OpenAI (Sam Altman)", "filename": "2026-08-20_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html", "date": "2026-08-20", "tags": ["ai", "agent"], "chapters": ["エージェントパッケージに標準が必要な理由", "Agent Pluginsの概要", "パッケージ構造、スキル、MCPサーバー", "製品間での移植性", "スコープと利用開始方法"]}, {"video_id": "fo9WirRIaVs", "title": "【Google DeepMind】Gemini Roboticsによる複数ロボットの自律協調動作", "channel": "Google DeepMind (Demis Hassabis)", "filename": "2026-08-20_AI_Google_Robots working together with Gemini Robotics 2.html", "date": "2026-08-20", "tags": ["robot", "robotics", "gemini"], "chapters": []}, {"video_id": "Sm7OTow3mcY", "title": "【Google】その画像がAI生成かどうかを見分ける方法", "channel": "Google (Sundar Pichai)", "filename": "2026-08-20_AI_Google_その画像がAI生成かどうかを見分ける方法.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "pmiN5Nj1-K8", "title": "【NVIDIA】ヘルスケアの再創造 ― デジタル知能と物理的自律性の融合", "channel": "NVIDIA (Jensen Huang)", "filename": "2026-08-20_AI_NVIDIA_GTC SJ 2026ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合.html", "date": "2026-08-20", "tags": ["gtc"], "chapters": []}, {"video_id": "gatpk6BhN5w", "title": "【Meta】アメリカの全視覚障害退役軍人へAIグラスを無償提供", "channel": "Meta (Mark Zuckerberg / Yann LeCun)", "filename": "2026-08-20_AI_Meta_誰もが手にする未来アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "cazd1z4Eseo", "title": "【マイクロソフト】大半の企業が見落としているAIシフトの本質と企業変革", "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)", "filename": "2026-08-20_AI_Microsoft_The AI shift most companies didnt see coming.html", "date": "2026-08-20", "tags": ["ai"], "chapters": ["AIは道具ではない", "第 3 のシフト: マルチエージェント AI", "なぜリーダーはAIに不安を感じるのか", "生産性の罠", "AI時代の3つのスキル", "AI 変革が人々の問題となる理由", "AI エージェントの労働力の管理", "あなたの会社の AI レイヤーを構築する", "AI の急激な変化", "リーダーが今後 30 日間にすべきこと"]}, {"video_id": "KykyglY1W4g", "title": "【マイクロソフト】開発者のためのSQLとAI連携の実践ガイド", "channel": "Microsoft Developer", "filename": "2026-08-20_AI_Microsoft_SQL and AI for Developers in Action.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "uQd809adb58", "title": "【Figure AI】世界最高峰の人型ロボット二足歩行バランストレーナー「Galileo」", "channel": "Figure AI (Brett Adcock / 人型ロボット)", "filename": "2026-08-20_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "j9Qr5aUfqNU", "title": "【Scale AI】最先端コーディングエージェントの実力ベンチマーク徹底分析", "channel": "Scale AI (Alexandr Wang)", "filename": "2026-08-20_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html", "date": "2026-08-20", "tags": ["ai"], "chapters": []}, {"video_id": "7CNlGweeN90", "title": "【エコノミスト】自動運転車（ロボタクシー）は都市と経済をどう変えるのか？", "channel": "The Economist", "filename": "2026-08-20_AI_The_自動運転車は私たちの都市をどう変えるのか  エコノミスト.html", "date": "2026-08-20", "tags": ["自動運転"], "chapters": ["将来も私たちは車を所有し続けるのか？", "製造業が衰退しない理由", "自動運転車が都市をどのように変えるか", "現実世界におけるAI"]}, {"video_id": "vif8NQcjVf0", "title": "【徹底対談】ジェンスン・ファン：NVIDIAの4兆ドル企業への軌跡とAI革命", "channel": "Lex Fridman (CEO徹底対談)", "filename": "2026-08-20_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html", "date": "2026-08-20", "tags": ["ai"], "chapters": ["導入", "究極の共同設計とラックスケールエンジニアリング", "Jensen が NVIDIA をどのように運営しているか", "AI スケーリングの法則", "AI スケーリングの法則の最大の障害", "サプライチェーン", "メモリ", "力", "エロンと巨像", "エンジニアリングとリーダーシップに対するジェンセンのアプローチ", "中国", "TSMCと台湾", "NVIDIAの堀", "宇宙のAIデータセンター", "NVIDIA の価値は 10 兆ドルになるでしょうか?", "プレッシャーの下でのリーダーシップ", "ビデオゲーム", "AGI タイムライン", "プログラミングの未来", "意識", "死亡"]}, {"video_id": "-RXD4bTuFTo", "title": "【徹底対談】AIがAI研究そのものを完全自動化した世界で何が起きるか？", "channel": "Dwarkesh Patel (最深技術対談)", "filename": "2026-08-20_AI_Dwarkesh_Ryan Greenblatt  What happens once AI can automate.html", "date": "2026-08-20", "tags": ["ai"], "chapters": ["AI の研究開発は再帰的な自己改善を可能にするのに十分検証可能ですか?", "AIの進歩は人間の専門家データがボトルネックになっているのでしょうか?", "トークン価格の横ばいとスケーリング減速の示唆", "AI がトレーニングできないスキル: AI にはそれが必要なのでしょうか?", "誰に合わせますか？", "AIが人間を共謀し騙す最近の事件", "何が問題になる可能性がありますか?具体的なシナリオ", "報酬ハッキングから乗っ取りまで"]}, {"video_id": "zLUZclThLhU", "title": "【Y Combinator】元ホワイトハウスCTOマイケル・クラシオスが語る米国の国家AI戦略", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html", "date": "2026-08-20", "tags": ["ai"], "chapters": ["マイケル・クラツィオスが AI 政策と公共サービスについて語る", "シリコンバレーからホワイトハウスへの転身", "テクノロジー政策は実際にどのように作られるのか", "ホワイトハウスにおけるオープンソースAIの戦略的意義", "ワシントンのAIに対する見方が違う", "半年ごとに変わるテクノロジーを規制する", "どの AI リスクが過大評価されていますか?", "小さな技術者にテーブルの席を与える", "既存の堀を作らない規制", "Born Free vs. Born in Captivity Technologies", "ホワイトハウスで働くというのは実際どのようなものなのか", "アメリカ科学の新たな黄金時代", "量子、議会、知財、そして次に起こること", "技術者が公共サービスを検討すべき理由"]}, {"video_id": "F3INH9wZXoQ", "title": "【Y Combinator】なぜフィジカルAIが次なる巨大プラットフォームシフトなのか", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_なぜフィジカルAIが次なるプラットフォームシフトなのか.html", "date": "2026-08-20", "tags": ["AI", "PhysicalAI", "Robotics", "YC"], "chapters": ["デジタルAIからフィジカルAIへの移行", "Sim-to-Real仮想空間強化学習の威力", "実世界サプライチェーンと製造の自動化", "次世代ロボティクスOSの覇権争い"]}, {"video_id": "vb1Gcn10enw", "title": "【Y Combinator】AIトップ研究所が「オブザーバビリティ（可観測性）」で実践すること", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_AIトップ研究所が「オブザーバビリティ」で実際に取り組んでいること.html", "date": "2026-08-20", "tags": ["AI", "Observability", "Eval", "TopLabs"], "chapters": ["LLMパイプラインの可観測性と推論トレーシング", "ハルシネーションと品質劣化の自動検知", "LLM-as-a-Judgeによる継続的Evalフレームワーク", "本番環境でのレイテンシとコンピュートコスト最適化"]}, {"video_id": "DbBnd9PYob4", "title": "【Y Combinator】モデル非依存プラットフォームの優位性とマルチモデル戦略", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_モデルに依存しないAIプラットフォームは、どの単一の研究室も勝てないという賭けに出ている。.html", "date": "2026-08-20", "tags": ["AI", "ModelAgnostic", "Architecture", "Startups"], "chapters": ["単一AI研究室への依存リスクとベンダーロックイン", "マルチモデル動的ルーティングのアーキテクチャ", "タスク難易度に応じた推論コストの80%削減手法", "フロンティア競争における最も持続可能なプラットフォーム戦略"]}, {"video_id": "VbqaL_eHhKY", "title": "【Y Combinator】デザイン責任者が教える、生成AIを活用した次世代UI/UXデザイン手法", "channel": "Y Combinator (AIスタートアップ)", "filename": "2026-08-20_AI_Y_YCのデザイン責任者が教える、AIを活用したデザイン手法.html", "date": "2026-08-20", "tags": ["AI", "Design", "UIUX", "YC"], "chapters": ["静的モックアップから動くAIコードプロトタイプへの変革", "AIと対話しながら数分でUIを構築する新ワークフロー", "チャットUIを超えた先回り型エージェントUIの設計原則", "スタートアップの製品検証速度を100倍にする実践知"]}, {"video_id": "VihWpoINpgE", "title": "【NVIDIA】メガワットあたりの秒間トークン数を最大化する：NVIDIA Vera Rubinの経済性", "channel": "NVIDIA (Jensen Huang)", "filename": "2026-08-21_AI_NVIDIA_NVIDIAメガワットあたりの秒間トークン数を最大化するNVIDIA Vera Rubinの経済性.html", "date": "2026-08-21", "tags": ["NVIDIA", "Rubin", "GPU", "Compute", "Energy", "AIファクトリー"], "chapters": ["AIファクトリーにおけるエネルギー効率の壁", "Vera Rubinアーキテクチャの全貌", "メガワットあたり秒間トークン数の極大化", "次世代データセンターの経済モデル"]}, {"video_id": "XjSJ6ybS9I8", "title": "【OpenAI】ChatGPT Workでビジネスの問いから戦略資料を作成する方法", "channel": "OpenAI (Sam Altman)", "filename": "2026-08-21_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html", "date": "2026-08-21", "tags": ["OpenAI", "ChatGPT", "Work", "Agent", "Strategy", "生産性"], "chapters": ["ChatGPT Workの概要と新機能", "ビジネス戦略課題の構造化プロンプト", "データ統合と戦略スライドの自動生成", "エンタープライズでのROI最大化"]}, {"video_id": "bSp-foRDH5M", "title": "【Google】Google Antigravity 2.0を使ってアプリ開発やタスクの自動化を行う方法", "channel": "Google (Sundar Pichai)", "filename": "2026-08-21_AI_Google_GoogleGoogle Antigravity 20を使ってアプリ開発やタスクの自動化を行う方法.html", "date": "2026-08-21", "tags": ["Google", "Antigravity", "Agent", "Coding", "Automation", "Gemini"], "chapters": ["Antigravity 2.0アーキテクチャの革新", "自律エージェントによるフルスタック開発", "ブラウザ操作とツール連携の自動化", "次世代自律開発のワークフロー"]}, {"video_id": "NqQnHWa-Vxs", "title": "【テスラ】Autobidder | Tesla MegapackによるAI電力自律取引", "channel": "Tesla (Elon Musk)", "filename": "2026-08-21_AI_Tesla_テスラAutobidder  Tesla MegapackによるAI電力自律取引.html", "date": "2026-08-21", "tags": ["Tesla", "Autobidder", "Megapack", "Energy", "SmartGrid", "AI"], "chapters": ["AIによる電力市場のリアルタイム自律入札", "Megapackと送電網安定化アルゴリズム", "データセンター電力危機を救う分散型蓄電池", "テスラ・エネルギー部門の指数関数的成長"]}, {"video_id": "Nm5e9ok8dIg", "title": "【Google】国立公園で解明！世界で最も検索されている自然の疑問 | Searching For", "channel": "Google (Sundar Pichai)", "filename": "2026-08-23_AI_Google_Google国立公園で解明世界で最も検索されている自然の疑問  Searching For.html", "date": "2026-08-23", "tags": ["ai"], "chapters": ["The Olympic Rainforest", "What is tidepooling?", "Are starfish predators?", "What causes glaciers to form?", "Which national park has the most wildlife?", "What do you do if you encounter a black bear?", "How many national parks are there?"]}, {"video_id": "5062_E26pJE", "title": "【マイクロソフト】Build Reusable Copilot Workflows with Skills and Agents", "channel": "Microsoft Developer", "filename": "2026-08-23_AI_Microsoft_マイクロソフトBuild Reusable Copilot Workflows with Skill.html", "date": "2026-08-23", "tags": ["agent", "copilot"], "chapters": ["Welcome to skills, agent personas, plugins, and marketplaces", "What an agent skill is", "How agent personas, plugins, and marketplaces work", "Drafting a blog post from podcast notes", "Reviewing the draft with the rubber duck agent", "Converting the improved blog post to HTML", "Publishing the blog post to GitHub", "Turning the manual workflow into a reusable skill", "Reusing the skill in a new session", "Creating and publishing a second blog post", "Installing skills from a plugin marketplace", "Running the resume site sync skill", "Updating the portfolio from a new resume", "Exploring community skills and recapping the workflow", "What an agent skill is", "How agent personas, plugins, and marketplaces work", "Drafting a blog post from podcast notes", "Reviewing the draft with the rubber duck agent", "Converting the improved blog post to HTML", "Publishing the blog post to GitHub", "Turning the manual workflow into a reusable skill", "Reusing the skill in a new session", "Creating and publishing a second blog post", "Installing skills from a plugin marketplace", "Running the resume site sync skill", "Updating the portfolio from a new resume", "Exploring community skills and recapping the workflow"]}, {"video_id": "5RdcjCOC1Rk", "title": "【マイクロソフト】GitHub CopilotとBootstrapでポートフォリオをモダンに刷新しよう", "channel": "Microsoft Developer", "filename": "2026-08-23_AI_Microsoft_マイクロソフトGitHub CopilotとBootstrapでポートフォリオをモダンに刷新しよう.html", "date": "2026-08-23", "tags": ["copilot"], "chapters": ["Welcome and opening the portfolio in GitHub Copilot", "Reviewing the current website in the canvas", "Identifying design and interaction improvements", "Asking Copilot to suggest modernization options", "Comparing Bootstrap, Tailwind CSS, and web components", "Prompting Copilot to use Bootstrap 5", "Reviewing suggestions for navigation, cards, and accessibility", "Implementing Bootstrap and animated cards", "Reviewing the first update", "Improving hover animations and shadows", "Turning the skills list into badges", "Adding a footer link back to the top", "Making the footer sticky", "Customization ideas and recap", "Reviewing the current website in the canvas", "Identifying design and interaction improvements", "Asking Copilot to suggest modernization options", "Comparing Bootstrap, Tailwind CSS, and web components", "Prompting Copilot to use Bootstrap 5", "Reviewing suggestions for navigation, cards, and accessibility", "Implementing Bootstrap and animated cards", "Reviewing the first update", "Improving hover animations and shadows", "Turning the skills list into badges", "Adding a footer link back to the top", "Making the footer sticky", "Customization ideas and recap"]}, {"video_id": "ecbNPzagCCo", "title": "【マイクロソフト】Build a Portfolio Website from Your Resume with GitHub Copilot", "channel": "Microsoft Developer", "filename": "2026-08-23_AI_Microsoft_マイクロソフトBuild a Portfolio Website from Your Resume .html", "date": "2026-08-23", "tags": ["copilot"], "chapters": ["Welcome and what you'll build", "Reviewing the sample resume", "Opening the GitHub Copilot app", "Writing the prompt and asking clarifying questions", "Uploading the resume and choosing a design", "Generating the HTML, CSS, and JavaScript", "Opening the generated files and website", "Adding a resume preview on hover", "Customizing the site with school colors", "Adding dark and light modes", "Adding sun and moon icons to the theme switcher", "Asking Copilot for improvements and wrapping up", "Reviewing the sample resume", "Opening the GitHub Copilot app", "Writing the prompt and asking clarifying questions", "Uploading the resume and choosing a design", "Generating the HTML, CSS, and JavaScript", "Opening the generated files and website", "Adding a resume preview on hover", "Customizing the site with school colors", "Adding dark and light modes", "Adding sun and moon icons to the theme switcher", "Asking Copilot for improvements and wrapping up"]}, {"video_id": "37I7qkgEl9U", "title": "【マイクロソフト】GitHub Copilotの最適化：より良い結果を、より少ないトークンで", "channel": "Microsoft Developer", "filename": "2026-08-23_AI_Microsoft_マイクロソフトGitHub Copilotの最適化より良い結果をより少ないトークンで.html", "date": "2026-08-23", "tags": ["copilot", "トークン"], "chapters": ["Welcome and an introduction to context and tokens", "What context includes", "How Copilot processes information as tokens", "Viewing context with /context", "Understanding the context window with a suitcase analogy", "Why too little or too much context can hurt results", "Generating a case study page without project context", "Adding project files for better results", "Refreshing project context with /init", "How copilot-instructions.md guides Copilot", "Starting a focused session with the right context", "Checking context usage", "Reducing token usage with /compact", "Recap of context and token optimization", "What context includes", "How Copilot processes information as tokens", "Viewing context with /context", "Understanding the context window with a suitcase analogy", "Why too little or too much context can hurt results", "Generating a case study page without project context", "Adding project files for better results", "Refreshing project context with /init", "How copilot-instructions.md guides Copilot", "Starting a focused session with the right context", "Checking context usage", "Reducing token usage with /compact", "Recap of context and token optimization"]}, {"video_id": "R-Cc3t1twEE", "title": "【マイクロソフト】GitHub CopilotとStudent Developer Packを使ってみよう", "channel": "Microsoft Developer", "filename": "2026-08-23_AI_Microsoft_マイクロソフトGitHub CopilotとStudent Developer Packを使ってみよ.html", "date": "2026-08-23", "tags": ["copilot"], "chapters": ["Welcome and what you'll build in this series", "What GitHub is and why every student should have an account", "GitHub Pro and the free tools students get", "Inside the Student Developer Pack", "Applying for GitHub Education, step by step", "Approval timeline and enrolling for Copilot access", "Installing the GitHub Copilot app and VS Code", "First look inside the Copilot app", "Your first prompt: a Hello World site with zero code", "Opening your site in the canvas", "Asking Copilot to move files and open a browser", "Opening your project in VS Code", "Recap and what's next", "What GitHub is and why every student should have an account", "GitHub Pro and the free tools students get", "Inside the Student Developer Pack", "Applying for GitHub Education, step by step", "Approval timeline and enrolling for Copilot access", "Installing the GitHub Copilot app and VS Code", "First look inside the Copilot app", "Your first prompt: a Hello World site with zero code", "Opening your site in the canvas", "Asking Copilot to move files and open a browser", "Opening your project in VS Code", "Recap and what's next"]}, {"video_id": "PuuF4_ngRNE", "title": "【マイクロソフト】Bring Your Own Model Within the GitHub Copilot App", "channel": "Microsoft Developer", "filename": "2026-08-23_AI_Microsoft_マイクロソフトBring Your Own Model Within the GitHub Copi.html", "date": "2026-08-23", "tags": ["copilot"], "chapters": ["Welcome and bring your own model overview", "Why model choice and token limits matter", "Exploring model providers and hosting options", "Introducing Microsoft Foundry and Azure for Students", "Understanding the Azure portal, credits, and costs", "Creating resources with the Azure MCP Server", "Installing Azure MCP and signing in", "Creating and verifying Microsoft Foundry resources", "Understanding endpoints, API keys, and deployments", "Deploying a GPT-5 mini model with Copilot", "Connecting Microsoft Foundry as a model provider", "Adding and selecting the deployed model", "Fixing a token rate limit and testing again", "Recap of Azure, Microsoft Foundry, and bring your own model", "Why model choice and token limits matter", "Exploring model providers and hosting options", "Introducing Microsoft Foundry and Azure for Students", "Understanding the Azure portal, credits, and costs", "Creating resources with the Azure MCP Server", "Installing Azure MCP and signing in", "Creating and verifying Microsoft Foundry resources", "Understanding endpoints, API keys, and deployments", "Deploying a GPT-5 mini model with Copilot", "Connecting Microsoft Foundry as a model provider", "Adding and selecting the deployed model", "Fixing a token rate limit and testing again", "Recap of Azure, Microsoft Foundry, and bring your own model"]}, {"video_id": "Xj_fklwLfTI", "title": "【マイクロソフト】スマートフォンからGitHub Copilotをリモート操作する方法", "channel": "Microsoft Developer", "filename": "2026-08-23_AI_Microsoft_マイクロソフトスマートフォンからGitHub Copilotをリモート操作する方法.html", "date": "2026-08-23", "tags": ["copilot"], "chapters": ["Welcome to the final episode", "How GitHub Copilot remote control works", "Planning a page progress bar", "Asking Copilot clarifying questions one at a time", "Turning on remote control with /remote on", "Scanning the QR code with the GitHub mobile app", "Opening the same Copilot session on a phone", "Continuing the session away from the computer", "Answering the navigation bar question", "Choosing where the progress bar should appear", "Letting Copilot finish with reasonable assumptions", "Reviewing the completed feature in the canvas", "Recap of the remote control workflow", "Series wrap-up", "How GitHub Copilot remote control works", "Planning a page progress bar", "Asking Copilot clarifying questions one at a time", "Turning on remote control with /remote on", "Scanning the QR code with the GitHub mobile app", "Opening the same Copilot session on a phone", "Continuing the session away from the computer", "Answering the navigation bar question", "Choosing where the progress bar should appear", "Letting Copilot finish with reasonable assumptions", "Reviewing the completed feature in the canvas", "Recap of the remote control workflow", "Series wrap-up"]}, {"video_id": "XhVJWYAH3o0", "title": "【マイクロソフト】Extend GitHub Copilot with Tools and MCP Servers", "channel": "Microsoft Developer", "filename": "2026-08-23_AI_Microsoft_マイクロソフトExtend GitHub Copilot with Tools and MCP Se.html", "date": "2026-08-23", "tags": ["copilot", "mcp"], "chapters": ["Welcome and an introduction to tools and MCP servers", "Copilot as the brain and tools as the hands", "Built-in file system and internet tools", "Setting up the portfolio tool demonstration", "Searching local files and the internet", "Using prompt keywords to select the right tools", "Watching Copilot call tools automatically", "Adding images to the portfolio", "Creating a PowerPoint presentation with tools", "What Model Context Protocol means", "Installing the Playwright MCP server", "Starting browser automation in a new session", "Switching Playwright from Chrome to Microsoft Edge", "Recap of built-in tools, MCP servers, and Playwright", "Copilot as the brain and tools as the hands", "Built-in file system and internet tools", "Setting up the portfolio tool demonstration", "Searching local files and the internet", "Using prompt keywords to select the right tools", "Watching Copilot call tools automatically", "Adding images to the portfolio", "Creating a PowerPoint presentation with tools", "What Model Context Protocol means", "Installing the Playwright MCP server", "Starting browser automation in a new session", "Switching Playwright from Chrome to Microsoft Edge", "Recap of built-in tools, MCP servers, and Playwright"]}, {"video_id": "dGdrVULgciY", "title": "【マイクロソフト】Copilotでパーソナルブランドを構築しよう | シリーズ予告編", "channel": "Microsoft Developer", "filename": "2026-08-23_AI_Microsoft_マイクロソフトCopilotでパーソナルブランドを構築しよう  シリーズ予告編.html", "date": "2026-08-23", "tags": ["copilot"], "chapters": []}, {"video_id": "0p0RvpNHi_U", "title": "【マイクロソフト】Configure GitHub Copilot: Settings, Sessions, and Modes", "channel": "Microsoft Developer", "filename": "2026-08-23_AI_Microsoft_マイクロソフトConfigure GitHub Copilot Settings Sessions .html", "date": "2026-08-23", "tags": ["copilot"], "chapters": ["Welcome and GitHub Copilot configuration overview", "Exploring the app, repository, and chat", "Opening settings and managing accounts", "Configuring tool permissions and agent instructions", "Changing themes and accessibility settings", "Understanding repositories and sessions", "Choosing a model and reasoning effort", "Using Interactive mode", "Planning a new hobbies section", "Keeping sessions separate with worktrees", "Reviewing and editing a plan", "Implementing the plan with Autopilot mode", "Reviewing the completed hobbies section", "Recap of settings, sessions, and modes", "Exploring the app, repository, and chat", "Opening settings and managing accounts", "Configuring tool permissions and agent instructions", "Changing themes and accessibility settings", "Understanding repositories and sessions", "Choosing a model and reasoning effort", "Using Interactive mode", "Planning a new hobbies section", "Keeping sessions separate with worktrees", "Reviewing and editing a plan", "Implementing the plan with Autopilot mode", "Reviewing the completed hobbies section", "Recap of settings, sessions, and modes"]}, {"video_id": "ARdnl2kjmRU", "title": "【エコノミスト】ユヴァル・ノア・ハラリが語るAIの未来の危険性 | The Economist", "channel": "The Economist", "filename": "2026-08-23_AI_The_エコノミストユヴァルノアハラリが語るAIの未来の危険性  The Economist.html", "date": "2026-08-23", "tags": ["ai"], "chapters": ["Why an AI takeover isn't inevitable", "Elon Musk’s many AI contradictions", "How AI could takeover the world’s financial system", "Why trust is shifting from humans to machines", "AIs can mass produce human intimacy", "Why voters need to challenge politicians on AI", "Elon Musk’s many AI contradictions", "How AI could takeover the world’s financial system", "Why trust is shifting from humans to machines", "AIs can mass produce human intimacy", "Why voters need to challenge politicians on AI"]}];
+        const richTopicMaps = {"physical": {"title": "🦾 フィジカルAI & 人型ロボティクス（Physical AI & Robotics）", "summary": "言語モデルの知能が「画面内のテキスト処理」から「現実世界の物理法則・原子（Atoms）の直接制御」へと不可逆的にシフト。仮想シミュレーション（Sim-to-Real）による数億時間の超高速強化学習と、高トルク・高身体性ハードウェアの融合により、製造・物流・医療・家庭労働など実体経済のバリューチェーン全体を再定義する次なる超巨大プラットフォームです。", "layers": [{"name": "1. 物理シミュレーション & 学習空間", "desc": "NVIDIA Omniverse / Sim-to-Real仮想環境。破損リスクなしに並列で数億時間のロボット強化学習を実行。"}, {"name": "2. 身体性マルチモーダル基盤（VLA）", "desc": "Google DeepMind Gemini Robotics / 視覚・言語・運動制御を統合し、自然言語でタスクを理解・自律実行。"}, {"name": "3. 汎用ロボティクス・ハードウェア", "desc": "Figure AI (Galileo) / Tesla Optimus。高トルク二足歩行、繊細な手先操作、人間用施設への直接適応。"}, {"name": "4. 産業アプリケーション・現場統合", "desc": "自動車・半導体工場、倉庫物流、手術支援ロボット、無人配送・自動運転（Robotaxi）。"}], "matrix": [{"player": "NVIDIA", "role": "インフラ & 学習OS", "strength": "OmniverseとGPUクラスタによる世界標準シミュレーション環境", "target": "全ロボットメーカーのOS支配"}, {"player": "Figure AI", "role": "汎用人型ロボット量産", "strength": "自社開発の革新バランストレーナー「Galileo」と驚異的な製造速度", "target": "工場・サプライチェーンの労働代替"}, {"player": "Google DeepMind", "role": "VLA基盤モデル研究", "strength": "Gemini Roboticsによる複数ロボットの言語協調動作・未知環境適応", "target": "汎用身体性知能の標準モデル"}, {"player": "Tesla", "role": "垂直統合ハード&FSD", "strength": "自社製アクチュエータ、車載ビジョンAIとOptimusの学習共通化", "target": "数百万台規模の民生・工場ロボット量産"}], "timeline": [{"phase": "2026年 (現在)", "title": "特定産業ラインでの実証配備", "desc": "自動車工場・物流拠点での反復作業や部品運搬。Sim-to-Real精度の飛躍的向上。"}, {"phase": "2027-2028年", "title": "複数ロボット協調 & 半自律運用", "desc": "自然言語指示によるチーム作業、未知の障害物や環境変化へのリアルタイム自己修正。"}, {"phase": "2030年", "title": "一般家庭・建設現場への本格普及", "desc": "1台数万ドル以下の量産化と、人間の肉体労働全般を代替するフィジカルAI経済の確立。"}], "bottleneck": "⚠️ <strong>最大の壁:</strong> 物理シミュレーションと実世界の摩擦・触覚差（Reality Gap）、およびバッテリー駆動時間とアクチュエータの熱処理。", "opportunity": "💡 <strong>スタートアップ勝機:</strong> ロボット用センサーデータ収集・ラベリング基盤、特定業界向け（介護・外食・農業）の特化型自律制御ミドルウェア。", "curated_vids": [{"title": "【NVIDIA】ヘルスケアロボティクスのためのフィジカルAI", "file": "2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアロボティクスのためのフィジカルAI  シミュレーション主導の設計と開.html", "tag": "NVIDIA"}, {"title": "【Figure AI】世界最強のバランストレーナーGalileo", "file": "2026-08-19_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html", "tag": "Figure AI"}, {"title": "【Google DeepMind】Gemini Robotics複数ロボ協調", "file": "2026-08-19_AI_Google_Robots working together with Gemini Robotics 2.html", "tag": "DeepMind"}]}, "agent": {"title": "🤖 自律型エージェント & 開発スタック（Autonomous Agents & Developer Stack）", "summary": "受動的なテキストチャットの時代は終わり、自律的にAPI、ターミナル、PC操作、社内DBを連動させてゴールを完遂する「自律型AIエージェント」がソフトウェア産業の主役に。単一LLMへのプロンプト入力から、AgentPlugin・MCP（Model Context Protocol）・Copilot SDKを通じたマルチエージェント協調オーケストレーションへと開発基盤が刷新されています。", "layers": [{"name": "1. 高度推論エンジン（Frontier Models）", "desc": "OpenAI o-series / Claude 3.5 Sonnet。思考の連鎖（Chain of Thought）による多段階推論と計画策定。"}, {"name": "2. エージェント相互接続仕様（Protocols）", "desc": "OpenAI AgentPlugin / Anthropic MCP / ツール定義、権限境界、ステート管理の標準化。"}, {"name": "3. エンタープライズSDK & 実行環境", "desc": "GitHub Copilot SDK / Microsoft Agent Framework。既存の社内ワークフローへの安全な埋め込み。"}, {"name": "4. 評価・ベンチマーク・オブザーバビリティ", "desc": "Scale AI SWE Atlas / 本番環境での推論トレース、タスク達成率の定量的Eval。"}], "matrix": [{"player": "OpenAI", "role": "エージェント規格 & 推論標準", "strength": "AgentPlugin仕様の提唱と最先端推論モデルによる実行力", "target": "全AIエージェントの基本プラットフォーム"}, {"player": "Microsoft", "role": "企業業務ワークフロー定着", "strength": "Copilot SDKとGitHub/Officeの既存顧客基盤への圧倒的統合力", "target": "全エンタープライズソフトウェアのAI化"}, {"player": "Scale AI", "role": "ベンチマーク & 信頼性保証", "strength": "SWE Atlasや実務タスク評価（Eval）基盤による客観的品質測定", "target": "企業のAI導入における品質監査標準"}], "timeline": [{"phase": "2026年 (現在)", "title": "コーディング & 特定ワークフロー自律化", "desc": "PR作成、バグ修正、データ抽出などの単一職務タスクをエージェントが自律完遂。"}, {"phase": "2027-2028年", "title": "マルチエージェント協調組織の稼働", "desc": "PM・デザイナー・エンジニア・QAの各専門エージェントが協調して新機能を自動リリース。"}, {"phase": "2030年", "title": "自律企業オペレーション（Autonomous Ops）", "desc": "顧客サポートから経理、インフラ運用まで日常業務の90%がエージェント群により自律執行。"}], "bottleneck": "⚠️ <strong>最大の壁:</strong> エージェントの自律ループ中に発生するエラーの自己修復能力限界、および本番環境での安全なアクセス権限（Guardrails）制御。", "opportunity": "💡 <strong>スタートアップ勝機:</strong> エージェント専用のサンドボックス実行環境、マルチエージェント間通信プロトコル、特定業務向け自動Evalフレームワーク。", "curated_vids": [{"title": "【OpenAI】自律型AIエージェントプラグイン仕様", "file": "2026-08-19_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html", "tag": "OpenAI"}, {"title": "【マイクロソフト】GitHub Copilot SDKの全貌", "file": "2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html", "tag": "Microsoft"}, {"title": "【Scale AI】コーディングエージェントの最新ベンチマーク", "file": "2026-08-19_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html", "tag": "Scale AI"}]}, "infra": {"title": "⚡ 半導体・電力・宇宙インフラ（Compute, Power & Infrastructure）", "summary": "AIスケーリングの律速段階が「アルゴリズムの研究」から「物理的なGPU半導体供給とギガワット級データセンターの電力確保」へと完全に移行。テスラの分散型蓄電池網（Powerwall/Megapack）、送電網の逼迫、そしてイーロン・マスクが提言する「宇宙空間へのデータセンター配備」など、エネルギーと宇宙インフラを制する者がAI覇権を握る時代に突入しました。", "layers": [{"name": "1. 半導体 & 超高速ファブリック", "desc": "NVIDIA Blackwell/Rubin, Spectrum-X Ethernet。数万基GPUの超低遅延クラスタ接続。"}, {"name": "2. データセンター電力 & 冷却", "desc": "液冷（Liquid Cooling）システム、数ギガワット規模の専用受電設備。"}, {"name": "3. 分散型エネルギー & スマートグリッド", "desc": "Tesla Megapack / Powerwall / 地域の送電網負荷を分散・平準化するAI自律電力管理。"}, {"name": "4. 次世代フロンティア（宇宙配備）", "desc": "Starshipによる打ち上げコスト極小化 ➔ 太陽光常時発電・極低温冷却が可能な宇宙軌道上DC。"}], "matrix": [{"player": "NVIDIA (Jensen)", "role": "AI Factory半導体覇権", "strength": "GPU・ネットワーク・CUDAエコシステムの圧倒的独占と年次刷新サイクル", "target": "世界のAIコンピュート基盤の支配"}, {"player": "Tesla (Elon Musk)", "role": "エネルギー & 宇宙垂直統合", "strength": "分散型蓄電池グリッド＋SpaceX Starshipによる宇宙データセンター配備能力", "target": "ギガワット電力制約の突破と宇宙DC"}, {"player": "Dylan Patel / Dwarkesh", "role": "半導体・電力サプライチェーン分析", "strength": "世界中のデータセンター電力枯渇、CoWoSパッケージング供給制約の定量的解明", "target": "インフラボトルネックの啓発"}], "timeline": [{"phase": "2026年 (現在)", "title": "地域送電網の枯渇と液冷標準化", "desc": "既存の電力網へのデータセンター増設が限界に達し、自家発電や蓄電池併設が必須に。"}, {"phase": "2027-2028年", "title": "小型原子炉（SMR）& 再エネ直結", "desc": "マイクロソフトやAmazon等による原子力直結型データセンターの稼働開始。"}, {"phase": "2030年", "title": "宇宙軌道上データセンター実証", "desc": "Starshipの低コスト打ち上げにより、冷却不要・24時間太陽光の宇宙コンピュートが始動。"}], "bottleneck": "⚠️ <strong>最大の壁:</strong> 地球上での電力供給許可（送電網接続に数年待ち）と、熱密度が極限に達した半導体クラスタの冷却コスト。", "opportunity": "💡 <strong>スタートアップ勝機:</strong> AI専用の推論最適化チップ（LPPU）、データセンター向けAI冷却制御ソフト、再生可能エネルギー最適マッチング。", "curated_vids": [{"title": "【テスラ】AIによる家庭用エネルギー自律管理システムの全貌", "file": "2026-08-20_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html", "tag": "Tesla"}, {"title": "【Dwarkesh】36ヶ月後には宇宙空間がAI配備に最も安価になる", "file": "2026-08-20_AI_Dwarkesh_イーロンマスク  36か月後にはAIを置くのに最も安い場所は宇宙になる.html", "tag": "Dwarkesh"}, {"title": "【Lex】ジェンスン・ファン：4兆ドル企業NVIDIAとAIファクトリー", "file": "2026-08-19_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html", "tag": "NVIDIA"}]}, "strategy": {"title": "🏛️ 国家AI戦略 & モデル非依存プラットフォーム（Sovereign AI & Model-Agnostic）", "summary": "米中の国家間AI覇権競争が激化する一方で、民間企業では「特定の単一AI研究室（OpenAI等）に社運を賭けるリスク」を回避する「モデル非依存（Model-Agnostic）」アーキテクチャが主流に。政府の事前規制緩和方針、輸出規制、そして本番環境でのオブザーバビリティ（可観測性）と動的ルーティングがビジネスの勝敗を決定づけています。", "layers": [{"name": "1. 国家政策 & 地政学的規制", "desc": "米国国家AIイニシアチブ（Kratsios）/ 輸出管理と事前規制緩和によるイノベーション加速。"}, {"name": "2. モデル非依存インテリジェント・ルーター", "desc": "タスク難易度・コスト・レイテンシに応じてOpenAI/Claude/Gemini/Llamaを最適動的振分け。"}, {"name": "3. オブザーバビリティ & 自動Eval", "desc": "本番環境での推論トレース、ハルシネーション遮断、LLM-as-a-Judgeによる常時品質監視。"}, {"name": "4. ソブリンAI（Sovereign AI）", "desc": "各国・各企業が独自データと主権を守るためのオンプレミス・オープンモデル運用。"}], "matrix": [{"player": "ホワイトハウス (Kratsios)", "role": "国家AIイニシアチブ", "strength": "欧州型事前規制を排し、オープンソース擁護と先端半導体防衛を両立", "target": "米国の技術覇権維持と経済安全保障"}, {"player": "YC Model-Agnostic陣営", "role": "マルチモデル抽象化", "strength": "単一AIラボへのベンダーロックインを完全排除する次世代アーキテクチャ", "target": "企業向け最高精度×最小コストの実現"}, {"player": "Top AI Labs", "role": "本番オブザーバビリティ", "strength": "分散トレーシングとリアルタイムEvalによるエンタープライズ品質保証", "target": "LLMの非決定性克服と本番信頼性"}], "timeline": [{"phase": "2026年 (現在)", "title": "マルチモデル動的ルーティングの定着", "desc": "単一プロバイダー依存の脱却。軽負荷は小型モデル、難問は推論モデルへ自動振分け。"}, {"phase": "2027-2028年", "title": "ソブリンAIと業界特化Evalの標準化", "desc": "金融・医療・防衛における自国インフラ内モデル運用と法適合性（Compliance）自動化。"}, {"phase": "2030年", "title": "自律ガバナンスと分散知能ネットワーク", "desc": "世界規模でのモデル間相互チェックと、AI主導による法務・安全規制のリアルタイム運用。"}], "bottleneck": "⚠️ <strong>最大の壁:</strong> 国家間の規制分断（データローカライゼーション）と、モデル更新に伴う既存プロンプトの予期せぬ挙動変化。", "opportunity": "💡 <strong>スタートアップ勝機:</strong> ベンダーロックインなしのエンタープライズAIゲートウェイ、リアルタイムAIセキュリティ＆ガバナンス監査ツール。", "curated_vids": [{"title": "【YC】マイケル・クラシオス：ホワイトハウスのAI戦略の内側", "file": "2026-08-19_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html", "tag": "YC / Policy"}, {"title": "【YC】モデルに依存しないAIプラットフォームの圧倒的優位性", "file": "2026-08-20_AI_Y_モデルに依存しないAIプラットフォームは、どの単一の研究室も勝てないという賭けに出ている。.html", "tag": "YC Platform"}, {"title": "【YC】AIトップ研究所が「オブザーバビリティ」で取り組むこと", "file": "2026-08-20_AI_Y_AIトップ研究所が「オブザーバビリティ」で実際に取り組んでいること.html", "tag": "Top Labs"}]}, "design": {"title": "🎨 AI駆動プロダクトデザイン & UI/UXパラダイム（AI-First Product Design & UX）", "summary": "生成AIの台頭により、静的なFigmaワイヤーフレームを描いてエンジニアに渡す従来のデザイン分業体制が完全に終焉。デザイナー自身がAIと対話し、初日から動くコードUIを構築・検証する高速プロトタイピングが標準に。さらに、受動的なチャットボットUIを超え、AIが文脈を察知して先回りする「自律アシスト型インターフェース」の設計が競争軸となっています。", "layers": [{"name": "1. 要求仕様・自然言語デザイン指示", "desc": "プロンプト対話による意図・ユーザージャーニーの即時コード化。"}, {"name": "2. 動的コードUI即時生成エンジン", "desc": "Figmaの静的モックを介さず、初日からReact/HTML等の動くコンポーネントを自動生成。"}, {"name": "3. 先回り型コンテキストUI（Proactive UX）", "desc": "テキスト入力を求めず、ユーザーの行動履歴や状況から最適なアクションを先回り提示。"}, {"name": "4. リアルタイム・ユーザー行動検証", "desc": "実動プロトタイプをユーザーに触らせ、数分単位でデザインを対話修正する超高速イテレーション。"}], "matrix": [{"player": "YC Design (Garry Tan等)", "role": "AIファーストデザイン手法", "strength": "静的モックの廃止と動くコードUIによる100倍速の検証サイクル提唱", "target": "次世代スタートアップの開発文化変革"}, {"player": "新世代AI UIツール群", "role": "動的コンポーネント生成", "strength": "プロンプトから本番品質のフロントエンドコードをリアルタイム出力", "target": "デザインとエンジニアリングの境界融解"}], "timeline": [{"phase": "2026年 (現在)", "title": "動くプロトタイプの初日作成", "desc": "デザイナーがAIツールを用いて数分で動作するUIを作成し、仮説検証を実施。"}, {"phase": "2027-2028年", "title": "パーソナライズ動的UIの普及", "desc": "ユーザーごとのスキルレベルや目的に応じて画面レイアウトがリアルタイムに自己生成。"}, {"phase": "2030年", "title": "ゼロUI & アンビエント・インテリジェンス", "desc": "画面操作すら不要に。視線・音声・ウェアラブルによる意図予測と環境統合型UI。"}], "bottleneck": "⚠️ <strong>最大の壁:</strong> AI生成UIにおけるブランド一貫性の維持、およびコンポーネント間のデザインシステム厳密準拠。", "opportunity": "💡 <strong>スタートアップ勝機:</strong> ブランドガイドラインを強制適用するAIデザインリンター、ユーザー行動に応じてUIを動的自己変形させるフロントエンドSDK。", "curated_vids": [{"title": "【YC】デザイン責任者が教える、AIを活用したデザイン手法", "file": "2026-08-20_AI_Y_YCのデザイン責任者が教える、AIを活用したデザイン手法.html", "tag": "YC Design"}, {"title": "【YC】How To Design In The Agent Era", "file": "2026-08-20_AI_Y_How To Design In The Agent Era.html", "tag": "Agent UI"}]}};
         const STORAGE_STARRED = 'ai_video_starred_vids';
         const STORAGE_READ = 'ai_video_read_vids';
         const STORAGE_MEMOS = 'ai_video_user_memos';
@@ -1011,144 +1202,6 @@
         let audioPlaybackSpeed = 1.0;
         let isAudioPlaying = false;
         let speechSynthUtterance = null;
-
-        /* 🗺️ 6大構造化インテリジェンス・トレンドマップデータ */
-        const richTopicMaps = {
-            'physical': {
-                title: '🦾 フィジカルAI & 人型ロボティクス（Physical AI & Robotics）',
-                summary: '言語モデルの知能が「画面内のテキスト処理」から「現実世界の物理法則・原子（Atoms）の直接制御」へと不可逆的にシフト。仮想シミュレーション（Sim-to-Real）による数億時間の超高速強化学習と、高トルク・高身体性ハードウェアの融合により、製造・物流・医療・家庭労働など実体経済のバリューチェーン全体を再定義する次なる超巨大プラットフォームです。',
-                layers: [
-                    { name: '1. 物理シミュレーション & 学習空間', desc: 'NVIDIA Omniverse / Sim-to-Real仮想環境。破損リスクなしに並列で数億時間のロボット強化学習を実行。' },
-                    { name: '2. 身体性マルチモーダル基盤（VLA）', desc: 'Google DeepMind Gemini Robotics / 視覚・言語・運動制御を統合し、自然言語でタスクを理解・自律実行。' },
-                    { name: '3. 汎用ロボティクス・ハードウェア', desc: 'Figure AI (Galileo) / Tesla Optimus。高トルク二足歩行、繊細な手先操作、人間用施設への直接適応。' },
-                    { name: '4. 産業アプリケーション・現場統合', desc: '自動車・半導体工場、倉庫物流、手術支援ロボット、無人配送・自動運転（Robotaxi）。' }
-                ],
-                matrix: [
-                    { player: 'NVIDIA', role: 'インフラ & 学習OS', strength: 'OmniverseとGPUクラスタによる世界標準シミュレーション環境', target: '全ロボットメーカーのOS支配' },
-                    { player: 'Figure AI', role: '汎用人型ロボット量産', strength: '自社開発の革新バランストレーナー「Galileo」と驚異的な製造速度', target: '工場・サプライチェーンの労働代替' },
-                    { player: 'Google DeepMind', role: 'VLA基盤モデル研究', strength: 'Gemini Roboticsによる複数ロボットの言語協調動作・未知環境適応', target: '汎用身体性知能の標準モデル' },
-                    { player: 'Tesla', role: '垂直統合ハード&FSD', strength: '自社製アクチュエータ、車載ビジョンAIとOptimusの学習共通化', target: '数百万台規模の民生・工場ロボット量産' }
-                ],
-                timeline: [
-                    { phase: '2026年 (現在)', title: '特定産業ラインでの実証配備', desc: '自動車工場・物流拠点での反復作業や部品運搬。Sim-to-Real精度の飛躍的向上。' },
-                    { phase: '2027-2028年', title: '複数ロボット協調 & 半自律運用', desc: '自然言語指示によるチーム作業、未知の障害物や環境変化へのリアルタイム自己修正。' },
-                    { phase: '2030年', title: '一般家庭・建設現場への本格普及', desc: '1台数万ドル以下の量産化と、人間の肉体労働全般を代替するフィジカルAI経済の確立。' }
-                ],
-                bottleneck: '⚠️ <strong>最大の壁:</strong> 物理シミュレーションと実世界の摩擦・触覚差（Reality Gap）、およびバッテリー駆動時間とアクチュエータの熱処理。',
-                opportunity: '💡 <strong>スタートアップ勝機:</strong> ロボット用センサーデータ収集・ラベリング基盤、特定業界向け（介護・外食・農業）の特化型自律制御ミドルウェア。',
-                curated_vids: [
-                    { title: '【NVIDIA】ヘルスケアロボティクスのためのフィジカルAI', file: '2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアロボティクスのためのフィジカルAI  シミュレーション主導の設計と開.html', tag: 'NVIDIA' },
-                    { title: '【Figure AI】世界最強のバランストレーナーGalileo', file: '2026-08-19_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html', tag: 'Figure AI' },
-                    { title: '【Google DeepMind】Gemini Robotics複数ロボ協調', file: '2026-08-19_AI_Google_Robots working together with Gemini Robotics 2.html', tag: 'DeepMind' }
-                ]
-            },
-            'agent': {
-                title: '🤖 自律型エージェント & 開発スタック（Autonomous Agents & Developer Stack）',
-                summary: '受動的なテキストチャットの時代は終わり、自律的にAPI、ターミナル、PC操作、社内DBを連動させてゴールを完遂する「自律型AIエージェント」がソフトウェア産業の主役に。単一LLMへのプロンプト入力から、AgentPlugin・MCP（Model Context Protocol）・Copilot SDKを通じたマルチエージェント協調オーケストレーションへと開発基盤が刷新されています。',
-                layers: [
-                    { name: '1. 高度推論エンジン（Frontier Models）', desc: 'OpenAI o-series / Claude 3.5 Sonnet。思考の連鎖（Chain of Thought）による多段階推論と計画策定。' },
-                    { name: '2. エージェント相互接続仕様（Protocols）', desc: 'OpenAI AgentPlugin / Anthropic MCP / ツール定義、権限境界、ステート管理の標準化。' },
-                    { name: '3. エンタープライズSDK & 実行環境', desc: 'GitHub Copilot SDK / Microsoft Agent Framework。既存の社内ワークフローへの安全な埋め込み。' },
-                    { name: '4. 評価・ベンチマーク・オブザーバビリティ', desc: 'Scale AI SWE Atlas / 本番環境での推論トレース、タスク達成率の定量的Eval。' }
-                ],
-                matrix: [
-                    { player: 'OpenAI', role: 'エージェント規格 & 推論標準', strength: 'AgentPlugin仕様の提唱と最先端推論モデルによる実行力', target: '全AIエージェントの基本プラットフォーム' },
-                    { player: 'Microsoft', role: '企業業務ワークフロー定着', strength: 'Copilot SDKとGitHub/Officeの既存顧客基盤への圧倒的統合力', target: '全エンタープライズソフトウェアのAI化' },
-                    { player: 'Scale AI', role: 'ベンチマーク & 信頼性保証', strength: 'SWE Atlasや実務タスク評価（Eval）基盤による客観的品質測定', target: '企業のAI導入における品質監査標準' }
-                ],
-                timeline: [
-                    { phase: '2026年 (現在)', title: 'コーディング & 特定ワークフロー自律化', desc: 'PR作成、バグ修正、データ抽出などの単一職務タスクをエージェントが自律完遂。' },
-                    { phase: '2027-2028年', title: 'マルチエージェント協調組織の稼働', desc: 'PM・デザイナー・エンジニア・QAの各専門エージェントが協調して新機能を自動リリース。' },
-                    { phase: '2030年', title: '自律企業オペレーション（Autonomous Ops）', desc: '顧客サポートから経理、インフラ運用まで日常業務の90%がエージェント群により自律執行。' }
-                ],
-                bottleneck: '⚠️ <strong>最大の壁:</strong> エージェントの自律ループ中に発生するエラーの自己修復能力限界、および本番環境での安全なアクセス権限（Guardrails）制御。',
-                opportunity: '💡 <strong>スタートアップ勝機:</strong> エージェント専用のサンドボックス実行環境、マルチエージェント間通信プロトコル、特定業務向け自動Evalフレームワーク。',
-                curated_vids: [
-                    { title: '【OpenAI】自律型AIエージェントプラグイン仕様', file: '2026-08-19_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html', tag: 'OpenAI' },
-                    { title: '【マイクロソフト】GitHub Copilot SDKの全貌', file: '2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html', tag: 'Microsoft' },
-                    { title: '【Scale AI】コーディングエージェントの最新ベンチマーク', file: '2026-08-19_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html', tag: 'Scale AI' }
-                ]
-            },
-            'infra': {
-                title: '⚡ 半導体・電力・宇宙インフラ（Compute, Power & Infrastructure）',
-                summary: 'AIスケーリングの律速段階が「アルゴリズムの研究」から「物理的なGPU半導体供給とギガワット級データセンターの電力確保」へと完全に移行。テスラの分散型蓄電池網（Powerwall/Megapack）、送電網の逼迫、そしてイーロン・マスクが提言する「宇宙空間へのデータセンター配備」など、エネルギーと宇宙インフラを制する者がAI覇権を握る時代に突入しました。',
-                layers: [
-                    { name: '1. 半導体 & 超高速ファブリック', desc: 'NVIDIA Blackwell/Rubin, Spectrum-X Ethernet。数万基GPUの超低遅延クラスタ接続。' },
-                    { name: '2. データセンター電力 & 冷却', desc: '液冷（Liquid Cooling）システム、数ギガワット規模の専用受電設備。' },
-                    { name: '3. 分散型エネルギー & スマートグリッド', desc: 'Tesla Megapack / Powerwall / 地域の送電網負荷を分散・平準化するAI自律電力管理。' },
-                    { name: '4. 次世代フロンティア（宇宙配備）', desc: 'Starshipによる打ち上げコスト極小化 ➔ 太陽光常時発電・極低温冷却が可能な宇宙軌道上DC。' }
-                ],
-                matrix: [
-                    { player: 'NVIDIA (Jensen)', role: 'AI Factory半導体覇権', strength: 'GPU・ネットワーク・CUDAエコシステムの圧倒的独占と年次刷新サイクル', target: '世界のAIコンピュート基盤の支配' },
-                    { player: 'Tesla (Elon Musk)', role: 'エネルギー & 宇宙垂直統合', strength: '分散型蓄電池グリッド＋SpaceX Starshipによる宇宙データセンター配備能力', target: 'ギガワット電力制約の突破と宇宙DC' },
-                    { player: 'Dylan Patel / Dwarkesh', role: '半導体・電力サプライチェーン分析', strength: '世界中のデータセンター電力枯渇、CoWoSパッケージング供給制約の定量的解明', target: 'インフラボトルネックの啓発' }
-                ],
-                timeline: [
-                    { phase: '2026年 (現在)', title: '地域送電網の枯渇と液冷標準化', desc: '既存の電力網へのデータセンター増設が限界に達し、自家発電や蓄電池併設が必須に。' },
-                    { phase: '2027-2028年', title: '小型原子炉（SMR）& 再エネ直結', desc: 'マイクロソフトやAmazon等による原子力直結型データセンターの稼働開始。' },
-                    { phase: '2030年', title: '宇宙軌道上データセンター実証', desc: 'Starshipの低コスト打ち上げにより、冷却不要・24時間太陽光の宇宙コンピュートが始動。' }
-                ],
-                bottleneck: '⚠️ <strong>最大の壁:</strong> 地球上での電力供給許可（送電網接続に数年待ち）と、熱密度が極限に達した半導体クラスタの冷却コスト。',
-                opportunity: '💡 <strong>スタートアップ勝機:</strong> AI専用の推論最適化チップ（LPPU）、データセンター向けAI冷却制御ソフト、再生可能エネルギー最適マッチング。',
-                curated_vids: [
-                    { title: '【テスラ】AIによる家庭用エネルギー自律管理システムの全貌', file: '2026-08-20_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html', tag: 'Tesla' },
-                    { title: '【Dwarkesh】36ヶ月後には宇宙空間がAI配備に最も安価になる', file: '2026-08-20_AI_Dwarkesh_イーロンマスク  36か月後にはAIを置くのに最も安い場所は宇宙になる.html', tag: 'Dwarkesh' },
-                    { title: '【Lex】ジェンスン・ファン：4兆ドル企業NVIDIAとAIファクトリー', file: '2026-08-19_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html', tag: 'NVIDIA' }
-                ]
-            },
-            'strategy': {
-                title: '🏛️ 国家AI戦略 & モデル非依存プラットフォーム（Sovereign AI & Model-Agnostic）',
-                summary: '米中の国家間AI覇権競争が激化する一方で、民間企業では「特定の単一AI研究室（OpenAI等）に社運を賭けるリスク」を回避する「モデル非依存（Model-Agnostic）」アーキテクチャが主流に。政府の事前規制緩和方針、輸出規制、そして本番環境でのオブザーバビリティ（可観測性）と動的ルーティングがビジネスの勝敗を決定づけています。',
-                layers: [
-                    { name: '1. 国家政策 & 地政学的規制', desc: '米国国家AIイニシアチブ（Kratsios）/ 輸出管理と事前規制緩和によるイノベーション加速。' },
-                    { name: '2. モデル非依存インテリジェント・ルーター', desc: 'タスク難易度・コスト・レイテンシに応じてOpenAI/Claude/Gemini/Llamaを最適動的振分け。' },
-                    { name: '3. オブザーバビリティ & 自動Eval', desc: '本番環境での推論トレース、ハルシネーション遮断、LLM-as-a-Judgeによる常時品質監視。' },
-                    { name: '4. ソブリンAI（Sovereign AI）', desc: '各国・各企業が独自データと主権を守るためのオンプレミス・オープンモデル運用。' }
-                ],
-                matrix: [
-                    { player: 'ホワイトハウス (Kratsios)', role: '国家AIイニシアチブ', strength: '欧州型事前規制を排し、オープンソース擁護と先端半導体防衛を両立', target: '米国の技術覇権維持と経済安全保障' },
-                    { player: 'YC Model-Agnostic陣営', role: 'マルチモデル抽象化', strength: '単一AIラボへのベンダーロックインを完全排除する次世代アーキテクチャ', target: '企業向け最高精度×最小コストの実現' },
-                    { player: 'Top AI Labs', role: '本番オブザーバビリティ', strength: '分散トレーシングとリアルタイムEvalによるエンタープライズ品質保証', target: 'LLMの非決定性克服と本番信頼性' }
-                ],
-                timeline: [
-                    { phase: '2026年 (現在)', title: 'マルチモデル動的ルーティングの定着', desc: '単一プロバイダー依存の脱却。軽負荷は小型モデル、難問は推論モデルへ自動振分け。' },
-                    { phase: '2027-2028年', title: 'ソブリンAIと業界特化Evalの標準化', desc: '金融・医療・防衛における自国インフラ内モデル運用と法適合性（Compliance）自動化。' },
-                    { phase: '2030年', title: '自律ガバナンスと分散知能ネットワーク', desc: '世界規模でのモデル間相互チェックと、AI主導による法務・安全規制のリアルタイム運用。' }
-                ],
-                bottleneck: '⚠️ <strong>最大の壁:</strong> 国家間の規制分断（データローカライゼーション）と、モデル更新に伴う既存プロンプトの予期せぬ挙動変化。',
-                opportunity: '💡 <strong>スタートアップ勝機:</strong> ベンダーロックインなしのエンタープライズAIゲートウェイ、リアルタイムAIセキュリティ＆ガバナンス監査ツール。',
-                curated_vids: [
-                    { title: '【YC】マイケル・クラシオス：ホワイトハウスのAI戦略の内側', file: '2026-08-19_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html', tag: 'YC / Policy' },
-                    { title: '【YC】モデルに依存しないAIプラットフォームの圧倒的優位性', file: '2026-08-20_AI_Y_モデルに依存しないAIプラットフォームは、どの単一の研究室も勝てないという賭けに出ている。.html', tag: 'YC Platform' },
-                    { title: '【YC】AIトップ研究所が「オブザーバビリティ」で取り組むこと', file: '2026-08-20_AI_Y_AIトップ研究所が「オブザーバビリティ」で実際に取り組んでいること.html', tag: 'Top Labs' }
-                ]
-            },
-            'design': {
-                title: '🎨 AI駆動プロダクトデザイン & UI/UXパラダイム（AI-First Product Design & UX）',
-                summary: '生成AIの台頭により、静的なFigmaワイヤーフレームを描いてエンジニアに渡す従来のデザイン分業体制が完全に終焉。デザイナー自身がAIと対話し、初日から動くコードUIを構築・検証する高速プロトタイピングが標準に。さらに、受動的なチャットボットUIを超え、AIが文脈を察知して先回りする「自律アシスト型インターフェース」の設計が競争軸となっています。',
-                layers: [
-                    { name: '1. 要求仕様・自然言語デザイン指示', desc: 'プロンプト対話による意図・ユーザージャーニーの即時コード化。' },
-                    { name: '2. 動的コードUI即時生成エンジン', desc: 'Figmaの静的モックを介さず、初日からReact/HTML等の動くコンポーネントを自動生成。' },
-                    { name: '3. 先回り型コンテキストUI（Proactive UX）', desc: 'テキスト入力を求めず、ユーザーの行動履歴や状況から最適なアクションを先回り提示。' },
-                    { name: '4. リアルタイム・ユーザー行動検証', desc: '実動プロトタイプをユーザーに触らせ、数分単位でデザインを対話修正する超高速イテレーション。' }
-                ],
-                matrix: [
-                    { player: 'YC Design (Garry Tan等)', role: 'AIファーストデザイン手法', strength: '静的モックの廃止と動くコードUIによる100倍速の検証サイクル提唱', target: '次世代スタートアップの開発文化変革' },
-                    { player: '新世代AI UIツール群', role: '動的コンポーネント生成', strength: 'プロンプトから本番品質のフロントエンドコードをリアルタイム出力', target: 'デザインとエンジニアリングの境界融解' }
-                ],
-                timeline: [
-                    { phase: '2026年 (現在)', title: '動くプロトタイプの初日作成', desc: 'デザイナーがAIツールを用いて数分で動作するUIを作成し、仮説検証を実施。' },
-                    { phase: '2027-2028年', title: 'パーソナライズ動的UIの普及', desc: 'ユーザーごとのスキルレベルや目的に応じて画面レイアウトがリアルタイムに自己生成。' },
-                    { phase: '2030年', title: 'ゼロUI & アンビエント・インテリジェンス', desc: '画面操作すら不要に。視線・音声・ウェアラブルによる意図予測と環境統合型UI。' }
-                ],
-                bottleneck: '⚠️ <strong>最大の壁:</strong> AI生成UIにおけるブランド一貫性の維持、およびコンポーネント間のデザインシステム厳密準拠。',
-                opportunity: '💡 <strong>スタートアップ勝機:</strong> ブランドガイドラインを強制適用するAIデザインリンター、ユーザー行動に応じてUIを動的自己変形させるフロントエンドSDK。',
-                curated_vids: [
-                    { title: '【YC】デザイン責任者が教える、AIを活用したデザイン手法', file: '2026-08-20_AI_Y_YCのデザイン責任者が教える、AIを活用したデザイン手法.html', tag: 'YC Design' },
-                    { title: '【YC】How To Design In The Agent Era', file: '2026-08-20_AI_Y_How To Design In The Agent Era.html', tag: 'Agent UI' }
-                ]
-            }
-        };
 
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
@@ -1170,10 +1223,7 @@
             } catch (e) { return []; }
         }
 
-        function setStoredList(key, arr) {
-            localStorage.setItem(key, JSON.stringify(arr));
-        }
-
+        function setStoredList(key, arr) { localStorage.setItem(key, JSON.stringify(arr)); }
         function getStoredObj(key) {
             try {
                 const val = localStorage.getItem(key);
@@ -1181,7 +1231,6 @@
             } catch (e) { return {}; }
         }
 
-        /* 🎙️ 音声ブリーフィング制御（HTML5 Audio + Web Speech API ハイブリッド） */
         function toggleAudioBriefing() {
             const audio = document.getElementById('briefingAudio');
             const playBtnText = document.getElementById('playAudioText');
@@ -1190,18 +1239,13 @@
             if (!isAudioPlaying) {
                 audio.playbackRate = audioPlaybackSpeed;
                 const playPromise = audio.play();
-                
                 if (playPromise !== undefined) {
                     playPromise.then(() => {
                         isAudioPlaying = true;
                         playBtnIcon.innerText = '⏸️';
                         playBtnText.innerText = '音声速報を一時停止';
-                    }).catch(err => {
-                        startWebSpeech();
-                    });
-                } else {
-                    startWebSpeech();
-                }
+                    }).catch(err => startWebSpeech());
+                } else startWebSpeech();
             } else {
                 audio.pause();
                 if ('speechSynthesis' in window) window.speechSynthesis.cancel();
@@ -1212,20 +1256,12 @@
         }
 
         function startWebSpeech() {
-            if (!('speechSynthesis' in window)) {
-                alert('お使いのブラウザは音声再生に対応していません。原稿テキストをご覧ください。');
-                return;
-            }
+            if (!('speechSynthesis' in window)) return;
             window.speechSynthesis.cancel();
-            const text = `おはようございます。本日のAIメガトレンド・エグゼクティブ速報です。現在、世界の最先端テック業界では3つの巨大な地殻変動が進行しています。第1に、画面内のチャットから物理世界で原子を動かすフィジカルAIへの大移動です。エヌビディアやフィギュアAI、ディープマインドは、仮想シミュレーションによる超高速強化学習を武器に、人型ロボットによる労働代替を現実のものにしています。第2に、単一のモデルに依存せず、オープンAIやマイクロソフトのSDKを活用して自律エージェントを束ねるモデル非依存アーキテクチャの台頭です。そして第3に、AI自身がAI研究を自動化する再帰的進化と、それを支える電力・半導体インフラの覇権争いです。今日も最先端の知見を味方に、素晴らしい1日をお過ごしください。`;
-            speechSynthUtterance = new SpeechSynthesisUtterance(text);
+            speechSynthUtterance = new SpeechSynthesisUtterance(`おはようございます。本日のAIメガトレンド・エグゼクティブ速報です。現在、世界の最先端テック業界では3つの巨大な地殻変動が進行しています。第1に、画面内のチャットから物理世界で原子を動かすフィジカルAIへの大移動です。エヌビディアやフィギュアAI、ディープマインドは、仮想シミュレーションによる超高速強化学習を武器に、人型ロボットによる労働代替を現実のものにしています。第2に、単一のモデルに依存せず、オープンAIやマイクロソフトのSDKを活用して自律エージェントを束ねるモデル非依存アーキテクチャの台頭です。そして第3に、AI自身がAI研究を自動化する再帰的進化と、それを支える電力・半導体インフラの覇権争いです。今日も最先端の知見を味方に、素晴らしい1日をお過ごしください。`);
             speechSynthUtterance.lang = 'ja-JP';
             speechSynthUtterance.rate = audioPlaybackSpeed;
-            
-            speechSynthUtterance.onend = () => {
-                onAudioEnded();
-            };
-            
+            speechSynthUtterance.onend = () => onAudioEnded();
             window.speechSynthesis.speak(speechSynthUtterance);
             isAudioPlaying = true;
             document.getElementById('playAudioIcon').innerText = '⏸️';
@@ -1243,13 +1279,8 @@
             audioPlaybackSpeed = speed;
             document.querySelectorAll('.speed-btn').forEach(btn => btn.classList.remove('active'));
             if (e && e.target) e.target.classList.add('active');
-            
             const audio = document.getElementById('briefingAudio');
             if (audio) audio.playbackRate = speed;
-            if (isAudioPlaying && 'speechSynthesis' in window && window.speechSynthesis.speaking) {
-                toggleAudioBriefing();
-                toggleAudioBriefing();
-            }
         }
 
         function toggleAudioScript() {
@@ -1257,7 +1288,6 @@
             box.style.display = (box.style.display === 'block') ? 'none' : 'block';
         }
 
-        /* 🔥 リッチな技術トピック別トレンドマップ展開制御 */
         function filterByTopic(topic) {
             currentTopic = topic;
             document.querySelectorAll('.topic-btn').forEach(btn => btn.classList.remove('active'));
@@ -1265,121 +1295,42 @@
             if (activeBtn) activeBtn.classList.add('active');
 
             const container = document.getElementById('trendMapContainer');
-            
             if (topic === 'all' || !richTopicMaps[topic]) {
                 container.style.display = 'none';
                 container.innerHTML = '';
             } else {
                 const data = richTopicMaps[topic];
-                
-                // レイヤーHTML
-                const layersHtml = data.layers.map(l => `
-                    <div class="layer-item">
-                        <div class="layer-name">${l.name}</div>
-                        <div class="layer-desc">${l.desc}</div>
-                    </div>
-                `).join('');
-
-                // プレイヤーマトリクス表HTML
-                const matrixRowsHtml = data.matrix.map(m => `
-                    <tr>
-                        <td class="matrix-player">${m.player}</td>
-                        <td><span style="color:var(--accent-color); font-weight:600;">${m.role}</span></td>
-                        <td>${m.strength}</td>
-                        <td><span style="color:var(--accent-orange);">${m.target}</span></td>
-                    </tr>
-                `).join('');
-
-                // タイムラインHTML
-                const timelineHtml = data.timeline.map(t => `
-                    <div class="timeline-step">
-                        <div class="timeline-badge">${t.phase}</div>
-                        <div class="timeline-content">
-                            <div class="timeline-title">${t.title}</div>
-                            <div>${t.desc}</div>
-                        </div>
-                    </div>
-                `).join('');
-
-                // 必見動画HTML
-                const curatedHtml = data.curated_vids.map(v => `
-                    <a href="${v.file}" class="curated-video-card">
-                        <div class="curated-video-title">${v.title}</div>
-                        <div class="curated-video-footer">
-                            <span>📌 ${v.tag}</span>
-                            <span>詳細レポート →</span>
-                        </div>
-                    </a>
-                `).join('');
+                const layersHtml = data.layers.map(l => `<div class="layer-item"><div class="layer-name">${l.name}</div><div class="layer-desc">${l.desc}</div></div>`).join('');
+                const matrixRowsHtml = data.matrix.map(m => `<tr><td class="matrix-player">${m.player}</td><td><span style="color:var(--accent-color); font-weight:600;">${m.role}</span></td><td>${m.strength}</td><td><span style="color:var(--accent-orange);">${m.target}</span></td></tr>`).join('');
+                const timelineHtml = data.timeline.map(t => `<div class="timeline-step"><div class="timeline-badge">${t.phase}</div><div class="timeline-content"><div class="timeline-title">${t.title}</div><div>${t.desc}</div></div></div>`).join('');
+                const curatedHtml = data.curated_vids.map(v => `<a href="${v.file}" class="curated-video-card"><div class="curated-video-title">${v.title}</div><div class="curated-video-footer"><span>📌 ${v.tag}</span><span>詳細レポート →</span></div></a>`).join('');
 
                 container.innerHTML = `
-                    <div class="trend-map-title">
-                        <span>${data.title}</span>
-                        <span style="font-size:0.8rem; font-weight:normal; color:var(--text-sub);">💡 業界構造 & 勢力図分析</span>
-                    </div>
+                    <div class="trend-map-title"><span>${data.title}</span><span style="font-size:0.8rem; font-weight:normal; color:var(--text-sub);">💡 業界構造 & 勢力図分析</span></div>
                     <div class="trend-map-summary">${data.summary}</div>
-
                     <div class="intel-section-grid">
-                        <div class="intel-box">
-                            <div class="intel-box-header">🗺️ 1. 技術スタック・レイヤー構造</div>
-                            <div class="layer-flow">${layersHtml}</div>
-                        </div>
-
-                        <div class="intel-box">
-                            <div class="intel-box-header">📈 2. 2026-2030年 技術進化タイムライン</div>
-                            <div class="timeline-list">${timelineHtml}</div>
-                        </div>
+                        <div class="intel-box"><div class="intel-box-header">🗺️ 1. 技術スタック・レイヤー構造</div><div class="layer-flow">${layersHtml}</div></div>
+                        <div class="intel-box"><div class="intel-box-header">📈 2. 2026-2030年 技術進化タイムライン</div><div class="timeline-list">${timelineHtml}</div></div>
                     </div>
-
                     <div class="intel-box" style="margin-bottom:18px;">
                         <div class="intel-box-header">⚔️ 3. 主要プレイヤー勢力図 & 対立マトリクス</div>
-                        <div style="overflow-x: auto;">
-                            <table class="matrix-table">
-                                <thead>
-                                    <tr>
-                                        <th style="width:18%;">企業・研究室</th>
-                                        <th style="width:22%;">ポジショニング</th>
-                                        <th style="width:35%;">強み・コア技術</th>
-                                        <th style="width:25%;">狙う市場・ゴール</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    ${matrixRowsHtml}
-                                </tbody>
-                            </table>
-                        </div>
+                        <div style="overflow-x: auto;"><table class="matrix-table"><thead><tr><th style="width:18%;">企業・研究室</th><th style="width:22%;">ポジショニング</th><th style="width:35%;">強み・コア技術</th><th style="width:25%;">狙う市場・ゴール</th></tr></thead><tbody>${matrixRowsHtml}</tbody></table></div>
                     </div>
-
                     <div class="intel-section-grid">
-                        <div class="intel-box">
-                            <div class="intel-box-header">⚡ 4. 最大のボトルネック</div>
-                            <div class="bottleneck-box">${data.bottleneck}</div>
-                        </div>
-                        <div class="intel-box">
-                            <div class="intel-box-header">💡 5. スタートアップ参入機会</div>
-                            <div class="opportunity-box">${data.opportunity}</div>
-                        </div>
+                        <div class="intel-box"><div class="intel-box-header">⚡ 4. 最大のボトルネック</div><div class="bottleneck-box">${data.bottleneck}</div></div>
+                        <div class="intel-box"><div class="intel-box-header">💡 5. スタートアップ参入機会</div><div class="opportunity-box">${data.opportunity}</div></div>
                     </div>
-
-                    <div class="intel-box" style="margin-top:18px;">
-                        <div class="intel-box-header">📺 6. このトピックを理解するための必見コア動画</div>
-                        <div class="curated-video-row">${curatedHtml}</div>
-                    </div>
+                    <div class="intel-box" style="margin-top:18px;"><div class="intel-box-header">📺 6. このトピックを理解するための必見コア動画</div><div class="curated-video-row">${curatedHtml}</div></div>
                 `;
                 container.style.display = 'block';
             }
-
             updateUIState();
         }
 
         function toggleStar(vid, e) {
             if (e) e.stopPropagation();
             let stars = getStoredList(STORAGE_STARRED);
-            if (stars.includes(vid)) {
-                stars = stars.filter(id => id !== vid);
-            } else {
-                stars.push(vid);
-            }
+            stars = stars.includes(vid) ? stars.filter(id => id !== vid) : [...stars, vid];
             setStoredList(STORAGE_STARRED, stars);
             updateUIState();
         }
@@ -1387,11 +1338,7 @@
         function toggleRead(vid, e) {
             if (e) e.stopPropagation();
             let reads = getStoredList(STORAGE_READ);
-            if (reads.includes(vid)) {
-                reads = reads.filter(id => id !== vid);
-            } else {
-                reads.push(vid);
-            }
+            reads = reads.includes(vid) ? reads.filter(id => id !== vid) : [...reads, vid];
             setStoredList(STORAGE_READ, reads);
             updateUIState();
         }
@@ -1400,8 +1347,7 @@
             if (e) e.stopPropagation();
             activeMemoVid = vid;
             document.getElementById('modalVideoTitle').innerText = '📝 メモ: ' + title.substring(0, 30) + '...';
-            const memos = getStoredObj(STORAGE_MEMOS);
-            document.getElementById('memoInput').value = memos[vid] || '';
+            document.getElementById('memoInput').value = getStoredObj(STORAGE_MEMOS)[vid] || '';
             document.getElementById('memoModal').style.display = 'flex';
         }
 
@@ -1414,11 +1360,8 @@
             if (!activeMemoVid) return;
             const text = document.getElementById('memoInput').value.trim();
             const memos = getStoredObj(STORAGE_MEMOS);
-            if (text) {
-                memos[activeMemoVid] = text;
-            } else {
-                delete memos[activeMemoVid];
-            }
+            if (text) memos[activeMemoVid] = text;
+            else delete memos[activeMemoVid];
             localStorage.setItem(STORAGE_MEMOS, JSON.stringify(memos));
             closeMemoModal();
             updateUIState();
@@ -1447,21 +1390,12 @@
                 const memoText = memos[vid] || '';
 
                 const starBtn = document.getElementById('star-' + vid);
-                if (starBtn) {
-                    if (isStar) starBtn.classList.add('active');
-                    else starBtn.classList.remove('active');
-                }
+                if (starBtn) starBtn.className = isStar ? 'star-btn active' : 'star-btn';
                 const readBtn = document.getElementById('read-' + vid);
-                if (readBtn) {
-                    if (isRead) readBtn.classList.add('active');
-                    else readBtn.classList.remove('active');
-                }
+                if (readBtn) readBtn.className = isRead ? 'read-btn active' : 'read-btn';
 
-                if (isStar) card.classList.add('is-starred');
-                else card.classList.remove('is-starred');
-
-                if (isRead) card.classList.add('is-read');
-                else card.classList.remove('is-read');
+                if (isStar) card.classList.add('is-starred'); else card.classList.remove('is-starred');
+                if (isRead) card.classList.add('is-read'); else card.classList.remove('is-read');
 
                 const memoPreview = document.getElementById('memo-preview-' + vid);
                 if (memoPreview) {
@@ -1476,17 +1410,11 @@
                 let show = true;
                 if (currentTab === 'starred' && !isStar) show = false;
                 if (currentTab === 'read' && !isRead) show = false;
-
-                if (currentTopic !== 'all') {
-                    if (!card.classList.contains('cat-' + currentTopic)) {
-                        show = false;
-                    }
-                }
+                if (currentTopic !== 'all' && !card.classList.contains('cat-' + currentTopic)) show = false;
 
                 card.style.display = show ? 'flex' : 'none';
                 if (show) visibleCount++;
             });
-
             document.getElementById('cardCount').innerText = `表示中: ${visibleCount} 件`;
         }
 
@@ -1497,27 +1425,26 @@
                 alert('まだ⭐マイストックに保存された動画がありません。カード右上の⭐を押して追加してください！');
                 return;
             }
-
             const starredItems = libraryData.filter(item => stars.includes(item.video_id));
-            let md = `# 🌟 マイAIインテリジェンス・ストック一覧 (${starredItems.length}件)\n\n`;
-            md += `生成日: ${new Date().toLocaleDateString('ja-JP')}\n\n`;
+            let md = `# 🌟 マイAIインテリジェンス・ストック一覧 (${starredItems.length}件)
 
+`;
+            md += `生成日: ${new Date().toLocaleDateString('ja-JP')}
+
+`;
             starredItems.forEach((item, idx) => {
-                md += `### ${idx + 1}. [${item.title}](https://ocean-star-sky.github.io/ai-video-notes/${encodeURIComponent(item.filename)})\n`;
-                md += `- **チャンネル**: ${item.channel}\n`;
-                md += `- **公開日**: ${item.date}\n`;
-                md += `- **YouTube公式**: https://www.youtube.com/watch?v=${item.video_id}\n`;
-                if (memos[item.video_id]) {
-                    md += `- **💡 個人メモ**: ${memos[item.video_id]}\n`;
-                }
-                md += `\n`;
+                md += `### ${idx + 1}. [${item.title}](https://ocean-star-sky.github.io/ai-video-notes/${encodeURIComponent(item.filename)})
+`;
+                md += `- **チャンネル**: ${item.channel}
+- **公開日**: ${item.date}
+- **YouTube公式**: https://www.youtube.com/watch?v=${item.video_id}
+`;
+                if (memos[item.video_id]) md += `- **💡 個人メモ**: ${memos[item.video_id]}
+`;
+                md += `
+`;
             });
-
-            navigator.clipboard.writeText(md).then(() => {
-                alert(`📋 ${starredItems.length}件のマイストックをMarkdown形式でクリップボードにコピーしました！\nNotionやObsidian、メモ帳にそのまま貼り付けできます。`);
-            }).catch(() => {
-                alert('コピーに失敗しました。');
-            });
+            navigator.clipboard.writeText(md).then(() => alert(`📋 ${starredItems.length}件のマイストックをMarkdownコピーしました！`));
         }
 
         function filterByTag(tag, e) {
@@ -1525,86 +1452,43 @@
             document.getElementById('chatInput').value = tag;
             askAI();
         }
-
         function quickAsk(text) {
             document.getElementById('chatInput').value = text;
             askAI();
         }
 
-        /* 🧠 横断AIアシスタント（マクロトレンド・企業比較アナライザー） */
         function askAI() {
             const query = document.getElementById('chatInput').value.trim().toLowerCase();
             if (!query) return;
-
             const responseArea = document.getElementById('aiResponseArea');
             const responseText = document.getElementById('aiResponseText');
             const sourceLinks = document.getElementById('aiSourceLinks');
-
             responseArea.style.display = 'block';
             responseText.innerHTML = '🧠 ライブラリを横断解析中...';
             sourceLinks.innerHTML = '';
 
             const queryWords = query.split(/\s+/);
             const matches = [];
-
             libraryData.forEach(item => {
                 let score = 0;
                 const title = item.title.toLowerCase();
                 const tags = (item.tags || []).join(' ').toLowerCase();
-                const chapters = (item.chapters || []).join(' ').toLowerCase();
-
                 queryWords.forEach(w => {
                     if (title.includes(w)) score += 6;
                     if (tags.includes(w)) score += 4;
-                    if (chapters.includes(w)) score += 3;
                 });
-
                 if (score > 0) matches.push({ score, item });
             });
-
             matches.sort((a, b) => b.score - a.score);
 
             setTimeout(() => {
-                let summaryAnswer = '';
-                let relatedMatches = matches;
-
-                if (query.includes('トレンド') || query.includes('潮流') || query.includes('まとめ')) {
-                    summaryAnswer = `<h3>🌅 最新AIメガトレンド・総合分析レポート</h3><br>
-                    <strong>1. フィジカルAIの覇権争い（NVIDIA / Figure / DeepMind）:</strong> 画面内のテキストから物理世界（原子）を制御するロボティクスへ主戦場がシフト。Sim-to-Real仮想強化学習がブレイクスルー。<br><br>
-                    <strong>2. 自律エージェント＆モデル非依存（OpenAI / Microsoft / YC）:</strong> 単一LLMへの囲い込みを脱し、マルチモデル動的ルーティングとSDKによる全業務の自律自動化へ。<br><br>
-                    <strong>3. AI研究の自動化と電力危機（Dwarkesh / Tesla / Lex）:</strong> AI自身がAIを改善する再帰的ループが視野に入り、ギガワット級の電力・半導体確保が最大のボトルネックに。`;
-                } else if (query.includes('openai') && (query.includes('microsoft') || query.includes('比較') || query.includes('違い'))) {
-                    summaryAnswer = `<h3>📊 OpenAI vs Microsoft エージェント戦略の対比</h3><br>
-                    ✦ <strong>OpenAI:</strong> 高度な推論モデル（o-series）と公式AgentPlugin仕様を通じ、開発者が直接ツールを操作する自律エージェント層の規格化を推進。<br>
-                    ✦ <strong>Microsoft:</strong> GitHub Copilot SDKを武器に、既存のエンタープライズ業務ソフトや社内システム全体にAIを深く浸透させ、初日からROIを出す実用化にフォーカス。<br><br>
-                    💡 <strong>結論:</strong> OpenAIが「知能とエージェント標準」を握り、Microsoftが「企業の既存ワークフローへの定着」を握る形で棲み分けが進んでいます。`;
-                } else if (query.includes('nvidia') && (query.includes('figure') || query.includes('比較') || query.includes('ロボット'))) {
-                    summaryAnswer = `<h3>🦾 NVIDIA vs Figure AI フィジカルAI戦略の対比</h3><br>
-                    ✦ <strong>NVIDIA:</strong> OmniverseとGPUクラスタを提供し、世界中のすべてのロボット企業が仮想空間で学習するための「インフラプラットフォーマー」を目指す。<br>
-                    ✦ <strong>Figure AI:</strong> 自社開発の高トルク二足歩行トレーナー「Galileo」を用い、人間用インフラ（階段・工場）へそのまま導入できる「汎用人型ロボットの量産メーカー」を目指す。<br><br>
-                    💡 <strong>結論:</strong> NVIDIAがOSと学習空間を支配し、Figure AIが物理ハードウェアの量産標準を狙う協調・競合関係にあります。`;
-                } else if (query.includes('スタートアップ') || query.includes('参入') || query.includes('機会')) {
-                    summaryAnswer = `<h3>💡 スタートアップが狙うべき注目の未開拓領域</h3><br>
-                    1. <strong>モデル非依存のインテリジェント・ルーター:</strong> 単一研究室に依存せず、タスク難易度に応じてOpenAI/Anthropic/Geminiを動的振分けするミドルウェア。<br>
-                    2. <strong>AIオブザーバビリティ＆自動Eval基盤:</strong> 本番環境でのLLM推論ログ追跡、ハルシネーション遮断、LLM-as-a-Judgeによる品質保証ツール。<br>
-                    3. <strong>AI駆動の超高速UI/UXプロトタイピング:</strong> 静的Figmaを脱し、対話しながら初日から動くコードUIを構築する新世代デザインツール。`;
-                } else if (query.includes('インフラ') || query.includes('電力') || query.includes('ボトルネック')) {
-                    summaryAnswer = `<h3>⚡ AIインフラの最大のボトルネックと電力危機</h3><br>
-                    テスラやジェンスン・ファンの指摘通り、AIデータセンターの急増により「地域の送電網容量の枯渇」が現実化。テスラは家庭用蓄電池（Powerwall）による分散型スマートグリッドで電力網を支える構想を掲げ、イーロン・マスクは数年以内に「宇宙空間へのAIデータセンター配備が最も安価になる」という驚異的なタイムラインを展望しています。`;
-                } else if (query.includes('nvidia') || query.includes('フィジカル') || query.includes('omniverse')) {
-                    summaryAnswer = `NVIDIAのジェンスン・ファンは、<strong>「フィジカルAI（Physical AI）」</strong>こそがAIの次なる巨大フロンティアであると強調。物理法則を完全に再現した「Omniverse」内でロボットに数億時間の強化学習を行わせることで、破損リスクなしに実世界ロボットを瞬時に進化させる戦略を推進しています。`;
-                } else if (query.includes('openai') || query.includes('エージェント') || query.includes('plugin') || query.includes('agent')) {
-                    summaryAnswer = `OpenAIは、受動的な対話チャットボットから<strong>「APIや開発ツールを自律操作して目的を完遂する自律型AIエージェント（Agent）」</strong>への進化を加速。AgentPluginや推論モデルの最適化により、ソフトウェア開発や複数ステップの業務が完全自動化されます。`;
-                } else if (matches.length > 0) {
+                let summaryAnswer = `ご質問の『<strong>${query}</strong>』に関連する最先端ナレッジを抽出しました。現在ライブラリにはフィジカルAI、自律エージェント、インフラ電力などの最新解説レポートが蓄積されています。`;
+                if (matches.length > 0) {
                     const top = matches[0].item;
-                    summaryAnswer = `『<strong>${top.title}</strong>』において、関連する重要な技術動向と今後の展望が語られています。各分野の最高責任者による具体的なデータとアーキテクチャの革新が解説されています。`;
-                } else {
-                    summaryAnswer = `ご質問の『<strong>${query}</strong>』に関連するナレッジを検索しました。現在ライブラリには「フィジカルAI」「自律エージェント」「インフラ電力」「国家戦略」に関する20本以上の徹底解説レポートが蓄積されています。`;
-                    relatedMatches = libraryData.slice(0, 3).map(item => ({ score: 1, item }));
+                    summaryAnswer = `『<strong>${top.title}</strong>』において、関連する重要な技術動向と今後の展望が語られています。`;
                 }
-
                 responseText.innerHTML = summaryAnswer;
-                sourceLinks.innerHTML = relatedMatches.slice(0, 4).map(m => `
+                sourceLinks.innerHTML = (matches.length > 0 ? matches : libraryData.slice(0, 3).map(item => ({item}))).slice(0, 4).map(m => `
                     <a href="${m.item.filename}" class="source-link-item">
                         <span>📺 [${m.item.channel}] ${m.item.title}</span>
                         <span style="color: var(--accent-color); font-weight: bold;">詳細レポートを見る →</span>

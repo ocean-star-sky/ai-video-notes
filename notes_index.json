@@ -1410,5 +1410,86 @@
       "Are you announcing a reduction in workforce?",
       "AI advice for leaders: focus on people"
     ]
+  },
+  {
+    "video_id": "yC-TA-GsRLI",
+    "title": "【Microsoft】Building an End-to-End Enterprise AI プラットフォーム on Azure",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_MicrosoftBuilding an End-to-End Enterprise AI プラット.html",
+    "date": "2026-08-25",
+    "tags": [
+      "ai"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "rkJJZQF_qcg",
+    "title": "【マイクロソフト】Secure AI Agents in Azure: AI Gateway, Tools, and Trust",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトSecure AI Agents in Azure AI Gateway Tools .html",
+    "date": "2026-08-25",
+    "tags": [
+      "ai",
+      "agent"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "a2DSorZ-LeE",
+    "title": "【マイクロソフト】Building your own MCP server",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトBuilding your own MCP server.html",
+    "date": "2026-08-25",
+    "tags": [
+      "mcp"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "Orr7qadkZD8",
+    "title": "【マイクロソフト】Stop Writing Prompts. Start Writing Specs.",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトStop Writing Prompts Start Writing Specs.html",
+    "date": "2026-08-25",
+    "tags": [
+      "prompt"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "1FfowsCdnxQ",
+    "title": "【マイクロソフト】Build Intelligent Agents with Work IQ, Foundry IQ, and Fabric IQ",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトBuild Intelligent Agents with Work IQ Found.html",
+    "date": "2026-08-25",
+    "tags": [
+      "agent"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "vhHzC2eMZ1U",
+    "title": "【マイクロソフト】Closing the Loop: Feedback based Learning for Agentic RAG on Azure",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトClosing the Loop Feedback based Learning fo.html",
+    "date": "2026-08-25",
+    "tags": [
+      "agent",
+      "rag"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "M9Q_Ajwcryo",
+    "title": "【マイクロソフト】From Idea to Agent in Minutes: Copilot Studio + Claude Code",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトFrom Idea to Agent in Minutes Copilot Studi.html",
+    "date": "2026-08-25",
+    "tags": [
+      "agent",
+      "copilot",
+      "claude"
+    ],
+    "chapters": []
   }
 ]

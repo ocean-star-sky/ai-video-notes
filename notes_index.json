@@ -1491,5 +1491,50 @@
       "claude"
     ],
     "chapters": []
+  },
+  {
+    "video_id": "CPldqiLKidY",
+    "title": "【マイクロソフト】E4: Azure SQL Database Hyperscale によるパフォーマンスとスケーラビリティの最適化",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトE4 Azure SQL Database Hyperscale によるパフォーマンス.html",
+    "date": "2026-08-25",
+    "tags": [
+      "scale"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "RV3GaHKIOvo",
+    "title": "【マイクロソフト】E3: Build AI apps with Azure SQL Database Hyperscale",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトE3 Build AI apps with Azure SQL Database Hy.html",
+    "date": "2026-08-25",
+    "tags": [
+      "ai",
+      "scale"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "FGEq2AOHlDo",
+    "title": "【マイクロソフト】E2: Azure SQL Database Hyperscale による移行と最適化",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトE2 Azure SQL Database Hyperscale による移行と最適化.html",
+    "date": "2026-08-25",
+    "tags": [
+      "scale"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "Gbb4vTh0Lts",
+    "title": "【マイクロソフト】E1：Azure SQL Database Hyperscale 再入門",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトE1Azure SQL Database Hyperscale 再入門.html",
+    "date": "2026-08-25",
+    "tags": [
+      "scale"
+    ],
+    "chapters": []
   }
 ]

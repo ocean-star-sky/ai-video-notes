@@ -243,7 +243,7 @@
             <audio id="briefingAudio" src="daily_briefing.m4a" preload="none" onended="onAudioEnded()"></audio>
             <div class="audio-script-box" id="audioScriptBox">
                 <strong>📝 本日の音声ブリーフィング原稿:</strong><br>
-                おはようございます。本日のAIメガトレンド・エグゼクティブ速報です。現在、世界の最先端テック業界では3つの巨大な地殻変動が進行しています。第1に、画面内のチャットから物理世界で原子を動かすフィジカルAIへの大移動です。エヌビディアやフィギュアAI、ディープマインドは、仮想シミュレーションによる超高速強化学習を武器に、人型ロボットによる労働代替を現実のものにしています。第2に、単一のモデルに依存せず、オープンAIやマイクロソフトのSDKを活用して自律エージェントを束ねるモデル非依存アーキテクチャの台頭です。そして第3に、AI自身がAI研究を自動化する再帰的進化と、それを支える電力・半導体インフラの覇権争いです。今日も最先端の知見を味方に、素晴らしい1日をお過ごしください。
+                おはようございます。2026年08月24日のAIメガトレンド・エグゼクティブ速報です。直近1週間で67本の最新AI動画を分析した結果、3つの注目トレンドが浮かび上がっています。第1に、自律型AIエージェントの爆発的進化とSDK標準化。自律エージェント & コーディングAIの領域で34本の重要動画が公開されました。第2に、実世界の「原子制御」へ ― 人型ロボットと自律移動体の急加速。6本の動画がこの領域をカバーしています。そして第3に、AIの社会的リスクと国家・企業の安全保障対策。5本の最新動画で議論されています。今日も最先端の知見を味方に、素晴らしい1日をお過ごしください。
             </div>
         </div>
 
@@ -256,18 +256,18 @@
             <div class="trend-grid">
                 <div class="trend-item">
                     <div class="trend-tag">🦾 トレンド 01</div>
-                    <div class="trend-h3">画面内のLLMから実世界の『原子制御』へ</div>
-                    <div class="trend-p">NVIDIA、Figure AI、Google DeepMind、Y Combinatorが一致して提唱。仮想空間（Sim-to-Real）での超高速強化学習により、人型ロボットや自律移動体が実体経済のサプライチェーンを再定義する次なる超巨大プラットフォームへ。</div>
+                    <div class="trend-h3">自律型AIエージェントの爆発的進化とSDK標準化</div>
+                    <div class="trend-p">Claude Code・GitHub Copilot・ChatGPT Workなど、自律的にコード生成・業務遂行するAIエージェントが実用段階に到達。MCP（Model Context Protocol）によるツール連携やマルチモデル運用が新たな標準に。 直近の注目: Microsoft Developer「【マイクロソフト】GitHub Copilot S」、OpenAI「【OpenAI】自律型AIエージェントプラグイン（」、Scale AI「【Scale AI】最先端コーディングエージェント」。</div>
                 </div>
                 <div class="trend-item">
                     <div class="trend-tag">🤖 トレンド 02</div>
-                    <div class="trend-h3">単一LLMへの依存脱却とエージェントSDKの標準化</div>
-                    <div class="trend-p">OpenAIのAgentPlugin、MicrosoftのCopilot SDK、YCのモデル非依存ルーティングなど、単一AIラボへのベンダーロックインを回避し、タスクごとに最適モデルを動的配備する自律実行レイヤーが主戦場に。</div>
+                    <div class="trend-h3">実世界の「原子制御」へ ― 人型ロボットと自律移動体の急加速</div>
+                    <div class="trend-p">NVIDIA Omniverse上でのSim-to-Real強化学習、Figure AI Galileoの量産ロードマップ、Google DeepMind Gemini Roboticsによる協調動作など、フィジカルAIが実体経済を再定義する動きが加速中。 直近の注目: NVIDIA「【NVIDIA】ヘルスケアロボティクスのためのフィ」、The Economist「【フル対談】イーロン・マスク：AI・AGIと超豊か」、Google DeepMind「【Google DeepMind】Gemini R」。</div>
                 </div>
                 <div class="trend-item">
                     <div class="trend-tag">⚡ トレンド 03</div>
-                    <div class="trend-h3">再帰的自己改善と数千兆円規模の電力・半導体競争</div>
-                    <div class="trend-p">AIがAIモデルを研究開発する自動化サイクルの現実味が高まり、律速要因は人間の頭脳からGPU計算資源・電力供給・宇宙データセンター構想へシフト。</div>
+                    <div class="trend-h3">AIの社会的リスクと国家・企業の安全保障対策</div>
+                    <div class="trend-p">ハラリが警鐘するAIの未来リスク、Anthropicが取り組む報酬ハッキング対策・sycophancy問題、米国のAI輸出規制とオープンソース推進のバランス。AI安全性が技術開発と並ぶ最重要アジェンダに。 直近の注目: Y Combinator「【Y Combinator】元ホワイトハウスCTO」、Y Combinator「【Y Combinator】AIトップ研究所が「オ」、Y Combinator「【Y Combinator】モデル非依存プラットフ」。</div>
                 </div>
             </div>
         </div>
@@ -1918,7 +1918,7 @@
         function startWebSpeech() {
             if (!('speechSynthesis' in window)) return;
             window.speechSynthesis.cancel();
-            speechSynthUtterance = new SpeechSynthesisUtterance(`おはようございます。本日のAIメガトレンド・エグゼクティブ速報です。現在、世界の最先端テック業界では3つの巨大な地殻変動が進行しています。第1に、画面内のチャットから物理世界で原子を動かすフィジカルAIへの大移動です。エヌビディアやフィギュアAI、ディープマインドは、仮想シミュレーションによる超高速強化学習を武器に、人型ロボットによる労働代替を現実のものにしています。第2に、単一のモデルに依存せず、オープンAIやマイクロソフトのSDKを活用して自律エージェントを束ねるモデル非依存アーキテクチャの台頭です。そして第3に、AI自身がAI研究を自動化する再帰的進化と、それを支える電力・半導体インフラの覇権争いです。今日も最先端の知見を味方に、素晴らしい1日をお過ごしください。`);
+            speechSynthUtterance = new SpeechSynthesisUtterance(`おはようございます。2026年08月24日のAIメガトレンド・エグゼクティブ速報です。直近1週間で67本の最新AI動画を分析した結果、3つの注目トレンドが浮かび上がっています。第1に、自律型AIエージェントの爆発的進化とSDK標準化。自律エージェント & コーディングAIの領域で34本の重要動画が公開されました。第2に、実世界の「原子制御」へ ― 人型ロボットと自律移動体の急加速。6本の動画がこの領域をカバーしています。そして第3に、AIの社会的リスクと国家・企業の安全保障対策。5本の最新動画で議論されています。今日も最先端の知見を味方に、素晴らしい1日をお過ごしください。`);
             speechSynthUtterance.lang = 'ja-JP';
             speechSynthUtterance.rate = audioPlaybackSpeed;
             speechSynthUtterance.onend = () => onAudioEnded();

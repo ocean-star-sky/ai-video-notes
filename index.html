@@ -243,7 +243,7 @@
             <audio id="briefingAudio" src="daily_briefing.m4a" preload="none" onended="onAudioEnded()"></audio>
             <div class="audio-script-box" id="audioScriptBox">
                 <strong>📝 本日の音声ブリーフィング原稿:</strong><br>
-                おはようございます。2026年08月24日のAIメガトレンド・エグゼクティブ速報です。直近1週間で67本の最新AI動画を分析した結果、3つの注目トレンドが浮かび上がっています。第1に、自律型AIエージェントの爆発的進化とSDK標準化。自律エージェント & コーディングAIの領域で34本の重要動画が公開されました。第2に、実世界の「原子制御」へ ― 人型ロボットと自律移動体の急加速。6本の動画がこの領域をカバーしています。そして第3に、AIの社会的リスクと国家・企業の安全保障対策。5本の最新動画で議論されています。今日も最先端の知見を味方に、素晴らしい1日をお過ごしください。
+                おはようございます。2026年08月24日のAIメガトレンド・エグゼクティブ速報です。前回配信以降に新たに0本のAI動画を分析しました。3つの注目トレンドをお伝えします。第1に、実世界の「原子制御」へ ― 人型ロボットと自律移動体の急加速。フィジカルAI & ロボティクスの領域で0本の重要動画が公開されました。第2に、自律型AIエージェントの爆発的進化とSDK標準化。0本の動画がこの領域をカバーしています。そして第3に、AI計算基盤の限界突破 ― GPUと電力の覇権争い。0本の最新動画で議論されています。今日も最先端の知見を味方に、素晴らしい1日をお過ごしください。
             </div>
         </div>
 
@@ -256,18 +256,18 @@
             <div class="trend-grid">
                 <div class="trend-item">
                     <div class="trend-tag">🦾 トレンド 01</div>
-                    <div class="trend-h3">自律型AIエージェントの爆発的進化とSDK標準化</div>
-                    <div class="trend-p">Claude Code・GitHub Copilot・ChatGPT Workなど、自律的にコード生成・業務遂行するAIエージェントが実用段階に到達。MCP（Model Context Protocol）によるツール連携やマルチモデル運用が新たな標準に。 直近の注目: Microsoft Developer「【マイクロソフト】GitHub Copilot S」、OpenAI「【OpenAI】自律型AIエージェントプラグイン（」、Scale AI「【Scale AI】最先端コーディングエージェント」。</div>
+                    <div class="trend-h3">実世界の「原子制御」へ ― 人型ロボットと自律移動体の急加速</div>
+                    <div class="trend-p">NVIDIA Omniverse上でのSim-to-Real強化学習、Figure AI Galileoの量産ロードマップ、Google DeepMind Gemini Roboticsによる協調動作など、フィジカルAIが実体経済を再定義する動きが加速中。</div>
                 </div>
                 <div class="trend-item">
                     <div class="trend-tag">🤖 トレンド 02</div>
-                    <div class="trend-h3">実世界の「原子制御」へ ― 人型ロボットと自律移動体の急加速</div>
-                    <div class="trend-p">NVIDIA Omniverse上でのSim-to-Real強化学習、Figure AI Galileoの量産ロードマップ、Google DeepMind Gemini Roboticsによる協調動作など、フィジカルAIが実体経済を再定義する動きが加速中。 直近の注目: NVIDIA「【NVIDIA】ヘルスケアロボティクスのためのフィ」、The Economist「【フル対談】イーロン・マスク：AI・AGIと超豊か」、Google DeepMind「【Google DeepMind】Gemini R」。</div>
+                    <div class="trend-h3">自律型AIエージェントの爆発的進化とSDK標準化</div>
+                    <div class="trend-p">Claude Code・GitHub Copilot・ChatGPT Workなど、自律的にコード生成・業務遂行するAIエージェントが実用段階に到達。MCP（Model Context Protocol）によるツール連携やマルチモデル運用が新たな標準に。</div>
                 </div>
                 <div class="trend-item">
                     <div class="trend-tag">⚡ トレンド 03</div>
-                    <div class="trend-h3">AIの社会的リスクと国家・企業の安全保障対策</div>
-                    <div class="trend-p">ハラリが警鐘するAIの未来リスク、Anthropicが取り組む報酬ハッキング対策・sycophancy問題、米国のAI輸出規制とオープンソース推進のバランス。AI安全性が技術開発と並ぶ最重要アジェンダに。 直近の注目: Y Combinator「【Y Combinator】元ホワイトハウスCTO」、Y Combinator「【Y Combinator】AIトップ研究所が「オ」、Y Combinator「【Y Combinator】モデル非依存プラットフ」。</div>
+                    <div class="trend-h3">AI計算基盤の限界突破 ― GPUと電力の覇権争い</div>
+                    <div class="trend-p">NVIDIA Vera RubinのメガワットあたりトークンMAX、Tesla Megapack/Autobidderの電力自律取引、データセンター急増に伴うギガワット級電力供給の確保が業界最大のボトルネックに。</div>
                 </div>
             </div>
         </div>
@@ -1918,7 +1918,7 @@
         function startWebSpeech() {
             if (!('speechSynthesis' in window)) return;
             window.speechSynthesis.cancel();
-            speechSynthUtterance = new SpeechSynthesisUtterance(`おはようございます。2026年08月24日のAIメガトレンド・エグゼクティブ速報です。直近1週間で67本の最新AI動画を分析した結果、3つの注目トレンドが浮かび上がっています。第1に、自律型AIエージェントの爆発的進化とSDK標準化。自律エージェント & コーディングAIの領域で34本の重要動画が公開されました。第2に、実世界の「原子制御」へ ― 人型ロボットと自律移動体の急加速。6本の動画がこの領域をカバーしています。そして第3に、AIの社会的リスクと国家・企業の安全保障対策。5本の最新動画で議論されています。今日も最先端の知見を味方に、素晴らしい1日をお過ごしください。`);
+            speechSynthUtterance = new SpeechSynthesisUtterance(`おはようございます。2026年08月24日のAIメガトレンド・エグゼクティブ速報です。前回配信以降に新たに0本のAI動画を分析しました。3つの注目トレンドをお伝えします。第1に、実世界の「原子制御」へ ― 人型ロボットと自律移動体の急加速。フィジカルAI & ロボティクスの領域で0本の重要動画が公開されました。第2に、自律型AIエージェントの爆発的進化とSDK標準化。0本の動画がこの領域をカバーしています。そして第3に、AI計算基盤の限界突破 ― GPUと電力の覇権争い。0本の最新動画で議論されています。今日も最先端の知見を味方に、素晴らしい1日をお過ごしください。`);
             speechSynthUtterance.lang = 'ja-JP';
             speechSynthUtterance.rate = audioPlaybackSpeed;
             speechSynthUtterance.onend = () => onAudioEnded();

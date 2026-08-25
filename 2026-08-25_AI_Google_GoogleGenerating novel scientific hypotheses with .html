@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【徹底解説】【Google】Generating novel scientific hypotheses with Co-Scientist</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad: true, theme: 'neutral'});</script>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border-color: #334155;
+            --success-color: #4ade80;
+            --highlight-bg: rgba(56, 189, 248, 0.1);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", Meiryo, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            padding: 40px 20px;
+        }
+        .container { max-width: 960px; margin: 0 auto; }
+        .nav-back {
+            display: inline-flex; align-items: center; gap: 6px; color: var(--accent-color);
+            text-decoration: none; font-weight: 600; margin-bottom: 20px; font-size: 0.95rem;
+        }
+        .nav-back:hover { text-decoration: underline; }
+        header {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 1px solid var(--border-color); border-radius: 16px; padding: 35px;
+            margin-bottom: 30px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+        }
+        .channel-tag {
+            display: inline-block; background-color: rgba(56, 189, 248, 0.15); color: var(--accent-color);
+            padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 12px;
+        }
+        h1 { font-size: 1.85rem; line-height: 1.4; margin-bottom: 16px; color: #ffffff; }
+        .meta-info { font-size: 0.9rem; color: var(--text-sub); display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+        .badge { display: inline-block; background: #334155; color: #e2e8f0; padding: 3px 10px; border-radius: 6px; font-size: 0.75rem; margin-right: 6px; font-weight: bold; }
+        
+        .card {
+            background-color: var(--card-bg); border: 1px solid var(--border-color);
+            border-radius: 16px; padding: 32px; margin-bottom: 30px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+        .card h2 {
+            font-size: 1.35rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+            color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 12px;
+        }
+        .summary-box {
+            background: rgba(15, 23, 42, 0.6); border-left: 4px solid var(--accent-color);
+            padding: 20px; border-radius: 0 12px 12px 0; margin-bottom: 20px;
+        }
+        .summary-box li {
+            margin-bottom: 12px; font-size: 1.05rem; list-style-type: none; position: relative; padding-left: 28px;
+        }
+        .summary-box li::before { content: "✦"; position: absolute; left: 0; color: var(--accent-color); font-weight: bold; }
+
+        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 22px; margin-bottom: 18px; }
+        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.75rem; font-weight: bold; padding: 3px 10px; border-radius: 6px; }
+        .timestamp-link {
+            color: var(--accent-color); text-decoration: none; font-weight: bold; font-size: 0.9rem;
+            background: rgba(56, 189, 248, 0.1); padding: 4px 12px; border-radius: 20px; transition: all 0.2s;
+        }
+        .timestamp-link:hover { background: var(--accent-color); color: #0f172a; }
+        .chapter-block h3 { font-size: 1.15rem; margin-bottom: 10px; color: #ffffff; }
+        .chapter-desc { font-size: 0.95rem; color: #cbd5e1; margin-bottom: 12px; }
+        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 3px solid var(--success-color); padding: 10px 14px; font-size: 0.9rem; color: #e2e8f0; border-radius: 0 6px 6px 0; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: var(--accent-color); color: #0f172a; font-weight: bold; text-decoration: none; padding: 12px 24px; border-radius: 8px; transition: all 0.2s; }
+        .btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
+        footer { text-align: center; font-size: 0.85rem; color: var(--text-sub); margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="nav-back">← 📚 AI動画ポータル（一覧）へ戻る</a>
+        <header>
+            <span class="channel-tag">📺 Google DeepMind (Demis Hassabis)</span>
+            <h1>【Google】Generating novel scientific hypotheses with Co-Scientist</h1>
+            <div class="meta-info">
+                <span>📅 収録/公開日: 2026年08月25日</span>
+                <div>検出キーワード: <span class="badge">AI</span><span class="badge">SPECIALIST</span></div>
+            </div>
+        </header>
+        <div class="card">
+            <h2>📝 300文字クイック・エグゼクティブ要約</h2>
+            <p style="font-size: 1.05rem; line-height: 1.9; color: #f1f5f9; margin-bottom: 24px;">Google DeepMind (Demis Hassabis)による『Generating novel scientific hypotheses with Co-Scientist』の徹底解説（注目領域: AI, Specialist）。Google DeepMind (Demis Hassabis)の最新知見に基づき、AI、Specialistを活用した実装アプローチと課題解決の道筋を提示。基礎概念の整理から実践的なデモ・実装パターン、実務導入におけるベストプラクティスまでを網羅。既存の開発・業務フローを進化させる具体的な指針を示している。</p>
+
+            <h2>📌 エグゼクティブ・サマリー（本質の3大ポイント）</h2>
+            <div class="summary-box">
+                <ul>
+                    <li>【Generating novel scientific 】の核心概念と技術的ブレイクスルーの背景</li><li>関連技術（AI・Specialist）を活用した具体的な実装・ワークフロー構築手順</li><li>エンタープライズ・実務現場における導入メリットと定量的な効果</li>
+                </ul>
+            </div>
+            <a href="https://www.youtube.com/watch?v=aSY_vFFmkW0" target="_blank" class="btn" style="width: 100%;">▶️ YouTube公式動画を再生する</a>
+        </div>
+        <div class="card">
+            <h2>🎥 公式動画</h2>
+            <div style="position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); background: #000; text-align: center;">
+                <a href="https://www.youtube.com/watch?v=aSY_vFFmkW0" target="_blank" style="display: block; position: relative; text-decoration: none;">
+                    <img src="https://img.youtube.com/vi/aSY_vFFmkW0/maxresdefault.jpg" alt="【Google】Generating novel scientific hypotheses with Co-Scientist" style="width: 100%; max-height: 480px; object-fit: cover; display: block; opacity: 0.85;">
+                </a>
+            </div>
+        </div>
+        
+        <footer>
+            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-25 09:17:16
+        </footer>
+    </div>
+</body>
+</html>

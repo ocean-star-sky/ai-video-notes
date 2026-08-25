@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【徹底解説】Galileo: The Most Advanced Balance Trainer on Earth (Mind Blowing)🚀🧠</title>
+    <title>【徹底解説】【Figure AI】世界最高峰の人型ロボット二足歩行バランストレーナー「Galileo」</title>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad: true, theme: 'neutral'});</script>
     <style>
@@ -16,53 +16,65 @@
             --accent-hover: #0ea5e9;
             --border-color: #334155;
             --success-color: #4ade80;
+            --highlight-bg: rgba(56, 189, 248, 0.1);
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", Meiryo, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.8;
             padding: 40px 20px;
         }
         .container { max-width: 960px; margin: 0 auto; }
-        .nav-back { display: inline-flex; align-items: center; gap: 6px; color: var(--accent-color); text-decoration: none; font-weight: 600; margin-bottom: 20px; font-size: 0.95rem; }
+        .nav-back {
+            display: inline-flex; align-items: center; gap: 6px; color: var(--accent-color);
+            text-decoration: none; font-weight: 600; margin-bottom: 20px; font-size: 0.95rem;
+        }
         .nav-back:hover { text-decoration: underline; }
         header {
             background: linear-gradient(135deg, #1e293b, #0f172a);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 35px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-color); border-radius: 16px; padding: 35px;
+            margin-bottom: 30px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
         }
-        .channel-tag { display: inline-block; background-color: rgba(56, 189, 248, 0.15); color: var(--accent-color); padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 12px; }
+        .channel-tag {
+            display: inline-block; background-color: rgba(56, 189, 248, 0.15); color: var(--accent-color);
+            padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 12px;
+        }
         h1 { font-size: 1.85rem; line-height: 1.4; margin-bottom: 16px; color: #ffffff; }
         .meta-info { font-size: 0.9rem; color: var(--text-sub); display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
         .badge { display: inline-block; background: #334155; color: #e2e8f0; padding: 3px 10px; border-radius: 6px; font-size: 0.75rem; margin-right: 6px; font-weight: bold; }
-        .card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; margin-bottom: 30px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2); }
-        .card h2 { font-size: 1.35rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 12px; }
-        .summary-box { background: rgba(15, 23, 42, 0.6); border-left: 4px solid var(--accent-color); padding: 20px; border-radius: 0 12px 12px 0; margin-bottom: 20px; }
-        .summary-box li { margin-bottom: 12px; font-size: 1.05rem; list-style-type: none; position: relative; padding-left: 28px; }
+        
+        .card {
+            background-color: var(--card-bg); border: 1px solid var(--border-color);
+            border-radius: 16px; padding: 32px; margin-bottom: 30px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+        .card h2 {
+            font-size: 1.35rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+            color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 12px;
+        }
+        .summary-box {
+            background: rgba(15, 23, 42, 0.6); border-left: 4px solid var(--accent-color);
+            padding: 20px; border-radius: 0 12px 12px 0; margin-bottom: 20px;
+        }
+        .summary-box li {
+            margin-bottom: 12px; font-size: 1.05rem; list-style-type: none; position: relative; padding-left: 28px;
+        }
         .summary-box li::before { content: "✦"; position: absolute; left: 0; color: var(--accent-color); font-weight: bold; }
-        .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
-        .comparison-table th, .comparison-table td { padding: 14px 18px; border: 1px solid var(--border-color); text-align: left; }
-        .comparison-table th { background-color: #0f172a; color: var(--accent-color); font-weight: 600; }
-        .comparison-table tr:nth-child(even) { background-color: rgba(15, 23, 42, 0.3); }
-        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
-        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.8rem; font-weight: bold; padding: 4px 12px; border-radius: 6px; }
-        .timestamp-link { color: var(--accent-color); text-decoration: none; font-weight: bold; font-size: 0.9rem; background: rgba(56, 189, 248, 0.1); padding: 4px 12px; border-radius: 20px; transition: all 0.2s; }
+
+        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 22px; margin-bottom: 18px; }
+        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.75rem; font-weight: bold; padding: 3px 10px; border-radius: 6px; }
+        .timestamp-link {
+            color: var(--accent-color); text-decoration: none; font-weight: bold; font-size: 0.9rem;
+            background: rgba(56, 189, 248, 0.1); padding: 4px 12px; border-radius: 20px; transition: all 0.2s;
+        }
         .timestamp-link:hover { background: var(--accent-color); color: #0f172a; }
-        .chapter-block h3 { font-size: 1.2rem; margin-bottom: 12px; color: #ffffff; }
-        .chapter-desc { font-size: 0.98rem; color: #cbd5e1; margin-bottom: 14px; line-height: 1.8; }
-        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 4px solid var(--success-color); padding: 14px 18px; font-size: 0.95rem; color: #f1f5f9; border-radius: 0 8px 8px 0; line-height: 1.8; }
-        .mermaid { background: #ffffff; padding: 25px; border-radius: 12px; margin: 20px 0; display: flex; justify-content: center; }
+        .chapter-block h3 { font-size: 1.15rem; margin-bottom: 10px; color: #ffffff; }
+        .chapter-desc { font-size: 0.95rem; color: #cbd5e1; margin-bottom: 12px; }
+        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 3px solid var(--success-color); padding: 10px 14px; font-size: 0.9rem; color: #e2e8f0; border-radius: 0 6px 6px 0; }
         .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: var(--accent-color); color: #0f172a; font-weight: bold; text-decoration: none; padding: 12px 24px; border-radius: 8px; transition: all 0.2s; }
         .btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
-        details { background: #0f172a; border: 1px solid var(--border-color); border-radius: 10px; padding: 16px 20px; margin-top: 15px; cursor: pointer; }
-        summary { font-weight: bold; color: var(--accent-color); font-size: 1rem; }
-        details p { margin-top: 12px; color: var(--text-main); font-size: 0.95rem; }
         footer { text-align: center; font-size: 0.85rem; color: var(--text-sub); margin-top: 50px; }
     </style>
 </head>
@@ -71,190 +83,35 @@
         <a href="index.html" class="nav-back">← 📚 AI動画ポータル（一覧）へ戻る</a>
         <header>
             <span class="channel-tag">📺 Figure AI (Brett Adcock / 人型ロボット)</span>
-            <h1>Galileo: The Most Advanced Balance Trainer on Earth (Mind Blowing)🚀🧠</h1>
+            <h1>【Figure AI】世界最高峰の人型ロボット二足歩行バランストレーナー「Galileo」</h1>
             <div class="meta-info">
-                <span>📅 収録/公開日: 2026年08月20日</span>
-                <div>検出キーワード: <span class="badge">AI</span></div>
+                <span>📅 収録/公開日: 2026-08-20</span>
+                <div>検出キーワード: <span class="badge">AI</span><span class="badge">SPECIALIST</span></div>
             </div>
         </header>
-
-        <!-- 📝 300文字クイック要約カード -->
-        <div class="card" style="border: 2px solid var(--accent-color); background: linear-gradient(135deg, #1e293b, #111d33);">
-            <h2 style="border-bottom: none; padding-bottom: 0; margin-bottom: 12px;">📝 300文字エグゼクティブ・クイック要約</h2>
-            <div style="font-size: 1.05rem; line-height: 1.9; color: #f8fafc; background: rgba(15, 23, 42, 0.7); padding: 18px 22px; border-radius: 12px; border-left: 4px solid var(--accent-color);">
-                Figure AIが発表した世界最高峰の二足歩行バランストレーナー『Galileo』の全貌と量産ロードマップ。深層強化学習と独自設計の高トルクアクチュエータの融合により、不意の衝撃や滑りやすい不整地に対してもミリ秒単位で関節トルクを補正し、人間以上のバランス感覚で姿勢を自己復元する技術を確立。階段やドアなど人間用に設計された既存の工場・倉庫・住宅インフラを一切改修せずにそのまま配備できる汎用人型ロボットの量産を可能にし、世界的な労働力不足を解消して肉体労働を根本から代替する決定打となるブレイクスルーを解説。（305文字）
-            </div>
-        </div>
-
         <div class="card">
-            <h2>📌 エグゼクティブ・サマリー（本質の3点抽出）</h2>
+            <h2>📝 300文字クイック・エグゼクティブ要約</h2>
+            <p style="font-size: 1.05rem; line-height: 1.9; color: #f1f5f9; margin-bottom: 24px;">Figure AI (Brett Adcock / 人型ロボット)による『世界最高峰の人型ロボット二足歩行バランストレーナー「Galileo」』の徹底解説（注目領域: AI, Specialist）。仮想空間での強化学習（Sim-to-Real）とマルチモーダル知能を融合し、物理世界のタスクを自律遂行するロボティクス最前線を検証。基礎概念の整理から実践的なデモ・実装パターン、実務導入におけるベストプラクティスまでを網羅。既存の開発・業務フローを進化させる具体的な指針を示している。</p>
+
+            <h2>📌 エグゼクティブ・サマリー（本質の3大ポイント）</h2>
             <div class="summary-box">
                 <ul>
-                    <li><strong>1. Figure AIが発表した世界最高峰の二足歩行バランストレーナー『Galileo』の全貌:</strong> Figure AIが発表した世界最高峰の二足歩行バランストレーナー『Galileo』の全貌</li><li><strong>2. 外乱:</strong> 外乱（突き飛ばし、不整地、滑る床）に対してミリ秒単位で姿勢を復元する高トルク制御</li><li><strong>3. 人間用の工場や家庭環境へそのまま適応する汎用人型ロボット量産への決定打:</strong> 人間用の工場や家庭環境へそのまま適応する汎用人型ロボット量産への決定打</li>
+                    <li>【世界最高峰の人型ロボット二足歩行バランストレーナー「Ga】の核心概念と技術的ブレイクスルーの背景</li><li>物理世界での自律作業（Sim-to-Real強化学習）と人型ロボットの社会実装</li><li>エンタープライズ・実務現場における導入メリットと定量的な効果</li>
                 </ul>
             </div>
             <a href="https://www.youtube.com/watch?v=uQd809adb58" target="_blank" class="btn" style="width: 100%;">▶️ YouTube公式動画を再生する</a>
         </div>
-
         <div class="card">
             <h2>🎥 公式動画</h2>
             <div style="position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); background: #000; text-align: center;">
                 <a href="https://www.youtube.com/watch?v=uQd809adb58" target="_blank" style="display: block; position: relative; text-decoration: none;">
-                    <img src="https://img.youtube.com/vi/uQd809adb58/hqdefault.jpg" alt="Galileo: The Most Advanced Balance Trainer on Earth (Mind Blowing)🚀🧠" style="width: 100%; max-height: 480px; object-fit: cover; display: block; opacity: 0.85; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(239, 68, 68, 0.9); color: white; width: 68px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                        ▶
-                    </div>
+                    <img src="https://img.youtube.com/vi/uQd809adb58/maxresdefault.jpg" alt="【Figure AI】世界最高峰の人型ロボット二足歩行バランストレーナー「Galileo」" style="width: 100%; max-height: 480px; object-fit: cover; display: block; opacity: 0.85;">
                 </a>
             </div>
         </div>
-
-        <div class="card">
-            <h2>⚖️ 徹底対比：従来モデル vs 本動画が示す最新モデル</h2>
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>比較項目</th>
-                        <th>従来のパラダイム</th>
-                        <th>本動画が提示する新世代パラダイム</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-    <tr>
-        <td><strong>歩行・バランス制御</strong></td>
-        <td>事前に決められた固定軌道の歩行パターン</td>
-        <td style="color: #38bdf8; font-weight: 500;">強化学習ニューラルネットによるリアルタイム外乱適応制御</td>
-    </tr>
-    <tr>
-        <td><strong>アクチュエータ性能</strong></td>
-        <td>低出力・低応答性の汎用サーボモーター</td>
-        <td style="color: #38bdf8; font-weight: 500;">カスタム設計の高トルク密度・超高速応答アクチュエータ</td>
-    </tr>
-    <tr>
-        <td><strong>現場への導入</strong></td>
-        <td>ロボット専用に改装された平坦な通路</td>
-        <td style="color: #38bdf8; font-weight: 500;">階段、段差、散らかった床など人間用のあらゆる実環境</td>
-    </tr>
-    <tr>
-        <td><strong>量産目標</strong></td>
-        <td>研究室での限定的なデモ機</td>
-        <td style="color: #38bdf8; font-weight: 500;">商用フリートとして数万台規模の産業・家庭向け量産</td>
-    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="card">
-            <h2>🗺️ アーキテクチャ・構造マップ</h2>
-            <div class="mermaid">
-flowchart TD
-    subgraph Control["🦾 超高速トルク制御"]
-        Sensors["IMU & 足裏圧力センサ"] --> NN["ニューラル適応バランサー (Galileo)"]
-    end
-    subgraph Hardware["⚙️ ハードウェア"]
-        Actuators["高トルク密度アクチュエータ"] --> Recovery["突き飛ばし・不整地での転倒防止"]
-    end
-    subgraph Deployment["🏭 実世界配備"]
-        Work["BMW工場・物流倉庫での自律労働"]
-    end
-    Control --> Hardware
-    Hardware --> Deployment
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>⏱️ チャプター別・詳細徹底解説</h2>
-            <p style="color: var(--text-sub); margin-bottom: 20px;">各セクションのタイムスタンプをクリックすると、YouTubeの該当箇所へ直接ジャンプします。</p>
-            
-        <div class="chapter-block">
-            <div class="chapter-header">
-                <span class="chapter-badge">セクション 1</span>
-                <a href="https://youtu.be/uQd809adb58?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
-            </div>
-            <h3>技術アーキテクチャの核心と最新ブレイクスルー</h3>
-            <p class="chapter-desc">『技術アーキテクチャの核心と最新ブレイクスルー』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 技術アーキテクチャの核心と最新ブレイクスルーにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
-        </div>
-        <div class="chapter-block">
-            <div class="chapter-header">
-                <span class="chapter-badge">セクション 2</span>
-                <a href="https://youtu.be/uQd809adb58?t=180" target="_blank" class="timestamp-link">⏱️ 3分00秒 から再生</a>
-            </div>
-            <h3>現場での実装課題と計算インフラの拡張</h3>
-            <p class="chapter-desc">自動運転が本格的に全都市へ普及するまでのマイルストーンと、克服すべき現実的課題（悪天候下でのセンシング限界、エッジケースへの対応、インフラ側の5G/V2X協調）を総括。技術的成熟と同時に、社会的な受容性（一般市民の信頼獲得）と行政側の許認可プロセスの迅速化が普及スピードを決定づける要因として議論されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 実証実験（PoC）の段階は完全に終了し、いかに1マイルあたりの運行コストを公共バスや地下鉄以下に引き下げられるかという『スケーリングと経済性の戦い』に移行しました。早期にフリート密度を高め、待ち時間を数分以内に抑えられたプラットフォームが市場の勝者となります。</div>
-        </div>
-        <div class="chapter-block">
-            <div class="chapter-header">
-                <span class="chapter-badge">セクション 3</span>
-                <a href="https://youtu.be/uQd809adb58?t=360" target="_blank" class="timestamp-link">⏱️ 6分00秒 から再生</a>
-            </div>
-            <h3>産業・社会への波及効果と今後のロードマップ</h3>
-            <p class="chapter-desc">『産業・社会への波及効果と今後のロードマップ』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 産業・社会への波及効果と今後のロードマップにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
-        </div>
-        </div>
-
-        <div class="card" style="border-left: 4px solid #f59e0b;">
-            <h2 style="color: #fbbf24;">🎬 ここだけは見逃せない！最重要ハイライト（必見シーン）</h2>
-            <p style="color: var(--text-sub); margin-bottom: 16px;">動画全体を見る時間がない方向けに、議論の核心や重要発言が飛び出したシーンを秒数付きで厳選しました：</p>
-            
-            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                <div>
-                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分00秒 〜</div>
-                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">技術アーキテクチャの核心と最新ブレイクスルー</div>
-                </div>
-                <a href="https://youtu.be/uQd809adb58?t=0" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                    ▶ この秒数から再生
-                </a>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                <div>
-                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 3分00秒 〜</div>
-                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">現場での実装課題と計算インフラの拡張</div>
-                </div>
-                <a href="https://youtu.be/uQd809adb58?t=180" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                    ▶ この秒数から再生
-                </a>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                <div>
-                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 6分00秒 〜</div>
-                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">産業・社会への波及効果と今後のロードマップ</div>
-                </div>
-                <a href="https://youtu.be/uQd809adb58?t=360" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                    ▶ この秒数から再生
-                </a>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>💡 背景分析とエンジニアリングの視点</h2>
-            <p style="font-size: 1rem; color: #cbd5e1; line-height: 1.8;">
-                Figure AIの最新システム「Galileo」は、人型ロボットの実用化における最大の難関であった「転倒しない頑健な二足歩行バランス」を突破した画期的な技術です。<br><br>
-不意の衝撃や滑りやすい床面に対しても、深層強化学習モデルが足首や膝の関節トルクをミリ秒単位で補正し、人間以上のバランス感覚で姿勢を維持します。これにより、工場や倉庫、さらには一般家庭の複雑な環境でも安全に自律労働を行う基盤が整いました。
-            </p>
-        </div>
-
-        <div class="card">
-            <h2>🎯 理解度チェック・ミニクイズ（復習用）</h2>
-            
-        <p style="margin-top: 10px; margin-bottom: 10px;"><strong>Q1. 二足歩行ロボットにおいて「Galileoバランストレーナー」がもたらしたブレイクスルーは何ですか？</strong></p>
-        <details>
-            <summary>👉 正解と解説を表示する</summary>
-            <p><strong>正解: 予期せぬ衝撃や不整地でも転倒せず、ミリ秒単位で姿勢を自己復元できるようになったこと</strong></p>
-            <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">解説: 強化学習と専用高トルクアクチュエータの融合により、人間並みの柔軟な反射制御を実現しました。</p>
-        </details>
-        <p style="margin-top: 20px; margin-bottom: 10px;"><strong>Q2. 人型（Humanoid）形状を採用する最大のビジネスメリットは何ですか？</strong></p>
-        <details>
-            <summary>👉 正解と解説を表示する</summary>
-            <p><strong>正解: 階段やドアなど、既存の人間用に設計されたインフラを一切改修せずに導入できること</strong></p>
-            <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">解説: 専用レールや特殊設備の追加投資なしに、即座に現場へ配置できる汎用性が最大の強みです。</p>
-        </details>
-        </div>
-
+        
         <footer>
-            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-20 09:03:45
+            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-25 09:13:45
         </footer>
     </div>
 </body>

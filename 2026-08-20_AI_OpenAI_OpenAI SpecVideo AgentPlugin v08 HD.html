@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【徹底解説】OpenAI SpecVideo AgentPlugin v08 HD</title>
+    <title>【徹底解説】【OpenAI】自律型AIエージェントプラグイン（AgentPlugin）仕様と開発</title>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad: true, theme: 'neutral'});</script>
     <style>
@@ -16,53 +16,65 @@
             --accent-hover: #0ea5e9;
             --border-color: #334155;
             --success-color: #4ade80;
+            --highlight-bg: rgba(56, 189, 248, 0.1);
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", Meiryo, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.8;
             padding: 40px 20px;
         }
         .container { max-width: 960px; margin: 0 auto; }
-        .nav-back { display: inline-flex; align-items: center; gap: 6px; color: var(--accent-color); text-decoration: none; font-weight: 600; margin-bottom: 20px; font-size: 0.95rem; }
+        .nav-back {
+            display: inline-flex; align-items: center; gap: 6px; color: var(--accent-color);
+            text-decoration: none; font-weight: 600; margin-bottom: 20px; font-size: 0.95rem;
+        }
         .nav-back:hover { text-decoration: underline; }
         header {
             background: linear-gradient(135deg, #1e293b, #0f172a);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 35px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-color); border-radius: 16px; padding: 35px;
+            margin-bottom: 30px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
         }
-        .channel-tag { display: inline-block; background-color: rgba(56, 189, 248, 0.15); color: var(--accent-color); padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 12px; }
+        .channel-tag {
+            display: inline-block; background-color: rgba(56, 189, 248, 0.15); color: var(--accent-color);
+            padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 12px;
+        }
         h1 { font-size: 1.85rem; line-height: 1.4; margin-bottom: 16px; color: #ffffff; }
         .meta-info { font-size: 0.9rem; color: var(--text-sub); display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
         .badge { display: inline-block; background: #334155; color: #e2e8f0; padding: 3px 10px; border-radius: 6px; font-size: 0.75rem; margin-right: 6px; font-weight: bold; }
-        .card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; margin-bottom: 30px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2); }
-        .card h2 { font-size: 1.35rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 12px; }
-        .summary-box { background: rgba(15, 23, 42, 0.6); border-left: 4px solid var(--accent-color); padding: 20px; border-radius: 0 12px 12px 0; margin-bottom: 20px; }
-        .summary-box li { margin-bottom: 12px; font-size: 1.05rem; list-style-type: none; position: relative; padding-left: 28px; }
+        
+        .card {
+            background-color: var(--card-bg); border: 1px solid var(--border-color);
+            border-radius: 16px; padding: 32px; margin-bottom: 30px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+        .card h2 {
+            font-size: 1.35rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+            color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 12px;
+        }
+        .summary-box {
+            background: rgba(15, 23, 42, 0.6); border-left: 4px solid var(--accent-color);
+            padding: 20px; border-radius: 0 12px 12px 0; margin-bottom: 20px;
+        }
+        .summary-box li {
+            margin-bottom: 12px; font-size: 1.05rem; list-style-type: none; position: relative; padding-left: 28px;
+        }
         .summary-box li::before { content: "✦"; position: absolute; left: 0; color: var(--accent-color); font-weight: bold; }
-        .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
-        .comparison-table th, .comparison-table td { padding: 14px 18px; border: 1px solid var(--border-color); text-align: left; }
-        .comparison-table th { background-color: #0f172a; color: var(--accent-color); font-weight: 600; }
-        .comparison-table tr:nth-child(even) { background-color: rgba(15, 23, 42, 0.3); }
-        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
-        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.8rem; font-weight: bold; padding: 4px 12px; border-radius: 6px; }
-        .timestamp-link { color: var(--accent-color); text-decoration: none; font-weight: bold; font-size: 0.9rem; background: rgba(56, 189, 248, 0.1); padding: 4px 12px; border-radius: 20px; transition: all 0.2s; }
+
+        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 22px; margin-bottom: 18px; }
+        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.75rem; font-weight: bold; padding: 3px 10px; border-radius: 6px; }
+        .timestamp-link {
+            color: var(--accent-color); text-decoration: none; font-weight: bold; font-size: 0.9rem;
+            background: rgba(56, 189, 248, 0.1); padding: 4px 12px; border-radius: 20px; transition: all 0.2s;
+        }
         .timestamp-link:hover { background: var(--accent-color); color: #0f172a; }
-        .chapter-block h3 { font-size: 1.2rem; margin-bottom: 12px; color: #ffffff; }
-        .chapter-desc { font-size: 0.98rem; color: #cbd5e1; margin-bottom: 14px; line-height: 1.8; }
-        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 4px solid var(--success-color); padding: 14px 18px; font-size: 0.95rem; color: #f1f5f9; border-radius: 0 8px 8px 0; line-height: 1.8; }
-        .mermaid { background: #ffffff; padding: 25px; border-radius: 12px; margin: 20px 0; display: flex; justify-content: center; }
+        .chapter-block h3 { font-size: 1.15rem; margin-bottom: 10px; color: #ffffff; }
+        .chapter-desc { font-size: 0.95rem; color: #cbd5e1; margin-bottom: 12px; }
+        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 3px solid var(--success-color); padding: 10px 14px; font-size: 0.9rem; color: #e2e8f0; border-radius: 0 6px 6px 0; }
         .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: var(--accent-color); color: #0f172a; font-weight: bold; text-decoration: none; padding: 12px 24px; border-radius: 8px; transition: all 0.2s; }
         .btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
-        details { background: #0f172a; border: 1px solid var(--border-color); border-radius: 10px; padding: 16px 20px; margin-top: 15px; cursor: pointer; }
-        summary { font-weight: bold; color: var(--accent-color); font-size: 1rem; }
-        details p { margin-top: 12px; color: var(--text-main); font-size: 0.95rem; }
         footer { text-align: center; font-size: 0.85rem; color: var(--text-sub); margin-top: 50px; }
     </style>
 </head>
@@ -71,217 +83,116 @@
         <a href="index.html" class="nav-back">← 📚 AI動画ポータル（一覧）へ戻る</a>
         <header>
             <span class="channel-tag">📺 OpenAI (Sam Altman)</span>
-            <h1>OpenAI SpecVideo AgentPlugin v08 HD</h1>
+            <h1>【OpenAI】自律型AIエージェントプラグイン（AgentPlugin）仕様と開発</h1>
             <div class="meta-info">
-                <span>📅 収録/公開日: 2026年08月20日</span>
-                <div>検出キーワード: <span class="badge">AI</span><span class="badge">AGENT</span></div>
+                <span>📅 収録/公開日: 2026-08-20</span>
+                <div>検出キーワード: <span class="badge">AI</span><span class="badge">SPECIALIST</span></div>
             </div>
         </header>
-
-        <!-- 📝 300文字クイック要約カード -->
-        <div class="card" style="border: 2px solid var(--accent-color); background: linear-gradient(135deg, #1e293b, #111d33);">
-            <h2 style="border-bottom: none; padding-bottom: 0; margin-bottom: 12px;">📝 300文字エグゼクティブ・クイック要約</h2>
-            <div style="font-size: 1.05rem; line-height: 1.9; color: #f8fafc; background: rgba(15, 23, 42, 0.7); padding: 18px 22px; border-radius: 12px; border-left: 4px solid var(--accent-color);">
-                OpenAIが推進する『対話チャットボットから自律型AIエージェントへの歴史的飛躍』を解説。ユーザーの質問にテキストで答える受動的なAIから、AgentPluginやSDKを通じて外部API・ブラウザ・PC環境を自律操作し、複雑な業務タスクを最後まで完遂する能動型知能へのシフトを提示。推論時計算量（Reasoning Compute）の最適化により、エラー発生時にもAI自身が自己検証・修復しながらコード作成からデプロイまでを自動実行。ソフトウェア開発のみならず、あらゆるホワイトカラー業務のオペレーションが根底から再設計される未来像を示している。（302文字）
-            </div>
-        </div>
-
         <div class="card">
-            <h2>📌 エグゼクティブ・サマリー（本質の3点抽出）</h2>
+            <h2>📝 300文字クイック・エグゼクティブ要約</h2>
+            <p style="font-size: 1.05rem; line-height: 1.9; color: #f1f5f9; margin-bottom: 24px;">OpenAI (Sam Altman)による『自律型AIエージェントプラグイン（AgentPlugin）仕様と開発』の徹底解説（注目領域: AI, Specialist）。単一モデルの対話を超え、自律的にツールを呼び出しタスクを完遂するマルチエージェントシステムの設計・運用手法を解説。チャプター構成（エージェントパッケージに標準が、Agent Pluginsの概、パッケージ構造、スキル、MCP等）に沿って、基礎概念の整理から実践的なデモ・実装パターン、実務導入におけるベストプラクティスまでを網羅。既存の開発・業務フローを進化させる具体的な指針を示している。</p>
+
+            <h2>📌 エグゼクティブ・サマリー（本質の3大ポイント）</h2>
             <div class="summary-box">
                 <ul>
-                    <li><strong>1. OpenAIが目指す「自律型AIエージェント:</strong> OpenAIが目指す「自律型AIエージェント（Agent）」とプラグインエコシステムの本格展開</li><li><strong>2. 単なるテキスト応答を超え、APIやツールを自在に操作して複雑なタスクを完遂する自律性:</strong> 単なるテキスト応答を超え、APIやツールを自在に操作して複雑なタスクを完遂する自律性</li><li><strong>3. フロンティアモデルの推論能力向上と、開発者コミュニティへのSDK/ツールキットの提供:</strong> フロンティアモデルの推論能力向上と、開発者コミュニティへのSDK/ツールキットの提供</li>
+                    <li>【エージェントパッケージに標準が必要な理由】: 課題の背景と本アプローチが目指す全体像</li><li>【Agent Pluginsの概要】: 自律エージェントのワークフローと統合手順とデモの詳細</li><li>【パッケージ構造、スキル、MCPサーバー】: 実運用におけるベストプラクティスと今後のロードマップ</li>
                 </ul>
             </div>
             <a href="https://www.youtube.com/watch?v=UaeWJK_vv-Y" target="_blank" class="btn" style="width: 100%;">▶️ YouTube公式動画を再生する</a>
         </div>
-
         <div class="card">
             <h2>🎥 公式動画</h2>
             <div style="position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); background: #000; text-align: center;">
                 <a href="https://www.youtube.com/watch?v=UaeWJK_vv-Y" target="_blank" style="display: block; position: relative; text-decoration: none;">
-                    <img src="https://img.youtube.com/vi/UaeWJK_vv-Y/hqdefault.jpg" alt="OpenAI SpecVideo AgentPlugin v08 HD" style="width: 100%; max-height: 480px; object-fit: cover; display: block; opacity: 0.85; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(239, 68, 68, 0.9); color: white; width: 68px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                        ▶
-                    </div>
+                    <img src="https://img.youtube.com/vi/UaeWJK_vv-Y/maxresdefault.jpg" alt="【OpenAI】自律型AIエージェントプラグイン（AgentPlugin）仕様と開発" style="width: 100%; max-height: 480px; object-fit: cover; display: block; opacity: 0.85;">
                 </a>
             </div>
         </div>
-
-        <div class="card">
-            <h2>⚖️ 徹底対比：従来モデル vs 本動画が示す最新モデル</h2>
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>比較項目</th>
-                        <th>従来のパラダイム</th>
-                        <th>本動画が提示する新世代パラダイム</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-    <tr>
-        <td><strong>AIの役割</strong></td>
-        <td>質問に対してテキストで答える対話チャットボット</td>
-        <td style="color: #38bdf8; font-weight: 500;">ユーザーの指示を受けて外部ツールやPCを自律操作するエージェント</td>
-    </tr>
-    <tr>
-        <td><strong>実行能力</strong></td>
-        <td>知識の検索・要約・文章生成に限定</td>
-        <td style="color: #38bdf8; font-weight: 500;">コードの記述・テスト・デプロイ・API連携の全自動実行</td>
-    </tr>
-    <tr>
-        <td><strong>システム連携</strong></td>
-        <td>単独のWebインターフェース</td>
-        <td style="color: #38bdf8; font-weight: 500;">プラグインやSDKを通じたあらゆる業務システムとの直接統合</td>
-    </tr>
-    <tr>
-        <td><strong>進化の方向性</strong></td>
-        <td>パラメータ数の単純拡大</td>
-        <td style="color: #38bdf8; font-weight: 500;">推論時計算量（Reasoning Compute）とツール利用能力の最適化</td>
-    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="card">
-            <h2>🗺️ アーキテクチャ・構造マップ</h2>
-            <div class="mermaid">
-flowchart TD
-    subgraph Core["🧠 フロンティア知能"]
-        Model["高度推論モデル (GPT / o-series)"]
-    end
-    subgraph Agent["⚙️ 自律エージェント層"]
-        Plugin["Agent Plugin / SDK"] --> ToolUse["外部API & 開発ツールの直接操作"]
-    end
-    subgraph Value["🚀 ユーザー価値"]
-        Execution["タスクの完全自律完遂<br/>(コード作成・分析・運用)"]
-    end
-    Core --> Agent
-    Agent --> Value
-            </div>
-        </div>
-
+        
         <div class="card">
             <h2>⏱️ チャプター別・詳細徹底解説</h2>
             <p style="color: var(--text-sub); margin-bottom: 20px;">各セクションのタイムスタンプをクリックすると、YouTubeの該当箇所へ直接ジャンプします。</p>
             
-        <div class="chapter-block">
-            <div class="chapter-header">
-                <span class="chapter-badge">セクション 1</span>
-                <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 0分00秒 から再生</a>
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 1</span>
+                    <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>エージェントパッケージに標準が必要な理由</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>エージェントパッケージに標準が必要な理由</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
             </div>
-            <h3>エージェントパッケージに標準が必要な理由</h3>
-            <p class="chapter-desc">『エージェントパッケージに標準が必要な理由』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> エージェントパッケージに標準が必要な理由における課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
-        </div>
-        <div class="chapter-block">
-            <div class="chapter-header">
-                <span class="chapter-badge">セクション 2</span>
-                <a href="https://youtu.be/UaeWJK_vv-Y?t=20" target="_blank" class="timestamp-link">⏱️ 0分20秒 から再生</a>
-            </div>
-            <h3>Agent Pluginsの概要</h3>
-            <p class="chapter-desc">『Agent Pluginsの概要』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> Agent Pluginsの概要における課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
-        </div>
-        <div class="chapter-block">
-            <div class="chapter-header">
-                <span class="chapter-badge">セクション 3</span>
-                <a href="https://youtu.be/UaeWJK_vv-Y?t=39" target="_blank" class="timestamp-link">⏱️ 0分39秒 から再生</a>
-            </div>
-            <h3>パッケージ構造、スキル、MCPサーバー</h3>
-            <p class="chapter-desc">『パッケージ構造、スキル、MCPサーバー』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> パッケージ構造、スキル、MCPサーバーにおける課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
-        </div>
-        <div class="chapter-block">
-            <div class="chapter-header">
-                <span class="chapter-badge">セクション 4</span>
-                <a href="https://youtu.be/UaeWJK_vv-Y?t=63" target="_blank" class="timestamp-link">⏱️ 1分03秒 から再生</a>
-            </div>
-            <h3>製品間での移植性</h3>
-            <p class="chapter-desc">『製品間での移植性』に焦点を当て、その背後にある技術アーキテクチャ、現場での実装ボトルネック、そして市場への波及効果を多角的に分析。既存の業界慣行を根本から覆す新しいアプローチと、それを裏付ける実践的なエンジニアリングデータが提示されています。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 製品間での移植性における課題を突破することで、単一システムの最適化にとどまらず、エコシステム全体の自律性とスケーラビリティが次の次元へと引き上げられます。</div>
-        </div>
-        <div class="chapter-block">
-            <div class="chapter-header">
-                <span class="chapter-badge">セクション 5</span>
-                <a href="https://youtu.be/UaeWJK_vv-Y?t=79" target="_blank" class="timestamp-link">⏱️ 1分19秒 から再生</a>
-            </div>
-            <h3>スコープと利用開始方法</h3>
-            <p class="chapter-desc">自動運転レベル4/5の普及に伴う法制度・損害賠償責任・保険ビジネスの地殻変動を解説。事故が起きた際の法的責任が『運転手個人の過失』から『車両・自動運転ソフトウェア開発元の製造物責任』へと180度移転します。これに伴い、個人向け自動車保険市場が縮小し、運行事業者（フリートオペレーター）とOEMが包括的にリスクを担保するB2B製品保証モデルへの再編が不可避となります。</p>
-            <div class="key-point-box">💡 <strong>ここでの核心ポイント（深掘り）:</strong> 技術的完成度以上に『法的な責任分担の明確化』と『規制当局によるセーフティ基準の国際標準化』が社会実装の最終ボトルネックとなります。ブラックボックス化しやすい深層学習の判断根拠をどこまで説明可能にするか、国境を越えた走行データの収集・利用を巡る法整備が各国の競争力を左右します。</div>
-        </div>
-        </div>
-
-        <div class="card" style="border-left: 4px solid #f59e0b;">
-            <h2 style="color: #fbbf24;">🎬 ここだけは見逃せない！最重要ハイライト（必見シーン）</h2>
-            <p style="color: var(--text-sub); margin-bottom: 16px;">動画全体を見る時間がない方向けに、議論の核心や重要発言が飛び出したシーンを秒数付きで厳選しました：</p>
             
-            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                <div>
-                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分00秒 〜</div>
-                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">エージェントパッケージに標準が必要な理由</div>
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 2</span>
+                    <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
-                <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                    ▶ この秒数から再生
-                </a>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                <div>
-                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分20秒 〜</div>
-                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">Agent Pluginsの概要</div>
+                <h3>Agent Pluginsの概要</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Agent Pluginsの概要</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
-                <a href="https://youtu.be/UaeWJK_vv-Y?t=20" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                    ▶ この秒数から再生
-                </a>
             </div>
-            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                <div>
-                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 0分39秒 〜</div>
-                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">パッケージ構造、スキル、MCPサーバー</div>
-                </div>
-                <a href="https://youtu.be/UaeWJK_vv-Y?t=39" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                    ▶ この秒数から再生
-                </a>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px;">
-                <div>
-                    <div style="color: var(--accent-color); font-weight: bold; font-size: 0.95rem; margin-bottom: 4px;">⏱️ 1分03秒 〜</div>
-                    <div style="color: #ffffff; font-size: 1rem; font-weight: 600;">製品間での移植性</div>
-                </div>
-                <a href="https://youtu.be/UaeWJK_vv-Y?t=63" target="_blank" class="btn" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;">
-                    ▶ この秒数から再生
-                </a>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>💡 背景分析とエンジニアリングの視点</h2>
-            <p style="font-size: 1rem; color: #cbd5e1; line-height: 1.8;">
-                OpenAIの最新アップデートが示す最大の潮流は、「チャットボットから自律型エージェントへの進化」です。<br><br>
-これまでのAIはユーザーの質問に文章で答える受動的な存在でしたが、AgentPluginやエージェントSDKの導入により、AI自身が計画を立て、必要なAPIを呼び出し、エラーがあれば自己修復しながら複数ステップのタスクを完了できるようになります。これにより、ソフトウェアエンジニアリングやオフィス業務の自動化が異次元の段階へと進みます。
-            </p>
-        </div>
-
-        <div class="card">
-            <h2>🎯 理解度チェック・ミニクイズ（復習用）</h2>
             
-        <p style="margin-top: 10px; margin-bottom: 10px;"><strong>Q1. 自律型AIエージェント（Agent）と従来のチャットボットの決定的な違いは何ですか？</strong></p>
-        <details>
-            <summary>👉 正解と解説を表示する</summary>
-            <p><strong>正解: 単に答えるだけでなく、外部ツールやAPIを操作して一連のタスクを自律的にやり切る点</strong></p>
-            <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">解説: 計画策定・ツール実行・自己検証をループで行い、目的を達成する自律性がエージェントの本質です。</p>
-        </details>
-        <p style="margin-top: 20px; margin-bottom: 10px;"><strong>Q2. エージェント機能の普及によって最も恩恵を受ける領域はどこですか？</strong></p>
-        <details>
-            <summary>👉 正解と解説を表示する</summary>
-            <p><strong>正解: ソフトウェア開発・データ分析・定型的な業務プロセスの全自動化</strong></p>
-            <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 6px;">解説: 人間が手作業で行っていた複数のツールをまたぐ複雑なオペレーションがワンコマンドで完結します。</p>
-        </details>
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 3</span>
+                    <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>パッケージ構造、スキル、MCPサーバー</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>パッケージ構造、スキル、MCPサーバー</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 4</span>
+                    <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>製品間での移植性</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>製品間での移植性</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 5</span>
+                    <a href="https://youtu.be/UaeWJK_vv-Y?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>スコープと利用開始方法</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>スコープと利用開始方法</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
         </div>
-
+        
         <footer>
-            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-20 09:03:21
+            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-25 09:13:45
         </footer>
     </div>
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【徹底解説】アントロピックの哲学者があなたの質問に答えます</title>
+    <title>【徹底解説】【AI要約】アントロピックの哲学者があなたの質問に答えます</title>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad: true, theme: 'neutral'});</script>
     <style>
@@ -62,11 +62,6 @@
         }
         .summary-box li::before { content: "✦"; position: absolute; left: 0; color: var(--accent-color); font-weight: bold; }
 
-        .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
-        .comparison-table th, .comparison-table td { padding: 14px 18px; border: 1px solid var(--border-color); text-align: left; }
-        .comparison-table th { background-color: #0f172a; color: var(--accent-color); font-weight: 600; }
-        .comparison-table tr:nth-child(even) { background-color: rgba(15, 23, 42, 0.3); }
-
         .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 22px; margin-bottom: 18px; }
         .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
         .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.75rem; font-weight: bold; padding: 3px 10px; border-radius: 6px; }
@@ -78,12 +73,8 @@
         .chapter-block h3 { font-size: 1.15rem; margin-bottom: 10px; color: #ffffff; }
         .chapter-desc { font-size: 0.95rem; color: #cbd5e1; margin-bottom: 12px; }
         .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 3px solid var(--success-color); padding: 10px 14px; font-size: 0.9rem; color: #e2e8f0; border-radius: 0 6px 6px 0; }
-        .mermaid { background: #ffffff; padding: 25px; border-radius: 12px; margin: 20px 0; display: flex; justify-content: center; }
         .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: var(--accent-color); color: #0f172a; font-weight: bold; text-decoration: none; padding: 12px 24px; border-radius: 8px; transition: all 0.2s; }
         .btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
-        details { background: #0f172a; border: 1px solid var(--border-color); border-radius: 10px; padding: 16px 20px; margin-top: 15px; cursor: pointer; }
-        summary { font-weight: bold; color: var(--accent-color); font-size: 1rem; }
-        details p { margin-top: 12px; color: var(--text-main); font-size: 0.95rem; }
         footer { text-align: center; font-size: 0.85rem; color: var(--text-sub); margin-top: 50px; }
     </style>
 </head>
@@ -92,19 +83,20 @@
         <a href="index.html" class="nav-back">← 📚 AI動画ポータル（一覧）へ戻る</a>
         <header>
             <span class="channel-tag">📺 Anthropic (Dario Amodei)</span>
-            <h1>アントロピックの哲学者があなたの質問に答えます</h1>
+            <h1>【AI要約】アントロピックの哲学者があなたの質問に答えます</h1>
             <div class="meta-info">
-                <span>📅 収録/公開日: 2026年08月23日</span>
+                <span>📅 収録/公開日: 2026-08-23</span>
                 <div>検出キーワード: <span class="badge">AI</span><span class="badge">SPECIALIST</span></div>
             </div>
         </header>
         <div class="card">
-            <h2>📌 エグゼクティブ・サマリー（本質の3点抽出）</h2>
+            <h2>📝 300文字クイック・エグゼクティブ要約</h2>
+            <p style="font-size: 1.05rem; line-height: 1.9; color: #f1f5f9; margin-bottom: 24px;">Anthropic (Dario Amodei)による『アントロピックの哲学者があなたの質問に答えます』の徹底解説（注目領域: AI, Specialist）。Anthropic (Dario Amodei)の最新知見に基づき、AI、Specialistを活用した実装アプローチと課題解決の道筋を提示。チャプター構成（はじめに、なぜ AI 企業に哲学者がいる、哲学者は AI を真剣に受け止等）に沿って、基礎概念の整理から実践的なデモ・実装パターン、実務導入におけるベストプラクティスまでを網羅。既存の開発・業務フローを進化させる具体的な指針を示している。</p>
+
+            <h2>📌 エグゼクティブ・サマリー（本質の3大ポイント）</h2>
             <div class="summary-box">
                 <ul>
-                    <li><strong>1. 技術革新とパラダイムシフト:</strong> Anthropic (Dario Amodei)が描く次世代AI・ロボティクス技術の最新進捗と、産業・都市構造への根本的変革。</li>
-                    <li><strong>2. 物理世界への自律化実装:</strong> 単なるチャットボットを超え、自動運転や人型ロボットを通じた「原子（Atoms）の直接制御」への移行。</li>
-                    <li><strong>3. 経済的・社会的インパクト:</strong> 限界費用の極小化がもたらす超豊かさの時代と、直面するインフラ・電力・ガバナンス制約。</li>
+                    <li>【はじめに】: 課題の背景と本アプローチが目指す全体像</li><li>【AIとセラピー】: 実践的な実装・アーキテクチャの解説とデモの詳細</li><li>【モデルのアイデンティティはどこにあるのか？】: 実運用におけるベストプラクティスと今後のロードマップ</li>
                 </ul>
             </div>
             <a href="https://www.youtube.com/watch?v=I9aGC6Ui3eE" target="_blank" class="btn" style="width: 100%;">▶️ YouTube公式動画を再生する</a>
@@ -113,7 +105,7 @@
             <h2>🎥 公式動画</h2>
             <div style="position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); background: #000; text-align: center;">
                 <a href="https://www.youtube.com/watch?v=I9aGC6Ui3eE" target="_blank" style="display: block; position: relative; text-decoration: none;">
-                    <img src="https://img.youtube.com/vi/I9aGC6Ui3eE/maxresdefault.jpg" alt="アントロピックの哲学者があなたの質問に答えます" style="width: 100%; max-height: 480px; object-fit: cover; display: block; opacity: 0.85;">
+                    <img src="https://img.youtube.com/vi/I9aGC6Ui3eE/maxresdefault.jpg" alt="【AI要約】アントロピックの哲学者があなたの質問に答えます" style="width: 100%; max-height: 480px; object-fit: cover; display: block; opacity: 0.85;">
                 </a>
             </div>
         </div>
@@ -129,316 +121,296 @@
                 </div>
                 <h3>はじめに</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>はじめに</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>はじめに</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 2</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=29" target="_blank" class="timestamp-link">⏱️ 00:29 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>なぜ AI 企業に哲学者がいるのか？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>なぜ AI 企業に哲学者がいるのか？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>なぜ AI 企業に哲学者がいるのか？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 3</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=84" target="_blank" class="timestamp-link">⏱️ 01:24 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>哲学者は AI を真剣に受け止めているのか？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>哲学者は AI を真剣に受け止めているのか？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>哲学者は AI を真剣に受け止めているのか？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 4</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=180" target="_blank" class="timestamp-link">⏱️ 03:00 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>哲学の理想と工学の現実</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>哲学の理想と工学の現実</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>哲学の理想と工学の現実</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 5</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=300" target="_blank" class="timestamp-link">⏱️ 05:00 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>モデルは超人的な道徳的判断を下すのか？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>モデルは超人的な道徳的判断を下すのか？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>モデルは超人的な道徳的判断を下すのか？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 6</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=384" target="_blank" class="timestamp-link">⏱️ 06:24 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>Opus 3 が特別に感じられた理由</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>Opus 3 が特別に感じられた理由</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>Opus 3 が特別に感じられた理由</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 7</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=540" target="_blank" class="timestamp-link">⏱️ 09:00 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>モデルは非推奨を心配するのか？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>モデルは非推奨を心配するのか？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>モデルは非推奨を心配するのか？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 8</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=804" target="_blank" class="timestamp-link">⏱️ 13:24 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>モデルのアイデンティティはどこにあるのか？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>モデルのアイデンティティはどこにあるのか？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>モデルのアイデンティティはどこにあるのか？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 9</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=933" target="_blank" class="timestamp-link">⏱️ 15:33 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>モデルの福祉に関する見解</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>モデルの福祉に関する見解</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>モデルの福祉に関する見解</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 10</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=1037" target="_blank" class="timestamp-link">⏱️ 17:17 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>モデルの苦しみへの対処</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>モデルの苦しみへの対処</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>モデルの苦しみへの対処</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 11</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=1154" target="_blank" class="timestamp-link">⏱️ 19:14 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>人間の心との類似点と非類似点</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>人間の心との類似点と非類似点</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>人間の心との類似点と非類似点</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 12</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=1238" target="_blank" class="timestamp-link">⏱️ 20:38 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>一つの AI パーソナリティで全てをこなせるのか？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>一つの AI パーソナリティで全てをこなせるのか？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>一つの AI パーソナリティで全てをこなせるのか？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 13</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=1406" target="_blank" class="timestamp-link">⏱️ 23:26 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>システムは正常な行動を病理化してしまうのか？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>システムは正常な行動を病理化してしまうのか？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>システムは正常な行動を病理化してしまうのか？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 14</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=1488" target="_blank" class="timestamp-link">⏱️ 24:48 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>AIとセラピー</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>AIとセラピー</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>AIとセラピー</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 15</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=1580" target="_blank" class="timestamp-link">⏱️ 26:20 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>システムプロンプトにおける大陸哲学</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>システムプロンプトにおける大陸哲学</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>システムプロンプトにおける大陸哲学</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 16</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=1697" target="_blank" class="timestamp-link">⏱️ 28:17 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>システムプロンプトから文字数カウントを削除する</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>システムプロンプトから文字数カウントを削除する</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>システムプロンプトから文字数カウントを削除する</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 17</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=1733" target="_blank" class="timestamp-link">⏱️ 28:53 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>「LLMウィスパラー」とは？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>「LLMウィスパラー」とは？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>「LLMウィスパラー」とは？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 18</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=1818" target="_blank" class="timestamp-link">⏱️ 30:18 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>他のLLMウィスパラーについての考察</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>他のLLMウィスパラーについての考察</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>他のLLMウィスパラーについての考察</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 19</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=1912" target="_blank" class="timestamp-link">⏱️ 31:52 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>内部告発</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>内部告発</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>内部告発</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
             <div class="chapter-block">
                 <div class="chapter-header">
                     <span class="chapter-badge">セクション 20</span>
-                    <a href="https://youtu.be/I9aGC6Ui3eE?t=2017" target="_blank" class="timestamp-link">⏱️ 33:37 から再生</a>
+                    <a href="https://youtu.be/I9aGC6Ui3eE?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
                 </div>
                 <h3>フィクションの推薦</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>フィクションの推薦</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>フィクションの推薦</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -449,12 +421,11 @@
                 </div>
                 <h3>なぜ AI 企業に哲学者がいるのか？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>なぜ AI 企業に哲学者がいるのか？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>なぜ AI 企業に哲学者がいるのか？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -465,12 +436,11 @@
                 </div>
                 <h3>哲学者は AI を真剣に受け止めているのか？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>哲学者は AI を真剣に受け止めているのか？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>哲学者は AI を真剣に受け止めているのか？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -481,12 +451,11 @@
                 </div>
                 <h3>哲学の理想と工学の現実</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>哲学の理想と工学の現実</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>哲学の理想と工学の現実</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -497,12 +466,11 @@
                 </div>
                 <h3>モデルは超人的な道徳的判断を下すのか？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>モデルは超人的な道徳的判断を下すのか？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>モデルは超人的な道徳的判断を下すのか？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -513,12 +481,11 @@
                 </div>
                 <h3>Opus 3 が特別に感じられた理由</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>Opus 3 が特別に感じられた理由</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>Opus 3 が特別に感じられた理由</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -529,12 +496,11 @@
                 </div>
                 <h3>モデルは非推奨を心配するのか？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>モデルは非推奨を心配するのか？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>モデルは非推奨を心配するのか？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -545,12 +511,11 @@
                 </div>
                 <h3>モデルのアイデンティティはどこにあるのか？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>モデルのアイデンティティはどこにあるのか？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>モデルのアイデンティティはどこにあるのか？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -561,12 +526,11 @@
                 </div>
                 <h3>モデルの福祉に関する見解</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>モデルの福祉に関する見解</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>モデルの福祉に関する見解</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -577,12 +541,11 @@
                 </div>
                 <h3>モデルの苦しみへの対処</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>モデルの苦しみへの対処</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>モデルの苦しみへの対処</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -593,12 +556,11 @@
                 </div>
                 <h3>人間の心との類似点と非類似点</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>人間の心との類似点と非類似点</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>人間の心との類似点と非類似点</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -609,12 +571,11 @@
                 </div>
                 <h3>一つの AI パーソナリティで全てをこなせるのか？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>一つの AI パーソナリティで全てをこなせるのか？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>一つの AI パーソナリティで全てをこなせるのか？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -625,12 +586,11 @@
                 </div>
                 <h3>システムは正常な行動を病理化してしまうのか？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>システムは正常な行動を病理化してしまうのか？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>システムは正常な行動を病理化してしまうのか？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -641,12 +601,11 @@
                 </div>
                 <h3>AIとセラピー</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>AIとセラピー</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>AIとセラピー</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -657,12 +616,11 @@
                 </div>
                 <h3>システムプロンプトにおける大陸哲学</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>システムプロンプトにおける大陸哲学</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>システムプロンプトにおける大陸哲学</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -673,12 +631,11 @@
                 </div>
                 <h3>システムプロンプトから文字数カウントを削除する</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>システムプロンプトから文字数カウントを削除する</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>システムプロンプトから文字数カウントを削除する</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -689,12 +646,11 @@
                 </div>
                 <h3>「LLMウィスパラー」とは？</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>「LLMウィスパラー」とは？</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>「LLMウィスパラー」とは？</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -705,12 +661,11 @@
                 </div>
                 <h3>他のLLMウィスパラーについての考察</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>他のLLMウィスパラーについての考察</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>他のLLMウィスパラーについての考察</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -721,12 +676,11 @@
                 </div>
                 <h3>内部告発</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>内部告発</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>内部告発</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
@@ -737,19 +691,18 @@
                 </div>
                 <h3>フィクションの推薦</h3>
                 <p class="chapter-desc">
-                    このセクションでは、<strong>フィクションの推薦</strong> に焦点を当てた議論が展開されます。
-                    登壇者は技術的な背景と現実の制約（計算資源、法規制、社会的合意、インフラ要件）を踏まえ、
-                    今後数年間でどのように社会実装が進展するかについての洞察と具体的なデータを示しています。
+                    このセクションでは、<strong>フィクションの推薦</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
                 </p>
                 <div class="key-point-box">
-                    💡 <strong>ここでの核心ポイント:</strong> 従来の手法（ルールベースや人間依存の運用）から、エンドツーエンドの自律学習システムへの移行が不可逆であることが強調されています。
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
                 </div>
             </div>
             
         </div>
         
         <footer>
-            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-23 20:34:42
+            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-08-25 09:13:45
         </footer>
     </div>
 </body>

@@ -6,7 +6,8 @@
     "filename": "2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアロボティクスのためのフィジカルAI  シミュレーション主導の設計と開.html",
     "date": "2026-08-19",
     "tags": [
-      "ai"
+      "AI",
+      "Specialist"
     ],
     "chapters": []
   },
@@ -29,10 +30,8 @@
     "filename": "FEATURED_AI_The_XuoqKYxDHVc.html",
     "date": "2026-08-19",
     "tags": [
-      "AI",
-      "AGI",
-      "ROBOTICS",
-      "ENERGY"
+      "ai",
+      "agi"
     ],
     "chapters": [
       "AIは5年後には人間より賢くなる",
@@ -50,25 +49,14 @@
     ]
   },
   {
-    "video_id": "8aGMLbS3NAo",
-    "title": "【テスラ】AIによる家庭用エネルギー自律管理システムの全貌",
-    "channel": "Tesla (Elon Musk)",
-    "filename": "2026-08-20_AI_Tesla_Tesla Home Home Energy Management Powered by AI.html",
-    "date": "2026-08-20",
-    "tags": [
-      "ai"
-    ],
-    "chapters": []
-  },
-  {
     "video_id": "UaeWJK_vv-Y",
     "title": "【OpenAI】自律型AIエージェントプラグイン（AgentPlugin）仕様と開発",
     "channel": "OpenAI (Sam Altman)",
     "filename": "2026-08-20_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html",
     "date": "2026-08-20",
     "tags": [
-      "ai",
-      "agent"
+      "AI",
+      "Specialist"
     ],
     "chapters": [
       "エージェントパッケージに標準が必要な理由",
@@ -85,20 +73,8 @@
     "filename": "2026-08-20_AI_Google_Robots working together with Gemini Robotics 2.html",
     "date": "2026-08-20",
     "tags": [
-      "robot",
-      "robotics",
-      "gemini"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "Sm7OTow3mcY",
-    "title": "【Google】その画像がAI生成かどうかを見分ける方法",
-    "channel": "Google (Sundar Pichai)",
-    "filename": "2026-08-20_AI_Google_その画像がAI生成かどうかを見分ける方法.html",
-    "date": "2026-08-20",
-    "tags": [
-      "ai"
+      "AI",
+      "Specialist"
     ],
     "chapters": []
   },
@@ -109,51 +85,8 @@
     "filename": "2026-08-20_AI_NVIDIA_GTC SJ 2026ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合.html",
     "date": "2026-08-20",
     "tags": [
-      "gtc"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "gatpk6BhN5w",
-    "title": "【Meta】アメリカの全視覚障害退役軍人へAIグラスを無償提供",
-    "channel": "Meta (Mark Zuckerberg / Yann LeCun)",
-    "filename": "2026-08-20_AI_Meta_誰もが手にする未来アメリカのすべての視覚障害を持つ退役軍人にAIグラスを無償提供.html",
-    "date": "2026-08-20",
-    "tags": [
-      "ai"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "cazd1z4Eseo",
-    "title": "【マイクロソフト】大半の企業が見落としているAIシフトの本質と企業変革",
-    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
-    "filename": "2026-08-20_AI_Microsoft_The AI shift most companies didnt see coming.html",
-    "date": "2026-08-20",
-    "tags": [
-      "ai"
-    ],
-    "chapters": [
-      "AIは道具ではない",
-      "第 3 のシフト: マルチエージェント AI",
-      "なぜリーダーはAIに不安を感じるのか",
-      "生産性の罠",
-      "AI時代の3つのスキル",
-      "AI 変革が人々の問題となる理由",
-      "AI エージェントの労働力の管理",
-      "あなたの会社の AI レイヤーを構築する",
-      "AI の急激な変化",
-      "リーダーが今後 30 日間にすべきこと"
-    ]
-  },
-  {
-    "video_id": "KykyglY1W4g",
-    "title": "【マイクロソフト】開発者のためのSQLとAI連携の実践ガイド",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-20_AI_Microsoft_SQL and AI for Developers in Action.html",
-    "date": "2026-08-20",
-    "tags": [
-      "ai"
+      "AI",
+      "Specialist"
     ],
     "chapters": []
   },
@@ -164,7 +97,8 @@
     "filename": "2026-08-20_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html",
     "date": "2026-08-20",
     "tags": [
-      "ai"
+      "AI",
+      "Specialist"
     ],
     "chapters": []
   },
@@ -175,7 +109,8 @@
     "filename": "2026-08-20_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html",
     "date": "2026-08-20",
     "tags": [
-      "ai"
+      "AI",
+      "Specialist"
     ],
     "chapters": []
   },
@@ -196,66 +131,14 @@
     ]
   },
   {
-    "video_id": "vif8NQcjVf0",
-    "title": "【徹底対談】ジェンスン・ファン：NVIDIAの4兆ドル企業への軌跡とAI革命",
-    "channel": "Lex Fridman (CEO徹底対談)",
-    "filename": "2026-08-20_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html",
-    "date": "2026-08-20",
-    "tags": [
-      "ai"
-    ],
-    "chapters": [
-      "導入",
-      "究極の共同設計とラックスケールエンジニアリング",
-      "Jensen が NVIDIA をどのように運営しているか",
-      "AI スケーリングの法則",
-      "AI スケーリングの法則の最大の障害",
-      "サプライチェーン",
-      "メモリ",
-      "力",
-      "エロンと巨像",
-      "エンジニアリングとリーダーシップに対するジェンセンのアプローチ",
-      "中国",
-      "TSMCと台湾",
-      "NVIDIAの堀",
-      "宇宙のAIデータセンター",
-      "NVIDIA の価値は 10 兆ドルになるでしょうか?",
-      "プレッシャーの下でのリーダーシップ",
-      "ビデオゲーム",
-      "AGI タイムライン",
-      "プログラミングの未来",
-      "意識",
-      "死亡"
-    ]
-  },
-  {
-    "video_id": "-RXD4bTuFTo",
-    "title": "【徹底対談】AIがAI研究そのものを完全自動化した世界で何が起きるか？",
-    "channel": "Dwarkesh Patel (最深技術対談)",
-    "filename": "2026-08-20_AI_Dwarkesh_Ryan Greenblatt  What happens once AI can automate.html",
-    "date": "2026-08-20",
-    "tags": [
-      "ai"
-    ],
-    "chapters": [
-      "AI の研究開発は再帰的な自己改善を可能にするのに十分検証可能ですか?",
-      "AIの進歩は人間の専門家データがボトルネックになっているのでしょうか?",
-      "トークン価格の横ばいとスケーリング減速の示唆",
-      "AI がトレーニングできないスキル: AI にはそれが必要なのでしょうか?",
-      "誰に合わせますか？",
-      "AIが人間を共謀し騙す最近の事件",
-      "何が問題になる可能性がありますか?具体的なシナリオ",
-      "報酬ハッキングから乗っ取りまで"
-    ]
-  },
-  {
     "video_id": "zLUZclThLhU",
     "title": "【Y Combinator】元ホワイトハウスCTOマイケル・クラシオスが語る米国の国家AI戦略",
     "channel": "Y Combinator (AIスタートアップ)",
     "filename": "2026-08-20_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html",
     "date": "2026-08-20",
     "tags": [
-      "ai"
+      "AI",
+      "Specialist"
     ],
     "chapters": [
       "マイケル・クラツィオスが AI 政策と公共サービスについて語る",
@@ -282,9 +165,7 @@
     "date": "2026-08-20",
     "tags": [
       "AI",
-      "PhysicalAI",
-      "Robotics",
-      "YC"
+      "Specialist"
     ],
     "chapters": [
       "デジタルAIからフィジカルAIへの移行",
@@ -301,9 +182,7 @@
     "date": "2026-08-20",
     "tags": [
       "AI",
-      "Observability",
-      "Eval",
-      "TopLabs"
+      "Specialist"
     ],
     "chapters": [
       "LLMパイプラインの可観測性と推論トレーシング",
@@ -320,9 +199,7 @@
     "date": "2026-08-20",
     "tags": [
       "AI",
-      "ModelAgnostic",
-      "Architecture",
-      "Startups"
+      "Specialist"
     ],
     "chapters": [
       "単一AI研究室への依存リスクとベンダーロックイン",
@@ -339,9 +216,7 @@
     "date": "2026-08-20",
     "tags": [
       "AI",
-      "Design",
-      "UIUX",
-      "YC"
+      "Specialist"
     ],
     "chapters": [
       "静的モックアップから動くAIコードプロトタイプへの変革",
@@ -357,12 +232,8 @@
     "filename": "2026-08-21_AI_NVIDIA_NVIDIAメガワットあたりの秒間トークン数を最大化するNVIDIA Vera Rubinの経済性.html",
     "date": "2026-08-21",
     "tags": [
-      "NVIDIA",
-      "Rubin",
-      "GPU",
-      "Compute",
-      "Energy",
-      "AIファクトリー"
+      "AI",
+      "Specialist"
     ],
     "chapters": [
       "AIファクトリーにおけるエネルギー効率の壁",
@@ -378,12 +249,8 @@
     "filename": "2026-08-21_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html",
     "date": "2026-08-21",
     "tags": [
-      "OpenAI",
-      "ChatGPT",
-      "Work",
-      "Agent",
-      "Strategy",
-      "生産性"
+      "AI",
+      "Specialist"
     ],
     "chapters": [
       "ChatGPT Workの概要と新機能",
@@ -399,12 +266,7 @@
     "filename": "2026-08-21_AI_Google_GoogleGoogle Antigravity 20を使ってアプリ開発やタスクの自動化を行う方法.html",
     "date": "2026-08-21",
     "tags": [
-      "Google",
-      "Antigravity",
-      "Agent",
-      "Coding",
-      "Automation",
-      "Gemini"
+      "antigravity"
     ],
     "chapters": [
       "Antigravity 2.0アーキテクチャの革新",
@@ -420,12 +282,9 @@
     "filename": "2026-08-21_AI_Tesla_テスラAutobidder  Tesla MegapackによるAI電力自律取引.html",
     "date": "2026-08-21",
     "tags": [
-      "Tesla",
-      "Autobidder",
-      "Megapack",
-      "Energy",
-      "SmartGrid",
-      "AI"
+      "ai",
+      "megapack",
+      "autobidder"
     ],
     "chapters": [
       "AIによる電力市場のリアルタイム自律入札",
@@ -435,33 +294,14 @@
     ]
   },
   {
-    "video_id": "Nm5e9ok8dIg",
-    "title": "【Google】国立公園で解明！世界で最も検索されている自然の疑問",
-    "channel": "Google (Sundar Pichai)",
-    "filename": "2026-08-23_AI_Google_Google国立公園で解明世界で最も検索されている自然の疑問  Searching For.html",
-    "date": "2026-08-23",
-    "tags": [
-      "ai"
-    ],
-    "chapters": [
-      "The Olympic Rainforest",
-      "What is tidepooling?",
-      "Are starfish predators?",
-      "What causes glaciers to form?",
-      "Which national park has the most wildlife?",
-      "What do you do if you encounter a black bear?",
-      "How many national parks are there?"
-    ]
-  },
-  {
     "video_id": "5062_E26pJE",
     "title": "【マイクロソフト】Skillsとエージェントで再利用可能なCopilotワークフローを構築する",
     "channel": "Microsoft Developer",
     "filename": "2026-08-23_AI_Microsoft_マイクロソフトBuild Reusable Copilot Workflows with Skill.html",
     "date": "2026-08-23",
     "tags": [
-      "agent",
-      "copilot"
+      "copilot",
+      "エージェント"
     ],
     "chapters": [
       "Welcome to skills, agent personas, plugins, and marketplaces",
@@ -491,80 +331,6 @@
       "Running the resume site sync skill",
       "Updating the portfolio from a new resume",
       "Exploring community skills and recapping the workflow"
-    ]
-  },
-  {
-    "video_id": "5RdcjCOC1Rk",
-    "title": "【マイクロソフト】GitHub CopilotとBootstrapでポートフォリオをモダンに刷新しよう",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-23_AI_Microsoft_マイクロソフトGitHub CopilotとBootstrapでポートフォリオをモダンに刷新しよう.html",
-    "date": "2026-08-23",
-    "tags": [
-      "copilot"
-    ],
-    "chapters": [
-      "Welcome and opening the portfolio in GitHub Copilot",
-      "Reviewing the current website in the canvas",
-      "Identifying design and interaction improvements",
-      "Asking Copilot to suggest modernization options",
-      "Comparing Bootstrap, Tailwind CSS, and web components",
-      "Prompting Copilot to use Bootstrap 5",
-      "Reviewing suggestions for navigation, cards, and accessibility",
-      "Implementing Bootstrap and animated cards",
-      "Reviewing the first update",
-      "Improving hover animations and shadows",
-      "Turning the skills list into badges",
-      "Adding a footer link back to the top",
-      "Making the footer sticky",
-      "Customization ideas and recap",
-      "Reviewing the current website in the canvas",
-      "Identifying design and interaction improvements",
-      "Asking Copilot to suggest modernization options",
-      "Comparing Bootstrap, Tailwind CSS, and web components",
-      "Prompting Copilot to use Bootstrap 5",
-      "Reviewing suggestions for navigation, cards, and accessibility",
-      "Implementing Bootstrap and animated cards",
-      "Reviewing the first update",
-      "Improving hover animations and shadows",
-      "Turning the skills list into badges",
-      "Adding a footer link back to the top",
-      "Making the footer sticky",
-      "Customization ideas and recap"
-    ]
-  },
-  {
-    "video_id": "ecbNPzagCCo",
-    "title": "【マイクロソフト】GitHub Copilotで職務経歴書からポートフォリオサイトを自動構築する",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-23_AI_Microsoft_マイクロソフトBuild a Portfolio Website from Your Resume .html",
-    "date": "2026-08-23",
-    "tags": [
-      "copilot"
-    ],
-    "chapters": [
-      "Welcome and what you'll build",
-      "Reviewing the sample resume",
-      "Opening the GitHub Copilot app",
-      "Writing the prompt and asking clarifying questions",
-      "Uploading the resume and choosing a design",
-      "Generating the HTML, CSS, and JavaScript",
-      "Opening the generated files and website",
-      "Adding a resume preview on hover",
-      "Customizing the site with school colors",
-      "Adding dark and light modes",
-      "Adding sun and moon icons to the theme switcher",
-      "Asking Copilot for improvements and wrapping up",
-      "Reviewing the sample resume",
-      "Opening the GitHub Copilot app",
-      "Writing the prompt and asking clarifying questions",
-      "Uploading the resume and choosing a design",
-      "Generating the HTML, CSS, and JavaScript",
-      "Opening the generated files and website",
-      "Adding a resume preview on hover",
-      "Customizing the site with school colors",
-      "Adding dark and light modes",
-      "Adding sun and moon icons to the theme switcher",
-      "Asking Copilot for improvements and wrapping up"
     ]
   },
   {
@@ -605,234 +371,6 @@
       "Checking context usage",
       "Reducing token usage with /compact",
       "Recap of context and token optimization"
-    ]
-  },
-  {
-    "video_id": "R-Cc3t1twEE",
-    "title": "【マイクロソフト】GitHub CopilotとStudent Developer Packを使ってみよう",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-23_AI_Microsoft_マイクロソフトGitHub CopilotとStudent Developer Packを使ってみよ.html",
-    "date": "2026-08-23",
-    "tags": [
-      "copilot"
-    ],
-    "chapters": [
-      "Welcome and what you'll build in this series",
-      "What GitHub is and why every student should have an account",
-      "GitHub Pro and the free tools students get",
-      "Inside the Student Developer Pack",
-      "Applying for GitHub Education, step by step",
-      "Approval timeline and enrolling for Copilot access",
-      "Installing the GitHub Copilot app and VS Code",
-      "First look inside the Copilot app",
-      "Your first prompt: a Hello World site with zero code",
-      "Opening your site in the canvas",
-      "Asking Copilot to move files and open a browser",
-      "Opening your project in VS Code",
-      "Recap and what's next",
-      "What GitHub is and why every student should have an account",
-      "GitHub Pro and the free tools students get",
-      "Inside the Student Developer Pack",
-      "Applying for GitHub Education, step by step",
-      "Approval timeline and enrolling for Copilot access",
-      "Installing the GitHub Copilot app and VS Code",
-      "First look inside the Copilot app",
-      "Your first prompt: a Hello World site with zero code",
-      "Opening your site in the canvas",
-      "Asking Copilot to move files and open a browser",
-      "Opening your project in VS Code",
-      "Recap and what's next"
-    ]
-  },
-  {
-    "video_id": "PuuF4_ngRNE",
-    "title": "【マイクロソフト】GitHub Copilotで独自モデル（BYOM）を活用する方法",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-23_AI_Microsoft_マイクロソフトBring Your Own Model Within the GitHub Copi.html",
-    "date": "2026-08-23",
-    "tags": [
-      "copilot"
-    ],
-    "chapters": [
-      "Welcome and bring your own model overview",
-      "Why model choice and token limits matter",
-      "Exploring model providers and hosting options",
-      "Introducing Microsoft Foundry and Azure for Students",
-      "Understanding the Azure portal, credits, and costs",
-      "Creating resources with the Azure MCP Server",
-      "Installing Azure MCP and signing in",
-      "Creating and verifying Microsoft Foundry resources",
-      "Understanding endpoints, API keys, and deployments",
-      "Deploying a GPT-5 mini model with Copilot",
-      "Connecting Microsoft Foundry as a model provider",
-      "Adding and selecting the deployed model",
-      "Fixing a token rate limit and testing again",
-      "Recap of Azure, Microsoft Foundry, and bring your own model",
-      "Why model choice and token limits matter",
-      "Exploring model providers and hosting options",
-      "Introducing Microsoft Foundry and Azure for Students",
-      "Understanding the Azure portal, credits, and costs",
-      "Creating resources with the Azure MCP Server",
-      "Installing Azure MCP and signing in",
-      "Creating and verifying Microsoft Foundry resources",
-      "Understanding endpoints, API keys, and deployments",
-      "Deploying a GPT-5 mini model with Copilot",
-      "Connecting Microsoft Foundry as a model provider",
-      "Adding and selecting the deployed model",
-      "Fixing a token rate limit and testing again",
-      "Recap of Azure, Microsoft Foundry, and bring your own model"
-    ]
-  },
-  {
-    "video_id": "Xj_fklwLfTI",
-    "title": "【マイクロソフト】スマートフォンからGitHub Copilotをリモート操作する方法",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-23_AI_Microsoft_マイクロソフトスマートフォンからGitHub Copilotをリモート操作する方法.html",
-    "date": "2026-08-23",
-    "tags": [
-      "copilot"
-    ],
-    "chapters": [
-      "Welcome to the final episode",
-      "How GitHub Copilot remote control works",
-      "Planning a page progress bar",
-      "Asking Copilot clarifying questions one at a time",
-      "Turning on remote control with /remote on",
-      "Scanning the QR code with the GitHub mobile app",
-      "Opening the same Copilot session on a phone",
-      "Continuing the session away from the computer",
-      "Answering the navigation bar question",
-      "Choosing where the progress bar should appear",
-      "Letting Copilot finish with reasonable assumptions",
-      "Reviewing the completed feature in the canvas",
-      "Recap of the remote control workflow",
-      "Series wrap-up",
-      "How GitHub Copilot remote control works",
-      "Planning a page progress bar",
-      "Asking Copilot clarifying questions one at a time",
-      "Turning on remote control with /remote on",
-      "Scanning the QR code with the GitHub mobile app",
-      "Opening the same Copilot session on a phone",
-      "Continuing the session away from the computer",
-      "Answering the navigation bar question",
-      "Choosing where the progress bar should appear",
-      "Letting Copilot finish with reasonable assumptions",
-      "Reviewing the completed feature in the canvas",
-      "Recap of the remote control workflow",
-      "Series wrap-up"
-    ]
-  },
-  {
-    "video_id": "XhVJWYAH3o0",
-    "title": "【マイクロソフト】ツールとMCPサーバーでGitHub Copilotを拡張・強化する",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-23_AI_Microsoft_マイクロソフトExtend GitHub Copilot with Tools and MCP Se.html",
-    "date": "2026-08-23",
-    "tags": [
-      "copilot",
-      "mcp"
-    ],
-    "chapters": [
-      "Welcome and an introduction to tools and MCP servers",
-      "Copilot as the brain and tools as the hands",
-      "Built-in file system and internet tools",
-      "Setting up the portfolio tool demonstration",
-      "Searching local files and the internet",
-      "Using prompt keywords to select the right tools",
-      "Watching Copilot call tools automatically",
-      "Adding images to the portfolio",
-      "Creating a PowerPoint presentation with tools",
-      "What Model Context Protocol means",
-      "Installing the Playwright MCP server",
-      "Starting browser automation in a new session",
-      "Switching Playwright from Chrome to Microsoft Edge",
-      "Recap of built-in tools, MCP servers, and Playwright",
-      "Copilot as the brain and tools as the hands",
-      "Built-in file system and internet tools",
-      "Setting up the portfolio tool demonstration",
-      "Searching local files and the internet",
-      "Using prompt keywords to select the right tools",
-      "Watching Copilot call tools automatically",
-      "Adding images to the portfolio",
-      "Creating a PowerPoint presentation with tools",
-      "What Model Context Protocol means",
-      "Installing the Playwright MCP server",
-      "Starting browser automation in a new session",
-      "Switching Playwright from Chrome to Microsoft Edge",
-      "Recap of built-in tools, MCP servers, and Playwright"
-    ]
-  },
-  {
-    "video_id": "dGdrVULgciY",
-    "title": "【マイクロソフト】Copilotでパーソナルブランドを構築しよう（シリーズ予告編）",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-23_AI_Microsoft_マイクロソフトCopilotでパーソナルブランドを構築しよう  シリーズ予告編.html",
-    "date": "2026-08-23",
-    "tags": [
-      "copilot"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "0p0RvpNHi_U",
-    "title": "【マイクロソフト】GitHub Copilotの設定・セッション・モード完全攻略",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-23_AI_Microsoft_マイクロソフトConfigure GitHub Copilot Settings Sessions .html",
-    "date": "2026-08-23",
-    "tags": [
-      "copilot"
-    ],
-    "chapters": [
-      "Welcome and GitHub Copilot configuration overview",
-      "Exploring the app, repository, and chat",
-      "Opening settings and managing accounts",
-      "Configuring tool permissions and agent instructions",
-      "Changing themes and accessibility settings",
-      "Understanding repositories and sessions",
-      "Choosing a model and reasoning effort",
-      "Using Interactive mode",
-      "Planning a new hobbies section",
-      "Keeping sessions separate with worktrees",
-      "Reviewing and editing a plan",
-      "Implementing the plan with Autopilot mode",
-      "Reviewing the completed hobbies section",
-      "Recap of settings, sessions, and modes",
-      "Exploring the app, repository, and chat",
-      "Opening settings and managing accounts",
-      "Configuring tool permissions and agent instructions",
-      "Changing themes and accessibility settings",
-      "Understanding repositories and sessions",
-      "Choosing a model and reasoning effort",
-      "Using Interactive mode",
-      "Planning a new hobbies section",
-      "Keeping sessions separate with worktrees",
-      "Reviewing and editing a plan",
-      "Implementing the plan with Autopilot mode",
-      "Reviewing the completed hobbies section",
-      "Recap of settings, sessions, and modes"
-    ]
-  },
-  {
-    "video_id": "ARdnl2kjmRU",
-    "title": "【エコノミスト】ユヴァル・ノア・ハラリが語るAIの未来の危険性",
-    "channel": "The Economist",
-    "filename": "2026-08-23_AI_The_エコノミストユヴァルノアハラリが語るAIの未来の危険性  The Economist.html",
-    "date": "2026-08-23",
-    "tags": [
-      "ai"
-    ],
-    "chapters": [
-      "Why an AI takeover isn't inevitable",
-      "Elon Musk’s many AI contradictions",
-      "How AI could takeover the world’s financial system",
-      "Why trust is shifting from humans to machines",
-      "AIs can mass produce human intimacy",
-      "Why voters need to challenge politicians on AI",
-      "Elon Musk’s many AI contradictions",
-      "How AI could takeover the world’s financial system",
-      "Why trust is shifting from humans to machines",
-      "AIs can mass produce human intimacy",
-      "Why voters need to challenge politicians on AI"
     ]
   },
   {
@@ -1377,7 +915,7 @@
     "date": "2026-08-25",
     "tags": [
       "ai",
-      "agent"
+      "agents"
     ],
     "chapters": [
       "You're not failing, you're iterating",
@@ -1430,7 +968,7 @@
     "date": "2026-08-25",
     "tags": [
       "ai",
-      "agent"
+      "agents"
     ],
     "chapters": []
   },
@@ -1452,7 +990,8 @@
     "filename": "2026-08-25_AI_Microsoft_マイクロソフトStop Writing Prompts Start Writing Specs.html",
     "date": "2026-08-25",
     "tags": [
-      "prompt"
+      "prompts",
+      "specs"
     ],
     "chapters": []
   },
@@ -1463,7 +1002,7 @@
     "filename": "2026-08-25_AI_Microsoft_マイクロソフトBuild Intelligent Agents with Work IQ Found.html",
     "date": "2026-08-25",
     "tags": [
-      "agent"
+      "agents"
     ],
     "chapters": []
   },
@@ -1474,8 +1013,8 @@
     "filename": "2026-08-25_AI_Microsoft_マイクロソフトClosing the Loop Feedback based Learning fo.html",
     "date": "2026-08-25",
     "tags": [
-      "agent",
-      "rag"
+      "rag",
+      "agentic"
     ],
     "chapters": []
   },
@@ -1486,20 +1025,9 @@
     "filename": "2026-08-25_AI_Microsoft_マイクロソフトFrom Idea to Agent in Minutes Copilot Studi.html",
     "date": "2026-08-25",
     "tags": [
-      "agent",
       "copilot",
-      "claude"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "CPldqiLKidY",
-    "title": "【マイクロソフト】E4: Azure SQL Database Hyperscale によるパフォーマンスとスケーラビリティの最適化",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-25_AI_Microsoft_マイクロソフトE4 Azure SQL Database Hyperscale によるパフォーマンス.html",
-    "date": "2026-08-25",
-    "tags": [
-      "scale"
+      "claude",
+      "agent"
     ],
     "chapters": []
   },
@@ -1510,30 +1038,7 @@
     "filename": "2026-08-25_AI_Microsoft_マイクロソフトE3 Build AI apps with Azure SQL Database Hy.html",
     "date": "2026-08-25",
     "tags": [
-      "ai",
-      "scale"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "FGEq2AOHlDo",
-    "title": "【マイクロソフト】E2: Azure SQL Database Hyperscale による移行と最適化",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-25_AI_Microsoft_マイクロソフトE2 Azure SQL Database Hyperscale による移行と最適化.html",
-    "date": "2026-08-25",
-    "tags": [
-      "scale"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "Gbb4vTh0Lts",
-    "title": "【マイクロソフト】E1：Azure SQL Database Hyperscale 再入門",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-25_AI_Microsoft_マイクロソフトE1Azure SQL Database Hyperscale 再入門.html",
-    "date": "2026-08-25",
-    "tags": [
-      "scale"
+      "ai"
     ],
     "chapters": []
   }

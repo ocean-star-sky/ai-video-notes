@@ -1173,5 +1173,29 @@
       "Specialist"
     ],
     "chapters": []
+  },
+  {
+    "video_id": "29SyCndnMZs",
+    "title": "【OpenAI】ChatGPT Workでビジネスの問いから戦略資料を作成する方法",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-26_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html",
+    "date": "2026-08-26",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "Is2NHa7awWY",
+    "title": "【OpenAI】WebMCPでAIエージェント対応サイトを構築しよう",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-26_AI_OpenAI_OpenAIWebMCPでAIエージェント対応サイトを構築しよう.html",
+    "date": "2026-08-26",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
   }
 ]

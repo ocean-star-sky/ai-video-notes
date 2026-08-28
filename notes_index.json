@@ -1413,5 +1413,33 @@
       "Specialist"
     ],
     "chapters": []
+  },
+  {
+    "video_id": "gF2RMvXput8",
+    "title": "【マイクロソフト】What does it really take to ship an AI agent?",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-29_AI_Microsoft_マイクロソフトWhat does it really take to ship an AI agen.html",
+    "date": "2026-08-29",
+    "tags": [
+      "ai",
+      "agent"
+    ],
+    "chapters": [
+      "The Agent Production Problem",
+      "Choosing From a Wide Array of Models",
+      "Building an Agent in the Portal",
+      "Building in Code: Agent Framework & SDK",
+      "Tracing Tokens, Cost, and Latency",
+      "Evaluating Agent Quality",
+      "Monitoring Agents at Scale",
+      "Governance, Security, and Guardrails",
+      "Choosing From a Wide Array of Models",
+      "Building an Agent in the Portal",
+      "Building in Code: Agent Framework & SDK",
+      "Tracing Tokens, Cost, and Latency",
+      "Evaluating Agent Quality",
+      "Monitoring Agents at Scale",
+      "Governance, Security, and Guardrails"
+    ]
   }
 ]

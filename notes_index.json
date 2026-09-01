@@ -1687,5 +1687,29 @@
       "Remote control and the QR code handoff",
       "Back at the laptop — the finished feature"
     ]
+  },
+  {
+    "video_id": "pdBSgV2SRcM",
+    "title": "【マイクロソフト】わずか数行のPythonコードで、はじめてのAIエージェントを作ろう",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-02_AI_Microsoft_マイクロソフトわずか数行のPythonコードではじめてのAIエージェントを作ろう.html",
+    "date": "2026-09-02",
+    "tags": [
+      "エージェント",
+      "ai"
+    ],
+    "chapters": [
+      "Build a Cupcake-Ordering Agent",
+      "Set Up Microsoft Foundry",
+      "Create and Test the Agent",
+      "Add Instructions and MCP Tools",
+      "Complete a Cupcake Order",
+      "Recap and Key Takeaways",
+      "Set Up Microsoft Foundry",
+      "Create and Test the Agent",
+      "Add Instructions and MCP Tools",
+      "Complete a Cupcake Order",
+      "Recap and Key Takeaways"
+    ]
   }
 ]

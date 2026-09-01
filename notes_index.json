@@ -1596,5 +1596,17 @@
       "Specialist"
     ],
     "chapters": []
+  },
+  {
+    "video_id": "ii001KWkV54",
+    "title": "【マイクロソフト】From Code to Agents: Build Production MCP Servers on Azure Functions",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-02_AI_Microsoft_マイクロソフトFrom Code to Agents Build Production MCP Se.html",
+    "date": "2026-09-02",
+    "tags": [
+      "mcp",
+      "agents"
+    ],
+    "chapters": []
   }
 ]

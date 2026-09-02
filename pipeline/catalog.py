@@ -161,6 +161,47 @@ def to_notes_index(catalog: list[dict]) -> list[dict]:
     ]
 
 
+def canonical_filename(video_id: str, channel: str, date: str) -> str:
+    """Stable ASCII filename for videos discovered by the VPS pipeline."""
+    short = re.sub(r"[^A-Za-z0-9]+", "", (channel or "AI").split(" ")[0]) or "AI"
+    return f"{date or '0000-00-00'}_AI_{short}_{video_id}.html"
+
+
+def sync_new_videos(summaries: dict[str, dict]) -> int:
+    """Give every summarized video a catalog entry + notes_index row (idempotent)."""
+    catalog = load_json(config.CATALOG_PATH, [])
+    known = {e["video_id"] for e in catalog}
+    added = 0
+    for vid, s in summaries.items():
+        if vid in known:
+            continue
+        catalog.append(
+            {
+                "video_id": vid,
+                "title": s.get("title") or s.get("title_ja") or vid,
+                "channel": s.get("channel", ""),
+                "date": s.get("date", ""),
+                "canonical_file": canonical_filename(
+                    vid, s.get("channel", ""), s.get("date", "")
+                ),
+                "duplicate_files": [],
+                "tags": [],
+                "chapters": s.get("chapters", []),
+            }
+        )
+        added += 1
+    if added:
+        catalog.sort(key=lambda e: (e["date"], e["video_id"]), reverse=True)
+        config.CATALOG_PATH.write_text(
+            json.dumps(catalog, ensure_ascii=False, indent=1), encoding="utf-8"
+        )
+        config.NOTES_INDEX_PATH.write_text(
+            json.dumps(to_notes_index(catalog), ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+    return added
+
+
 def load_json(path: Path, default):
     if not path.exists():
         return default

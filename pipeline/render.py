@@ -17,7 +17,7 @@ from collections import Counter
 from pathlib import Path
 
 from . import config
-from .catalog import load_json
+from .catalog import load_json, sync_new_videos
 
 SITE_TITLE = "AI Video Intelligence ポータル"
 STORAGE_KEYS = {
@@ -373,11 +373,12 @@ paint();
 
 
 def build_site(repo_root: Path = config.REPO_ROOT) -> dict:
-    catalog = load_json(config.CATALOG_PATH, [])
     summaries: dict[str, dict] = {}
     for p in sorted(config.SUMMARY_DIR.glob("*.json")):
         s = json.loads(p.read_text(encoding="utf-8"))
         summaries[s["video_id"]] = s
+    sync_new_videos(summaries)  # videos found by `discover` have no legacy note file
+    catalog = load_json(config.CATALOG_PATH, [])
     by_vid = {e["video_id"]: e for e in catalog}
     written = 0
     for vid, s in summaries.items():

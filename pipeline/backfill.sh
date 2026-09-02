@@ -1,24 +1,19 @@
 #!/bin/bash
-# One-off backfill: drain the queue (fetch via Mac, summarize via Codex) until nothing is pending.
+# One-off backfill: repeat hourly passes until nothing is pending in the queue.
 # Sleeps and retries while the Mac is asleep. Run detached:
 #   nohup setsid bash pipeline/backfill.sh > state/backfill.log 2>&1 &
 set -u
 cd "$(dirname "$0")/.." || exit 1
-BATCH=${BATCH:-20}
 MAC_SLEEP=${MAC_SLEEP:-900}
 IDLE_SLEEP=${IDLE_SLEEP:-60}
 while true; do
-    python3 -m pipeline.run fetch --max "$BATCH"
+    bash pipeline/hourly.sh
     rc=$?
-    python3 -m pipeline.run summarize --max "$BATCH"
-    python3 -m pipeline.threads assign
-    python3 -m pipeline.render
-    left=$(python3 - <<'EOF'
+    left=$(python3 - <<'PY'
 import sqlite3
 c = sqlite3.connect("state/queue.sqlite")
-q = c.execute("SELECT COUNT(*) FROM videos WHERE status IN ('queued','fetched') AND attempts<3").fetchone()[0]
-print(q)
-EOF
+print(c.execute("SELECT COUNT(*) FROM videos WHERE status IN ('queued','fetched') AND attempts<3").fetchone()[0])
+PY
 )
     echo "[$(date '+%F %T')] pending=$left fetch_rc=$rc"
     if [ "$left" = "0" ]; then

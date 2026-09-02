@@ -115,8 +115,40 @@ def test_render_index_cards_topics_and_pending(tmp_path):
     assert "話題スレッド 2" in page
 
 
+def test_build_site_adds_catalog_entry_for_discovered_video(tmp_path, monkeypatch):
+    monkeypatch.setattr(config, "CATALOG_PATH", tmp_path / "catalog.json")
+    monkeypatch.setattr(config, "NOTES_INDEX_PATH", tmp_path / "notes_index.json")
+    monkeypatch.setattr(config, "SUMMARY_DIR", tmp_path / "s")
+    (tmp_path / "s").mkdir()
+    (tmp_path / "catalog.json").write_text("[]", encoding="utf-8")
+    new = dict(
+        SUMMARY,
+        video_id="newvid12345",
+        channel="Google DeepMind (Demis Hassabis)",
+        date="2026-09-03",
+    )
+    (tmp_path / "s" / "newvid12345.json").write_text(
+        json.dumps(new, ensure_ascii=False), encoding="utf-8"
+    )
+    stats = render.build_site(tmp_path)
+    assert stats["videos"] == 1 and stats["notes_written"] == 1
+    cat = json.loads((tmp_path / "catalog.json").read_text(encoding="utf-8"))
+    assert cat[0]["canonical_file"] == "2026-09-03_AI_Google_newvid12345.html"
+    assert (tmp_path / "2026-09-03_AI_Google_newvid12345.html").exists()
+    idx = json.loads((tmp_path / "notes_index.json").read_text(encoding="utf-8"))
+    assert (
+        idx[0]["video_id"] == "newvid12345"
+        and idx[0]["filename"] == cat[0]["canonical_file"]
+    )
+    assert (
+        render.build_site(tmp_path)["notes_written"] == 0
+    )  # idempotent, no duplicate entry
+    assert len(json.loads((tmp_path / "catalog.json").read_text(encoding="utf-8"))) == 1
+
+
 def test_build_site_writes_canonical_note_and_index(tmp_path, monkeypatch):
     monkeypatch.setattr(config, "CATALOG_PATH", tmp_path / "catalog.json")
+    monkeypatch.setattr(config, "NOTES_INDEX_PATH", tmp_path / "notes_index.json")
     monkeypatch.setattr(config, "SUMMARY_DIR", tmp_path / "s")
     (tmp_path / "s").mkdir()
     (tmp_path / "catalog.json").write_text(json.dumps([ENTRY]), encoding="utf-8")

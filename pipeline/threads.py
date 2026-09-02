@@ -33,7 +33,6 @@ EMBED_BATCH = 16
 EMBED_PAUSE_SEC = 1.0
 EMBEDDINGS_PATH = config.STATE_DIR / "embeddings.json"
 
-JUDGE_MODEL = "gemini-2.5-flash"
 THREAD_COS_JOIN = 0.90  # >= : same story without asking
 THREAD_COS_MAYBE = (
     0.84  # [maybe, join): ask the judge (or entity overlap when no judge)
@@ -64,14 +63,22 @@ def embed_text(summary: dict) -> str:
     )
 
 
-def _gemini_client():
-    sys.path.insert(0, "/root")
-    from lib.gemini_logged_client import LoggedClient  # noqa: PLC0415
+_CLIENT = None
 
-    config.load_dotenv(Path("/root/.env"))
-    return LoggedClient(
-        api_key=os.environ["GEMINI_API_KEY"], caller="ai-video-notes.threads"
-    )
+
+def _gemini_client():
+    """One client per process: a throw-away LoggedClient gets garbage-collected
+    (and its transport closed) before the request is sent."""
+    global _CLIENT
+    if _CLIENT is None:
+        sys.path.insert(0, "/root")
+        from lib.gemini_logged_client import LoggedClient  # noqa: PLC0415
+
+        config.load_dotenv(Path("/root/.env"))
+        _CLIENT = LoggedClient(
+            api_key=os.environ["GEMINI_API_KEY"], caller="ai-video-notes.threads"
+        )
+    return _CLIENT
 
 
 def gemini_embed(texts: list[str]) -> list[list[float]]:
@@ -114,12 +121,23 @@ def build_judge_prompt(new: dict, thread: dict, summaries: dict[str, dict]) -> s
     )
 
 
-def gemini_judge(new: dict, thread: dict, summaries: dict[str, dict]) -> bool:
-    """Same-story judge for the ambiguous cosine band (fast, free-tier Flash)."""
-    r = _gemini_client().models.generate_content(
-        model=JUDGE_MODEL, contents=build_judge_prompt(new, thread, summaries)
+def codex_judge(new: dict, thread: dict, summaries: dict[str, dict]) -> bool:
+    """Same-story judge for the ambiguous cosine band.
+
+    Codex (no API cost). Gemini Flash would be faster but its free tier is
+    20 requests/day per project and shared with other services on this host.
+    No Gemini fallback here: a failure makes `assign` use the entity rule.
+    """
+    sys.path.insert(0, "/root")
+    from lib.codex_client import call_codex_json, get_last_message  # noqa: PLC0415
+
+    events = call_codex_json(
+        build_judge_prompt(new, thread, summaries),
+        timeout=120,
+        reasoning_effort=config.CODEX_REASONING_EFFORT,
+        gemini_fallback=False,
     )
-    return bool(_json_from_text(r.text).get("same_topic"))
+    return bool(_json_from_text(get_last_message(events)).get("same_topic"))
 
 
 def cosine(a: list[float], b: list[float]) -> float:
@@ -322,7 +340,7 @@ def top_pairs(
     return pairs[:top]
 
 
-def cmd_assign(embed=gemini_embed, llm=codex_llm, judge=gemini_judge) -> int:
+def cmd_assign(embed=gemini_embed, llm=codex_llm, judge=codex_judge) -> int:
     summaries = load_summaries()
     emb = load_embeddings()
     n_new = ensure_embeddings(summaries, emb, embed)

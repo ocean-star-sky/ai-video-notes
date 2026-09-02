@@ -1,10 +1,34 @@
 [
   {
-    "video_id": "rRkucx0KwcI",
-    "title": "【NVIDIA】ヘルスケアロボティクスのためのフィジカルAI",
-    "channel": "NVIDIA (Jensen Huang)",
-    "filename": "2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアロボティクスのためのフィジカルAI  シミュレーション主導の設計と開.html",
-    "date": "2026-08-19",
+    "video_id": "pdBSgV2SRcM",
+    "title": "【マイクロソフト】わずか数行のPythonコードで、はじめてのAIエージェントを作ろう",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-02_AI_Microsoft_マイクロソフトわずか数行のPythonコードではじめてのAIエージェントを作ろう.html",
+    "date": "2026-09-02",
+    "tags": [
+      "エージェント",
+      "ai"
+    ],
+    "chapters": [
+      "Build a Cupcake-Ordering Agent",
+      "Set Up Microsoft Foundry",
+      "Create and Test the Agent",
+      "Add Instructions and MCP Tools",
+      "Complete a Cupcake Order",
+      "Recap and Key Takeaways",
+      "Set Up Microsoft Foundry",
+      "Create and Test the Agent",
+      "Add Instructions and MCP Tools",
+      "Complete a Cupcake Order",
+      "Recap and Key Takeaways"
+    ]
+  },
+  {
+    "video_id": "nM86DBOqgPM",
+    "title": "【Y Combinator】Heart Aerospace Built the World’s Largest Electric Aircraft",
+    "channel": "Y Combinator (AIスタートアップ)",
+    "filename": "2026-09-02_AI_Y_Y CombinatorHeart Aerospace Built the Worlds Large.html",
+    "date": "2026-09-02",
     "tags": [
       "AI",
       "Specialist"
@@ -12,1150 +36,243 @@
     "chapters": []
   },
   {
-    "video_id": "QLKcF0j6bVA",
-    "title": "【マイクロソフト】GitHub Copilot SDKで、あらゆるアイデアをAIアプリにしよう",
+    "video_id": "ii001KWkV54",
+    "title": "【マイクロソフト】From Code to Agents: Build Production MCP Servers on Azure Functions",
     "channel": "Microsoft Developer",
-    "filename": "2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html",
-    "date": "2026-08-19",
+    "filename": "2026-09-02_AI_Microsoft_マイクロソフトFrom Code to Agents Build Production MCP Se.html",
+    "date": "2026-09-02",
     "tags": [
-      "ai",
+      "mcp",
+      "agents"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "ROF2Nv_KjOM",
+    "title": "【AI要約】Claude Fable 5.1が登場",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-09-02_AI_Anthropic_AI要約Claude Fable 51が登場.html",
+    "date": "2026-09-02",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "MkbepPfaeMU",
+    "title": "【NVIDIA】トークノミクス入門：トークンとは何か、なぜ重要なのか | AIファクトリー・インサイダー 第4話",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-09-02_AI_NVIDIA_NVIDIAトークノミクス入門トークンとは何かなぜ重要なのか  AIファクトリーインサイダー 第4話.html",
+    "date": "2026-09-02",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "Introduction",
+      "Meet our guests: Shruti Koparkar & Tue Tran",
+      "What is a token?",
+      "What is \"tokenomics,\" and why is it relevant now?",
+      "Not all tokens are equal: intelligence, context, and speed",
+      "Trading vs. research: matching tokens to the use case",
+      "Retail video: one-token answers vs. batch captioning",
+      "Sizing token demand: back-of-napkin math",
+      "The multipliers: reasoning, agentic loops, and cache hit rate",
+      "KV cache and prefix matching explained",
+      "Supply: the AI factory as a car engine",
+      "Dense models vs. mixture of experts",
+      "Right model for the right task: a telco example",
+      "Intelligent routing with NeMo Switchyard",
+      "Where are your tokens going? Observability with NeMo Relay",
+      "Matching infrastructure: NVL72, HGX, and RTX PRO Servers",
+      "Dynamo and extreme co-design",
+      "Monetization: four paths from tokens to ROI",
+      "Just get started, and make it a team effort",
+      "Guardrails for a token tsunami",
+      "Wrap-up",
+      "Meet our guests: Shruti Koparkar & Tue Tran",
+      "What is a token?",
+      "What is \"tokenomics,\" and why is it relevant now?",
+      "Not all tokens are equal: intelligence, context, and speed",
+      "Trading vs. research: matching tokens to the use case",
+      "Retail video: one-token answers vs. batch captioning",
+      "Sizing token demand: back-of-napkin math",
+      "The multipliers: reasoning, agentic loops, and cache hit rate",
+      "KV cache and prefix matching explained",
+      "Supply: the AI factory as a car engine",
+      "Dense models vs. mixture of experts",
+      "Right model for the right task: a telco example",
+      "Intelligent routing with NeMo Switchyard",
+      "Where are your tokens going? Observability with NeMo Relay",
+      "Matching infrastructure: NVL72, HGX, and RTX PRO Servers",
+      "Dynamo and extreme co-design",
+      "Monetization: four paths from tokens to ROI",
+      "Just get started, and make it a team effort",
+      "Guardrails for a token tsunami",
+      "Wrap-up"
+    ]
+  },
+  {
+    "video_id": "CFFcWs2FRBo",
+    "title": "【マイクロソフト】Build Your Personal Brand with GitHub Copilot — Full Course for Students",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-02_AI_Microsoft_マイクロソフトBuild Your Personal Brand with GitHub Copil.html",
+    "date": "2026-09-02",
+    "tags": [
       "copilot"
     ],
-    "chapters": []
-  },
-  {
-    "video_id": "XuoqKYxDHVc",
-    "title": "【フル対談】イーロン・マスク：AI・AGIと超豊かさの時代（2036年）へのロードマップ",
-    "channel": "The Economist",
-    "filename": "FEATURED_AI_The_XuoqKYxDHVc.html",
-    "date": "2026-08-19",
-    "tags": [
-      "ai",
-      "agi"
-    ],
     "chapters": [
-      "AIは5年後には人間より賢くなる",
-      "AI企業はどのように自主規制を行うべきか",
-      "中国はAI分野のリーダーになるのか？",
-      "イーロン・マスク氏、サム・アルトマン氏とAI企業のボスたちについて語る",
-      "仕事は選択肢になる",
-      "一人の人間がこれほど大きな権力を持つべきなのか？",
-      "スターリンクとウクライナ戦争",
-      "政治に関わりすぎた",
-      "マスク氏：USAIDの予算削減で死者は出ていない",
-      "ヨーロッパ、極右、そしてイギリスの内戦",
-      "マスク氏：私は人種差別主義者ではない",
-      "マスク氏について人々が最も誤解していることは何か？"
+      "Welcome — what you'll build in this series",
+      "Claiming the GitHub Student Developer Pack",
+      "Your first prompt: a Hello World site",
+      "EPISODE 2 — Build a portfolio website from a resume",
+      "Answering Copilot's questions about structure and style",
+      "Resume preview, school colors, and dark mode",
+      "EPISODE 3 — Git, GitHub, and GitHub Pages",
+      "Version control explained: diffs, commits, branches, merging",
+      "Creating a repository and pushing your site",
+      "Deploying with GitHub Pages",
+      "EPISODE 4 — Copilot settings, sessions, and modes",
+      "Interactive mode, Plan mode, and Autopilot mode",
+      "EPISODE 5 — Context and tokens",
+      "Adding project files and running /init",
+      "Shrinking your session with /compact",
+      "EPISODE 6 — Tools and MCP servers",
+      "Installing and using the Playwright MCP server",
+      "EPISODE 7 — Skills, agent personas, and marketplaces",
+      "Turning a workflow into a reusable skill",
+      "Adding a plugin marketplace",
+      "EPISODE 8 — Bring your own model",
+      "Using the Azure MCP to create a Foundry resource",
+      "Connecting Foundry as a model provider",
+      "EPISODE 9 — Modernize the site with Bootstrap",
+      "Sticky navbar, animated cards, and shadows",
+      "EPISODE 10 — Control Copilot from your phone",
+      "Remote control and the QR code handoff",
+      "Back at the laptop — the finished feature",
+      "Claiming the GitHub Student Developer Pack",
+      "Your first prompt: a Hello World site",
+      "EPISODE 2 — Build a portfolio website from a resume",
+      "Answering Copilot's questions about structure and style",
+      "Resume preview, school colors, and dark mode",
+      "EPISODE 3 — Git, GitHub, and GitHub Pages",
+      "Version control explained: diffs, commits, branches, merging",
+      "Creating a repository and pushing your site",
+      "Deploying with GitHub Pages",
+      "EPISODE 4 — Copilot settings, sessions, and modes",
+      "Interactive mode, Plan mode, and Autopilot mode",
+      "EPISODE 5 — Context and tokens",
+      "Adding project files and running /init",
+      "Shrinking your session with /compact",
+      "EPISODE 6 — Tools and MCP servers",
+      "Installing and using the Playwright MCP server",
+      "EPISODE 7 — Skills, agent personas, and marketplaces",
+      "Turning a workflow into a reusable skill",
+      "Adding a plugin marketplace",
+      "EPISODE 8 — Bring your own model",
+      "Using the Azure MCP to create a Foundry resource",
+      "Connecting Foundry as a model provider",
+      "EPISODE 9 — Modernize the site with Bootstrap",
+      "Sticky navbar, animated cards, and shadows",
+      "EPISODE 10 — Control Copilot from your phone",
+      "Remote control and the QR code handoff",
+      "Back at the laptop — the finished feature"
     ]
   },
   {
-    "video_id": "UaeWJK_vv-Y",
-    "title": "【OpenAI】自律型AIエージェントプラグイン（AgentPlugin）仕様と開発",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-20_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html",
-    "date": "2026-08-20",
+    "video_id": "u15N3l4RT80",
+    "title": "【Dwarkesh】AIエージェント文明の興亡",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-09-01_AI_Dwarkesh_DwarkeshAIエージェント文明の興亡.html",
+    "date": "2026-09-01",
     "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "エージェントパッケージに標準が必要な理由",
-      "Agent Pluginsの概要",
-      "パッケージ構造、スキル、MCPサーバー",
-      "製品間での移植性",
-      "スコープと利用開始方法"
-    ]
-  },
-  {
-    "video_id": "fo9WirRIaVs",
-    "title": "【Google DeepMind】Gemini Roboticsによる複数ロボットの自律協調動作",
-    "channel": "Google DeepMind (Demis Hassabis)",
-    "filename": "2026-08-20_AI_Google_Robots working together with Gemini Robotics 2.html",
-    "date": "2026-08-20",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "pmiN5Nj1-K8",
-    "title": "【NVIDIA】ヘルスケアの再創造 ― デジタル知能と物理的自律性の融合",
-    "channel": "NVIDIA (Jensen Huang)",
-    "filename": "2026-08-20_AI_NVIDIA_GTC SJ 2026ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合.html",
-    "date": "2026-08-20",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "uQd809adb58",
-    "title": "【Figure AI】世界最高峰の人型ロボット二足歩行バランストレーナー「Galileo」",
-    "channel": "Figure AI (Brett Adcock / 人型ロボット)",
-    "filename": "2026-08-20_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html",
-    "date": "2026-08-20",
-    "tags": [
-      "AI",
-      "Specialist"
+      "エージェント",
+      "ai"
     ],
     "chapters": []
   },
   {
-    "video_id": "j9Qr5aUfqNU",
-    "title": "【Scale AI】最先端コーディングエージェントの実力ベンチマーク徹底分析",
-    "channel": "Scale AI (Alexandr Wang)",
-    "filename": "2026-08-20_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html",
-    "date": "2026-08-20",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "7CNlGweeN90",
-    "title": "【エコノミスト】自動運転車（ロボタクシー）は都市と経済をどう変えるのか？",
-    "channel": "The Economist",
-    "filename": "2026-08-20_AI_The_自動運転車は私たちの都市をどう変えるのか  エコノミスト.html",
-    "date": "2026-08-20",
-    "tags": [
-      "自動運転"
-    ],
-    "chapters": [
-      "将来も私たちは車を所有し続けるのか？",
-      "製造業が衰退しない理由",
-      "自動運転車が都市をどのように変えるか",
-      "現実世界におけるAI"
-    ]
-  },
-  {
-    "video_id": "zLUZclThLhU",
-    "title": "【Y Combinator】元ホワイトハウスCTOマイケル・クラシオスが語る米国の国家AI戦略",
-    "channel": "Y Combinator (AIスタートアップ)",
-    "filename": "2026-08-20_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html",
-    "date": "2026-08-20",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "マイケル・クラツィオスが AI 政策と公共サービスについて語る",
-      "シリコンバレーからホワイトハウスへの転身",
-      "テクノロジー政策は実際にどのように作られるのか",
-      "ホワイトハウスにおけるオープンソースAIの戦略的意義",
-      "ワシントンのAIに対する見方が違う",
-      "半年ごとに変わるテクノロジーを規制する",
-      "どの AI リスクが過大評価されていますか?",
-      "小さな技術者にテーブルの席を与える",
-      "既存の堀を作らない規制",
-      "Born Free vs. Born in Captivity Technologies",
-      "ホワイトハウスで働くというのは実際どのようなものなのか",
-      "アメリカ科学の新たな黄金時代",
-      "量子、議会、知財、そして次に起こること",
-      "技術者が公共サービスを検討すべき理由"
-    ]
-  },
-  {
-    "video_id": "F3INH9wZXoQ",
-    "title": "【Y Combinator】なぜフィジカルAIが次なる巨大プラットフォームシフトなのか",
-    "channel": "Y Combinator (AIスタートアップ)",
-    "filename": "2026-08-20_AI_Y_なぜフィジカルAIが次なるプラットフォームシフトなのか.html",
-    "date": "2026-08-20",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "デジタルAIからフィジカルAIへの移行",
-      "Sim-to-Real仮想空間強化学習の威力",
-      "実世界サプライチェーンと製造の自動化",
-      "次世代ロボティクスOSの覇権争い"
-    ]
-  },
-  {
-    "video_id": "vb1Gcn10enw",
-    "title": "【Y Combinator】AIトップ研究所が「オブザーバビリティ（可観測性）」で実践すること",
-    "channel": "Y Combinator (AIスタートアップ)",
-    "filename": "2026-08-20_AI_Y_AIトップ研究所が「オブザーバビリティ」で実際に取り組んでいること.html",
-    "date": "2026-08-20",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "LLMパイプラインの可観測性と推論トレーシング",
-      "ハルシネーションと品質劣化の自動検知",
-      "LLM-as-a-Judgeによる継続的Evalフレームワーク",
-      "本番環境でのレイテンシとコンピュートコスト最適化"
-    ]
-  },
-  {
-    "video_id": "DbBnd9PYob4",
-    "title": "【Y Combinator】モデル非依存プラットフォームの優位性とマルチモデル戦略",
-    "channel": "Y Combinator (AIスタートアップ)",
-    "filename": "2026-08-20_AI_Y_モデルに依存しないAIプラットフォームは、どの単一の研究室も勝てないという賭けに出ている。.html",
-    "date": "2026-08-20",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "単一AI研究室への依存リスクとベンダーロックイン",
-      "マルチモデル動的ルーティングのアーキテクチャ",
-      "タスク難易度に応じた推論コストの80%削減手法",
-      "フロンティア競争における最も持続可能なプラットフォーム戦略"
-    ]
-  },
-  {
-    "video_id": "VbqaL_eHhKY",
-    "title": "【Y Combinator】デザイン責任者が教える、生成AIを活用した次世代UI/UXデザイン手法",
-    "channel": "Y Combinator (AIスタートアップ)",
-    "filename": "2026-08-20_AI_Y_YCのデザイン責任者が教える、AIを活用したデザイン手法.html",
-    "date": "2026-08-20",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "静的モックアップから動くAIコードプロトタイプへの変革",
-      "AIと対話しながら数分でUIを構築する新ワークフロー",
-      "チャットUIを超えた先回り型エージェントUIの設計原則",
-      "スタートアップの製品検証速度を100倍にする実践知"
-    ]
-  },
-  {
-    "video_id": "VihWpoINpgE",
-    "title": "【NVIDIA】メガワットあたりの秒間トークン数を最大化する：NVIDIA Vera Rubinの経済性",
-    "channel": "NVIDIA (Jensen Huang)",
-    "filename": "2026-08-21_AI_NVIDIA_NVIDIAメガワットあたりの秒間トークン数を最大化するNVIDIA Vera Rubinの経済性.html",
-    "date": "2026-08-21",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "AIファクトリーにおけるエネルギー効率の壁",
-      "Vera Rubinアーキテクチャの全貌",
-      "メガワットあたり秒間トークン数の極大化",
-      "次世代データセンターの経済モデル"
-    ]
-  },
-  {
-    "video_id": "XjSJ6ybS9I8",
-    "title": "【OpenAI】ChatGPT Workでビジネスの問いから戦略資料を作成する方法",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-21_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html",
-    "date": "2026-08-21",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "ChatGPT Workの概要と新機能",
-      "ビジネス戦略課題の構造化プロンプト",
-      "データ統合と戦略スライドの自動生成",
-      "エンタープライズでのROI最大化"
-    ]
-  },
-  {
-    "video_id": "bSp-foRDH5M",
-    "title": "【Google】Google Antigravity 2.0を使ってアプリ開発やタスクの自動化を行う方法",
-    "channel": "Google (Sundar Pichai)",
-    "filename": "2026-08-21_AI_Google_GoogleGoogle Antigravity 20を使ってアプリ開発やタスクの自動化を行う方法.html",
-    "date": "2026-08-21",
-    "tags": [
-      "antigravity"
-    ],
-    "chapters": [
-      "Antigravity 2.0アーキテクチャの革新",
-      "自律エージェントによるフルスタック開発",
-      "ブラウザ操作とツール連携の自動化",
-      "次世代自律開発のワークフロー"
-    ]
-  },
-  {
-    "video_id": "NqQnHWa-Vxs",
-    "title": "【テスラ】Autobidder | Tesla MegapackによるAI電力自律取引",
-    "channel": "Tesla (Elon Musk)",
-    "filename": "2026-08-21_AI_Tesla_テスラAutobidder  Tesla MegapackによるAI電力自律取引.html",
-    "date": "2026-08-21",
-    "tags": [
-      "ai",
-      "megapack",
-      "autobidder"
-    ],
-    "chapters": [
-      "AIによる電力市場のリアルタイム自律入札",
-      "Megapackと送電網安定化アルゴリズム",
-      "データセンター電力危機を救う分散型蓄電池",
-      "テスラ・エネルギー部門の指数関数的成長"
-    ]
-  },
-  {
-    "video_id": "5062_E26pJE",
-    "title": "【マイクロソフト】Skillsとエージェントで再利用可能なCopilotワークフローを構築する",
+    "video_id": "Hjth_qL6ok8",
+    "title": "【マイクロソフト】エージェント全盛の今、何を学ぶべきか？",
     "channel": "Microsoft Developer",
-    "filename": "2026-08-23_AI_Microsoft_マイクロソフトBuild Reusable Copilot Workflows with Skill.html",
-    "date": "2026-08-23",
+    "filename": "2026-09-01_AI_Microsoft_マイクロソフトエージェント全盛の今何を学ぶべきか.html",
+    "date": "2026-09-01",
     "tags": [
-      "copilot",
       "エージェント"
     ],
-    "chapters": [
-      "Welcome to skills, agent personas, plugins, and marketplaces",
-      "What an agent skill is",
-      "How agent personas, plugins, and marketplaces work",
-      "Drafting a blog post from podcast notes",
-      "Reviewing the draft with the rubber duck agent",
-      "Converting the improved blog post to HTML",
-      "Publishing the blog post to GitHub",
-      "Turning the manual workflow into a reusable skill",
-      "Reusing the skill in a new session",
-      "Creating and publishing a second blog post",
-      "Installing skills from a plugin marketplace",
-      "Running the resume site sync skill",
-      "Updating the portfolio from a new resume",
-      "Exploring community skills and recapping the workflow",
-      "What an agent skill is",
-      "How agent personas, plugins, and marketplaces work",
-      "Drafting a blog post from podcast notes",
-      "Reviewing the draft with the rubber duck agent",
-      "Converting the improved blog post to HTML",
-      "Publishing the blog post to GitHub",
-      "Turning the manual workflow into a reusable skill",
-      "Reusing the skill in a new session",
-      "Creating and publishing a second blog post",
-      "Installing skills from a plugin marketplace",
-      "Running the resume site sync skill",
-      "Updating the portfolio from a new resume",
-      "Exploring community skills and recapping the workflow"
-    ]
+    "chapters": []
   },
   {
-    "video_id": "37I7qkgEl9U",
-    "title": "【マイクロソフト】GitHub Copilotの最適化：より良い結果を、より少ないトークンで",
+    "video_id": "yfnh8SuMbNw",
+    "title": "【OpenAI】スマホでChatGPTを活用する方法 v5 CC",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-29_AI_OpenAI_OpenAIスマホでChatGPTを活用する方法 v5 CC.html",
+    "date": "2026-08-29",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "urXc4xxixVU",
+    "title": "【OpenAI】スケジュールされたタスク v3 CC",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-29_AI_OpenAI_OpenAIスケジュールされたタスク v3 CC.html",
+    "date": "2026-08-29",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "syML5KT-HzI",
+    "title": "【OpenAI】スライド、ドキュメント、テンプレートの作成方法",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-29_AI_OpenAI_OpenAIスライドドキュメントテンプレートの作成方法.html",
+    "date": "2026-08-29",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "gF2RMvXput8",
+    "title": "【マイクロソフト】What does it really take to ship an AI agent?",
     "channel": "Microsoft Developer",
-    "filename": "2026-08-23_AI_Microsoft_マイクロソフトGitHub Copilotの最適化より良い結果をより少ないトークンで.html",
-    "date": "2026-08-23",
-    "tags": [
-      "copilot",
-      "トークン"
-    ],
-    "chapters": [
-      "Welcome and an introduction to context and tokens",
-      "What context includes",
-      "How Copilot processes information as tokens",
-      "Viewing context with /context",
-      "Understanding the context window with a suitcase analogy",
-      "Why too little or too much context can hurt results",
-      "Generating a case study page without project context",
-      "Adding project files for better results",
-      "Refreshing project context with /init",
-      "How copilot-instructions.md guides Copilot",
-      "Starting a focused session with the right context",
-      "Checking context usage",
-      "Reducing token usage with /compact",
-      "Recap of context and token optimization",
-      "What context includes",
-      "How Copilot processes information as tokens",
-      "Viewing context with /context",
-      "Understanding the context window with a suitcase analogy",
-      "Why too little or too much context can hurt results",
-      "Generating a case study page without project context",
-      "Adding project files for better results",
-      "Refreshing project context with /init",
-      "How copilot-instructions.md guides Copilot",
-      "Starting a focused session with the right context",
-      "Checking context usage",
-      "Reducing token usage with /compact",
-      "Recap of context and token optimization"
-    ]
-  },
-  {
-    "video_id": "iF5IWjOWcA4",
-    "title": "【AI要約】How Icelanders are thinking about AI",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約How Icelanders are thinking about AI.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "rKV5JcALQoQ",
-    "title": "【AI要約】Claudeの思考における異なる階層",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Claudeの思考における異なる階層.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "海のような心",
-      "J空間のご紹介",
-      "サイレント・マス",
-      "橋のことは考えないで",
-      "クロードの自動処理",
-      "隠された思考を捉える",
-      "意識の問題",
-      "J空間のご紹介",
-      "サイレント・マス",
-      "橋のことは考えないで",
-      "クロードの自動処理",
-      "隠された思考を捉える",
-      "意識の問題"
-    ]
-  },
-  {
-    "video_id": "Y9Wz2PV404E",
-    "title": "【AI要約】Claude Fable 5の紹介",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Claude Fable 5の紹介.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "j2knrqAzYVY",
-    "title": "【AI要約】クロードの考えを言葉に翻訳する",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約クロードの考えを言葉に翻訳する.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "INGOC6-LLv0",
-    "title": "【AI要約】世界のソフトウェアを保護するための取り組み | プロジェクト・グラスウィング",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約世界のソフトウェアを保護するための取り組み  プロジェクトグラスウィング.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "D4XTefP3Lsc",
-    "title": "【AI要約】AIが感情的に振る舞うとき",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約AIが感情的に振る舞うとき.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "dPn3GBI8lII",
-    "title": "【AI要約】Introducing Claude Opus 4.6",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Introducing Claude Opus 46.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "bluAmTHoEow",
-    "title": "【AI要約】Your tools are now interactive in Claude",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Your tools are now interactive in Claude.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "N5yJJA0NCU0",
-    "title": "【AI要約】AI on campus",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約AI on campus.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "Introduction",
-      "Meet the panel",
-      "Vibes on campus",
-      "What are students building?",
-      "AI as tool vs. crutch",
-      "Are professors keeping up?",
-      "Downsides",
-      "AI and the job market",
-      "Rapid-fire questions",
-      "Meet the panel",
-      "Vibes on campus",
-      "What are students building?",
-      "AI as tool vs. crutch",
-      "Are professors keeping up?",
-      "Downsides",
-      "AI and the job market",
-      "Rapid-fire questions"
-    ]
-  },
-  {
-    "video_id": "UAmKyyZ-b9E",
-    "title": "【AI要約】Introducing Cowork: Claude Code for the rest of your work",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Introducing Cowork Claude Code for the rest of.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "nvbq39yVYRk",
-    "title": "【AI要約】What is sycophancy in AI models?",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約What is sycophancy in AI models.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "rBJnWMD0Pho",
-    "title": "【AI要約】Let Claude handle work in your browser",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Let Claude handle work in your browser.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "5KTHvKCrQ00",
-    "title": "【AI要約】Claude ran a business in our office",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Claude ran a business in our office.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "Background on Project Vend",
-      "How a transaction works",
-      "Claudius's naïveté",
-      "An identity crisis",
-      "The CEO agent",
-      "Conclusion",
-      "How a transaction works",
-      "Claudius's naïveté",
-      "An identity crisis",
-      "The CEO agent",
-      "Conclusion"
-    ]
-  },
-  {
-    "video_id": "i9U_b-8KKno",
-    "title": "【AI要約】Binti helps social workers license foster families faster with Claude",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Binti helps social workers license foster fami.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "Uh98_aGhAuY",
-    "title": "【AI要約】AIは教育にとって何を意味するのでしょうか?",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約AIは教育にとって何を意味するのでしょうか.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "Introduction",
-      "Why is Anthropic focused on this topic?",
-      "How is AI affecting education today?",
-      "What is the potential we see in AI for teaching and learning?",
-      "How should children and teachers approach learning in the age of AI?",
-      "What work is Anthropic doing in the sector?",
-      "What are the things we’re still uncertain about?",
-      "What would the successful incorporation of AI look like?"
-    ]
-  },
-  {
-    "video_id": "PLyCki2K0Lg",
-    "title": "【AI要約】モデルコンテキストプロトコル（MCP）を構築し、寄付した理由",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約モデルコンテキストプロトコルMCPを構築し寄付した理由.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "MCP とは？",
-      "MCPが解決する問題",
-      "USB-Cとの類似性",
-      "MCPの始まり",
-      "MCPの違い",
-      "コミュニティによる採用",
-      "義務のない標準",
-      "AnthropicハッカソンからHacker Newsへ",
-      "オープンソース化の決断",
-      "Linux FoundationへのMCPの寄贈",
-      "Agentic AI Foundation",
-      "MCPへの批判",
-      "MCPの将来",
-      "MCPを使って開発されたもの",
-      "開発者以外の方へのアドバイス",
-      "Davidが最も誇りに思っていること",
-      "MCPが解決する問題",
-      "USB-Cとの類似性",
-      "MCPの始まり",
-      "MCPの違い",
-      "コミュニティによる採用",
-      "義務のない標準",
-      "AnthropicハッカソンからHacker Newsへ",
-      "オープンソース化の決断",
-      "Linux FoundationへのMCPの寄贈",
-      "Agentic AI Foundation",
-      "MCPへの批判",
-      "MCPの将来",
-      "MCPを使って開発されたもの",
-      "開発者以外の方へのアドバイス",
-      "Davidが最も誇りに思っていること"
-    ]
-  },
-  {
-    "video_id": "_jjSS0qGFbI",
-    "title": "【AI要約】Claude.ai のコネクタを使い始める",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Claudeai のコネクタを使い始める.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "XpXImenrSPI",
-    "title": "【AI要約】Slack の Claude Code",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Slack の Claude Code.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "tJP6SKfo49c",
-    "title": "【AI要約】アントロピックが法務分野でクロードを利用する方法",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約アントロピックが法務分野でクロードを利用する方法.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "I9aGC6Ui3eE",
-    "title": "【AI要約】アントロピックの哲学者があなたの質問に答えます",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約アントロピックの哲学者があなたの質問に答えます.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "はじめに",
-      "なぜ AI 企業に哲学者がいるのか？",
-      "哲学者は AI を真剣に受け止めているのか？",
-      "哲学の理想と工学の現実",
-      "モデルは超人的な道徳的判断を下すのか？",
-      "Opus 3 が特別に感じられた理由",
-      "モデルは非推奨を心配するのか？",
-      "モデルのアイデンティティはどこにあるのか？",
-      "モデルの福祉に関する見解",
-      "モデルの苦しみへの対処",
-      "人間の心との類似点と非類似点",
-      "一つの AI パーソナリティで全てをこなせるのか？",
-      "システムは正常な行動を病理化してしまうのか？",
-      "AIとセラピー",
-      "システムプロンプトにおける大陸哲学",
-      "システムプロンプトから文字数カウントを削除する",
-      "「LLMウィスパラー」とは？",
-      "他のLLMウィスパラーについての考察",
-      "内部告発",
-      "フィクションの推薦",
-      "なぜ AI 企業に哲学者がいるのか？",
-      "哲学者は AI を真剣に受け止めているのか？",
-      "哲学の理想と工学の現実",
-      "モデルは超人的な道徳的判断を下すのか？",
-      "Opus 3 が特別に感じられた理由",
-      "モデルは非推奨を心配するのか？",
-      "モデルのアイデンティティはどこにあるのか？",
-      "モデルの福祉に関する見解",
-      "モデルの苦しみへの対処",
-      "人間の心との類似点と非類似点",
-      "一つの AI パーソナリティで全てをこなせるのか？",
-      "システムは正常な行動を病理化してしまうのか？",
-      "AIとセラピー",
-      "システムプロンプトにおける大陸哲学",
-      "システムプロンプトから文字数カウントを削除する",
-      "「LLMウィスパラー」とは？",
-      "他のLLMウィスパラーについての考察",
-      "内部告発",
-      "フィクションの推薦"
-    ]
-  },
-  {
-    "video_id": "xatyxfEevZA",
-    "title": "【AI要約】非営利団体向け AI 活用コースのトレーラー",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約非営利団体向け AI 活用コースのトレーラー.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "R-KJgjIrh24",
-    "title": "【AI要約】Claude.aiでリサーチを始める",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Claudeaiでリサーチを始める.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "GJ5jTgcbRHA",
-    "title": "【AI要約】Claude.aiでプロジェクトを始める",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Claudeaiでプロジェクトを始める.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "0vZ_UVLhSQQ",
-    "title": "【AI要約】Claude.aiを使い始める",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Claudeaiを使い始める.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "fOxC44g8vig",
-    "title": "【AI要約】クロードエージェントのスキルの説明",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約クロードエージェントのスキルの説明.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "エージェントスキルの紹介",
-      "エージェントスキルの仕組み",
-      "エージェントスキルと Claude.md の比較",
-      "エージェントスキルと MCP サーバーの比較",
-      "エージェントスキルとサブエージェントの比較",
-      "まとめ"
-    ]
-  },
-  {
-    "video_id": "zrcCS9oHjtI",
-    "title": "【AI要約】Claude Code on desktop",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Claude Code on desktop.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "LpGpwhORWr0",
-    "title": "【AI要約】Claude works with you on slides, spreadsheets, and contract redlines",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Claude works with you on slides spreadsheets a.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "56kq0VTkU4k",
-    "title": "【AI要約】Claude Opus 4.5 のご紹介",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Claude Opus 45 のご紹介.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "2MJDdzSXL74",
-    "title": "【AI要約】Claude Opus 4.5 solves a puzzle game",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約Claude Opus 45 solves a puzzle game.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "lvMMZLYoDr4",
-    "title": "【AI要約】AI の「報酬ハッキング」とは何ですか? また、なぜ私たちはそれを心配するのでしょうか?",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-23_AI_Anthropic_AI要約AI の報酬ハッキングとは何ですか またなぜ私たちはそれを心配するのでしょうか.html",
-    "date": "2026-08-23",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": [
-      "はじめに",
-      "この研究は何についてですか？",
-      "どのように実験を行いましたか？",
-      "モデルの不整合の検出",
-      "報酬ハッキングによる不整合の防止",
-      "代替戦略",
-      "限界",
-      "この研究は私たちの見解をどのように変えましたか？",
-      "AI安全性研究の実施に関心のある人々への教訓",
-      "この研究は何についてですか？",
-      "どのように実験を行いましたか？",
-      "モデルの不整合の検出",
-      "報酬ハッキングによる不整合の防止",
-      "代替戦略",
-      "限界",
-      "この研究は私たちの見解をどのように変えましたか？",
-      "AI安全性研究の実施に関心のある人々への教訓"
-    ]
-  },
-  {
-    "video_id": "VDI4MiD6eh4",
-    "title": "【OpenAI】NTTデータにとってCodexがもたらす可能性",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-24_AI_OpenAI_OpenAINTTデータにとってCodexがもたらす可能性.html",
-    "date": "2026-08-24",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "ceBruD6v5Bk",
-    "title": "【OpenAI】声だけで操作できる | ChatGPTで仕事術",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-24_AI_OpenAI_OpenAI声だけで操作できる  ChatGPTで仕事術.html",
-    "date": "2026-08-24",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "3_sQZRkwU2g",
-    "title": "【マイクロソフト】Kantar has more AI agents than employees",
-    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
-    "filename": "2026-08-25_AI_Microsoft_マイクロソフトKantar has more AI agents than employees.html",
-    "date": "2026-08-25",
+    "filename": "2026-08-29_AI_Microsoft_マイクロソフトWhat does it really take to ship an AI agen.html",
+    "date": "2026-08-29",
     "tags": [
       "ai",
-      "agents"
-    ],
-    "chapters": [
-      "You're not failing, you're iterating",
-      "Kantar created a Chief People & Agent Officer",
-      "Addressing employee anxiety about AI",
-      "Managing people and agents together",
-      "Kantar's AI transformation began",
-      "Moving from pilot to company-wide adoption",
-      "85% daily Copilot usage",
-      "Kantar built 15,000 agents",
-      "Inside Kantar's agent factory",
-      "No-code, low-code, and pro-code agents",
-      "HR agent: 3 days to 120 seconds",
-      "AI improved work quality",
-      "ROI: tech cost, labor cost, token cost",
-      "Are you announcing a reduction in workforce?",
-      "AI advice for leaders: focus on people",
-      "Kantar created a Chief People & Agent Officer",
-      "Addressing employee anxiety about AI",
-      "Managing people and agents together",
-      "Kantar's AI transformation began",
-      "Moving from pilot to company-wide adoption",
-      "85% daily Copilot usage",
-      "Kantar built 15,000 agents",
-      "Inside Kantar's agent factory",
-      "No-code, low-code, and pro-code agents",
-      "HR agent: 3 days to 120 seconds",
-      "AI improved work quality",
-      "ROI: tech cost, labor cost, token cost",
-      "Are you announcing a reduction in workforce?",
-      "AI advice for leaders: focus on people"
-    ]
-  },
-  {
-    "video_id": "yC-TA-GsRLI",
-    "title": "【Microsoft】Building an End-to-End Enterprise AI プラットフォーム on Azure",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-25_AI_Microsoft_MicrosoftBuilding an End-to-End Enterprise AI プラット.html",
-    "date": "2026-08-25",
-    "tags": [
-      "ai"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "rkJJZQF_qcg",
-    "title": "【マイクロソフト】Secure AI Agents in Azure: AI Gateway, Tools, and Trust",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-25_AI_Microsoft_マイクロソフトSecure AI Agents in Azure AI Gateway Tools .html",
-    "date": "2026-08-25",
-    "tags": [
-      "ai",
-      "agents"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "a2DSorZ-LeE",
-    "title": "【マイクロソフト】Building your own MCP server",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-25_AI_Microsoft_マイクロソフトBuilding your own MCP server.html",
-    "date": "2026-08-25",
-    "tags": [
-      "mcp"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "Orr7qadkZD8",
-    "title": "【マイクロソフト】Stop Writing Prompts. Start Writing Specs.",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-25_AI_Microsoft_マイクロソフトStop Writing Prompts Start Writing Specs.html",
-    "date": "2026-08-25",
-    "tags": [
-      "prompts",
-      "specs"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "1FfowsCdnxQ",
-    "title": "【マイクロソフト】Build Intelligent Agents with Work IQ, Foundry IQ, and Fabric IQ",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-25_AI_Microsoft_マイクロソフトBuild Intelligent Agents with Work IQ Found.html",
-    "date": "2026-08-25",
-    "tags": [
-      "agents"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "vhHzC2eMZ1U",
-    "title": "【マイクロソフト】Closing the Loop: Feedback based Learning for Agentic RAG on Azure",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-25_AI_Microsoft_マイクロソフトClosing the Loop Feedback based Learning fo.html",
-    "date": "2026-08-25",
-    "tags": [
-      "rag",
-      "agentic"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "M9Q_Ajwcryo",
-    "title": "【マイクロソフト】From Idea to Agent in Minutes: Copilot Studio + Claude Code",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-25_AI_Microsoft_マイクロソフトFrom Idea to Agent in Minutes Copilot Studi.html",
-    "date": "2026-08-25",
-    "tags": [
-      "copilot",
-      "claude",
       "agent"
     ],
-    "chapters": []
-  },
-  {
-    "video_id": "RV3GaHKIOvo",
-    "title": "【マイクロソフト】E3: Build AI apps with Azure SQL Database Hyperscale",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-25_AI_Microsoft_マイクロソフトE3 Build AI apps with Azure SQL Database Hy.html",
-    "date": "2026-08-25",
-    "tags": [
-      "ai"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "jzmNh8lbSp8",
-    "title": "【OpenAI】ChatGPTで情報を可視化する方法",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-25_AI_OpenAI_OpenAIChatGPTで情報を可視化する方法.html",
-    "date": "2026-08-25",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "o0ORPbSEgd8",
-    "title": "【Y Combinator】Max Junestrand: You Need The Willingness To Learn Faster Than Anyone Else",
-    "channel": "Y Combinator (AIスタートアップ)",
-    "filename": "2026-08-25_AI_Y_Y CombinatorMax Junestrand You Need The Willingnes.html",
-    "date": "2026-08-25",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
     "chapters": [
-      "Intro",
-      "What Lawyers Actually Needed",
-      "The Origin Story",
-      "Moving Into a Law Firm",
-      "The YC Rejection",
-      "San Francisco",
-      "80 Investor Meetings in 10 Days",
-      "Freezing Sales to Fix the Product",
-      "The Legora Product Manifesto",
-      "Unlearning the Fancy Resume Hire",
-      "The Law of Jante Problem",
-      "Stockholm Onboarding as Superpower",
-      "What Actually Made the Company",
-      "Does Domain Expertise Still Matter?",
-      "Betting on Model Improvement",
-      "Building Your Own Evals",
-      "When Should You Start a Startup?",
-      "How Competitiveness Shows Up at Legora",
-      "What Happens When You're #1?",
-      "How to Become More Ambitious",
-      "Storytelling as the CEO Superpower",
-      "Zero to $100M in 18 Months",
-      "What Lawyers Actually Needed",
-      "The Origin Story",
-      "Moving Into a Law Firm",
-      "The YC Rejection",
-      "San Francisco",
-      "80 Investor Meetings in 10 Days",
-      "Freezing Sales to Fix the Product",
-      "The Legora Product Manifesto",
-      "Unlearning the Fancy Resume Hire",
-      "The Law of Jante Problem",
-      "Stockholm Onboarding as Superpower",
-      "What Actually Made the Company",
-      "Does Domain Expertise Still Matter?",
-      "Betting on Model Improvement",
-      "Building Your Own Evals",
-      "When Should You Start a Startup?",
-      "How Competitiveness Shows Up at Legora",
-      "What Happens When You're #1?",
-      "How to Become More Ambitious",
-      "Storytelling as the CEO Superpower",
-      "Zero to $100M in 18 Months"
+      "The Agent Production Problem",
+      "Choosing From a Wide Array of Models",
+      "Building an Agent in the Portal",
+      "Building in Code: Agent Framework & SDK",
+      "Tracing Tokens, Cost, and Latency",
+      "Evaluating Agent Quality",
+      "Monitoring Agents at Scale",
+      "Governance, Security, and Guardrails",
+      "Choosing From a Wide Array of Models",
+      "Building an Agent in the Portal",
+      "Building in Code: Agent Framework & SDK",
+      "Tracing Tokens, Cost, and Latency",
+      "Evaluating Agent Quality",
+      "Monitoring Agents at Scale",
+      "Governance, Security, and Guardrails"
     ]
   },
   {
-    "video_id": "aV26V1UvkJw",
-    "title": "【Dwarkesh】Dylan Patel – Anthropic & OpenAI will have most of the world’s compute by 2028",
-    "channel": "Dwarkesh Patel (最深技術対談)",
-    "filename": "2026-08-26_AI_Dwarkesh_DwarkeshDylan Patel  Anthropic  OpenAI will have m.html",
-    "date": "2026-08-26",
-    "tags": [
-      "compute"
-    ],
-    "chapters": [
-      "Two labs will soon control most of the world’s compute",
-      "6 billion in fab capex enables $1t+ of end revenue",
-      "Compute prices will rise if the labs outbid everyone",
-      "Which layer will capture most of the surplus?",
-      "Will datacenter regulation slow down AI?",
-      "Labs are shifting compute from inference to R&D",
-      "China gets less than 10% of new compute, but its labs need less",
-      "Will AI cause a sovereign debt crisis?",
-      "Will the world's future workforce belong to a few companies?",
-      "6 billion in fab capex enables $1t+ of end revenue",
-      "Compute prices will rise if the labs outbid everyone",
-      "Which layer will capture most of the surplus?",
-      "Will datacenter regulation slow down AI?",
-      "Labs are shifting compute from inference to R&D",
-      "China gets less than 10% of new compute, but its labs need less",
-      "Will AI cause a sovereign debt crisis?",
-      "Will the world's future workforce belong to a few companies?"
-    ]
-  },
-  {
-    "video_id": "32C0_8_296k",
-    "title": "【テスラ】Megapackの大規模展開",
-    "channel": "Tesla (Elon Musk)",
-    "filename": "2026-08-26_AI_Tesla_テスラMegapackの大規模展開.html",
-    "date": "2026-08-26",
-    "tags": [
-      "megapack"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "9MIkJHcMtVA",
-    "title": "【OpenAI】No Limits on Text Chats with ChatGPT",
+    "video_id": "S6TIVzqTmu8",
+    "title": "【OpenAI】Magic Manga Girl (:30)",
     "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-26_AI_OpenAI_OpenAINo Limits on Text Chats with ChatGPT.html",
-    "date": "2026-08-26",
+    "filename": "2026-08-29_AI_OpenAI_OpenAIMagic Manga Girl 30.html",
+    "date": "2026-08-29",
     "tags": [
       "AI",
       "Specialist"
@@ -1163,23 +280,11 @@
     "chapters": []
   },
   {
-    "video_id": "2f9bBlGOuX4",
-    "title": "【OpenAI】コーデックスだけど、ちょっと変わったやつ。ハハハック。",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-26_AI_OpenAI_OpenAIコーデックスだけどちょっと変わったやつハハハック.html",
-    "date": "2026-08-26",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "29SyCndnMZs",
+    "video_id": "Rk4VyQxDq5s",
     "title": "【OpenAI】ChatGPT Workでビジネスの問いから戦略資料を作成する方法",
     "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-26_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html",
-    "date": "2026-08-26",
+    "filename": "2026-08-29_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html",
+    "date": "2026-08-29",
     "tags": [
       "AI",
       "Specialist"
@@ -1187,11 +292,11 @@
     "chapters": []
   },
   {
-    "video_id": "Is2NHa7awWY",
-    "title": "【OpenAI】WebMCPでAIエージェント対応サイトを構築しよう",
+    "video_id": "IEpTT48oW5Y",
+    "title": "【OpenAI】Tennis (:30)",
     "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-26_AI_OpenAI_OpenAIWebMCPでAIエージェント対応サイトを構築しよう.html",
-    "date": "2026-08-26",
+    "filename": "2026-08-29_AI_OpenAI_OpenAITennis 30.html",
+    "date": "2026-08-29",
     "tags": [
       "AI",
       "Specialist"
@@ -1199,11 +304,155 @@
     "chapters": []
   },
   {
-    "video_id": "o38xYi2mtgc",
-    "title": "【OpenAI】Codexがloveholidaysにもたらすもの",
+    "video_id": "981SivztzOc",
+    "title": "【OpenAI】コンピューターブラウザの使用 v4",
     "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-26_AI_OpenAI_OpenAICodexがloveholidaysにもたらすもの.html",
-    "date": "2026-08-26",
+    "filename": "2026-08-29_AI_OpenAI_OpenAIコンピューターブラウザの使用 v4.html",
+    "date": "2026-08-29",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "5QPBVrAAdBk",
+    "title": "【OpenAI】プラグインとスキル v6 CC",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-29_AI_OpenAI_OpenAIプラグインとスキル v6 CC.html",
+    "date": "2026-08-29",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "0qK3KqvtRrg",
+    "title": "【OpenAI】共有可能なサイトを構築する v3 CC",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-29_AI_OpenAI_OpenAI共有可能なサイトを構築する v3 CC.html",
+    "date": "2026-08-29",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "w1dcfvUCZYw",
+    "title": "【OpenAI】サッカー",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-28_AI_OpenAI_OpenAIサッカー.html",
+    "date": "2026-08-28",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "t64oZKCdG8Q",
+    "title": "【OpenAI】ChatGPT Workでビジネスの問いから戦略資料を作成する方法",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-28_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html",
+    "date": "2026-08-28",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "rh4BtN2NxmE",
+    "title": "【OpenAI】引退",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-28_AI_OpenAI_OpenAI引退.html",
+    "date": "2026-08-28",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "ppVPLmfKSfo",
+    "title": "【OpenAI】理科の授業",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-28_AI_OpenAI_OpenAI理科の授業.html",
+    "date": "2026-08-28",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "piNZDb8XLZo",
+    "title": "【OpenAI】Lost Cat",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-28_AI_OpenAI_OpenAILost Cat.html",
+    "date": "2026-08-28",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "lPgm4LByPRw",
+    "title": "【OpenAI】Mochi",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-28_AI_OpenAI_OpenAIMochi.html",
+    "date": "2026-08-28",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "huct2N_J5mc",
+    "title": "【OpenAI】テニス",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-28_AI_OpenAI_OpenAIテニス.html",
+    "date": "2026-08-28",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "UxJZrCFzTHY",
+    "title": "【AI要約】Model Hardware Standard：AIによる物理機器の操作",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-28_AI_Anthropic_AI要約Model Hardware StandardAIによる物理機器の操作.html",
+    "date": "2026-08-28",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "UPcy4gkhoGc",
+    "title": "【OpenAI】Magic Manga Girl",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-28_AI_OpenAI_OpenAIMagic Manga Girl.html",
+    "date": "2026-08-28",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "P1zBiAQU1IA",
+    "title": "【AI要約】AIモデルが科学実験の実施を支援する時代に",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-28_AI_Anthropic_AI要約AIモデルが科学実験の実施を支援する時代に.html",
+    "date": "2026-08-28",
     "tags": [
       "AI",
       "Specialist"
@@ -1295,11 +544,11 @@
     ]
   },
   {
-    "video_id": "rh4BtN2NxmE",
-    "title": "【OpenAI】引退",
+    "video_id": "o38xYi2mtgc",
+    "title": "【OpenAI】Codexがloveholidaysにもたらすもの",
     "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-28_AI_OpenAI_OpenAI引退.html",
-    "date": "2026-08-28",
+    "filename": "2026-08-26_AI_OpenAI_OpenAICodexがloveholidaysにもたらすもの.html",
+    "date": "2026-08-26",
     "tags": [
       "AI",
       "Specialist"
@@ -1307,147 +556,40 @@
     "chapters": []
   },
   {
-    "video_id": "piNZDb8XLZo",
-    "title": "【OpenAI】Lost Cat",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-28_AI_OpenAI_OpenAILost Cat.html",
-    "date": "2026-08-28",
+    "video_id": "aV26V1UvkJw",
+    "title": "【Dwarkesh】Dylan Patel – Anthropic & OpenAI will have most of the world’s compute by 2028",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-26_AI_Dwarkesh_DwarkeshDylan Patel  Anthropic  OpenAI will have m.html",
+    "date": "2026-08-26",
     "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "w1dcfvUCZYw",
-    "title": "【OpenAI】サッカー",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-28_AI_OpenAI_OpenAIサッカー.html",
-    "date": "2026-08-28",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "lPgm4LByPRw",
-    "title": "【OpenAI】Mochi",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-28_AI_OpenAI_OpenAIMochi.html",
-    "date": "2026-08-28",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "huct2N_J5mc",
-    "title": "【OpenAI】テニス",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-28_AI_OpenAI_OpenAIテニス.html",
-    "date": "2026-08-28",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "ppVPLmfKSfo",
-    "title": "【OpenAI】理科の授業",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-28_AI_OpenAI_OpenAI理科の授業.html",
-    "date": "2026-08-28",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "UPcy4gkhoGc",
-    "title": "【OpenAI】Magic Manga Girl",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-28_AI_OpenAI_OpenAIMagic Manga Girl.html",
-    "date": "2026-08-28",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "t64oZKCdG8Q",
-    "title": "【OpenAI】ChatGPT Workでビジネスの問いから戦略資料を作成する方法",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-28_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html",
-    "date": "2026-08-28",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "P1zBiAQU1IA",
-    "title": "【AI要約】AIモデルが科学実験の実施を支援する時代に",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-28_AI_Anthropic_AI要約AIモデルが科学実験の実施を支援する時代に.html",
-    "date": "2026-08-28",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "UxJZrCFzTHY",
-    "title": "【AI要約】Model Hardware Standard：AIによる物理機器の操作",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-08-28_AI_Anthropic_AI要約Model Hardware StandardAIによる物理機器の操作.html",
-    "date": "2026-08-28",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "gF2RMvXput8",
-    "title": "【マイクロソフト】What does it really take to ship an AI agent?",
-    "channel": "Microsoft Developer",
-    "filename": "2026-08-29_AI_Microsoft_マイクロソフトWhat does it really take to ship an AI agen.html",
-    "date": "2026-08-29",
-    "tags": [
-      "ai",
-      "agent"
+      "compute"
     ],
     "chapters": [
-      "The Agent Production Problem",
-      "Choosing From a Wide Array of Models",
-      "Building an Agent in the Portal",
-      "Building in Code: Agent Framework & SDK",
-      "Tracing Tokens, Cost, and Latency",
-      "Evaluating Agent Quality",
-      "Monitoring Agents at Scale",
-      "Governance, Security, and Guardrails",
-      "Choosing From a Wide Array of Models",
-      "Building an Agent in the Portal",
-      "Building in Code: Agent Framework & SDK",
-      "Tracing Tokens, Cost, and Latency",
-      "Evaluating Agent Quality",
-      "Monitoring Agents at Scale",
-      "Governance, Security, and Guardrails"
+      "Two labs will soon control most of the world’s compute",
+      "6 billion in fab capex enables $1t+ of end revenue",
+      "Compute prices will rise if the labs outbid everyone",
+      "Which layer will capture most of the surplus?",
+      "Will datacenter regulation slow down AI?",
+      "Labs are shifting compute from inference to R&D",
+      "China gets less than 10% of new compute, but its labs need less",
+      "Will AI cause a sovereign debt crisis?",
+      "Will the world's future workforce belong to a few companies?",
+      "6 billion in fab capex enables $1t+ of end revenue",
+      "Compute prices will rise if the labs outbid everyone",
+      "Which layer will capture most of the surplus?",
+      "Will datacenter regulation slow down AI?",
+      "Labs are shifting compute from inference to R&D",
+      "China gets less than 10% of new compute, but its labs need less",
+      "Will AI cause a sovereign debt crisis?",
+      "Will the world's future workforce belong to a few companies?"
     ]
   },
   {
-    "video_id": "yfnh8SuMbNw",
-    "title": "【OpenAI】スマホでChatGPTを活用する方法 v5 CC",
+    "video_id": "Is2NHa7awWY",
+    "title": "【OpenAI】WebMCPでAIエージェント対応サイトを構築しよう",
     "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-29_AI_OpenAI_OpenAIスマホでChatGPTを活用する方法 v5 CC.html",
-    "date": "2026-08-29",
+    "filename": "2026-08-26_AI_OpenAI_OpenAIWebMCPでAIエージェント対応サイトを構築しよう.html",
+    "date": "2026-08-26",
     "tags": [
       "AI",
       "Specialist"
@@ -1455,11 +597,11 @@
     "chapters": []
   },
   {
-    "video_id": "syML5KT-HzI",
-    "title": "【OpenAI】スライド、ドキュメント、テンプレートの作成方法",
+    "video_id": "9MIkJHcMtVA",
+    "title": "【OpenAI】No Limits on Text Chats with ChatGPT",
     "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-29_AI_OpenAI_OpenAIスライドドキュメントテンプレートの作成方法.html",
-    "date": "2026-08-29",
+    "filename": "2026-08-26_AI_OpenAI_OpenAINo Limits on Text Chats with ChatGPT.html",
+    "date": "2026-08-26",
     "tags": [
       "AI",
       "Specialist"
@@ -1467,11 +609,34 @@
     "chapters": []
   },
   {
-    "video_id": "DLcQSp_CIIc",
+    "video_id": "32C0_8_296k",
+    "title": "【テスラ】Megapackの大規模展開",
+    "channel": "Tesla (Elon Musk)",
+    "filename": "2026-08-26_AI_Tesla_テスラMegapackの大規模展開.html",
+    "date": "2026-08-26",
+    "tags": [
+      "megapack"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "2f9bBlGOuX4",
+    "title": "【OpenAI】コーデックスだけど、ちょっと変わったやつ。ハハハック。",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-26_AI_OpenAI_OpenAIコーデックスだけどちょっと変わったやつハハハック.html",
+    "date": "2026-08-26",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "29SyCndnMZs",
     "title": "【OpenAI】ChatGPT Workでビジネスの問いから戦略資料を作成する方法",
     "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-29_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html",
-    "date": "2026-08-29",
+    "filename": "2026-08-26_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html",
+    "date": "2026-08-26",
     "tags": [
       "AI",
       "Specialist"
@@ -1479,142 +644,300 @@
     "chapters": []
   },
   {
-    "video_id": "981SivztzOc",
-    "title": "【OpenAI】コンピューターブラウザの使用 v4",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-29_AI_OpenAI_OpenAIコンピューターブラウザの使用 v4.html",
-    "date": "2026-08-29",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
+    "video_id": "zDuZmccxjlA",
+    "title": "【NVIDIA】NPSとNVIDIAによる次世代AIリーダー育成の取り組み",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIANPSとNVIDIAによる次世代AIリーダー育成の取り組み.html",
+    "date": "2026-08-25",
+    "tags": [],
     "chapters": []
   },
   {
-    "video_id": "urXc4xxixVU",
-    "title": "【OpenAI】スケジュールされたタスク v3 CC",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-29_AI_OpenAI_OpenAIスケジュールされたタスク v3 CC.html",
-    "date": "2026-08-29",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
+    "video_id": "z1b8DRFwWgo",
+    "title": "【NVIDIA】GTC SJ 2026：次世代インテリジェント手術ロボット",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIAGTC SJ 2026次世代インテリジェント手術ロボット.html",
+    "date": "2026-08-25",
+    "tags": [],
     "chapters": []
   },
   {
-    "video_id": "5QPBVrAAdBk",
-    "title": "【OpenAI】プラグインとスキル v6 CC",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-29_AI_OpenAI_OpenAIプラグインとスキル v6 CC.html",
-    "date": "2026-08-29",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "0qK3KqvtRrg",
-    "title": "【OpenAI】共有可能なサイトを構築する v3 CC",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-29_AI_OpenAI_OpenAI共有可能なサイトを構築する v3 CC.html",
-    "date": "2026-08-29",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "Rk4VyQxDq5s",
-    "title": "【OpenAI】ChatGPT Workでビジネスの問いから戦略資料を作成する方法",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-29_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html",
-    "date": "2026-08-29",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "S6TIVzqTmu8",
-    "title": "【OpenAI】Magic Manga Girl (:30)",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-29_AI_OpenAI_OpenAIMagic Manga Girl 30.html",
-    "date": "2026-08-29",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "IEpTT48oW5Y",
-    "title": "【OpenAI】Tennis (:30)",
-    "channel": "OpenAI (Sam Altman)",
-    "filename": "2026-08-29_AI_OpenAI_OpenAITennis 30.html",
-    "date": "2026-08-29",
-    "tags": [
-      "AI",
-      "Specialist"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "Hjth_qL6ok8",
-    "title": "【マイクロソフト】エージェント全盛の今、何を学ぶべきか？",
+    "video_id": "yC-TA-GsRLI",
+    "title": "【Microsoft】Building an End-to-End Enterprise AI プラットフォーム on Azure",
     "channel": "Microsoft Developer",
-    "filename": "2026-09-01_AI_Microsoft_マイクロソフトエージェント全盛の今何を学ぶべきか.html",
-    "date": "2026-09-01",
+    "filename": "2026-08-25_AI_Microsoft_MicrosoftBuilding an End-to-End Enterprise AI プラット.html",
+    "date": "2026-08-25",
     "tags": [
-      "エージェント"
-    ],
-    "chapters": []
-  },
-  {
-    "video_id": "u15N3l4RT80",
-    "title": "【Dwarkesh】AIエージェント文明の興亡",
-    "channel": "Dwarkesh Patel (最深技術対談)",
-    "filename": "2026-09-01_AI_Dwarkesh_DwarkeshAIエージェント文明の興亡.html",
-    "date": "2026-09-01",
-    "tags": [
-      "エージェント",
       "ai"
     ],
     "chapters": []
   },
   {
-    "video_id": "nM86DBOqgPM",
-    "title": "【Y Combinator】Heart Aerospace Built the World’s Largest Electric Aircraft",
-    "channel": "Y Combinator (AIスタートアップ)",
-    "filename": "2026-09-02_AI_Y_Y CombinatorHeart Aerospace Built the Worlds Large.html",
-    "date": "2026-09-02",
+    "video_id": "xySgVPLYnsc",
+    "title": "【NVIDIA】NVIDIA Alpamayo 2 Super: The Frontier Open Model for Robotaxis and 自律型 Vehicle",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIANVIDIA Alpamayo 2 Super The Frontier Open Mo.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "xcTRTotS9-A",
+    "title": "【NVIDIA】Firebird、アルメニアにCIS地域最大のAIファクトリーを設立",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIAFirebirdアルメニアにCIS地域最大のAIファクトリーを設立.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "wd5ZZV8if54",
+    "title": "【Google】Predicting a historic storm earlier with WeatherNext",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GooglePredicting a historic storm earlier with Wea.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "wYVHxw2-DP4",
+    "title": "【Google】Tough dexterity tasks with Gemini ロボティクス 2",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleTough dexterity tasks with Gemini ロボティクス 2.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "wIE3-E9EN4g",
+    "title": "【Google】Project Genie | Skydiving",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleProject Genie  Skydiving.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "vhHzC2eMZ1U",
+    "title": "【マイクロソフト】Closing the Loop: Feedback based Learning for Agentic RAG on Azure",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトClosing the Loop Feedback based Learning fo.html",
+    "date": "2026-08-25",
     "tags": [
-      "AI",
-      "Specialist"
+      "rag",
+      "agentic"
     ],
     "chapters": []
   },
   {
-    "video_id": "ii001KWkV54",
-    "title": "【マイクロソフト】From Code to Agents: Build Production MCP Servers on Azure Functions",
+    "video_id": "vXWs3Xq-ke0",
+    "title": "【NVIDIA】NVIDIAと日本：次なる産業革命の構築",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIANVIDIAと日本次なる産業革命の構築.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "udnhu43tTfk",
+    "title": "【Google】Teaching the foundations of AI in the classroom",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleTeaching the foundations of AI in the classr.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "uW4B6ziQqvY",
+    "title": "【Google】Gemini Omniとは？",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-25_AI_Google_GoogleGemini Omniとは.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "tjGVnjsvi-k",
+    "title": "【NVIDIA】AIファクトリーの心臓部となるネットワーク：NVIDIA Spectrum-X Ethernet",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIAAIファクトリーの心臓部となるネットワークNVIDIA Spectrum-X Ether.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "sUdEcG824YQ",
+    "title": "【NVIDIA】NVIDIAデータセンターパートナー総括 | GTC Taipei 2026総括",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIANVIDIAデータセンターパートナー総括  GTC Taipei 2026総括.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "s4Lav_gsMPo",
+    "title": "【Google】先行公開：次世代スマートグラス | Geminiがあなたのメガネにやってくる",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-25_AI_Google_Google先行公開次世代スマートグラス  Geminiがあなたのメガネにやってくる.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "rpQPBCDv5Pc",
+    "title": "【NVIDIA】BharatGenはNVIDIA Nemotronを使ってどのようにインドのAIを構築しているのか",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIABharatGenはNVIDIA Nemotronを使ってどのようにインドのAIを構築し.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "rkJJZQF_qcg",
+    "title": "【マイクロソフト】Secure AI Agents in Azure: AI Gateway, Tools, and Trust",
     "channel": "Microsoft Developer",
-    "filename": "2026-09-02_AI_Microsoft_マイクロソフトFrom Code to Agents Build Production MCP Se.html",
-    "date": "2026-09-02",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトSecure AI Agents in Azure AI Gateway Tools .html",
+    "date": "2026-08-25",
     "tags": [
-      "mcp",
+      "ai",
       "agents"
     ],
     "chapters": []
   },
   {
-    "video_id": "ROF2Nv_KjOM",
-    "title": "【AI要約】Claude Fable 5.1が登場",
-    "channel": "Anthropic (Dario Amodei)",
-    "filename": "2026-09-02_AI_Anthropic_AI要約Claude Fable 51が登場.html",
-    "date": "2026-09-02",
+    "video_id": "r64krUavXJU",
+    "title": "【OpenAI】バードウォッチングの相棒を紹介",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAIバードウォッチングの相棒を紹介.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "qoinGjj60Fo",
+    "title": "【Google】10 years of AlphaGo: The turning point for AI | Thore Graepel & Pushmeet Kohli",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_Google10 years of AlphaGo The turning point for AI.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "q9TPE7pKkIo",
+    "title": "【OpenAI】ChatGPT Workでビジネスの問いから戦略資料を作成する方法",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "pZNzfQLgGsA",
+    "title": "【Google】Reimagining the mouse pointer with AI",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleReimagining the mouse pointer with AI.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "o0ORPbSEgd8",
+    "title": "【Y Combinator】Max Junestrand: You Need The Willingness To Learn Faster Than Anyone Else",
+    "channel": "Y Combinator (AIスタートアップ)",
+    "filename": "2026-08-25_AI_Y_Y CombinatorMax Junestrand You Need The Willingnes.html",
+    "date": "2026-08-25",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "Intro",
+      "What Lawyers Actually Needed",
+      "The Origin Story",
+      "Moving Into a Law Firm",
+      "The YC Rejection",
+      "San Francisco",
+      "80 Investor Meetings in 10 Days",
+      "Freezing Sales to Fix the Product",
+      "The Legora Product Manifesto",
+      "Unlearning the Fancy Resume Hire",
+      "The Law of Jante Problem",
+      "Stockholm Onboarding as Superpower",
+      "What Actually Made the Company",
+      "Does Domain Expertise Still Matter?",
+      "Betting on Model Improvement",
+      "Building Your Own Evals",
+      "When Should You Start a Startup?",
+      "How Competitiveness Shows Up at Legora",
+      "What Happens When You're #1?",
+      "How to Become More Ambitious",
+      "Storytelling as the CEO Superpower",
+      "Zero to $100M in 18 Months",
+      "What Lawyers Actually Needed",
+      "The Origin Story",
+      "Moving Into a Law Firm",
+      "The YC Rejection",
+      "San Francisco",
+      "80 Investor Meetings in 10 Days",
+      "Freezing Sales to Fix the Product",
+      "The Legora Product Manifesto",
+      "Unlearning the Fancy Resume Hire",
+      "The Law of Jante Problem",
+      "Stockholm Onboarding as Superpower",
+      "What Actually Made the Company",
+      "Does Domain Expertise Still Matter?",
+      "Betting on Model Improvement",
+      "Building Your Own Evals",
+      "When Should You Start a Startup?",
+      "How Competitiveness Shows Up at Legora",
+      "What Happens When You're #1?",
+      "How to Become More Ambitious",
+      "Storytelling as the CEO Superpower",
+      "Zero to $100M in 18 Months"
+    ]
+  },
+  {
+    "video_id": "nBftSI5mmHA",
+    "title": "【Google】Tasks that require whole-body control with Gemini ロボティクス 2",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleTasks that require whole-body control with G.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "mx0xFpVjxHE",
+    "title": "【Google】Google AI Studioでアプリを公開する方法",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-25_AI_Google_GoogleGoogle AI Studioでアプリを公開する方法.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "lRRtW16GalE",
+    "title": "【Tesla】自律型 Tesla Delivery | Full Drive",
+    "channel": "Tesla (Elon Musk)",
+    "filename": "2026-08-25_AI_Tesla_Tesla自律型 Tesla Delivery  Full Drive.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "l5Wpm4o6k1A",
+    "title": "【Google】Music AI Sandbox | AI x Creativity: Wyclef Jean",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleMusic AI Sandbox  AI x Creativity Wyclef Jea.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "jzmNh8lbSp8",
+    "title": "【OpenAI】ChatGPTで情報を可視化する方法",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAIChatGPTで情報を可視化する方法.html",
+    "date": "2026-08-25",
     "tags": [
       "AI",
       "Specialist"
@@ -1622,148 +945,2397 @@
     "chapters": []
   },
   {
-    "video_id": "CFFcWs2FRBo",
-    "title": "【マイクロソフト】Build Your Personal Brand with GitHub Copilot — Full Course for Students",
-    "channel": "Microsoft Developer",
-    "filename": "2026-09-02_AI_Microsoft_マイクロソフトBuild Your Personal Brand with GitHub Copil.html",
-    "date": "2026-09-02",
-    "tags": [
-      "copilot"
-    ],
-    "chapters": [
-      "Welcome — what you'll build in this series",
-      "Claiming the GitHub Student Developer Pack",
-      "Your first prompt: a Hello World site",
-      "EPISODE 2 — Build a portfolio website from a resume",
-      "Answering Copilot's questions about structure and style",
-      "Resume preview, school colors, and dark mode",
-      "EPISODE 3 — Git, GitHub, and GitHub Pages",
-      "Version control explained: diffs, commits, branches, merging",
-      "Creating a repository and pushing your site",
-      "Deploying with GitHub Pages",
-      "EPISODE 4 — Copilot settings, sessions, and modes",
-      "Interactive mode, Plan mode, and Autopilot mode",
-      "EPISODE 5 — Context and tokens",
-      "Adding project files and running /init",
-      "Shrinking your session with /compact",
-      "EPISODE 6 — Tools and MCP servers",
-      "Installing and using the Playwright MCP server",
-      "EPISODE 7 — Skills, agent personas, and marketplaces",
-      "Turning a workflow into a reusable skill",
-      "Adding a plugin marketplace",
-      "EPISODE 8 — Bring your own model",
-      "Using the Azure MCP to create a Foundry resource",
-      "Connecting Foundry as a model provider",
-      "EPISODE 9 — Modernize the site with Bootstrap",
-      "Sticky navbar, animated cards, and shadows",
-      "EPISODE 10 — Control Copilot from your phone",
-      "Remote control and the QR code handoff",
-      "Back at the laptop — the finished feature",
-      "Claiming the GitHub Student Developer Pack",
-      "Your first prompt: a Hello World site",
-      "EPISODE 2 — Build a portfolio website from a resume",
-      "Answering Copilot's questions about structure and style",
-      "Resume preview, school colors, and dark mode",
-      "EPISODE 3 — Git, GitHub, and GitHub Pages",
-      "Version control explained: diffs, commits, branches, merging",
-      "Creating a repository and pushing your site",
-      "Deploying with GitHub Pages",
-      "EPISODE 4 — Copilot settings, sessions, and modes",
-      "Interactive mode, Plan mode, and Autopilot mode",
-      "EPISODE 5 — Context and tokens",
-      "Adding project files and running /init",
-      "Shrinking your session with /compact",
-      "EPISODE 6 — Tools and MCP servers",
-      "Installing and using the Playwright MCP server",
-      "EPISODE 7 — Skills, agent personas, and marketplaces",
-      "Turning a workflow into a reusable skill",
-      "Adding a plugin marketplace",
-      "EPISODE 8 — Bring your own model",
-      "Using the Azure MCP to create a Foundry resource",
-      "Connecting Foundry as a model provider",
-      "EPISODE 9 — Modernize the site with Bootstrap",
-      "Sticky navbar, animated cards, and shadows",
-      "EPISODE 10 — Control Copilot from your phone",
-      "Remote control and the QR code handoff",
-      "Back at the laptop — the finished feature"
-    ]
+    "video_id": "jHEEaQJxJyo",
+    "title": "【Google】パペット×AI | Timmy TPUの舞台裏",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-25_AI_Google_GoogleパペットAI  Timmy TPUの舞台裏.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
   },
   {
-    "video_id": "pdBSgV2SRcM",
-    "title": "【マイクロソフト】わずか数行のPythonコードで、はじめてのAIエージェントを作ろう",
+    "video_id": "iWsKSxyfRIA",
+    "title": "【NVIDIA】GTC SJ 2026：AIネイティブ・デジタルヘルススタック ― 2026年版開発者ガイド",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIAGTC SJ 2026AIネイティブデジタルヘルススタック  2026年版開発者ガイド.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "hv8ZI7foGZk",
+    "title": "【Google】Introducing Lyria 3 Pro",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleIntroducing Lyria 3 Pro.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "hjXi7b01s2c",
+    "title": "【OpenAI】営業のためのChatGPT活用：アカウントプランニングと会議準備",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAI営業のためのChatGPT活用アカウントプランニングと会議準備.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "guv2-EoGUXw",
+    "title": "【Google】Gemini Omniで動画を編集・作成する方法",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-25_AI_Google_GoogleGemini Omniで動画を編集作成する方法.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "gatpk6BhN5w",
+    "title": "【Meta】アメリカの全視覚障害退役軍人へAIグラスを無償提供",
+    "channel": "Meta (Mark Zuckerberg / Yann LeCun)",
+    "filename": "2026-08-25_AI_Meta_Metaアメリカの全視覚障害退役軍人へAIグラスを無償提供.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "exh1vwGlrSo",
+    "title": "【Google】Understanding cancer at a genetic level with AI",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleUnderstanding cancer at a genetic level with.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "eV1Z2xQZGvA",
+    "title": "【NVIDIA】次世代エンタープライズAI：InfosysとNVIDIAが実現する未来",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIA次世代エンタープライズAIInfosysとNVIDIAが実現する未来.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "eCrU0EdIiO4",
+    "title": "【テスラ】ドライバーがFSDを愛する理由 | テスラ",
+    "channel": "Tesla (Elon Musk)",
+    "filename": "2026-08-25_AI_Tesla_テスラドライバーがFSDを愛する理由  テスラ.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "eAOaRJj02HU",
+    "title": "【Google】Gemini 3 Deep Think: Accelerating mechanical engineering and rapid prototyping",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleGemini 3 Deep Think Accelerating mechanical .html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "bl2eGejkbaU",
+    "title": "【OpenAI】CFOデモ 3 — ビジネスの実行",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAICFOデモ 3  ビジネスの実行.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "bQnY_0_ZD60",
+    "title": "【テスラ】Road Trippin’ with FSD Supervised | Bay Area → LA",
+    "channel": "Tesla (Elon Musk)",
+    "filename": "2026-08-25_AI_Tesla_テスラRoad Trippin with FSD Supervised  Bay Area  LA.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "bOj_LCHmINU",
+    "title": "【Meta】Meta AIと語り合おう ― ブッククラブ",
+    "channel": "Meta (Mark Zuckerberg / Yann LeCun)",
+    "filename": "2026-08-25_AI_Meta_MetaMeta AIと語り合おう  ブッククラブ.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "bNrbxCvFrKA",
+    "title": "【Google】Gemini 3 Deep Think: Identifying logical errors in complex mathematics research",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleGemini 3 Deep Think Identifying logical erro.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "amnhF6BwzZQ",
+    "title": "【Google】Gemini Spark | I/O 2026 基調講演",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-25_AI_Google_GoogleGemini Spark  IO 2026 基調講演.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "aSY_vFFmkW0",
+    "title": "【Google】Generating novel scientific hypotheses with Co-Scientist",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleGenerating novel scientific hypotheses with .html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "a2DSorZ-LeE",
+    "title": "【マイクロソフト】Building your own MCP server",
     "channel": "Microsoft Developer",
-    "filename": "2026-09-02_AI_Microsoft_マイクロソフトわずか数行のPythonコードではじめてのAIエージェントを作ろう.html",
-    "date": "2026-09-02",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトBuilding your own MCP server.html",
+    "date": "2026-08-25",
     "tags": [
-      "エージェント",
+      "mcp"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "_Gd9yzAc-WI",
+    "title": "【OpenAI】ChatGPTの音声会話機能で作業する",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAIChatGPTの音声会話機能で作業する.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "ZAVVfZ_mwnw",
+    "title": "【NVIDIA】NVIDIAとWistron：先端製造技術による米国の再工業化",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIANVIDIAとWistron先端製造技術による米国の再工業化.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "Ywgx2AqcdM8",
+    "title": "【NVIDIA】NVIDIA cuPhoton：宇宙の発見を加速させる技術",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIANVIDIA cuPhoton宇宙の発見を加速させる技術.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "YSKzyVOQmuA",
+    "title": "【Google】Gemini 1.5 Flashはいかにして酪農家の経営を支えたのか",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-25_AI_Google_GoogleGemini 15 Flashはいかにして酪農家の経営を支えたのか.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "XdtQbMXHDjQ",
+    "title": "【NVIDIA】BlenderでAIエージェント対応のシミュレーションを実現する",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIABlenderでAIエージェント対応のシミュレーションを実現する.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "WeP9VUf1OoE",
+    "title": "【OpenAI】「gpt-transcribe」および「gpt-live-transcribe」の紹介",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAIgpt-transcribeおよびgpt-live-transcribeの紹介.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "WCRNR1Ve9s0",
+    "title": "【NVIDIA】開発者エージェント・デモ 1",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIA開発者エージェントデモ 1.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "W-HhMUe9hOg",
+    "title": "【OpenAI】ChatGPTのコンピュータ履歴機能",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAIChatGPTのコンピュータ履歴機能.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "V04bm-3d6EQ",
+    "title": "【Google】When millions of AI agents meet",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleWhen millions of AI agents meet.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "UV_pGEAUZCk",
+    "title": "【Google】Project Genie | Puddle Jumper",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleProject Genie  Puddle Jumper.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "U6wb-zgYylk",
+    "title": "【Google】Project Genie | Silver Sphere",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleProject Genie  Silver Sphere.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "TY2EilHUR1c",
+    "title": "【NVIDIA】Powering Agentic AI with AI-Ready Data プラットフォームs That Turn Data Into Intelligence",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIAPowering Agentic AI with AI-Ready Data プラットフ.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "Sm7OTow3mcY",
+    "title": "【Google】その画像がAI生成かどうかを見分ける方法",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-25_AI_Google_Googleその画像がAI生成かどうかを見分ける方法.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "SJJBPwlPpww",
+    "title": "【OpenAI】AIはボストン小児病院の医療の謎をどう解き明かすのか | OpenAIフォーラム",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAIAIはボストン小児病院の医療の謎をどう解き明かすのか  OpenAIフォーラム.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "RV3GaHKIOvo",
+    "title": "【マイクロソフト】E3: Build AI apps with Azure SQL Database Hyperscale",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトE3 Build AI apps with Azure SQL Database Hy.html",
+    "date": "2026-08-25",
+    "tags": [
       "ai"
     ],
+    "chapters": []
+  },
+  {
+    "video_id": "RS9c40UDuIs",
+    "title": "【NVIDIA】次世代産業の幕開け：GTC Taipei 2026で注目のNVIDIA Inceptionスタートアップを紹介",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIA次世代産業の幕開けGTC Taipei 2026で注目のNVIDIA Inception.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "RNY0p5wL4AA",
+    "title": "【NVIDIA】BIO26 ヘルスケア特別講演",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIABIO26 ヘルスケア特別講演.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "R-Yqes8AotY",
+    "title": "【Google】Reconstructing Pelé’s lost goal",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleReconstructing Pelés lost goal.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "QhdEJFFaig0",
+    "title": "【Google】Gemini Omni | I/O 2026 基調講演",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-25_AI_Google_GoogleGemini Omni  IO 2026 基調講演.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "P3VzeHtat70",
+    "title": "【NVIDIA】自律型AIはいかにしてチップとシステム設計を変革しているのか",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIA自律型AIはいかにしてチップとシステム設計を変革しているのか.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "Orr7qadkZD8",
+    "title": "【マイクロソフト】Stop Writing Prompts. Start Writing Specs.",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトStop Writing Prompts Start Writing Specs.html",
+    "date": "2026-08-25",
+    "tags": [
+      "prompts",
+      "specs"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "OEkxKdhtQng",
+    "title": "【OpenAI】Model MLがGPT-5.6 Solを活用して金融業務の効率を劇的に高める方法",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAIModel MLがGPT-56 Solを活用して金融業務の効率を劇的に高める方法.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "O9-650iHAls",
+    "title": "【Google】Advanced dexterity with Gemini ロボティクス 2",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleAdvanced dexterity with Gemini ロボティクス 2.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "Np0afRWtdp8",
+    "title": "【NVIDIA】Why AI Agents Need More Than One Model",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIAWhy AI Agents Need More Than One Model.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "NcjBCtqRgtE",
+    "title": "【NVIDIA】Redefining Financial Services With Next-Generation Compute and Agentic AI",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIARedefining Financial Services With Next-Gene.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "MkJKoDEmxEQ",
+    "title": "【Google】Project Genie | Ruin Rover",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleProject Genie  Ruin Rover.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "MLehRytu9Zo",
+    "title": "【OpenAI】10万人の学術研究者に最先端AIモデルを無償提供します",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAI10万人の学術研究者に最先端AIモデルを無償提供します.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "MBEbs-WxMDA",
+    "title": "【Google】Project Genie | Meadow",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleProject Genie  Meadow.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "M9Q_Ajwcryo",
+    "title": "【マイクロソフト】From Idea to Agent in Minutes: Copilot Studio + Claude Code",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトFrom Idea to Agent in Minutes Copilot Studi.html",
+    "date": "2026-08-25",
+    "tags": [
+      "copilot",
+      "claude",
+      "agent"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "LvbUFwNtyPI",
+    "title": "【NVIDIA】COMPUTEX 2026 | NVIDIA 基調講演 | エクストリーム・コデザイン：AIファクトリーの構築",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIACOMPUTEX 2026  NVIDIA 基調講演  エクストリームコデザインAIファ.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "Ljm3nHQQiSk",
+    "title": "【OpenAI】CFOデモ 1 — 数値への信頼性",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAICFOデモ 1  数値への信頼性.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "Jpsq_-1kJTo",
+    "title": "【NVIDIA】NVIDIAはどのように独自のAIファクトリーを運営しているのか | AI Factory Insider 第2回",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIANVIDIAはどのように独自のAIファクトリーを運営しているのか  AI Factory.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "JJTdXTf12oQ",
+    "title": "【Google】Google Flowにおけるエージェントの使い方 | Find Your Flow",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-25_AI_Google_GoogleGoogle Flowにおけるエージェントの使い方  Find Your Flow.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "IE0BmXsIzTI",
+    "title": "【Google】Gemini 3 Deep Think: Optimizing 2D semiconductor fabrication",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleGemini 3 Deep Think Optimizing 2D semiconduc.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "HxapJDdSP9Y",
+    "title": "【Google】Project Genie | Rollerball",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleProject Genie  Rollerball.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "FZ9RQVQsDts",
+    "title": "【Google】Project Genie | Shine and Seek",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleProject Genie  Shine and Seek.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "EDWbX_-RYws",
+    "title": "【OpenAI】Ultrafastモードのプレビュー：最大14倍の速度を実現するGPT-5.6 Sol",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAIUltrafastモードのプレビュー最大14倍の速度を実現するGPT-56 Sol.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "Cxp2aZQqkYM",
+    "title": "【OpenAI】Base44がGPT-5.6を使用して20%少ないトークンでアプリを構築する方法",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAIBase44がGPT-56を使用して20少ないトークンでアプリを構築する方法.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "Cnuj24PjWrQ",
+    "title": "【Google】Using AI to outsmart drug-resistant bacteria",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleUsing AI to outsmart drug-resistant bacteria.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "CiTPDm7PKW0",
+    "title": "【Google】Multi-robot collaboration with Gemini ロボティクス 2",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleMulti-robot collaboration with Gemini ロボティクス.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "CNM6Mmqrfeg",
+    "title": "【NVIDIA】NVIDIA Spectrum-X Ethernet Photonics | Now in Full Production",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIANVIDIA Spectrum-X Ethernet Photonics  Now in.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "9MNLEAzA59o",
+    "title": "【Google】Intelligent whole-body control with Gemini ロボティクス 2",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleIntelligent whole-body control with Gemini ロ.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "94Td-y5z5rk",
+    "title": "【OpenAI】CFO向けデモ2 — 予測を形にする",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAICFO向けデモ2  予測を形にする.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "8aGMLbS3NAo",
+    "title": "【テスラ】AIによる家庭用エネルギー自律管理システムの全貌",
+    "channel": "Tesla (Elon Musk)",
+    "filename": "2026-08-25_AI_Tesla_テスラAIによる家庭用エネルギー自律管理システムの全貌.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "8TQYkjViaBQ",
+    "title": "【NVIDIA】AIファクトリーで自律型エージェントを安全に展開する方法 | AI Factory Insider 第3回",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIAAIファクトリーで自律型エージェントを安全に展開する方法  AI Factory Ins.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "8FBYm3rcwVI",
+    "title": "【Meta】Meta's Privacy Conversations: Risk Management and AI With Susan Cooper and Bojana Belamy",
+    "channel": "Meta (Mark Zuckerberg / Yann LeCun)",
+    "filename": "2026-08-25_AI_Meta_MetaMetas Privacy Conversations Risk Management an.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "7Z5Vy9JBANs",
+    "title": "【Google】Gemini | I/O 2026 基調講演",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-25_AI_Google_GoogleGemini  IO 2026 基調講演.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "7W7admQcwyA",
+    "title": "【Google】Project Genie | Library Cat",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleProject Genie  Library Cat.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "4lSQnrMC6nY",
+    "title": "【Google】Gemini ロボティクス 2 brings whole body intelligence to robots",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleGemini ロボティクス 2 brings whole body intelligen.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "3sDEcfO2cQU",
+    "title": "【NVIDIA】リアルタイム神経学的洞察：NVIDIA InceptionによるNeuroDX AIの拡張",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIAリアルタイム神経学的洞察NVIDIA InceptionによるNeuroDX AIの拡張.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "3_sQZRkwU2g",
+    "title": "【マイクロソフト】Kantar has more AI agents than employees",
+    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトKantar has more AI agents than employees.html",
+    "date": "2026-08-25",
+    "tags": [
+      "ai",
+      "agents"
+    ],
     "chapters": [
-      "Build a Cupcake-Ordering Agent",
-      "Set Up Microsoft Foundry",
-      "Create and Test the Agent",
-      "Add Instructions and MCP Tools",
-      "Complete a Cupcake Order",
-      "Recap and Key Takeaways",
-      "Set Up Microsoft Foundry",
-      "Create and Test the Agent",
-      "Add Instructions and MCP Tools",
-      "Complete a Cupcake Order",
-      "Recap and Key Takeaways"
+      "You're not failing, you're iterating",
+      "Kantar created a Chief People & Agent Officer",
+      "Addressing employee anxiety about AI",
+      "Managing people and agents together",
+      "Kantar's AI transformation began",
+      "Moving from pilot to company-wide adoption",
+      "85% daily Copilot usage",
+      "Kantar built 15,000 agents",
+      "Inside Kantar's agent factory",
+      "No-code, low-code, and pro-code agents",
+      "HR agent: 3 days to 120 seconds",
+      "AI improved work quality",
+      "ROI: tech cost, labor cost, token cost",
+      "Are you announcing a reduction in workforce?",
+      "AI advice for leaders: focus on people",
+      "Kantar created a Chief People & Agent Officer",
+      "Addressing employee anxiety about AI",
+      "Managing people and agents together",
+      "Kantar's AI transformation began",
+      "Moving from pilot to company-wide adoption",
+      "85% daily Copilot usage",
+      "Kantar built 15,000 agents",
+      "Inside Kantar's agent factory",
+      "No-code, low-code, and pro-code agents",
+      "HR agent: 3 days to 120 seconds",
+      "AI improved work quality",
+      "ROI: tech cost, labor cost, token cost",
+      "Are you announcing a reduction in workforce?",
+      "AI advice for leaders: focus on people"
     ]
   },
   {
-    "video_id": "MkbepPfaeMU",
-    "title": "【NVIDIA】トークノミクス入門：トークンとは何か、なぜ重要なのか | AIファクトリー・インサイダー 第4話",
+    "video_id": "34q_KjF64E8",
+    "title": "【Google】AIと社会 | I/O 2026 基調講演",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-25_AI_Google_GoogleAIと社会  IO 2026 基調講演.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "2m5BCWB02jY",
+    "title": "【Google】Meet Gemini Omni",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-25_AI_Google_GoogleMeet Gemini Omni.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "2l_2k5KrXmo",
+    "title": "【Meta】Your personal AI. The new Meta AI app.",
+    "channel": "Meta (Mark Zuckerberg / Yann LeCun)",
+    "filename": "2026-08-25_AI_Meta_MetaYour personal AI The new Meta AI app.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "2jBT5mlomoE",
+    "title": "【Google】How We Use AI for Your Health | Made by Google Podcast S9E6",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-25_AI_Google_GoogleHow We Use AI for Your Health  Made by Googl.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "1QPh70Es_oU",
+    "title": "【NVIDIA】NVIDIA Cosmosでコンピューティングをデータに変換：フィジカルAIの実現に向けて",
     "channel": "NVIDIA (Jensen Huang)",
-    "filename": "2026-09-02_AI_NVIDIA_NVIDIAトークノミクス入門トークンとは何かなぜ重要なのか  AIファクトリーインサイダー 第4話.html",
-    "date": "2026-09-02",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIANVIDIA Cosmosでコンピューティングをデータに変換フィジカルAIの実現に向けて.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "1FfowsCdnxQ",
+    "title": "【マイクロソフト】Build Intelligent Agents with Work IQ, Foundry IQ, and Fabric IQ",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-25_AI_Microsoft_マイクロソフトBuild Intelligent Agents with Work IQ Found.html",
+    "date": "2026-08-25",
+    "tags": [
+      "agents"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "1DtMiRKg-cs",
+    "title": "【Google】Understanding the inner thoughts of AI",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-25_AI_Google_GoogleUnderstanding the inner thoughts of AI.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "10Kb3IB0d70",
+    "title": "【NVIDIA】Together AIがNVIDIAのフルスタックを活用してAI応答を100ミリ秒以内で実現する方法",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-25_AI_NVIDIA_NVIDIATogether AIがNVIDIAのフルスタックを活用してAI応答を100ミリ秒以内で.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "0XPk_MAwCW4",
+    "title": "【OpenAI】クリケット界で最もスマートな舞台裏｜Rajasthan Royals｜ChatGPT @rajasthanroyals",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-25_AI_OpenAI_OpenAIクリケット界で最もスマートな舞台裏Rajasthan RoyalsChatGPT raj.html",
+    "date": "2026-08-25",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "ceBruD6v5Bk",
+    "title": "【OpenAI】声だけで操作できる | ChatGPTで仕事術",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-24_AI_OpenAI_OpenAI声だけで操作できる  ChatGPTで仕事術.html",
+    "date": "2026-08-24",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "VDI4MiD6eh4",
+    "title": "【OpenAI】NTTデータにとってCodexがもたらす可能性",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-24_AI_OpenAI_OpenAINTTデータにとってCodexがもたらす可能性.html",
+    "date": "2026-08-24",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "zrcCS9oHjtI",
+    "title": "【AI要約】Claude Code on desktop",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Claude Code on desktop.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "xatyxfEevZA",
+    "title": "【AI要約】非営利団体向け AI 活用コースのトレーラー",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約非営利団体向け AI 活用コースのトレーラー.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "tJP6SKfo49c",
+    "title": "【AI要約】アントロピックが法務分野でクロードを利用する方法",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約アントロピックが法務分野でクロードを利用する方法.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "rKV5JcALQoQ",
+    "title": "【AI要約】Claudeの思考における異なる階層",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Claudeの思考における異なる階層.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "海のような心",
+      "J空間のご紹介",
+      "サイレント・マス",
+      "橋のことは考えないで",
+      "クロードの自動処理",
+      "隠された思考を捉える",
+      "意識の問題",
+      "J空間のご紹介",
+      "サイレント・マス",
+      "橋のことは考えないで",
+      "クロードの自動処理",
+      "隠された思考を捉える",
+      "意識の問題"
+    ]
+  },
+  {
+    "video_id": "rBJnWMD0Pho",
+    "title": "【AI要約】Let Claude handle work in your browser",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Let Claude handle work in your browser.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "nvbq39yVYRk",
+    "title": "【AI要約】What is sycophancy in AI models?",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約What is sycophancy in AI models.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "lvMMZLYoDr4",
+    "title": "【AI要約】AI の「報酬ハッキング」とは何ですか? また、なぜ私たちはそれを心配するのでしょうか?",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約AI の報酬ハッキングとは何ですか またなぜ私たちはそれを心配するのでしょうか.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "はじめに",
+      "この研究は何についてですか？",
+      "どのように実験を行いましたか？",
+      "モデルの不整合の検出",
+      "報酬ハッキングによる不整合の防止",
+      "代替戦略",
+      "限界",
+      "この研究は私たちの見解をどのように変えましたか？",
+      "AI安全性研究の実施に関心のある人々への教訓",
+      "この研究は何についてですか？",
+      "どのように実験を行いましたか？",
+      "モデルの不整合の検出",
+      "報酬ハッキングによる不整合の防止",
+      "代替戦略",
+      "限界",
+      "この研究は私たちの見解をどのように変えましたか？",
+      "AI安全性研究の実施に関心のある人々への教訓"
+    ]
+  },
+  {
+    "video_id": "j2knrqAzYVY",
+    "title": "【AI要約】クロードの考えを言葉に翻訳する",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約クロードの考えを言葉に翻訳する.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "iF5IWjOWcA4",
+    "title": "【AI要約】How Icelanders are thinking about AI",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約How Icelanders are thinking about AI.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "i9U_b-8KKno",
+    "title": "【AI要約】Binti helps social workers license foster families faster with Claude",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Binti helps social workers license foster fami.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "fOxC44g8vig",
+    "title": "【AI要約】クロードエージェントのスキルの説明",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約クロードエージェントのスキルの説明.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "エージェントスキルの紹介",
+      "エージェントスキルの仕組み",
+      "エージェントスキルと Claude.md の比較",
+      "エージェントスキルと MCP サーバーの比較",
+      "エージェントスキルとサブエージェントの比較",
+      "まとめ"
+    ]
+  },
+  {
+    "video_id": "dPn3GBI8lII",
+    "title": "【AI要約】Introducing Claude Opus 4.6",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Introducing Claude Opus 46.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "bluAmTHoEow",
+    "title": "【AI要約】Your tools are now interactive in Claude",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Your tools are now interactive in Claude.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "_jjSS0qGFbI",
+    "title": "【AI要約】Claude.ai のコネクタを使い始める",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Claudeai のコネクタを使い始める.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "Y9Wz2PV404E",
+    "title": "【AI要約】Claude Fable 5の紹介",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Claude Fable 5の紹介.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "XpXImenrSPI",
+    "title": "【AI要約】Slack の Claude Code",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Slack の Claude Code.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "Uh98_aGhAuY",
+    "title": "【AI要約】AIは教育にとって何を意味するのでしょうか?",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約AIは教育にとって何を意味するのでしょうか.html",
+    "date": "2026-08-23",
     "tags": [
       "AI",
       "Specialist"
     ],
     "chapters": [
       "Introduction",
-      "Meet our guests: Shruti Koparkar & Tue Tran",
-      "What is a token?",
-      "What is \"tokenomics,\" and why is it relevant now?",
-      "Not all tokens are equal: intelligence, context, and speed",
-      "Trading vs. research: matching tokens to the use case",
-      "Retail video: one-token answers vs. batch captioning",
-      "Sizing token demand: back-of-napkin math",
-      "The multipliers: reasoning, agentic loops, and cache hit rate",
-      "KV cache and prefix matching explained",
-      "Supply: the AI factory as a car engine",
-      "Dense models vs. mixture of experts",
-      "Right model for the right task: a telco example",
-      "Intelligent routing with NeMo Switchyard",
-      "Where are your tokens going? Observability with NeMo Relay",
-      "Matching infrastructure: NVL72, HGX, and RTX PRO Servers",
-      "Dynamo and extreme co-design",
-      "Monetization: four paths from tokens to ROI",
-      "Just get started, and make it a team effort",
-      "Guardrails for a token tsunami",
-      "Wrap-up",
-      "Meet our guests: Shruti Koparkar & Tue Tran",
-      "What is a token?",
-      "What is \"tokenomics,\" and why is it relevant now?",
-      "Not all tokens are equal: intelligence, context, and speed",
-      "Trading vs. research: matching tokens to the use case",
-      "Retail video: one-token answers vs. batch captioning",
-      "Sizing token demand: back-of-napkin math",
-      "The multipliers: reasoning, agentic loops, and cache hit rate",
-      "KV cache and prefix matching explained",
-      "Supply: the AI factory as a car engine",
-      "Dense models vs. mixture of experts",
-      "Right model for the right task: a telco example",
-      "Intelligent routing with NeMo Switchyard",
-      "Where are your tokens going? Observability with NeMo Relay",
-      "Matching infrastructure: NVL72, HGX, and RTX PRO Servers",
-      "Dynamo and extreme co-design",
-      "Monetization: four paths from tokens to ROI",
-      "Just get started, and make it a team effort",
-      "Guardrails for a token tsunami",
-      "Wrap-up"
+      "Why is Anthropic focused on this topic?",
+      "How is AI affecting education today?",
+      "What is the potential we see in AI for teaching and learning?",
+      "How should children and teachers approach learning in the age of AI?",
+      "What work is Anthropic doing in the sector?",
+      "What are the things we’re still uncertain about?",
+      "What would the successful incorporation of AI look like?"
     ]
+  },
+  {
+    "video_id": "UAmKyyZ-b9E",
+    "title": "【AI要約】Introducing Cowork: Claude Code for the rest of your work",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Introducing Cowork Claude Code for the rest of.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "R-KJgjIrh24",
+    "title": "【AI要約】Claude.aiでリサーチを始める",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Claudeaiでリサーチを始める.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "PLyCki2K0Lg",
+    "title": "【AI要約】モデルコンテキストプロトコル（MCP）を構築し、寄付した理由",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約モデルコンテキストプロトコルMCPを構築し寄付した理由.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "MCP とは？",
+      "MCPが解決する問題",
+      "USB-Cとの類似性",
+      "MCPの始まり",
+      "MCPの違い",
+      "コミュニティによる採用",
+      "義務のない標準",
+      "AnthropicハッカソンからHacker Newsへ",
+      "オープンソース化の決断",
+      "Linux FoundationへのMCPの寄贈",
+      "Agentic AI Foundation",
+      "MCPへの批判",
+      "MCPの将来",
+      "MCPを使って開発されたもの",
+      "開発者以外の方へのアドバイス",
+      "Davidが最も誇りに思っていること",
+      "MCPが解決する問題",
+      "USB-Cとの類似性",
+      "MCPの始まり",
+      "MCPの違い",
+      "コミュニティによる採用",
+      "義務のない標準",
+      "AnthropicハッカソンからHacker Newsへ",
+      "オープンソース化の決断",
+      "Linux FoundationへのMCPの寄贈",
+      "Agentic AI Foundation",
+      "MCPへの批判",
+      "MCPの将来",
+      "MCPを使って開発されたもの",
+      "開発者以外の方へのアドバイス",
+      "Davidが最も誇りに思っていること"
+    ]
+  },
+  {
+    "video_id": "N5yJJA0NCU0",
+    "title": "【AI要約】AI on campus",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約AI on campus.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "Introduction",
+      "Meet the panel",
+      "Vibes on campus",
+      "What are students building?",
+      "AI as tool vs. crutch",
+      "Are professors keeping up?",
+      "Downsides",
+      "AI and the job market",
+      "Rapid-fire questions",
+      "Meet the panel",
+      "Vibes on campus",
+      "What are students building?",
+      "AI as tool vs. crutch",
+      "Are professors keeping up?",
+      "Downsides",
+      "AI and the job market",
+      "Rapid-fire questions"
+    ]
+  },
+  {
+    "video_id": "LpGpwhORWr0",
+    "title": "【AI要約】Claude works with you on slides, spreadsheets, and contract redlines",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Claude works with you on slides spreadsheets a.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "INGOC6-LLv0",
+    "title": "【AI要約】世界のソフトウェアを保護するための取り組み | プロジェクト・グラスウィング",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約世界のソフトウェアを保護するための取り組み  プロジェクトグラスウィング.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "I9aGC6Ui3eE",
+    "title": "【AI要約】アントロピックの哲学者があなたの質問に答えます",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約アントロピックの哲学者があなたの質問に答えます.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "はじめに",
+      "なぜ AI 企業に哲学者がいるのか？",
+      "哲学者は AI を真剣に受け止めているのか？",
+      "哲学の理想と工学の現実",
+      "モデルは超人的な道徳的判断を下すのか？",
+      "Opus 3 が特別に感じられた理由",
+      "モデルは非推奨を心配するのか？",
+      "モデルのアイデンティティはどこにあるのか？",
+      "モデルの福祉に関する見解",
+      "モデルの苦しみへの対処",
+      "人間の心との類似点と非類似点",
+      "一つの AI パーソナリティで全てをこなせるのか？",
+      "システムは正常な行動を病理化してしまうのか？",
+      "AIとセラピー",
+      "システムプロンプトにおける大陸哲学",
+      "システムプロンプトから文字数カウントを削除する",
+      "「LLMウィスパラー」とは？",
+      "他のLLMウィスパラーについての考察",
+      "内部告発",
+      "フィクションの推薦",
+      "なぜ AI 企業に哲学者がいるのか？",
+      "哲学者は AI を真剣に受け止めているのか？",
+      "哲学の理想と工学の現実",
+      "モデルは超人的な道徳的判断を下すのか？",
+      "Opus 3 が特別に感じられた理由",
+      "モデルは非推奨を心配するのか？",
+      "モデルのアイデンティティはどこにあるのか？",
+      "モデルの福祉に関する見解",
+      "モデルの苦しみへの対処",
+      "人間の心との類似点と非類似点",
+      "一つの AI パーソナリティで全てをこなせるのか？",
+      "システムは正常な行動を病理化してしまうのか？",
+      "AIとセラピー",
+      "システムプロンプトにおける大陸哲学",
+      "システムプロンプトから文字数カウントを削除する",
+      "「LLMウィスパラー」とは？",
+      "他のLLMウィスパラーについての考察",
+      "内部告発",
+      "フィクションの推薦"
+    ]
+  },
+  {
+    "video_id": "GJ5jTgcbRHA",
+    "title": "【AI要約】Claude.aiでプロジェクトを始める",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Claudeaiでプロジェクトを始める.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "D4XTefP3Lsc",
+    "title": "【AI要約】AIが感情的に振る舞うとき",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約AIが感情的に振る舞うとき.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "5KTHvKCrQ00",
+    "title": "【AI要約】Claude ran a business in our office",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Claude ran a business in our office.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "Background on Project Vend",
+      "How a transaction works",
+      "Claudius's naïveté",
+      "An identity crisis",
+      "The CEO agent",
+      "Conclusion",
+      "How a transaction works",
+      "Claudius's naïveté",
+      "An identity crisis",
+      "The CEO agent",
+      "Conclusion"
+    ]
+  },
+  {
+    "video_id": "56kq0VTkU4k",
+    "title": "【AI要約】Claude Opus 4.5 のご紹介",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Claude Opus 45 のご紹介.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "5062_E26pJE",
+    "title": "【マイクロソフト】Skillsとエージェントで再利用可能なCopilotワークフローを構築する",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-23_AI_Microsoft_マイクロソフトBuild Reusable Copilot Workflows with Skill.html",
+    "date": "2026-08-23",
+    "tags": [
+      "copilot",
+      "エージェント"
+    ],
+    "chapters": [
+      "Welcome to skills, agent personas, plugins, and marketplaces",
+      "What an agent skill is",
+      "How agent personas, plugins, and marketplaces work",
+      "Drafting a blog post from podcast notes",
+      "Reviewing the draft with the rubber duck agent",
+      "Converting the improved blog post to HTML",
+      "Publishing the blog post to GitHub",
+      "Turning the manual workflow into a reusable skill",
+      "Reusing the skill in a new session",
+      "Creating and publishing a second blog post",
+      "Installing skills from a plugin marketplace",
+      "Running the resume site sync skill",
+      "Updating the portfolio from a new resume",
+      "Exploring community skills and recapping the workflow",
+      "What an agent skill is",
+      "How agent personas, plugins, and marketplaces work",
+      "Drafting a blog post from podcast notes",
+      "Reviewing the draft with the rubber duck agent",
+      "Converting the improved blog post to HTML",
+      "Publishing the blog post to GitHub",
+      "Turning the manual workflow into a reusable skill",
+      "Reusing the skill in a new session",
+      "Creating and publishing a second blog post",
+      "Installing skills from a plugin marketplace",
+      "Running the resume site sync skill",
+      "Updating the portfolio from a new resume",
+      "Exploring community skills and recapping the workflow"
+    ]
+  },
+  {
+    "video_id": "37I7qkgEl9U",
+    "title": "【マイクロソフト】GitHub Copilotの最適化：より良い結果を、より少ないトークンで",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-23_AI_Microsoft_マイクロソフトGitHub Copilotの最適化より良い結果をより少ないトークンで.html",
+    "date": "2026-08-23",
+    "tags": [
+      "copilot",
+      "トークン"
+    ],
+    "chapters": [
+      "Welcome and an introduction to context and tokens",
+      "What context includes",
+      "How Copilot processes information as tokens",
+      "Viewing context with /context",
+      "Understanding the context window with a suitcase analogy",
+      "Why too little or too much context can hurt results",
+      "Generating a case study page without project context",
+      "Adding project files for better results",
+      "Refreshing project context with /init",
+      "How copilot-instructions.md guides Copilot",
+      "Starting a focused session with the right context",
+      "Checking context usage",
+      "Reducing token usage with /compact",
+      "Recap of context and token optimization",
+      "What context includes",
+      "How Copilot processes information as tokens",
+      "Viewing context with /context",
+      "Understanding the context window with a suitcase analogy",
+      "Why too little or too much context can hurt results",
+      "Generating a case study page without project context",
+      "Adding project files for better results",
+      "Refreshing project context with /init",
+      "How copilot-instructions.md guides Copilot",
+      "Starting a focused session with the right context",
+      "Checking context usage",
+      "Reducing token usage with /compact",
+      "Recap of context and token optimization"
+    ]
+  },
+  {
+    "video_id": "2MJDdzSXL74",
+    "title": "【AI要約】Claude Opus 4.5 solves a puzzle game",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Claude Opus 45 solves a puzzle game.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "0vZ_UVLhSQQ",
+    "title": "【AI要約】Claude.aiを使い始める",
+    "channel": "Anthropic (Dario Amodei)",
+    "filename": "2026-08-23_AI_Anthropic_AI要約Claudeaiを使い始める.html",
+    "date": "2026-08-23",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "bSp-foRDH5M",
+    "title": "【Google】Google Antigravity 2.0を使ってアプリ開発やタスクの自動化を行う方法",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-21_AI_Google_GoogleGoogle Antigravity 20を使ってアプリ開発やタスクの自動化を行う方法.html",
+    "date": "2026-08-21",
+    "tags": [
+      "antigravity"
+    ],
+    "chapters": [
+      "Antigravity 2.0アーキテクチャの革新",
+      "自律エージェントによるフルスタック開発",
+      "ブラウザ操作とツール連携の自動化",
+      "次世代自律開発のワークフロー"
+    ]
+  },
+  {
+    "video_id": "XjSJ6ybS9I8",
+    "title": "【OpenAI】ChatGPT Workでビジネスの問いから戦略資料を作成する方法",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-21_AI_OpenAI_OpenAIChatGPT Workでビジネスの問いから戦略資料を作成する方法.html",
+    "date": "2026-08-21",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "ChatGPT Workの概要と新機能",
+      "ビジネス戦略課題の構造化プロンプト",
+      "データ統合と戦略スライドの自動生成",
+      "エンタープライズでのROI最大化"
+    ]
+  },
+  {
+    "video_id": "VihWpoINpgE",
+    "title": "【NVIDIA】メガワットあたりの秒間トークン数を最大化する：NVIDIA Vera Rubinの経済性",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-21_AI_NVIDIA_NVIDIAメガワットあたりの秒間トークン数を最大化するNVIDIA Vera Rubinの経済性.html",
+    "date": "2026-08-21",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "AIファクトリーにおけるエネルギー効率の壁",
+      "Vera Rubinアーキテクチャの全貌",
+      "メガワットあたり秒間トークン数の極大化",
+      "次世代データセンターの経済モデル"
+    ]
+  },
+  {
+    "video_id": "NqQnHWa-Vxs",
+    "title": "【テスラ】Autobidder | Tesla MegapackによるAI電力自律取引",
+    "channel": "Tesla (Elon Musk)",
+    "filename": "2026-08-21_AI_Tesla_テスラAutobidder  Tesla MegapackによるAI電力自律取引.html",
+    "date": "2026-08-21",
+    "tags": [
+      "ai",
+      "megapack",
+      "autobidder"
+    ],
+    "chapters": [
+      "AIによる電力市場のリアルタイム自律入札",
+      "Megapackと送電網安定化アルゴリズム",
+      "データセンター電力危機を救う分散型蓄電池",
+      "テスラ・エネルギー部門の指数関数的成長"
+    ]
+  },
+  {
+    "video_id": "zLUZclThLhU",
+    "title": "【Y Combinator】元ホワイトハウスCTOマイケル・クラシオスが語る米国の国家AI戦略",
+    "channel": "Y Combinator (AIスタートアップ)",
+    "filename": "2026-08-20_AI_Y_マイケルクラシオスホワイトハウスのAI戦略の内側.html",
+    "date": "2026-08-20",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "マイケル・クラツィオスが AI 政策と公共サービスについて語る",
+      "シリコンバレーからホワイトハウスへの転身",
+      "テクノロジー政策は実際にどのように作られるのか",
+      "ホワイトハウスにおけるオープンソースAIの戦略的意義",
+      "ワシントンのAIに対する見方が違う",
+      "半年ごとに変わるテクノロジーを規制する",
+      "どの AI リスクが過大評価されていますか?",
+      "小さな技術者にテーブルの席を与える",
+      "既存の堀を作らない規制",
+      "Born Free vs. Born in Captivity Technologies",
+      "ホワイトハウスで働くというのは実際どのようなものなのか",
+      "アメリカ科学の新たな黄金時代",
+      "量子、議会、知財、そして次に起こること",
+      "技術者が公共サービスを検討すべき理由"
+    ]
+  },
+  {
+    "video_id": "xoxcJ2bhW2s",
+    "title": "AIで教育を再考する | Local Optima エピソード1",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_AIで教育を再考する  Local Optima エピソード1.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "xmkSf5IS-zw",
+    "title": "How GPT, Claude, and Gemini are actually trained and served – Reiner Pope",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-20_AI_Dwarkesh_How GPT Claude and Gemini are actually trained and.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "xRLuSE16aOo",
+    "title": "方言の紹介：AIと企業信頼の間の欠落したレイヤー",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_方言の紹介AIと企業信頼の間の欠落したレイヤー.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "vb1Gcn10enw",
+    "title": "【Y Combinator】AIトップ研究所が「オブザーバビリティ（可観測性）」で実践すること",
+    "channel": "Y Combinator (AIスタートアップ)",
+    "filename": "2026-08-20_AI_Y_AIトップ研究所が「オブザーバビリティ」で実際に取り組んでいること.html",
+    "date": "2026-08-20",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "LLMパイプラインの可観測性と推論トレーシング",
+      "ハルシネーションと品質劣化の自動検知",
+      "LLM-as-a-Judgeによる継続的Evalフレームワーク",
+      "本番環境でのレイテンシとコンピュートコスト最適化"
+    ]
+  },
+  {
+    "video_id": "vagyIcmIGOQ",
+    "title": "DHH: Future of Programming, AI, Ruby on Rails, Productivity & Parenting | Lex Fridman Podcast #474",
+    "channel": "Lex Fridman (CEO徹底対談)",
+    "filename": "2026-08-20_AI_Lex_DHH Future of Programming AI Ruby on Rails Product.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "uWQ1OTfJ0cs",
+    "title": "Chain of Thought：Harbor",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_Chain of ThoughtHarbor.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "uQd809adb58",
+    "title": "【Figure AI】世界最高峰の人型ロボット二足歩行バランストレーナー「Galileo」",
+    "channel": "Figure AI (Brett Adcock / 人型ロボット)",
+    "filename": "2026-08-20_AI_Figure_Galileo The Most Advanced Balance Trainer on Earth.html",
+    "date": "2026-08-20",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "tJ03ZqehAwQ",
+    "title": "炉辺談話：AIがカタールの文化体験を再考する",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_炉辺談話AIがカタールの文化体験を再考する.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "rQFHFIgGZys",
+    "title": "エージェントコード・ライトニングトーク：大規模AI研究ミートアップ（サンフランシスコ）2026年5月15日",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_エージェントコードライトニングトーク大規模AI研究ミートアップサンフランシスコ2026年5月15日.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "q-dnq2Fsq2Y",
+    "title": "求人難を解消：Geminiを活用するホリーの物語",
+    "channel": "Google (Sundar Pichai)",
+    "filename": "2026-08-20_AI_Google_求人難を解消Geminiを活用するホリーの物語.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "pmiN5Nj1-K8",
+    "title": "【NVIDIA】ヘルスケアの再創造 ― デジタル知能と物理的自律性の融合",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-20_AI_NVIDIA_GTC SJ 2026ヘルスケアの再創造 - デジタルインテリジェンスと物理的自律性の融合.html",
+    "date": "2026-08-20",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "oZBGAuANX6I",
+    "title": "AIモデルの高性能化が計算コストを10倍に引き上げる可能性とその理由",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-20_AI_Dwarkesh_AIモデルの高性能化が計算コストを10倍に引き上げる可能性とその理由.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "oXu6JGxW_YM",
+    "title": "法務業界におけるAI変革の舵取り | ジョナサン・ウィリアムズ氏（Legora フランス支社代表）",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-20_AI_OpenAI_法務業界におけるAI変革の舵取り  ジョナサンウィリアムズ氏Legora フランス支社代表.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "myDCd0hNqQU",
+    "title": "なぜロボット工学はまだ解決されていないのか、しかし間もなく解決される可能性がある理由 | YC Paper Club",
+    "channel": "Y Combinator (AIスタートアップ)",
+    "filename": "2026-08-20_AI_Y_なぜロボット工学はまだ解決されていないのかしかし間もなく解決される可能性がある理由  YC Pape.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "mlXbfJf80k8",
+    "title": "Why AI adoption fails (and how to fix it)",
+    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
+    "filename": "2026-08-20_AI_Microsoft_Why AI adoption fails and how to fix it.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "mJ-7v30gfiU",
+    "title": "Discovering Power App Data with M365 Copilot using MCP | DEM360",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-20_AI_Microsoft_Discovering Power App Data with M365 Copilot using.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "mDG_Hx3BSUE",
+    "title": "Dylan Patel — The single biggest bottleneck to scaling AI compute",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-20_AI_Dwarkesh_Dylan Patel  The single biggest bottleneck to scal.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "jdCKiEJpwf4",
+    "title": "Scott Horton: The Case Against War and the Military Industrial Complex | Lex Fridman Podcast #478",
+    "channel": "Lex Fridman (CEO徹底対談)",
+    "filename": "2026-08-20_AI_Lex_Scott Horton The Case Against War and the Military.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "jLUnC5_QwJw",
+    "title": "Agentex の説明",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_Agentex の説明.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "j9Qr5aUfqNU",
+    "title": "【Scale AI】最先端コーディングエージェントの実力ベンチマーク徹底分析",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_コーディングエージェントのベンチマークScale AIリサーチミートアップNYC20260813.html",
+    "date": "2026-08-20",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "iyCUbhpRzvY",
+    "title": "政府AIの実際の仕組み｜ローカルオプティマ：エピソード3",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_政府AIの実際の仕組みローカルオプティマエピソード3.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "iT-DLTmV3HE",
+    "title": "Chain of Thought: Introducing ResearchRubrics",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_Chain of Thought Introducing ResearchRubrics.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "hnLxZYDb4z0",
+    "title": "Ode Poetry Experience | Powered by MAI models",
+    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
+    "filename": "2026-08-20_AI_Microsoft_Ode Poetry Experience  Powered by MAI models.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "hbnhMKckxTE",
+    "title": "A new vision for agent-first computing: Project Solara | Steven Bathiche at Microsoft Build 2026",
+    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
+    "filename": "2026-08-20_AI_Microsoft_A new vision for agent-first computingProject Sola.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "geK_ijU0YC8",
+    "title": "SQL MCP Server：AIエージェントとSQLデータの連携",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-20_AI_Microsoft_SQL MCP ServerAIエージェントとSQLデータの連携.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "fo9WirRIaVs",
+    "title": "【Google DeepMind】Gemini Roboticsによる複数ロボットの自律協調動作",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-08-20_AI_Google_Robots working together with Gemini Robotics 2.html",
+    "date": "2026-08-20",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "eXYr5dAUYJU",
+    "title": "ジュジュ・ワトキンスとチャンス・ザ・ラッパーが、AIが女子バスケットボールの成長に果たす役割について語る",
+    "channel": "Meta (Mark Zuckerberg / Yann LeCun)",
+    "filename": "2026-08-20_AI_Meta_ジュジュワトキンスとチャンスザラッパーがAIが女子バスケットボールの成長に果たす役割について語る.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "d645NfL0W_g",
+    "title": "🤖 Humans Meet The New AI Workers of 2025 🏡",
+    "channel": "Figure AI (Brett Adcock / 人型ロボット)",
+    "filename": "2026-08-20_AI_Figure_ Humans Meet The New AI Workers of 2025.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "cRZNwgvcWUg",
+    "title": "チェルシー・フィン：これがロボット工学の最前線",
+    "channel": "Y Combinator (AIスタートアップ)",
+    "filename": "2026-08-20_AI_Y_チェルシーフィンこれがロボット工学の最前線.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "a7e_3ThX4nY",
+    "title": "Introducing MAI-Transcribe-1.5 | Microsoft AI Models",
+    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
+    "filename": "2026-08-20_AI_Microsoft_Introducing MAI-Transcribe-15  Microsoft AI Models.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "_9V_Hbe-N1A",
+    "title": "Adam Marblestone – AI is missing something fundamental about the brain",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-20_AI_Dwarkesh_Adam Marblestone  AI is missing something fundamen.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "YFjfBk8HI5o",
+    "title": "OpenClaw: The Viral AI Agent that Broke the Internet - Peter Steinberger | Lex Fridman Podcast #491",
+    "channel": "Lex Fridman (CEO徹底対談)",
+    "filename": "2026-08-20_AI_Lex_OpenClaw The Viral AI Agent that Broke the Interne.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "X_ZVSPcZhtw",
+    "title": "What rebuilding AlphaGo teaches us about self-play, RL, and future of LLMs - Eric Jang",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-20_AI_Dwarkesh_What rebuilding AlphaGo teaches us about self-play.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "W_s_X_kj3vg",
+    "title": "Claude Opus 4 + RAG：埋め込みとナレッジグラフを活用したAIアプリ開発 | MVP Unplugged",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-20_AI_Microsoft_Claude Opus 4  RAG埋め込みとナレッジグラフを活用したAIアプリ開発  MVP Un.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "Vkcsn99Z1is",
+    "title": "音声AIライトニングトーク：大規模AI研究ミートアップ（サンフランシスコ）2026年3月31日",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_音声AIライトニングトーク大規模AI研究ミートアップサンフランシスコ2026年3月31日.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "VbqaL_eHhKY",
+    "title": "【Y Combinator】デザイン責任者が教える、生成AIを活用した次世代UI/UXデザイン手法",
+    "channel": "Y Combinator (AIスタートアップ)",
+    "filename": "2026-08-20_AI_Y_YCのデザイン責任者が教える、AIを活用したデザイン手法.html",
+    "date": "2026-08-20",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "静的モックアップから動くAIコードプロトタイプへの変革",
+      "AIと対話しながら数分でUIを構築する新ワークフロー",
+      "チャットUIを超えた先回り型エージェントUIの設計原則",
+      "スタートアップの製品検証速度を100倍にする実践知"
+    ]
+  },
+  {
+    "video_id": "UaeWJK_vv-Y",
+    "title": "【OpenAI】自律型AIエージェントプラグイン（AgentPlugin）仕様と開発",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-08-20_AI_OpenAI_OpenAI SpecVideo AgentPlugin v08 HD.html",
+    "date": "2026-08-20",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "エージェントパッケージに標準が必要な理由",
+      "Agent Pluginsの概要",
+      "パッケージ構造、スキル、MCPサーバー",
+      "製品間での移植性",
+      "スコープと利用開始方法"
+    ]
+  },
+  {
+    "video_id": "TfyPshgMbug",
+    "title": "グラント・サンダーソン (@3blue1brown) ― AIが有名な数学の予想を覆した。次はどうなる？",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-20_AI_Dwarkesh_グラントサンダーソン 3blue1brown  AIが有名な数学の予想を覆した次はどうなる.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "QFncbBQl6RM",
+    "title": "Meet the People Behind Microsoft AI‌",
+    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
+    "filename": "2026-08-20_AI_Microsoft_Meet the People Behind Microsoft AI.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "Q8Fkpi18QXU",
+    "title": "Terence Tao – How the world’s top mathematician uses AI",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-20_AI_Dwarkesh_Terence Tao  How the worlds top mathematician uses.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "Pp3EgOodc40",
+    "title": "Mac版ZoomIt：20年以上前のWindowsツールをAIがいかにして移植したか",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-20_AI_Microsoft_Mac版ZoomIt20年以上前のWindowsツールをAIがいかにして移植したか.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "P06RgnUKX_I",
+    "title": "How To Design In The Agent Era",
+    "channel": "Y Combinator (AIスタートアップ)",
+    "filename": "2026-08-20_AI_Y_How To Design In The Agent Era.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "OvLIae4HCeM",
+    "title": "Microsoft AI CEO unveils 7 new AI models | Mustafa Suleyman at Microsoft Build 2026",
+    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
+    "filename": "2026-08-20_AI_Microsoft_Microsoft AI CEO unveils 7 new AI models  Mustafa .html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "NGvTm-KENj0",
+    "title": "Chain of Thought: Introducing Remote Labor Index (RLI)",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_Chain of Thought Introducing Remote Labor Index RL.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "KGVpKPNUdzA",
+    "title": "Khabib vs Lex: Training with Khabib | FULL EXCLUSIVE FOOTAGE",
+    "channel": "Lex Fridman (CEO徹底対談)",
+    "filename": "2026-08-20_AI_Lex_Khabib vs Lex Training with Khabib  FULL EXCLUSIVE.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "KBPOTklFTiU",
+    "title": "AIに関して誰も尋ねていない最も重要な質問。",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-20_AI_Dwarkesh_AIに関して誰も尋ねていない最も重要な質問.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "Jj-kBHzUohs",
+    "title": "AIが進化するほど経済シェアは縮小するのか ― アレックス・アイマス＆フィル・トラメル",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-20_AI_Dwarkesh_AIが進化するほど経済シェアは縮小するのか  アレックスアイマスフィルトラメル.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "I-ej54mJHJk",
+    "title": "Introducing Frontier Tuning | Microsoft AI Models",
+    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
+    "filename": "2026-08-20_AI_Microsoft_Introducing Frontier Tuning  Microsoft AI Models.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "HaosNNUiaSc",
+    "title": "未来は「証明」で動く | Scale AI",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_未来は証明で動く  Scale AI.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "HUkBz-cdB-k",
+    "title": "Terence Tao: Hardest Problems in Mathematics, Physics & the Future of AI | Lex Fridman Podcast #472",
+    "channel": "Lex Fridman (CEO徹底対談)",
+    "filename": "2026-08-20_AI_Lex_Terence Tao Hardest Problems in Mathematics Physic.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "GsqW5MPFajw",
+    "title": "NVIDIAとCoherent：アメリカの再工業化、AI時代の製造に向けて",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-20_AI_NVIDIA_NVIDIAとCoherentアメリカの再工業化AI時代の製造に向けて.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "GKO36t0FFP8",
+    "title": "An Interview With Dr. Jacob A. George, Director of the Utah NeuroRobotics Lab",
+    "channel": "Meta (Mark Zuckerberg / Yann LeCun)",
+    "filename": "2026-08-20_AI_Meta_An Interview With Dr Jacob A George Director of th.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "G4QO490GlG8",
+    "title": "Meta AIと熱力学について語り合おう",
+    "channel": "Meta (Mark Zuckerberg / Yann LeCun)",
+    "filename": "2026-08-20_AI_Meta_Meta AIと熱力学について語り合おう.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "FdkpWrlR5zg",
+    "title": "Sarah Paine – Why Russia Lost the Cold War",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-20_AI_Dwarkesh_Sarah Paine  Why Russia Lost the Cold War.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "FA0tEJ6QFpI",
+    "title": "Diving into Enterprise Healthcare AI for 2026",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_Diving into Enterprise Healthcare AI for 2026.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "F4jaljD27hM",
+    "title": "ベンチマーク徹底解説：SWE Atlas | Chain of Thought",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_ベンチマーク徹底解説SWE Atlas  Chain of Thought.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "F3INH9wZXoQ",
+    "title": "【Y Combinator】なぜフィジカルAIが次なる巨大プラットフォームシフトなのか",
+    "channel": "Y Combinator (AIスタートアップ)",
+    "filename": "2026-08-20_AI_Y_なぜフィジカルAIが次なるプラットフォームシフトなのか.html",
+    "date": "2026-08-20",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "デジタルAIからフィジカルAIへの移行",
+      "Sim-to-Real仮想空間強化学習の威力",
+      "実世界サプライチェーンと製造の自動化",
+      "次世代ロボティクスOSの覇権争い"
+    ]
+  },
+  {
+    "video_id": "EV7WhVT270Q",
+    "title": "State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI | Lex Fridman Podcast #490",
+    "channel": "Lex Fridman (CEO徹底対談)",
+    "filename": "2026-08-20_AI_Lex_State of AI in 2026 LLMs Coding Scaling Laws China.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "E-AO0-1Ig74",
+    "title": "AIは今回の構築において実際にどのような価値をもたらし、どこからが単なる誇大広告なのか？",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-20_AI_Microsoft_AIは今回の構築において実際にどのような価値をもたらしどこからが単なる誇大広告なのか.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "DbBnd9PYob4",
+    "title": "【Y Combinator】モデル非依存プラットフォームの優位性とマルチモデル戦略",
+    "channel": "Y Combinator (AIスタートアップ)",
+    "filename": "2026-08-20_AI_Y_モデルに依存しないAIプラットフォームは、どの単一の研究室も勝てないという賭けに出ている。.html",
+    "date": "2026-08-20",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "単一AI研究室への依存リスクとベンダーロックイン",
+      "マルチモデル動的ルーティングのアーキテクチャ",
+      "タスク難易度に応じた推論コストの80%削減手法",
+      "フロンティア競争における最も持続可能なプラットフォーム戦略"
+    ]
+  },
+  {
+    "video_id": "DOm7VDEPcI0",
+    "title": "Introducing MAI-Voice-2 | Microsoft AI Models",
+    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
+    "filename": "2026-08-20_AI_Microsoft_Introducing MAI-Voice-2  Microsoft AI Models.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "CxXgV54KzpQ",
+    "title": "Jeff Dean: The 1% Rule for Building in AI",
+    "channel": "Y Combinator (AIスタートアップ)",
+    "filename": "2026-08-20_AI_Y_Jeff Dean The 1 Rule for Building in AI.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "BYXbuik3dgA",
+    "title": "イーロン・マスク — 「36か月後には、AIを置くのに最も安い場所は宇宙になる",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-20_AI_Dwarkesh_イーロンマスク  36か月後にはAIを置くのに最も安い場所は宇宙になる.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "BQsLSmGLh_c",
+    "title": "Introducing 7 new Microsoft AI models",
+    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
+    "filename": "2026-08-20_AI_Microsoft_Introducing 7 new Microsoft AI models.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "AdTTArl73vk",
+    "title": "Genesis | Scale AI",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_Genesis  Scale AI.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "9QHLDEefhIo",
+    "title": "AIの年 | Local Optima",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_AIの年  Local Optima.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "9O2_FfdMA9g",
+    "title": "Chain of Thought: Introducing Audio MultiChallenge",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_Chain of Thought Introducing Audio MultiChallenge.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "8-boBsWcr5A",
+    "title": "Satya Nadella – How Microsoft thinks about AGI",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-20_AI_Dwarkesh_Satya Nadella  How Microsoft thinks about AGI.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "7CNlGweeN90",
+    "title": "【エコノミスト】自動運転車（ロボタクシー）は都市と経済をどう変えるのか？",
+    "channel": "The Economist",
+    "filename": "2026-08-20_AI_The_自動運転車は私たちの都市をどう変えるのか  エコノミスト.html",
+    "date": "2026-08-20",
+    "tags": [
+      "自動運転"
+    ],
+    "chapters": [
+      "将来も私たちは車を所有し続けるのか？",
+      "製造業が衰退しない理由",
+      "自動運転車が都市をどのように変えるか",
+      "現実世界におけるAI"
+    ]
+  },
+  {
+    "video_id": "5d6y3poKwK4",
+    "title": "パトリック・コリソン：AIは「リーン・スタートアップ」の定石を覆すのか？",
+    "channel": "Y Combinator (AIスタートアップ)",
+    "filename": "2026-08-20_AI_Y_パトリックコリソンAIはリーンスタートアップの定石を覆すのか.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "551n6E8iCBI",
+    "title": "QDKチュートリアル：VS CodeとGitHub Copilotで学ぶ量子コンピューティング",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-20_AI_Microsoft_QDKチュートリアルVS CodeとGitHub Copilotで学ぶ量子コンピューティング.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "4v9AAw9J-FA",
+    "title": "Introducing MAI-Image-2.5 | Microsoft AI Models",
+    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
+    "filename": "2026-08-20_AI_Microsoft_Introducing MAI-Image-25  Microsoft AI Models.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "4pG3SJQPAwk",
+    "title": "AIの中核にあるデータのブラックホール",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-20_AI_Dwarkesh_AIの中核にあるデータのブラックホール.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "4iIQHZ19El4",
+    "title": "i h8 ai",
+    "channel": "Meta (Mark Zuckerberg / Yann LeCun)",
+    "filename": "2026-08-20_AI_Meta_i h8 ai.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "3nGPxJ0kJ7k",
+    "title": "Voice Coding Demo: MAI-Code-1-Flash | Microsoft AI Models",
+    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
+    "filename": "2026-08-20_AI_Microsoft_Voice Coding Demo MAI-Code-1-Flash  Microsoft AI M.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "20p5-kQXF_Q",
+    "title": "次世代のAI学習パラダイムはどうなるのか？",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-20_AI_Dwarkesh_次世代のAI学習パラダイムはどうなるのか.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "1zwZG4W1xYI",
+    "title": "Expand your world with Meta AI",
+    "channel": "Meta (Mark Zuckerberg / Yann LeCun)",
+    "filename": "2026-08-20_AI_Meta_Expand your world with Meta AI.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "-YKKuLE6zoM",
+    "title": "We predicted the future of AI in 2025…were we right? plus our 2026 predictions",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_We predicted the future of AI in 2025were we right.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "-HzgcbRXUK8",
+    "title": "Demis Hassabis: Future of AI, Simulating Reality, Physics and Video Games | Lex Fridman Podcast #475",
+    "channel": "Lex Fridman (CEO徹底対談)",
+    "filename": "2026-08-20_AI_Lex_Demis Hassabis Future of AI Simulating Reality Phy.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "-9XjMKX2v9w",
+    "title": "Chain of Thought: MoRe Bench",
+    "channel": "Scale AI (Alexandr Wang)",
+    "filename": "2026-08-20_AI_Scale_Chain of Thought MoRe Bench.html",
+    "date": "2026-08-20",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "zZHOpr3O-D0",
+    "title": "Getting railed | Cybertruck",
+    "channel": "Tesla (Elon Musk)",
+    "filename": "2026-08-19_AI_Tesla_Getting railed  Cybertruck.md",
+    "date": "2026-08-19",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "vif8NQcjVf0",
+    "title": "Jensen Huang: NVIDIA - The $4 Trillion Company & the AI Revolution | Lex Fridman Podcast #494",
+    "channel": "Lex Fridman (CEO徹底対談)",
+    "filename": "2026-08-19_AI_Lex_Jensen Huang NVIDIA - The 4 Trillion Company  the .html",
+    "date": "2026-08-19",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "rRkucx0KwcI",
+    "title": "【NVIDIA】ヘルスケアロボティクスのためのフィジカルAI",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-08-19_AI_NVIDIA_GTC SJ 2026ヘルスケアロボティクスのためのフィジカルAI  シミュレーション主導の設計と開.html",
+    "date": "2026-08-19",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "mzlZ5GF1CXI",
+    "title": "AIによる人間代替競争への反発の高まり｜エコノミスト",
+    "channel": "The Economist",
+    "filename": "2026-08-19_AI_The_AIによる人間代替競争への反発の高まりエコノミスト.md",
+    "date": "2026-08-19",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "kwaQvoOtJmQ",
+    "title": "AIブームは熱狂の新たなフェーズに突入したのか？ | エコノミスト",
+    "channel": "The Economist",
+    "filename": "2026-08-19_AI_The_AIブームは熱狂の新たなフェーズに突入したのか  エコノミスト.md",
+    "date": "2026-08-19",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "k4TqPqGer8A",
+    "title": "ドイツ陸軍総監が語るAI、ドローン、そして戦車の未来 | The Economist",
+    "channel": "The Economist",
+    "filename": "2026-08-19_AI_The_ドイツ陸軍総監が語るAIドローンそして戦車の未来  The Economist.md",
+    "date": "2026-08-19",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "gNk5UC3hAHc",
+    "title": "AI開発競争に「勝者」がいない理由 | The Economist",
+    "channel": "The Economist",
+    "filename": "2026-08-19_AI_The_AI開発競争に勝者がいない理由  The Economist.md",
+    "date": "2026-08-19",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "cazd1z4Eseo",
+    "title": "The AI shift most companies didn't see coming",
+    "channel": "Microsoft (Satya Nadella / Mustafa Suleyman)",
+    "filename": "2026-08-19_AI_Microsoft_The AI shift most companies didnt see coming.html",
+    "date": "2026-08-19",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "XuoqKYxDHVc",
+    "title": "【フル対談】イーロン・マスク：AI・AGIと超豊かさの時代（2036年）へのロードマップ",
+    "channel": "The Economist",
+    "filename": "FEATURED_AI_The_XuoqKYxDHVc.html",
+    "date": "2026-08-19",
+    "tags": [
+      "ai",
+      "agi"
+    ],
+    "chapters": [
+      "AIは5年後には人間より賢くなる",
+      "AI企業はどのように自主規制を行うべきか",
+      "中国はAI分野のリーダーになるのか？",
+      "イーロン・マスク氏、サム・アルトマン氏とAI企業のボスたちについて語る",
+      "仕事は選択肢になる",
+      "一人の人間がこれほど大きな権力を持つべきなのか？",
+      "スターリンクとウクライナ戦争",
+      "政治に関わりすぎた",
+      "マスク氏：USAIDの予算削減で死者は出ていない",
+      "ヨーロッパ、極右、そしてイギリスの内戦",
+      "マスク氏：私は人種差別主義者ではない",
+      "マスク氏について人々が最も誤解していることは何か？"
+    ]
+  },
+  {
+    "video_id": "Vb-OqxUWPDE",
+    "title": "How Tesla Vision Helps Deploy Airbags Earlier",
+    "channel": "Tesla (Elon Musk)",
+    "filename": "2026-08-19_AI_Tesla_How Tesla Vision Helps Deploy Airbags Earlier.md",
+    "date": "2026-08-19",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "TugPBKBXIHc",
+    "title": "なぜ中国とアメリカでAIに対する認識がこれほど違うのか | The Economist",
+    "channel": "The Economist",
+    "filename": "2026-08-19_AI_The_なぜ中国とアメリカでAIに対する認識がこれほど違うのか  The Economist.md",
+    "date": "2026-08-19",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "QLKcF0j6bVA",
+    "title": "【マイクロソフト】GitHub Copilot SDKで、あらゆるアイデアをAIアプリにしよう",
+    "channel": "Microsoft Developer",
+    "filename": "2026-08-19_AI_Microsoft_GitHub Copilot SDKであらゆるアイデアをAIアプリにしよう.html",
+    "date": "2026-08-19",
+    "tags": [
+      "ai",
+      "copilot"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "1X-rr1DKSbY",
+    "title": "イーロン・マスクが語るAIの未来：10年後、人類は制御を失う | The Economist",
+    "channel": "The Economist",
+    "filename": "2026-08-19_AI_The_イーロンマスクが語るAIの未来10年後人類は制御を失う  The Economist.md",
+    "date": "2026-08-19",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "-RXD4bTuFTo",
+    "title": "Ryan Greenblatt – What happens once AI can automate AI research?",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-08-19_AI_Dwarkesh_Ryan Greenblatt  What happens once AI can automate.html",
+    "date": "2026-08-19",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "9H5y9Uag8AA",
+    "title": "Tesla Q2 2026 Financial Results and Q&A Webcast",
+    "channel": "Tesla (Elon Musk)",
+    "filename": "2026-07-22_Tesla_Tesla Q2 2026 Financial Results and QA Webcast.md",
+    "date": "2026-07-22",
+    "tags": [],
+    "chapters": []
+  },
+  {
+    "video_id": "-a0ecQMq-rM",
+    "title": "Starship - Critical Path",
+    "channel": "SpaceX (Elon Musk)",
+    "filename": "2026-07-13_SpaceX_Starship - Critical Path.md",
+    "date": "2026-07-13",
+    "tags": [],
+    "chapters": []
   }
 ]

@@ -87,6 +87,57 @@ def test_assign_joins_by_cosine_and_specific_entity():
     assert sum(len(t["members"]) for t in out) == 4
 
 
+def test_assign_uses_judge_in_the_ambiguous_band_and_falls_back_on_error():
+    summaries = {
+        "aaaaaaaaaaa": _s("aaaaaaaaaaa", "2026-08-19", "A", "h", ["Thing One"]),
+        "ddddddddddd": _s("ddddddddddd", "2026-08-21", "D", "h", ["Other"]),
+    }
+    emb = {"aaaaaaaaaaa": _unit(1, 0, 0), "ddddddddddd": _unit(1, 0.5, 0)}  # cos ~0.89
+    seen = []
+
+    def yes(new, thread, all_s):
+        seen.append((new["video_id"], thread["members"][0]["video_id"]))
+        return True
+
+    out = threads.assign(summaries, dict(emb), [], join=0.95, maybe=0.85, judge=yes)
+    assert len(out) == 1 and seen == [("ddddddddddd", "aaaaaaaaaaa")]
+    out = threads.assign(
+        summaries, dict(emb), [], join=0.95, maybe=0.85, judge=lambda *a: False
+    )
+    assert len(out) == 2  # judge says different story despite the cosine
+
+    def broken(*a):
+        raise RuntimeError("quota")
+
+    out = threads.assign(summaries, dict(emb), [], join=0.95, maybe=0.85, judge=broken)
+    assert len(out) == 2  # no shared specific entity -> entity fallback says no
+    summaries["ddddddddddd"]["entities"] = ["Thing One"]
+    out = threads.assign(summaries, dict(emb), [], join=0.95, maybe=0.85, judge=broken)
+    assert len(out) == 1  # fallback rule joins on the shared entity
+    # above JOIN the judge is never consulted
+    calls = []
+    threads.assign(
+        summaries,
+        {"aaaaaaaaaaa": _unit(1, 0, 0), "ddddddddddd": _unit(1, 0.05, 0)},
+        [],
+        join=0.95,
+        maybe=0.85,
+        judge=lambda *a: calls.append(1) or True,
+    )
+    assert calls == []
+
+
+def test_judge_prompt_mentions_both_sides():
+    s = {"aaaaaaaaaaa": _s("aaaaaaaaaaa", "2026-08-19", "既存タイトル", "h1", ["E"])}
+    new = _s("bbbbbbbbbbb", "2026-08-20", "新タイトル", "h2", ["E"])
+    thread = {
+        "title_ja": "スレッド名",
+        "members": [{"video_id": "aaaaaaaaaaa", "date": "2026-08-19"}],
+    }
+    p = threads.build_judge_prompt(new, thread, s)
+    assert "『新タイトル』" in p and "『既存タイトル』" in p and "same_topic" in p
+
+
 def test_synthesize_only_multi_member_threads_and_only_when_membership_changed():
     summaries = {
         "aaaaaaaaaaa": _s("aaaaaaaaaaa", "2026-08-19", "A", "h1", ["E"]),

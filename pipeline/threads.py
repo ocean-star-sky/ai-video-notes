@@ -33,8 +33,11 @@ EMBED_BATCH = 16
 EMBED_PAUSE_SEC = 1.0
 EMBEDDINGS_PATH = config.STATE_DIR / "embeddings.json"
 
-THREAD_COS_JOIN = 0.90  # calibrate with `pairs` once ~50 summaries exist
-THREAD_COS_MAYBE = 0.85
+JUDGE_MODEL = "gemini-2.5-flash"
+THREAD_COS_JOIN = 0.90  # >= : same story without asking
+THREAD_COS_MAYBE = (
+    0.84  # [maybe, join): ask the judge (or entity overlap when no judge)
+)
 
 # Entities too generic to count as "the same story" evidence.
 GENERIC_ENTITIES = {
@@ -61,23 +64,62 @@ def embed_text(summary: dict) -> str:
     )
 
 
-def gemini_embed(texts: list[str]) -> list[list[float]]:
+def _gemini_client():
     sys.path.insert(0, "/root")
     from lib.gemini_logged_client import LoggedClient  # noqa: PLC0415
 
     config.load_dotenv(Path("/root/.env"))
-    client = LoggedClient(
+    return LoggedClient(
         api_key=os.environ["GEMINI_API_KEY"], caller="ai-video-notes.threads"
     )
+
+
+def gemini_embed(texts: list[str]) -> list[list[float]]:
+    """task_type=CLUSTERING separates same-story pairs best (measured 2026-09-02:
+    3 ChatGPT Work tutorials 0.88-0.92 vs. every other pair <= 0.88)."""
+    from google.genai import types  # noqa: PLC0415
+
+    client = _gemini_client()
     out: list[list[float]] = []
     for i in range(0, len(texts), EMBED_BATCH):
         if i:
             time.sleep(EMBED_PAUSE_SEC)
         r = client.models.embed_content(
-            model=EMBED_MODEL, contents=texts[i : i + EMBED_BATCH]
+            model=EMBED_MODEL,
+            contents=texts[i : i + EMBED_BATCH],
+            config=types.EmbedContentConfig(task_type="CLUSTERING"),
         )
         out.extend([list(e.values) for e in r.embeddings])
     return out
+
+
+def _brief(s: dict) -> str:
+    return (
+        f"『{s.get('title_ja') or s.get('title')}』({s.get('channel')}, {s.get('date')})\n"
+        f"  要点: {s.get('hook_ja')}\n  持ち帰り: {' / '.join(s.get('takeaways_ja', []))}"
+    )
+
+
+def build_judge_prompt(new: dict, thread: dict, summaries: dict[str, dict]) -> str:
+    members = "\n".join(
+        _brief(summaries[m["video_id"]])
+        for m in thread["members"][-3:]
+        if m["video_id"] in summaries
+    )
+    return (
+        "次の「新しい動画」は、既存の「話題スレッド」の続報・同じ話題（同じ製品/発表/研究テーマ/論点）として"
+        "1 つにまとめて読者に見せるべきですか？ 同じ企業や同じ分野というだけなら別扱いにしてください。\n"
+        'JSON のみで回答: {"same_topic": true/false, "reason": "20字以内"}\n\n'
+        f"[新しい動画]\n{_brief(new)}\n\n[話題スレッド: {thread.get('title_ja')}]\n{members}\n"
+    )
+
+
+def gemini_judge(new: dict, thread: dict, summaries: dict[str, dict]) -> bool:
+    """Same-story judge for the ambiguous cosine band (fast, free-tier Flash)."""
+    r = _gemini_client().models.generate_content(
+        model=JUDGE_MODEL, contents=build_judge_prompt(new, thread, summaries)
+    )
+    return bool(_json_from_text(r.text).get("same_topic"))
 
 
 def cosine(a: list[float], b: list[float]) -> float:
@@ -153,8 +195,13 @@ def assign(
     threads: list[dict],
     join: float = THREAD_COS_JOIN,
     maybe: float = THREAD_COS_MAYBE,
+    judge: Callable[[dict, dict, dict], bool] | None = None,
 ) -> list[dict]:
-    """Attach every not-yet-assigned video to a thread (oldest first, so '続報' is chronological)."""
+    """Attach every not-yet-assigned video to a thread (oldest first, so '続報' is chronological).
+
+    judge(new_summary, thread, summaries) decides the ambiguous band; when it is
+    None or fails, a shared *specific* entity is required instead.
+    """
     assigned = {m["video_id"] for t in threads for m in t["members"]}
     todo = sorted(
         (s for vid, s in summaries.items() if vid not in assigned and vid in emb),
@@ -171,9 +218,18 @@ def assign(
             if c > best_cos:
                 best, best_cos = t, c
         joined = False
-        if best is not None:
-            shared = specific_entities(s) & set(best.get("entities", []))
-            joined = best_cos >= join or (best_cos >= maybe and bool(shared))
+        if best is not None and best_cos >= join:
+            joined = True
+        elif best is not None and best_cos >= maybe:
+            verdict = None
+            if judge is not None:
+                try:
+                    verdict = bool(judge(s, best, summaries))
+                except Exception as e:  # judge outage -> fall back to the entity rule
+                    print(f"  judge failed for {vid}: {str(e)[:100]}")
+            if verdict is None:
+                verdict = bool(specific_entities(s) & set(best.get("entities", [])))
+            joined = verdict
         member = {
             "video_id": vid,
             "date": s.get("date", ""),
@@ -266,13 +322,13 @@ def top_pairs(
     return pairs[:top]
 
 
-def cmd_assign(embed=gemini_embed, llm=codex_llm) -> int:
+def cmd_assign(embed=gemini_embed, llm=codex_llm, judge=gemini_judge) -> int:
     summaries = load_summaries()
     emb = load_embeddings()
     n_new = ensure_embeddings(summaries, emb, embed)
     if n_new:
         save_embeddings(emb)
-    threads = assign(summaries, emb, load_threads())
+    threads = assign(summaries, emb, load_threads(), judge=judge)
     n_syn = synthesize(threads, summaries, llm)
     save_threads(threads)
     multi = sum(1 for t in threads if len(t["members"]) > 1)

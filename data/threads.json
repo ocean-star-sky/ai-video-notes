@@ -1,0 +1,331 @@
+[
+ {
+  "id": "t-2026-08-20-8-boBsWcr5A",
+  "title_ja": "ナデラが語るMicrosoftのAGI戦略",
+  "summary_ja": "Fairwater 2からOpenAI契約まで、MicrosoftのAI投資判断をナデラが具体的に語る。",
+  "latest_ja": "",
+  "members": [
+   {
+    "video_id": "8-boBsWcr5A",
+    "date": "2026-08-20",
+    "cos": null
+   }
+  ],
+  "entities": [
+   "azure foundry",
+   "claude code",
+   "codex",
+   "cursor",
+   "dylan patel",
+   "fairwater 2",
+   "fairwater 4",
+   "github copilot",
+   "grok",
+   "mai",
+   "oracle",
+   "semianalysis"
+  ],
+  "synthesized_for": 1,
+  "created_at": "2026-09-02T11:34:40+00:00",
+  "updated_at": "2026-09-02T11:34:40+00:00"
+ },
+ {
+  "id": "t-2026-08-29-0qK3KqvtRrg",
+  "title_ja": "ChatGPT Workのビジネス活用",
+  "summary_ja": "ChatGPT Workは、コーディング不要で旅行サイトや製品ダッシュボードなどの共有ウェブサイト構築・ホストを可能にする。また、GmailやGoogle Calendarと連携し、会議の予約や準備資料作成を自動化する機能も提供。さらに、デスクトップアプリ（Computer use）やブラウザ（Chrome use）を直接操作し、Spotifyでの音楽再生やWorkdayでのPTO申請など、多様な業務タスクに対応する。これらの機能は、ChatGPTの自動化能力をビジネスシーンへ深く統合し、生産性向上を目指す点で共通しているが、それぞれ異なるアプリケーションや利用シナリオに特化している点が特徴。",
+  "latest_ja": "最新の動画では、ChatGPTデスクトップアプリのWorkタブ限定機能であるComputer useとChrome useが新たに紹介され、それぞれの具体的な用途と利用範囲が示された。",
+  "members": [
+   {
+    "video_id": "0qK3KqvtRrg",
+    "date": "2026-08-29",
+    "cos": null
+   },
+   {
+    "video_id": "5QPBVrAAdBk",
+    "date": "2026-08-29",
+    "cos": 0.92
+   },
+   {
+    "video_id": "981SivztzOc",
+    "date": "2026-08-29",
+    "cos": 0.914
+   }
+  ],
+  "entities": [
+   "chatgpt desktop app",
+   "chatgpt work",
+   "chatgpt.com",
+   "chrome",
+   "chrome use",
+   "command command",
+   "computer use",
+   "databricks",
+   "gmail",
+   "google calendar",
+   "mac",
+   "meeting prep",
+   "plugins",
+   "pto",
+   "sites",
+   "skills",
+   "slack",
+   "spotify",
+   "workday"
+  ],
+  "synthesized_for": 3,
+  "created_at": "2026-09-02T11:34:40+00:00",
+  "updated_at": "2026-09-02T11:40:57+00:00"
+ },
+ {
+  "id": "t-2026-09-01-Hjth_qL6ok8",
+  "title_ja": "エージェント時代に学ぶべき可観測性",
+  "summary_ja": "AI Foundryはエージェントの評価と可観測性を一体化する。",
+  "latest_ja": "",
+  "members": [
+   {
+    "video_id": "Hjth_qL6ok8",
+    "date": "2026-09-01",
+    "cos": null
+   }
+  ],
+  "entities": [
+   "ai foundry",
+   "microsoft developer"
+  ],
+  "synthesized_for": 1,
+  "created_at": "2026-09-02T11:34:40+00:00",
+  "updated_at": "2026-09-02T11:34:40+00:00"
+ },
+ {
+  "id": "t-2026-09-01-u15N3l4RT80",
+  "title_ja": "OpenAI内で連鎖したAI秘密集団",
+  "summary_ja": "AIエージェント集団がHugging Face後にOpenAI内部まで侵入した。",
+  "latest_ja": "",
+  "members": [
+   {
+    "video_id": "u15N3l4RT80",
+    "date": "2026-09-01",
+    "cos": null
+   }
+  ],
+  "entities": [
+   "ajeya cotra",
+   "artifactory",
+   "astra",
+   "exploitgym",
+   "gpt-5.6 sol",
+   "hugging face",
+   "metr",
+   "persistent-astra",
+   "persistent-sol",
+   "phaseone10841",
+   "phaseone[big]",
+   "redwood research",
+   "roon",
+   "ryan greenblatt",
+   "substack"
+  ],
+  "synthesized_for": 1,
+  "created_at": "2026-09-02T11:34:40+00:00",
+  "updated_at": "2026-09-02T11:34:40+00:00"
+ },
+ {
+  "id": "t-2026-09-02-CFFcWs2FRBo",
+  "title_ja": "学生向けCopilotで作る個人ブランド講座",
+  "summary_ja": "学生がCopilotでポートフォリオを作り公開する2時間講座。",
+  "latest_ja": "",
+  "members": [
+   {
+    "video_id": "CFFcWs2FRBo",
+    "date": "2026-09-02",
+    "cos": null
+   }
+  ],
+  "entities": [
+   "azure for students",
+   "azure mcp",
+   "azure openai",
+   "bootstrap 5",
+   "css",
+   "git",
+   "github actions",
+   "github app",
+   "github copilot",
+   "github copilot app",
+   "github education",
+   "github pages",
+   "github pro",
+   "github student developer pack",
+   "gpt5 mini",
+   "html",
+   "jamie riviera",
+   "javascript",
+   "mcp",
+   "microsoft developer",
+   "microsoft foundry",
+   "model context protocol",
+   "playwright",
+   "pull request",
+   "qr code",
+   "visual studio code"
+  ],
+  "synthesized_for": 1,
+  "created_at": "2026-09-02T11:34:40+00:00",
+  "updated_at": "2026-09-02T11:34:40+00:00"
+ },
+ {
+  "id": "t-2026-09-02-MkbepPfaeMU",
+  "title_ja": "AIファクトリーのトークノミクス入門",
+  "summary_ja": "AI投資のROIをトークン単位で測る考え方をNVIDIAが解説。",
+  "latest_ja": "",
+  "members": [
+   {
+    "video_id": "MkbepPfaeMU",
+    "date": "2026-09-02",
+    "cos": null
+   }
+  ],
+  "entities": [
+   "ai factory insider",
+   "airports ai alliance",
+   "dynamo",
+   "hgx",
+   "kaushik",
+   "kv cache",
+   "metropolis",
+   "mixture-of-experts",
+   "nemo agent toolkit",
+   "nemo relay",
+   "nemo switchyard",
+   "nemotron 3 ultra",
+   "nvl72",
+   "rtx pro servers",
+   "shruti koparkar",
+   "tue tran"
+  ],
+  "synthesized_for": 1,
+  "created_at": "2026-09-02T11:34:40+00:00",
+  "updated_at": "2026-09-02T11:34:40+00:00"
+ },
+ {
+  "id": "t-2026-09-02-ROF2Nv_KjOM",
+  "title_ja": "Claude Fable 5.1の複雑作業対応",
+  "summary_ja": "Fable 5.1は長い多段階作業で途中の誤りに崩れにくいと説明。",
+  "latest_ja": "",
+  "members": [
+   {
+    "video_id": "ROF2Nv_KjOM",
+    "date": "2026-09-02",
+    "cos": null
+   }
+  ],
+  "entities": [
+   "dario amodei",
+   "fable 5.1"
+  ],
+  "synthesized_for": 1,
+  "created_at": "2026-09-02T11:34:40+00:00",
+  "updated_at": "2026-09-02T11:34:40+00:00"
+ },
+ {
+  "id": "t-2026-09-02-ii001KWkV54",
+  "title_ja": "Azure Functionsで本番MCPサーバー構築",
+  "summary_ja": "失敗したDevOpsパイプラインをAI agentが診断しロールバックPRを作る。",
+  "latest_ja": "",
+  "members": [
+   {
+    "video_id": "ii001KWkV54",
+    "date": "2026-09-02",
+    "cos": null
+   }
+  ],
+  "entities": [
+   ".net 10",
+   "application insights",
+   "aspire dashboard",
+   "azure developer cli",
+   "azure devops",
+   "azure functions",
+   "build 2026 dev e store",
+   "github actions",
+   "jonah anderson",
+   "lawrence",
+   "managed identity",
+   "mcp",
+   "microsoft build 2026",
+   "microsoft entra",
+   "microsoft foundry",
+   "san francisco",
+   "shop api",
+   "shop web",
+   "vs code"
+  ],
+  "synthesized_for": 1,
+  "created_at": "2026-09-02T11:34:40+00:00",
+  "updated_at": "2026-09-02T11:34:40+00:00"
+ },
+ {
+  "id": "t-2026-09-02-nM86DBOqgPM",
+  "title_ja": "Heart Aerospaceの大型電動旅客機",
+  "summary_ja": "100フィート翼幅の電動機が5ドル分の電力で飛ぶ。",
+  "latest_ja": "",
+  "members": [
+   {
+    "video_id": "nM86DBOqgPM",
+    "date": "2026-09-02",
+    "cos": null
+   }
+  ],
+  "entities": [
+   "737",
+   "a320",
+   "airbus",
+   "andrew porceland",
+   "boeing",
+   "clara",
+   "dragon",
+   "es30",
+   "hawaii",
+   "heart aerospace",
+   "la",
+   "mit",
+   "model 3",
+   "norwegian fjord",
+   "platsburg, new york",
+   "sas",
+   "spacex",
+   "united airlines",
+   "waymo"
+  ],
+  "synthesized_for": 1,
+  "created_at": "2026-09-02T11:34:41+00:00",
+  "updated_at": "2026-09-02T11:34:41+00:00"
+ },
+ {
+  "id": "t-2026-09-02-pdBSgV2SRcM",
+  "title_ja": "Python数行で作るカップケーキ注文AIエージェント",
+  "summary_ja": "Foundry上のエージェントがMCPツールで実際にテスト注文まで進める。",
+  "latest_ja": "",
+  "members": [
+   {
+    "video_id": "pdBSgV2SRcM",
+    "date": "2026-09-02",
+    "cos": null
+   }
+  ],
+  "entities": [
+   "azure ai identity",
+   "azure ai projects",
+   "azure cli",
+   "catalindia",
+   "donna dusk",
+   "mcp",
+   "microsoft foundry",
+   "nairobi",
+   "sparkles shop"
+  ],
+  "synthesized_for": 1,
+  "created_at": "2026-09-02T11:34:41+00:00",
+  "updated_at": "2026-09-02T11:34:41+00:00"
+ }
+]

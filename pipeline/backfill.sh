@@ -11,6 +11,7 @@ while true; do
     python3 -m pipeline.run fetch --max "$BATCH"
     rc=$?
     python3 -m pipeline.run summarize --max "$BATCH"
+    python3 -m pipeline.threads assign
     python3 -m pipeline.render
     left=$(python3 - <<'EOF'
 import sqlite3

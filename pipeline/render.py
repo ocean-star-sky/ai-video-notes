@@ -81,6 +81,14 @@ header.top h1{font-size:2.1rem;background:linear-gradient(135deg,#38bdf8,#818cf8
 .pcard .meta{display:flex;justify-content:space-between;align-items:center;color:var(--sub);font-size:.78rem;margin-top:auto}
 .pcard .memo{font-size:.8rem;color:var(--green);white-space:pre-wrap}
 .pending{color:var(--orange);font-size:.8rem}
+h2.sec{border:none;font-size:1.25rem;color:var(--text);margin:26px 0 12px}
+.threads{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:16px}
+.thread{background:var(--deep);border:1px solid #6366f1;border-radius:14px;padding:18px 20px}
+.thread h3{font-size:1.05rem;line-height:1.5;margin-bottom:8px}
+.thread p{font-size:.92rem;color:#cbd5e1;margin-bottom:8px}
+.thread .latest{font-size:.85rem;color:var(--green);margin-bottom:8px}
+.thread .members{margin-bottom:10px}.thread .members .chip{text-decoration:none;font-weight:500}
+.count .btn{margin-left:8px}
 .count{color:var(--sub);font-size:.85rem;margin:6px 0 14px}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:20px}
 .modal.open{display:flex}.modal .box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;width:min(560px,100%)}
@@ -194,7 +202,35 @@ def render_note(summary: dict, entry: dict) -> str:
 """
 
 
-def _card(entry: dict, summary: dict | None) -> str:
+def _thread_section(
+    threads: list[dict], summaries: dict[str, dict], by_vid: dict[str, dict]
+) -> str:
+    multi = [t for t in threads if len(t["members"]) >= 2]
+    if not multi:
+        return ""
+    multi.sort(key=lambda t: max(m["date"] for m in t["members"]), reverse=True)
+    items = []
+    for t in multi:
+        members = sorted(t["members"], key=lambda m: m["date"], reverse=True)
+        chips = "".join(
+            f'<a class="chip" href="{_e(by_vid[m["video_id"]]["canonical_file"])}">{_e(m["date"])} {_e((summaries.get(m["video_id"]) or {}).get("title_ja") or by_vid[m["video_id"]]["title"])}</a>'
+            for m in members
+            if m["video_id"] in by_vid
+        )
+        latest = (
+            f'<div class="latest">🆕 {_e(t["latest_ja"])}</div>'
+            if t.get("latest_ja")
+            else ""
+        )
+        items.append(
+            f'<div class="thread" data-thread="{_e(t["id"])}"><h3>🧵 {_e(t["title_ja"])} <span class="sub">({len(members)} 本)</span></h3>'
+            f'<p>{_e(t["summary_ja"])}</p>{latest}<div class="members">{chips}</div>'
+            f'<button class="btn" data-thread-filter="{_e(t["id"])}">この話題の動画だけ表示</button></div>'
+        )
+    return f'<h2 class="sec">🧵 話題スレッド（同じ話題の動画を 1 つにまとめています）</h2><div class="threads">{"".join(items)}</div>'
+
+
+def _card(entry: dict, summary: dict | None, thread_id: str = "") -> str:
     vid = entry["video_id"]
     title = (summary or {}).get("title_ja") or entry["title"]
     hook = (summary or {}).get("hook_ja") or ""
@@ -214,7 +250,7 @@ def _card(entry: dict, summary: dict | None) -> str:
         if hook
         else '<div class="pending">要約を準備中（字幕取得待ち）</div>'
     )
-    return f"""<div class="pcard" data-id="{_e(vid)}" data-topics="{_e(" ".join(t.lower() for t in labels))}" data-search="{_e(search_blob)}">
+    return f"""<div class="pcard" data-id="{_e(vid)}" data-thread="{_e(thread_id)}" data-topics="{_e(" ".join(t.lower() for t in labels))}" data-search="{_e(search_blob)}">
 <div class="thumbc"><a href="{_e(entry["canonical_file"])}"><img src="https://img.youtube.com/vi/{_e(vid)}/hqdefault.jpg" alt="" loading="lazy"></a>
 <button class="tb star" data-act="star" title="マイストック">⭐</button><button class="tb read" data-act="read" title="読了">✅</button></div>
 <div class="body"><div class="ch">{_e(entry["channel"])}</div><h3><a href="{_e(entry["canonical_file"])}">{_e(title)}</a></h3>{body}
@@ -223,10 +259,17 @@ def _card(entry: dict, summary: dict | None) -> str:
 <div class="memo" data-memo></div></div></div>"""
 
 
-def render_index(catalog: list[dict], summaries: dict[str, dict]) -> str:
+def render_index(
+    catalog: list[dict], summaries: dict[str, dict], threads: list[dict] | None = None
+) -> str:
+    threads = threads or []
     entries = sorted(
         catalog, key=lambda e: (e.get("date") or "", e["video_id"]), reverse=True
     )
+    by_vid = {e["video_id"]: e for e in entries}
+    thread_of = {m["video_id"]: t["id"] for t in threads for m in t["members"]}
+    n_threads = len(threads)
+    thread_section = _thread_section(threads, summaries, by_vid)
     counts = Counter(
         t.lower()
         for e in entries
@@ -236,7 +279,10 @@ def render_index(catalog: list[dict], summaries: dict[str, dict]) -> str:
         f'<button class="btn topic" data-topic="{_e(t)}">{_e(t)} <span class="sub">{n}</span></button>'
         for t, n in counts.most_common(14)
     )
-    cards = "\n".join(_card(e, summaries.get(e["video_id"])) for e in entries)
+    cards = "\n".join(
+        _card(e, summaries.get(e["video_id"]), thread_of.get(e["video_id"], ""))
+        for e in entries
+    )
     lib = [
         {
             "video_id": e["video_id"],
@@ -263,7 +309,9 @@ def render_index(catalog: list[dict], summaries: dict[str, dict]) -> str:
 <button class="btn" id="export">📋 マイストックを Markdown コピー</button>
 </div>
 <div class="topics"><button class="btn topic active" data-topic="">🌐 すべて</button>{topics}</div>
-<div class="count"><span id="shown">{len(entries)}</span> 本を表示 ／ 要約済み {done} / {len(entries)}</div>
+{thread_section}
+<h2 class="sec">🎬 動画一覧</h2>
+<div class="count"><span id="shown">{len(entries)}</span> 本を表示 ／ 要約済み {done} / {len(entries)} ／ 話題スレッド {n_threads} <button class="btn" id="clearthread" hidden>絞り込み解除</button></div>
 <div class="grid" id="grid">
 {cards}
 </div>
@@ -276,7 +324,7 @@ const KEYS={json.dumps(STORAGE_KEYS)};
 const load=k=>{{try{{return JSON.parse(localStorage.getItem(k))||(k===KEYS.memos?{{}}:[])}}catch(e){{return k===KEYS.memos?{{}}:[]}}}};
 const save=(k,v)=>{{try{{localStorage.setItem(k,JSON.stringify(v))}}catch(e){{}}}};
 let stars=load(KEYS.starred),reads=load(KEYS.read),memos=load(KEYS.memos);
-let tab='all',topic='',q='',memoVid=null;
+let tab='all',topic='',q='',memoVid=null,thread='';
 const cards=[...document.querySelectorAll('.pcard')];
 function paint(){{
   let shown=0;
@@ -288,8 +336,10 @@ function paint(){{
     const okTab=tab==='all'||(tab==='star'&&stars.includes(id))||(tab==='read'&&reads.includes(id));
     const okTopic=!topic||c.dataset.topics.split(' ').includes(topic);
     const okQ=!q||q.split(/\\s+/).every(w=>c.dataset.search.includes(w));
-    const show=okTab&&okTopic&&okQ; c.hidden=!show; if(show)shown++;
+    const okThread=!thread||c.dataset.thread===thread;
+    const show=okTab&&okTopic&&okQ&&okThread; c.hidden=!show; if(show)shown++;
   }}
+  document.getElementById('clearthread').hidden=!thread;
   document.getElementById('shown').textContent=shown;
   document.getElementById('nstar').textContent=stars.length;
   document.getElementById('nread').textContent=reads.length;
@@ -307,6 +357,8 @@ document.getElementById('mcancel').onclick=()=>document.getElementById('modal').
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{{tab=b.dataset.tab;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));paint()}});
 document.querySelectorAll('.topic').forEach(b=>b.onclick=()=>{{topic=b.dataset.topic;document.querySelectorAll('.topic').forEach(x=>x.classList.toggle('active',x===b));paint()}});
 document.getElementById('q').addEventListener('input',e=>{{q=e.target.value.trim().toLowerCase();paint()}});
+document.querySelectorAll('[data-thread-filter]').forEach(b=>b.onclick=()=>{{thread=b.dataset.threadFilter;paint();document.getElementById('grid').scrollIntoView({{behavior:'smooth'}})}});
+document.getElementById('clearthread').onclick=()=>{{thread='';paint()}};
 document.getElementById('export').onclick=()=>{{
   const items=LIB.filter(i=>stars.includes(i.video_id));
   if(!items.length){{alert('⭐ マイストックが空です。カードの ⭐ を押して追加してください。');return}}
@@ -337,7 +389,8 @@ def build_site(repo_root: Path = config.REPO_ROOT) -> dict:
         if not out.exists() or out.read_text(encoding="utf-8") != page:
             out.write_text(page, encoding="utf-8")
             written += 1
-    index = render_index(catalog, summaries)
+    threads = load_json(config.THREADS_PATH, [])
+    index = render_index(catalog, summaries, threads)
     index_path = repo_root / "index.html"
     if not index_path.exists() or index_path.read_text(encoding="utf-8") != index:
         index_path.write_text(index, encoding="utf-8")

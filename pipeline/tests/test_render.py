@@ -80,6 +80,39 @@ def test_render_index_cards_topics_and_pending(tmp_path):
     assert "ai_video_starred_vids" in page and "ai_video_user_memos" in page
     assert "要約済み 1 / 2" in page
     assert "microsoft" in page  # search blob includes entities lowercased
+    assert "話題スレッド（" not in page  # no multi-video threads -> section omitted
+
+    threads = [
+        {
+            "id": "t-2026-08-20-8-boBsWcr5A",
+            "title_ja": "MS の AGI 投資 <続報>",
+            "summary_ja": "統合文",
+            "latest_ja": "最新で加わった点",
+            "members": [
+                {"video_id": "8-boBsWcr5A", "date": "2026-08-20"},
+                {"video_id": "bbbbbbbbbbb", "date": "2026-09-01"},
+            ],
+        },
+        {
+            "id": "solo",
+            "title_ja": "単独",
+            "summary_ja": "h",
+            "latest_ja": "",
+            "members": [{"video_id": "zzzzzzzzzzz", "date": "2026-01-01"}],
+        },
+    ]
+    page = render.render_index([ENTRY, other], {ENTRY["video_id"]: SUMMARY}, threads)
+    assert page.count('class="thread"') == 1  # single-member threads are not listed
+    assert (
+        "MS の AGI 投資 &lt;続報&gt;" in page
+        and "統合文" in page
+        and "🆕 最新で加わった点" in page
+    )
+    assert 'data-thread-filter="t-2026-08-20-8-boBsWcr5A"' in page
+    assert (
+        page.count('data-thread="t-2026-08-20-8-boBsWcr5A"') == 3
+    )  # section + 2 cards
+    assert "話題スレッド 2" in page
 
 
 def test_build_site_writes_canonical_note_and_index(tmp_path, monkeypatch):

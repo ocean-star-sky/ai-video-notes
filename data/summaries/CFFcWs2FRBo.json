@@ -1,0 +1,151 @@
+{
+ "title_ja": "学生向けCopilotで作る個人ブランド講座",
+ "hook_ja": "学生がCopilotでポートフォリオを作り公開する2時間講座。",
+ "takeaways_ja": [
+  "GitHub Student Developer Packを申請し、VS CodeとGitHub Copilot appで最初のWebサイトを作る流れを実演している。",
+  "Jamie Rivieraの履歴書から単一ページのポートフォリオを生成し、GitHubへpush、PR merge、GitHub Pages公開まで進めている。",
+  "CopilotのPlan/Autopilot、context、MCP、skills、BYO model、Bootstrap化、スマホからのリモート操作まで扱っている。"
+ ],
+ "claims": [
+  {
+   "who": "speaker",
+   "claim_ja": "Student Developer Packでは学生が数千ドル相当のリソースを無料で利用できると述べた。",
+   "at": "02:02"
+  },
+  {
+   "who": "Ahmed",
+   "claim_ja": "採用担当者が複数ページを回らずに済むため、ポートフォリオ構成は単一ページがよいと述べた。",
+   "at": "14:01"
+  },
+  {
+   "who": "Alexander Algazabel",
+   "claim_ja": "GitHub PagesはWebサイトをホストするサーバーを提供し、誰でもサイトを見られるようにすると説明した。",
+   "at": "31:00"
+  },
+  {
+   "who": "Grant Harris",
+   "claim_ja": "Autopilot modeは、planとdesign decisionsを確認した後、Copilotにuser inputなしで作業させられると述べた。",
+   "at": "58:01"
+  },
+  {
+   "who": "Emily Rothrock",
+   "claim_ja": "Contextはprompt、過去のconversation、読んでいるfiles、saved project instructionsを含むと説明した。",
+   "at": "59:00"
+  },
+  {
+   "who": "Garrett Burliner",
+   "claim_ja": "Copilotはbrainであり、toolsやMCPs、built-in toolsは作業するためのhandsだと述べた。",
+   "at": "1:07:02"
+  },
+  {
+   "who": "Alexander Alguzabul",
+   "claim_ja": "CopilotのtokenやAI credits上限に達した場合、bring your own modelを使う選択肢があると述べた。",
+   "at": "1:37:00"
+  },
+  {
+   "who": "Grant Harris",
+   "claim_ja": "Copilot desktop appで開始した会話をphoneに移し、外出中でも作業を続けたり監視したりできると説明した。",
+   "at": "2:00:01"
+  }
+ ],
+ "entities": [
+  "Microsoft Developer",
+  "GitHub Copilot",
+  "GitHub Student Developer Pack",
+  "GitHub Education",
+  "GitHub Pro",
+  "Visual Studio Code",
+  "GitHub Copilot app",
+  "GitHub Pages",
+  "GitHub Actions",
+  "Pull Request",
+  "Jamie Riviera",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Git",
+  "MCP",
+  "Model Context Protocol",
+  "Playwright",
+  "Azure MCP",
+  "Microsoft Foundry",
+  "Azure OpenAI",
+  "Azure for Students",
+  "GPT5 mini",
+  "Bootstrap 5",
+  "QR code",
+  "GitHub app"
+ ],
+ "topic_labels": [
+  "developer-tools",
+  "agents",
+  "education"
+ ],
+ "novelty_ja": "GitHub Copilotを学生の個人ブランド構築に絞り、履歴書からサイト生成、GitHub Pages公開、skills化、BYO model、スマホ遠隔操作まで一つの実演でつなげている点。",
+ "audience_ja": "GitHub Copilotでポートフォリオを作って公開したい学生や初学者向け。",
+ "truncated": false,
+ "chunks": 4,
+ "video_id": "CFFcWs2FRBo",
+ "title": "【マイクロソフト】Build Your Personal Brand with GitHub Copilot — Full Course for Students",
+ "channel": "Microsoft Developer",
+ "date": "2026-09-02",
+ "chapters": [
+  "Welcome — what you'll build in this series",
+  "Claiming the GitHub Student Developer Pack",
+  "Your first prompt: a Hello World site",
+  "EPISODE 2 — Build a portfolio website from a resume",
+  "Answering Copilot's questions about structure and style",
+  "Resume preview, school colors, and dark mode",
+  "EPISODE 3 — Git, GitHub, and GitHub Pages",
+  "Version control explained: diffs, commits, branches, merging",
+  "Creating a repository and pushing your site",
+  "Deploying with GitHub Pages",
+  "EPISODE 4 — Copilot settings, sessions, and modes",
+  "Interactive mode, Plan mode, and Autopilot mode",
+  "EPISODE 5 — Context and tokens",
+  "Adding project files and running /init",
+  "Shrinking your session with /compact",
+  "EPISODE 6 — Tools and MCP servers",
+  "Installing and using the Playwright MCP server",
+  "EPISODE 7 — Skills, agent personas, and marketplaces",
+  "Turning a workflow into a reusable skill",
+  "Adding a plugin marketplace",
+  "EPISODE 8 — Bring your own model",
+  "Using the Azure MCP to create a Foundry resource",
+  "Connecting Foundry as a model provider",
+  "EPISODE 9 — Modernize the site with Bootstrap",
+  "Sticky navbar, animated cards, and shadows",
+  "EPISODE 10 — Control Copilot from your phone",
+  "Remote control and the QR code handoff",
+  "Back at the laptop — the finished feature",
+  "Claiming the GitHub Student Developer Pack",
+  "Your first prompt: a Hello World site",
+  "EPISODE 2 — Build a portfolio website from a resume",
+  "Answering Copilot's questions about structure and style",
+  "Resume preview, school colors, and dark mode",
+  "EPISODE 3 — Git, GitHub, and GitHub Pages",
+  "Version control explained: diffs, commits, branches, merging",
+  "Creating a repository and pushing your site",
+  "Deploying with GitHub Pages",
+  "EPISODE 4 — Copilot settings, sessions, and modes",
+  "Interactive mode, Plan mode, and Autopilot mode",
+  "EPISODE 5 — Context and tokens",
+  "Adding project files and running /init",
+  "Shrinking your session with /compact",
+  "EPISODE 6 — Tools and MCP servers",
+  "Installing and using the Playwright MCP server",
+  "EPISODE 7 — Skills, agent personas, and marketplaces",
+  "Turning a workflow into a reusable skill",
+  "Adding a plugin marketplace",
+  "EPISODE 8 — Bring your own model",
+  "Using the Azure MCP to create a Foundry resource",
+  "Connecting Foundry as a model provider",
+  "EPISODE 9 — Modernize the site with Bootstrap",
+  "Sticky navbar, animated cards, and shadows",
+  "EPISODE 10 — Control Copilot from your phone",
+  "Remote control and the QR code handoff",
+  "Back at the laptop — the finished feature"
+ ],
+ "transcript_lang": "en",
+ "generated_at": "2026-09-02T10:01:38+00:00"
+}

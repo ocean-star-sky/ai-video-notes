@@ -1,0 +1,63 @@
+{
+ "title_ja": "Claude Fable 5.1の複雑作業対応",
+ "hook_ja": "Fable 5.1は長い多段階作業で途中の誤りに崩れにくいと説明。",
+ "takeaways_ja": [
+  "Anthropicは最上位モデル系の最新アップグレードとしてFable 5.1を公開した。",
+  "複雑な金融モデル、長い数学証明、相互参照が多い契約書など多段階作業を重視している。",
+  "ソフトウェア開発ではコードレビュー、性能改善、コードベース横断機能、長時間セッションに対応すると述べた。"
+ ],
+ "claims": [
+  {
+   "who": "Dario Amodei",
+   "claim_ja": "Fable 5.1はAnthropicの最も有能なモデルクラスの最新アップグレードだと発表した。",
+   "at": "00:00"
+  },
+  {
+   "who": "Dario Amodei",
+   "claim_ja": "複雑な金融モデル、長い数学証明、数百の相互参照を持つ契約書のような多段階作業で最後まで持ちこたえると述べた。",
+   "at": "00:14"
+  },
+  {
+   "who": "Dario Amodei",
+   "claim_ja": "ソフトウェアプロジェクトではコードレビューから性能改善、コードベース全体にまたがる機能まで従来以上に担えると述べた。",
+   "at": "00:36"
+  },
+  {
+   "who": "Dario Amodei",
+   "claim_ja": "壁に当たると、試したことと行き詰まった場所を伝えると説明した。",
+   "at": "00:47"
+  },
+  {
+   "who": "Dario Amodei",
+   "claim_ja": "研究、スプレッドシート、メモ、デッキを、確認可能な数字と出典付きで返せると述べた。",
+   "at": "00:52"
+  },
+  {
+   "who": "Dario Amodei",
+   "claim_ja": "科学分野では文献を読み、仮説を提案し、実験を設計して研究を速めると述べた。",
+   "at": "01:00"
+  }
+ ],
+ "entities": [
+  "Anthropic",
+  "Dario Amodei",
+  "Claude",
+  "Fable 5.1"
+ ],
+ "topic_labels": [
+  "product-launch",
+  "agents",
+  "research"
+ ],
+ "novelty_ja": "Fable 5.1を、多段階で長く続く複雑作業、コードベース横断開発、科学研究支援に強い最新モデルとして位置づけている点。",
+ "audience_ja": "大規模なコード、金融モデル、契約書、研究課題をAIに任せたい開発者・研究者・業務担当者。",
+ "truncated": false,
+ "chunks": 1,
+ "video_id": "ROF2Nv_KjOM",
+ "title": "【AI要約】Claude Fable 5.1が登場",
+ "channel": "Anthropic (Dario Amodei)",
+ "date": "2026-09-02",
+ "chapters": [],
+ "transcript_lang": "en",
+ "generated_at": "2026-09-02T10:02:22+00:00"
+}

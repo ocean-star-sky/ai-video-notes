@@ -1,0 +1,76 @@
+{
+ "title_ja": "ナデラが語るMicrosoftのAGI戦略",
+ "hook_ja": "Fairwater 2からOpenAI契約まで、MicrosoftのAI投資判断をナデラが具体的に語る。",
+ "takeaways_ja": [
+  "MicrosoftはOpenAIモデル向け訓練能力を18カ月ごとに10倍化してきたが、単一モデル専用ではなく複数モデルを支えるインフラを志向している。",
+  "GitHub Copilotは直近四半期でサブスクが2000万から2600万に増え、AIコーディング市場全体は年末Q4に50〜60億ドル規模のランレートへ拡大したと語られた。",
+  "Nadellaは、将来のMicrosoft 365やGitHubを人間向けツールだけでなく、AIエージェントの計算・ID・セキュリティ基盤として捉えている。"
+ ],
+ "claims": [
+  {
+   "who": "Satya Nadella",
+   "claim_ja": "MicrosoftはOpenAIモデル向け訓練キャパシティを18カ月ごとに10倍にしてきた。",
+   "at": "50:03"
+  },
+  {
+   "who": "Satya Nadella",
+   "claim_ja": "インフラは複数のモデルファミリーを支えられるように作る必要があり、1つのモデル向け最適化は陳腐化リスクがある。",
+   "at": "46:00"
+  },
+  {
+   "who": "Satya Nadella",
+   "claim_ja": "GitHub Copilotのサブスクは直近四半期で2000万から2600万に増えた。",
+   "at": "15:04"
+  },
+  {
+   "who": "Dylan Patel",
+   "claim_ja": "AIコーディングエージェント市場のランレートは昨年末約5億ドルから今年Q4に50〜60億ドルへ拡大した。",
+   "at": "18:00"
+  },
+  {
+   "who": "Satya Nadella",
+   "claim_ja": "Microsoftは今後7年間OpenAIモデルにアクセスでき、製品全体で活用しつつMAIで自社モデルも構築する。",
+   "at": "28:01"
+  }
+ ],
+ "entities": [
+  "Satya Nadella",
+  "Dwarkesh Patel",
+  "Dylan Patel",
+  "SemiAnalysis",
+  "Microsoft",
+  "OpenAI",
+  "Azure",
+  "Fairwater 2",
+  "Fairwater 4",
+  "GPT-5",
+  "GitHub Copilot",
+  "Claude Code",
+  "Cursor",
+  "Codex",
+  "Azure Foundry",
+  "Grok",
+  "MAI",
+  "Nvidia",
+  "Oracle",
+  "Google",
+  "Amazon",
+  "Meta"
+ ],
+ "topic_labels": [
+  "compute-power",
+  "business-strategy",
+  "agents"
+ ],
+ "novelty_ja": "MicrosoftのAI戦略を、Fairwater 2の規模、OpenAI向け訓練能力の10倍化、Copilotの2600万サブスク、OpenAI APIのAzure独占条件まで結びつけて説明している点。",
+ "audience_ja": "AIインフラ投資、OpenAIとMicrosoftの関係、AIコーディング市場の収益化を追う投資家・開発者・事業責任者向け。",
+ "truncated": false,
+ "chunks": 2,
+ "video_id": "8-boBsWcr5A",
+ "title": "Satya Nadella – How Microsoft thinks about AGI",
+ "channel": "Dwarkesh Patel (最深技術対談)",
+ "date": "2026-08-20",
+ "chapters": [],
+ "transcript_lang": "en",
+ "generated_at": "2026-09-02T09:55:15+00:00"
+}

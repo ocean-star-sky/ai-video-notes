@@ -1,0 +1,78 @@
+{
+ "title_ja": "Azure Functionsで本番MCPサーバー構築",
+ "hook_ja": "失敗したDevOpsパイプラインをAI agentが診断しロールバックPRを作る。",
+ "takeaways_ja": [
+  "Jonah Andersonは、Azure FunctionsのMCP tool triggerでDevOps向けMCPサーバーを実装するデモを行った。",
+  "構成はMicrosoft Foundryのreasoning agentと、Azure Functions上のtool agentの2つで、MCP handshakeで連携する。",
+  "デモではshop APIの失敗ビルドを検出し、既知の正常コミットを見つけ、PR #3として自動ロールバックPRを作成した。"
+ ],
+ "claims": [
+  {
+   "who": "Jonah Anderson",
+   "claim_ja": "AI toolsやagentsは既存の本番アプリから分離・分散しており、本番アプリはまだ100% AI対応ではないと述べた。",
+   "at": "06:01"
+  },
+  {
+   "who": "Jonah Anderson",
+   "claim_ja": "AI agentsをDevOps automation assistantsとして使い、CI/CDの失敗検知やロールバック支援に使えると説明した。",
+   "at": "07:01"
+  },
+  {
+   "who": "Jonah Anderson",
+   "claim_ja": "Azure Functions MCP tool extensionで、recent deployments取得、失敗診断、rollback PR作成の3メソッドをtoolとして公開した。",
+   "at": "27:04"
+  },
+  {
+   "who": "Jonah Anderson",
+   "claim_ja": "demo modeでは承認不要、production modeでは常に人間の承認を要求するapproval modeをコードで切り替えられると説明した。",
+   "at": "32:00"
+  },
+  {
+   "who": "DevOps rollback agent",
+   "claim_ja": "shop APIの最後の失敗デプロイはordersテーブル変更時のdatabase migration timeoutが原因だと応答した。",
+   "at": "39:00"
+  },
+  {
+   "who": "Jonah Anderson",
+   "claim_ja": "Azure Functionsをself-hosted MCP serverとして使うと、managed identityやEntraによる認証統合ができ、本番利用可能だと述べた。",
+   "at": "45:00"
+  }
+ ],
+ "entities": [
+  "Jonah Anderson",
+  "Microsoft Build 2026",
+  "San Francisco",
+  "Azure Functions",
+  "MCP",
+  "Microsoft Foundry",
+  ".NET 10",
+  "Azure DevOps",
+  "GitHub Actions",
+  "Azure Developer CLI",
+  "Aspire Dashboard",
+  "Application Insights",
+  "Managed Identity",
+  "Microsoft Entra",
+  "VS Code",
+  "Build 2026 Dev E Store",
+  "shop API",
+  "shop web",
+  "Lawrence"
+ ],
+ "topic_labels": [
+  "agents",
+  "devops",
+  "azure-functions"
+ ],
+ "novelty_ja": "MCPサーバーをAzure Functionsで実装し、Azure DevOpsの失敗ビルド診断からロールバックPR作成までを2-agent構成で動かす具体デモ。",
+ "audience_ja": "Azure/.NETでDevOps自動化や本番向けMCP toolを作りたい開発者・SRE向け。",
+ "truncated": false,
+ "chunks": 1,
+ "video_id": "ii001KWkV54",
+ "title": "【マイクロソフト】From Code to Agents: Build Production MCP Servers on Azure Functions",
+ "channel": "Microsoft Developer",
+ "date": "2026-09-02",
+ "chapters": [],
+ "transcript_lang": "en",
+ "generated_at": "2026-09-02T10:02:41+00:00"
+}

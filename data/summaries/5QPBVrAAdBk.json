@@ -1,0 +1,64 @@
+{
+ "title_ja": "ChatGPT Workで会議準備をスキル化",
+ "hook_ja": "GmailとGoogle Calendarを使い会議予約と準備資料作成を自動化する。",
+ "takeaways_ja": [
+  "ChatGPT WorkのPluginsでGmailとGoogle Calendarを接続し、受信箱と予定表を組み合わせて使う。",
+  "クライアントのメールから出席者、タイトル、アジェンダを推定し、金曜前の空き時間で会議招待を作る。",
+  "会議ブリーフの形式を「meeting prep」スキルとして保存し、別の会議でも同じ形式で再利用する。"
+ ],
+ "claims": [
+  {
+   "who": "話者",
+   "claim_ja": "ChatGPTにクライアントのWebサイト redesign kickoffのメールを見つけさせ、会議予約と準備ブリーフ作成まで行わせる。",
+   "at": "00:04"
+  },
+  {
+   "who": "話者",
+   "claim_ja": "Gmailは接続済みで、Google CalendarをPluginからインストールしてアカウント接続すると、受信箱とカレンダーを一緒に使える。",
+   "at": "00:04"
+  },
+  {
+   "who": "話者",
+   "claim_ja": "ChatGPTが金曜前の空き時間候補を見つけ、メール内容から出席者、タイトル、アジェンダを含む会議招待を作成した。",
+   "at": "01:01"
+  },
+  {
+   "who": "話者",
+   "claim_ja": "クライアント kickoff 用のブリーフには objective、client priorities、decisions、risks、next stepsを含めたい。",
+   "at": "01:01"
+  },
+  {
+   "who": "話者",
+   "claim_ja": "同じ作業手順を毎回説明しないために、会議準備の流れを「meeting prep」というSkillとして保存した。",
+   "at": "02:02"
+  }
+ ],
+ "entities": [
+  "OpenAI",
+  "Sam Altman",
+  "ChatGPT",
+  "ChatGPT Work",
+  "Gmail",
+  "Google Calendar",
+  "Plugins",
+  "Skills",
+  "meeting prep",
+  "chatgpt.com"
+ ],
+ "topic_labels": [
+  "agents",
+  "productivity",
+  "product-launch"
+ ],
+ "novelty_ja": "ChatGPT WorkでGmailとGoogle CalendarのPlugin連携に加え、会議予約からブリーフ作成までの手順をSkillとして保存し再利用する実演になっている。",
+ "audience_ja": "クライアント会議の予約と事前準備をChatGPT Workで定型化したい業務利用者。",
+ "truncated": false,
+ "chunks": 1,
+ "video_id": "5QPBVrAAdBk",
+ "title": "【OpenAI】プラグインとスキル v6 CC",
+ "channel": "OpenAI (Sam Altman)",
+ "date": "2026-08-29",
+ "chapters": [],
+ "transcript_lang": "en",
+ "generated_at": "2026-09-02T10:04:34+00:00"
+}

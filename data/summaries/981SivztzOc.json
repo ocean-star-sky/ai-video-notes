@@ -1,0 +1,64 @@
+{
+ "title_ja": "ChatGPT WorkのComputer useとChrome use",
+ "hook_ja": "Spotify、Workday、Google Calendarを使い分ける実演。",
+ "takeaways_ja": [
+  "Computer useはChatGPTデスクトップアプリのWorkタブ限定で、Spotifyなどプラグインがないデスクトップアプリを操作できる。",
+  "Chrome useはログイン済みブラウザ上のサイトを操作し、WorkdayのPTO申請フォーム入力のような作業を担う。",
+  "WorkdayはChrome use、Google Calendarはプラグインを使い、PTO提出や予定作成の前にユーザー確認で停止する。"
+ ],
+ "claims": [
+  {
+   "who": "Sam Altman",
+   "claim_ja": "Computer useとChrome useはChatGPTデスクトップアプリのWorkタブだけで使え、通常のChatGPT、Web、スマホでは使えない。",
+   "at": "00:04"
+  },
+  {
+   "who": "Sam Altman",
+   "claim_ja": "Spotifyには特別な統合を使わず、ChatGPTが既存のデスクトップアプリを操作してdaylistを再生する。",
+   "at": "00:38"
+  },
+  {
+   "who": "Sam Altman",
+   "claim_ja": "Command Commandでappshotを撮ると、ChatGPTが見ているアプリやWebサイトを文脈付きで理解できる。",
+   "at": "01:00"
+  },
+  {
+   "who": "Sam Altman",
+   "claim_ja": "WorkdayにはプラグインがないためChrome useでPTO申請を入力し、Google Calendarプラグインで予定確認と不在イベント下書きを行う。",
+   "at": "01:24"
+  },
+  {
+   "who": "Sam Altman",
+   "claim_ja": "PTO提出やカレンダーイベント作成は実際の変更なので、ChatGPTは下書きまでで止まりユーザーが確認する。",
+   "at": "01:50"
+  }
+ ],
+ "entities": [
+  "ChatGPT Work",
+  "ChatGPT desktop app",
+  "Computer use",
+  "Chrome use",
+  "Spotify",
+  "Mac",
+  "Command Command",
+  "Workday",
+  "Google Calendar",
+  "PTO"
+ ],
+ "topic_labels": [
+  "agents",
+  "product-launch",
+  "workflow-automation"
+ ],
+ "novelty_ja": "ChatGPT Workで、プラグインがないWorkdayをChrome use、Google Calendarをプラグインで処理し、実変更前に停止する具体例を示している。",
+ "audience_ja": "ChatGPT Workで社内ツールやログイン済みWebサイトの作業を自動化したい業務ユーザー向け。",
+ "truncated": false,
+ "chunks": 1,
+ "video_id": "981SivztzOc",
+ "title": "【OpenAI】コンピューターブラウザの使用 v4",
+ "channel": "OpenAI (Sam Altman)",
+ "date": "2026-08-29",
+ "chapters": [],
+ "transcript_lang": "en",
+ "generated_at": "2026-09-02T10:04:55+00:00"
+}

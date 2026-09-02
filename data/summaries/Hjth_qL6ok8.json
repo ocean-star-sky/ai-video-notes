@@ -1,0 +1,46 @@
+{
+ "title_ja": "エージェント時代に学ぶべき可観測性",
+ "hook_ja": "AI Foundryはエージェントの評価と可観測性を一体化する。",
+ "takeaways_ja": [
+  "エージェント化で従来のアプリロジックがエージェントへ移る中、学ぶべきものは可観測性だと述べている。",
+  "エージェントのテスト、保守、健全性維持には evaluations と evaluators の理解が重要だとしている。",
+  "AI Foundry は内側と外側のループをつなぐ単一の可観測性プラットフォームを提供し、データ資産や評価管理と統合される。"
+ ],
+ "claims": [
+  {
+   "who": "話者",
+   "claim_ja": "今学ぶべきことの答えは observability、evaluations、evaluators だと述べた。",
+   "at": "00:00"
+  },
+  {
+   "who": "話者",
+   "claim_ja": "エージェントは非決定的で、長時間実行やステートレスな複雑さもあるため、健全性維持には追加の理解が必要だと述べた。",
+   "at": "00:24"
+  },
+  {
+   "who": "話者",
+   "claim_ja": "AI Foundry は内側と外側のループをつなぐ単一の可観測性プラットフォームを用意したと述べた。",
+   "at": "00:44"
+  }
+ ],
+ "entities": [
+  "AI Foundry",
+  "Microsoft Developer"
+ ],
+ "topic_labels": [
+  "agents",
+  "observability",
+  "evaluations"
+ ],
+ "novelty_ja": "エージェント時代の学習対象を、モデル構築ではなく可観測性と評価者の理解に絞っている点。",
+ "audience_ja": "AIエージェントをアプリやシステムに組み込んで保守する開発者が見るべき。",
+ "truncated": false,
+ "chunks": 1,
+ "video_id": "Hjth_qL6ok8",
+ "title": "【マイクロソフト】エージェント全盛の今、何を学ぶべきか？",
+ "channel": "Microsoft Developer",
+ "date": "2026-09-01",
+ "chapters": [],
+ "transcript_lang": "en",
+ "generated_at": "2026-09-02T10:03:37+00:00"
+}

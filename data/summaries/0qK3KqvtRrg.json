@@ -1,0 +1,62 @@
+{
+ "title_ja": "ChatGPT Workで共有サイト構築",
+ "hook_ja": "旅行サイトと製品ローンチダッシュボードをコード不要で作成・ホストできる。",
+ "takeaways_ja": [
+  "ChatGPT Workは会話内容やグループチャットを参照し、旅行用の非公開モバイルサイトを作れる。",
+  "サイトには投票、領収書アップロード、共有費用の自動分割、アクセス制御を組み込める。",
+  "業務用途ではDatabricks、Slack、Chromeを使い、毎朝ローンチ指標や公開反応を更新できる。"
+ ],
+ "claims": [
+  {
+   "who": "話者",
+   "claim_ja": "ChatGPT Workでは、必要な内容を伝えるだけで実際のウェブサイトを構築しインターネット上に公開できる。",
+   "at": "00:04"
+  },
+  {
+   "who": "話者",
+   "claim_ja": "旅行サイトには到着時刻、宿泊先、予約、日別旅程、投票可能な活動、共有費用トラッカーを含められる。",
+   "at": "00:25"
+  },
+  {
+   "who": "話者",
+   "claim_ja": "サイトは投票や費用をデータベースに保存し、領収書などのアップロードファイルも保存できる。",
+   "at": "00:44"
+  },
+  {
+   "who": "話者",
+   "claim_ja": "サイトは最初は非公開で、特定ユーザーへの共有や公開インターネット共有に切り替えられる。",
+   "at": "01:18"
+  },
+  {
+   "who": "話者",
+   "claim_ja": "ローンチダッシュボードはDatabricks、Slack、Chromeを毎朝確認し、指標や公開フィードバックを更新できる。",
+   "at": "01:52"
+  }
+ ],
+ "entities": [
+  "OpenAI",
+  "Sam Altman",
+  "ChatGPT Work",
+  "ChatGPT",
+  "Sites",
+  "Databricks",
+  "Slack",
+  "Chrome"
+ ],
+ "topic_labels": [
+  "product-launch",
+  "business-strategy",
+  "agents"
+ ],
+ "novelty_ja": "ChatGPT Workが会話から実サイトを作成・ホストし、DB保存、ファイル保存、アクセス制御、外部サービスを使った定期更新まで担う点。",
+ "audience_ja": "コードを書かずにチーム用サイトや業務ダッシュボードを作りたい企画・運用担当者。",
+ "truncated": false,
+ "chunks": 1,
+ "video_id": "0qK3KqvtRrg",
+ "title": "【OpenAI】共有可能なサイトを構築する v3 CC",
+ "channel": "OpenAI (Sam Altman)",
+ "date": "2026-08-29",
+ "chapters": [],
+ "transcript_lang": "en",
+ "generated_at": "2026-09-02T10:04:16+00:00"
+}

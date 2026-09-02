@@ -1,0 +1,80 @@
+{
+ "title_ja": "Heart Aerospaceの大型電動旅客機",
+ "hook_ja": "100フィート翼幅の電動機が5ドル分の電力で飛ぶ。",
+ "takeaways_ja": [
+  "Heart AerospaceはLAの40人チームで、36席級のハイブリッド電動機ES30を開発している。",
+  "ES30は電池のみで最大125マイル、ハイブリッドで最大500マイル飛び、約30分で充電する設計。",
+  "純電動だけでは迂回・45分待機などの予備要件が重すぎるため、簡素なターボプロップを積む判断をした。"
+ ],
+ "claims": [
+  {
+   "who": "ナレーター",
+   "claim_ja": "この機体は飛行した電動航空機として世界最大で、翼幅100フィート、離陸重量25,000ポンド、離陸に必要な電力コストは5ドルだった。",
+   "at": "00:01"
+  },
+  {
+   "who": "Andrew Porceland",
+   "claim_ja": "Heart Aerospaceの使命は航空旅行のコストを下げることで、そのためのハイブリッド電動航空機技術を作っている。",
+   "at": "01:01"
+  },
+  {
+   "who": "Andrew Porceland",
+   "claim_ja": "小型リージョナル機向けジェットエンジンは30席でも70席でも複雑さとコストが同じで、短距離路線を大きな機体と長距離路線へ押しやっている。",
+   "at": "02:01"
+  },
+  {
+   "who": "Andrew Porceland",
+   "claim_ja": "United Airlinesとの最初の大口顧客接点はinfo宛メールのスパム整理中に見つかった。",
+   "at": "06:00"
+  },
+  {
+   "who": "Andrew Porceland",
+   "claim_ja": "米国では1000便に1便が別空港へ迂回するため、純電動機では電池需要の3分の2を予備用に持つ必要がある。",
+   "at": "09:02"
+  },
+  {
+   "who": "Andrew Porceland",
+   "claim_ja": "ES30は電動で最大125マイル、ハイブリッド運用で最大500マイル飛べる。",
+   "at": "10:00"
+  }
+ ],
+ "entities": [
+  "Heart Aerospace",
+  "ES30",
+  "Y Combinator",
+  "Andrew Porceland",
+  "Clara",
+  "LA",
+  "Boeing",
+  "Airbus",
+  "SAS",
+  "United Airlines",
+  "MIT",
+  "Elon Musk",
+  "SpaceX",
+  "Model 3",
+  "Dragon",
+  "Hawaii",
+  "Norwegian fjord",
+  "Platsburg, New York",
+  "737",
+  "A320",
+  "Waymo"
+ ],
+ "topic_labels": [
+  "electric-aircraft",
+  "regional-aviation",
+  "hardware-startups"
+ ],
+ "novelty_ja": "既存の電動航空機論ではなく、Heart Aerospaceが世界最大級の電動航空機を実際にタキシング・初飛行段階まで進め、純電動ではなく予備要件を理由にハイブリッド化した具体判断を語っている点。",
+ "audience_ja": "電動航空機、リージョナル航空、ハードウェアスタートアップの資金調達と開発戦略に関心がある人。",
+ "truncated": false,
+ "chunks": 1,
+ "video_id": "nM86DBOqgPM",
+ "title": "【Y Combinator】Heart Aerospace Built the World’s Largest Electric Aircraft",
+ "channel": "Y Combinator (AIスタートアップ)",
+ "date": "2026-09-02",
+ "chapters": [],
+ "transcript_lang": "en",
+ "generated_at": "2026-09-02T10:03:02+00:00"
+}

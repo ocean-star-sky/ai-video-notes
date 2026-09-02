@@ -1,0 +1,124 @@
+{
+ "title_ja": "AIファクトリーのトークノミクス入門",
+ "hook_ja": "AI投資のROIをトークン単位で測る考え方をNVIDIAが解説。",
+ "takeaways_ja": [
+  "トークン価値はモデルの知能、参照できるコンテキスト、生成速度で変わり、用途に合わない高級モデルは経済性を悪化させる。",
+  "需要見積もりはユーザー数、リクエスト数、1リクエスト当たりトークン数を起点に、推論モデル、エージェントループ、KVキャッシュ、季節性を加味する。",
+  "供給側はモデル、ハードウェア、ソフトウェアの効率で決まり、NeMo Switchyard、NeMo Relay、Dynamo、NVL72などで最適化する。"
+ ],
+ "claims": [
+  {
+   "who": "Shruti Koparkar",
+   "claim_ja": "トークンはAIの最小単位で、言語モデルでは通常4文字程度を表す数値集合、画像生成ではピクセルを表す数値集合になり得る。",
+   "at": "02:48"
+  },
+  {
+   "who": "Tue Tran",
+   "claim_ja": "トークノミクスはトークン生成のコスト、需要、価値を調べるもので、価値とコストの差がAIユースケースを拡大するか pilot 後に止めるかを決める。",
+   "at": "04:05"
+  },
+  {
+   "who": "Shruti Koparkar",
+   "claim_ja": "ある通信企業では開発者がプレミアムモデルを既定で使っていたが、実際に必要だったタスクは8から16%だけだった。",
+   "at": "20:53"
+  },
+  {
+   "who": "Shruti Koparkar",
+   "claim_ja": "NeMo Switchyardは要求をモデル適合性、価格、コスト特性などに基づいて適切なモデルへルーティングする。",
+   "at": "21:35"
+  },
+  {
+   "who": "Shruti Koparkar",
+   "claim_ja": "NeMo RelayはAIファクトリー規模で、どのトークンがどのユースケースに使われ、事業価値があるかを観測するための層を作る。",
+   "at": "22:13"
+  },
+  {
+   "who": "Tue Tran",
+   "claim_ja": "Mixture-of-Expertsモデルは各トークン生成時に関連する専門家だけを読むため計算量を減らせるが、専門家が別GPUにあるため高速なネットワークが必要になる。",
+   "at": "18:06"
+  },
+  {
+   "who": "Shruti Koparkar",
+   "claim_ja": "Nemotron 3 Ultraは同じ成果に対して1ターン当たりのトークン数と総ターン数を減らす。",
+   "at": "30:13"
+  }
+ ],
+ "entities": [
+  "NVIDIA",
+  "Jensen Huang",
+  "Shruti Koparkar",
+  "Tue Tran",
+  "Kaushik",
+  "AI Factory Insider",
+  "Metropolis",
+  "NeMo Switchyard",
+  "NeMo Agent toolkit",
+  "NeMo Relay",
+  "NVL72",
+  "HGX",
+  "RTX PRO Servers",
+  "Dynamo",
+  "Nemotron 3 Ultra",
+  "Mixture-of-Experts",
+  "KV cache",
+  "Airports AI Alliance"
+ ],
+ "topic_labels": [
+  "tokenomics",
+  "ai-infrastructure",
+  "business-strategy"
+ ],
+ "novelty_ja": "AIファクトリーのROIを、単なるGPU投資ではなくトークンの価値、需要、供給、ルーティング、観測性に分解して説明し、NeMo SwitchyardやNeMo RelayなどNVIDIA製ソフトウェアに結び付けている点。",
+ "audience_ja": "企業のAIファクトリー投資をROI、モデル選定、インフラ設計の観点で評価するCFO、IT責任者、AI基盤担当者向け。",
+ "truncated": false,
+ "chunks": 1,
+ "video_id": "MkbepPfaeMU",
+ "title": "【NVIDIA】トークノミクス入門：トークンとは何か、なぜ重要なのか | AIファクトリー・インサイダー 第4話",
+ "channel": "NVIDIA (Jensen Huang)",
+ "date": "2026-09-02",
+ "chapters": [
+  "Introduction",
+  "Meet our guests: Shruti Koparkar & Tue Tran",
+  "What is a token?",
+  "What is \"tokenomics,\" and why is it relevant now?",
+  "Not all tokens are equal: intelligence, context, and speed",
+  "Trading vs. research: matching tokens to the use case",
+  "Retail video: one-token answers vs. batch captioning",
+  "Sizing token demand: back-of-napkin math",
+  "The multipliers: reasoning, agentic loops, and cache hit rate",
+  "KV cache and prefix matching explained",
+  "Supply: the AI factory as a car engine",
+  "Dense models vs. mixture of experts",
+  "Right model for the right task: a telco example",
+  "Intelligent routing with NeMo Switchyard",
+  "Where are your tokens going? Observability with NeMo Relay",
+  "Matching infrastructure: NVL72, HGX, and RTX PRO Servers",
+  "Dynamo and extreme co-design",
+  "Monetization: four paths from tokens to ROI",
+  "Just get started, and make it a team effort",
+  "Guardrails for a token tsunami",
+  "Wrap-up",
+  "Meet our guests: Shruti Koparkar & Tue Tran",
+  "What is a token?",
+  "What is \"tokenomics,\" and why is it relevant now?",
+  "Not all tokens are equal: intelligence, context, and speed",
+  "Trading vs. research: matching tokens to the use case",
+  "Retail video: one-token answers vs. batch captioning",
+  "Sizing token demand: back-of-napkin math",
+  "The multipliers: reasoning, agentic loops, and cache hit rate",
+  "KV cache and prefix matching explained",
+  "Supply: the AI factory as a car engine",
+  "Dense models vs. mixture of experts",
+  "Right model for the right task: a telco example",
+  "Intelligent routing with NeMo Switchyard",
+  "Where are your tokens going? Observability with NeMo Relay",
+  "Matching infrastructure: NVL72, HGX, and RTX PRO Servers",
+  "Dynamo and extreme co-design",
+  "Monetization: four paths from tokens to ROI",
+  "Just get started, and make it a team effort",
+  "Guardrails for a token tsunami",
+  "Wrap-up"
+ ],
+ "transcript_lang": "en",
+ "generated_at": "2026-09-02T10:02:04+00:00"
+}

@@ -1788,5 +1788,39 @@
       "Specialist"
     ],
     "chapters": []
+  },
+  {
+    "video_id": "lLTqWYDhHZw",
+    "title": "【マイクロソフト】VS Codeから離れずにAIエージェントを構築する方法",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-03_AI_Microsoft_マイクロソフトVS Codeから離れずにAIエージェントを構築する方法.html",
+    "date": "2026-09-03",
+    "tags": [
+      "エージェント",
+      "ai"
+    ],
+    "chapters": [
+      "Build Production-Ready AI Agents",
+      "Create a Foundry Project",
+      "Select and Deploy GPT-5.4",
+      "Configure the Prompt Agent",
+      "Connect the MCP Server",
+      "Test the Cupcake Ordering Flow",
+      "Inspect Observability Traces",
+      "Set Up Agent Evaluations",
+      "Generate Test Cases with Copilot",
+      "Run the Evaluation Metrics",
+      "Review Results and Wrap Up",
+      "Create a Foundry Project",
+      "Select and Deploy GPT-5.4",
+      "Configure the Prompt Agent",
+      "Connect the MCP Server",
+      "Test the Cupcake Ordering Flow",
+      "Inspect Observability Traces",
+      "Set Up Agent Evaluations",
+      "Generate Test Cases with Copilot",
+      "Run the Evaluation Metrics",
+      "Review Results and Wrap Up"
+    ]
   }
 ]

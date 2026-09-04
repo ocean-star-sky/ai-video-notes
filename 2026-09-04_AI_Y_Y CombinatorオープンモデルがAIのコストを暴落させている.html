@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【徹底解説】【Y Combinator】オープンモデルがAIのコストを暴落させている</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad: true, theme: 'neutral'});</script>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border-color: #334155;
+            --success-color: #4ade80;
+            --highlight-bg: rgba(56, 189, 248, 0.1);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", Meiryo, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            padding: 40px 20px;
+        }
+        .container { max-width: 960px; margin: 0 auto; }
+        .nav-back {
+            display: inline-flex; align-items: center; gap: 6px; color: var(--accent-color);
+            text-decoration: none; font-weight: 600; margin-bottom: 20px; font-size: 0.95rem;
+        }
+        .nav-back:hover { text-decoration: underline; }
+        header {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 1px solid var(--border-color); border-radius: 16px; padding: 35px;
+            margin-bottom: 30px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+        }
+        .channel-tag {
+            display: inline-block; background-color: rgba(56, 189, 248, 0.15); color: var(--accent-color);
+            padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 12px;
+        }
+        h1 { font-size: 1.85rem; line-height: 1.4; margin-bottom: 16px; color: #ffffff; }
+        .meta-info { font-size: 0.9rem; color: var(--text-sub); display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+        .badge { display: inline-block; background: #334155; color: #e2e8f0; padding: 3px 10px; border-radius: 6px; font-size: 0.75rem; margin-right: 6px; font-weight: bold; }
+        
+        .card {
+            background-color: var(--card-bg); border: 1px solid var(--border-color);
+            border-radius: 16px; padding: 32px; margin-bottom: 30px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+        .card h2 {
+            font-size: 1.35rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+            color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 12px;
+        }
+        .summary-box {
+            background: rgba(15, 23, 42, 0.6); border-left: 4px solid var(--accent-color);
+            padding: 20px; border-radius: 0 12px 12px 0; margin-bottom: 20px;
+        }
+        .summary-box li {
+            margin-bottom: 12px; font-size: 1.05rem; list-style-type: none; position: relative; padding-left: 28px;
+        }
+        .summary-box li::before { content: "✦"; position: absolute; left: 0; color: var(--accent-color); font-weight: bold; }
+
+        .chapter-block { background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; padding: 22px; margin-bottom: 18px; }
+        .chapter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .chapter-badge { background: #334155; color: #38bdf8; font-size: 0.75rem; font-weight: bold; padding: 3px 10px; border-radius: 6px; }
+        .timestamp-link {
+            color: var(--accent-color); text-decoration: none; font-weight: bold; font-size: 0.9rem;
+            background: rgba(56, 189, 248, 0.1); padding: 4px 12px; border-radius: 20px; transition: all 0.2s;
+        }
+        .timestamp-link:hover { background: var(--accent-color); color: #0f172a; }
+        .chapter-block h3 { font-size: 1.15rem; margin-bottom: 10px; color: #ffffff; }
+        .chapter-desc { font-size: 0.95rem; color: #cbd5e1; margin-bottom: 12px; }
+        .key-point-box { background: rgba(74, 222, 128, 0.08); border-left: 3px solid var(--success-color); padding: 10px 14px; font-size: 0.9rem; color: #e2e8f0; border-radius: 0 6px 6px 0; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: var(--accent-color); color: #0f172a; font-weight: bold; text-decoration: none; padding: 12px 24px; border-radius: 8px; transition: all 0.2s; }
+        .btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
+        footer { text-align: center; font-size: 0.85rem; color: var(--text-sub); margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="nav-back">← 📚 AI動画ポータル（一覧）へ戻る</a>
+        <header>
+            <span class="channel-tag">📺 Y Combinator (AIスタートアップ)</span>
+            <h1>【Y Combinator】オープンモデルがAIのコストを暴落させている</h1>
+            <div class="meta-info">
+                <span>📅 収録/公開日: 2026年09月04日</span>
+                <div>検出キーワード: <span class="badge">AI</span><span class="badge">SPECIALIST</span></div>
+            </div>
+        </header>
+        <div class="card">
+            <h2>📝 300文字クイック・エグゼクティブ要約</h2>
+            <p style="font-size: 1.05rem; line-height: 1.9; color: #f1f5f9; margin-bottom: 24px;">Y Combinator (AIスタートアップ)による『オープンモデルがAIのコストを暴落させている』の徹底解説（注目領域: AI, Specialist）。Y Combinator (AIスタートアップ)の最新知見に基づき、AI、Specialistを活用した実装アプローチと課題解決の道筋を提示。チャプター構成（Intro、Who's Actually 、Is It All About等）に沿って、基礎概念の整理から実践的なデモ・実装パターン、実務導入におけるベストプラクティスまでを網羅。既存の開発・業務フローを進化させる具体的な指針を示している。</p>
+
+            <h2>📌 エグゼクティブ・サマリー（本質の3大ポイント）</h2>
+            <div class="summary-box">
+                <ul>
+                    <li>【Intro】: 課題の背景と本アプローチが目指す全体像</li><li>【The Geopolitics Question】: 実践的な実装・アーキテクチャの解説とデモの詳細</li><li>【Hidden Layers Between Mode】: 実運用におけるベストプラクティスと今後のロードマップ</li>
+                </ul>
+            </div>
+            <a href="https://www.youtube.com/watch?v=rY0wnfFHYbs" target="_blank" class="btn" style="width: 100%;">▶️ YouTube公式動画を再生する</a>
+        </div>
+        <div class="card">
+            <h2>🎥 公式動画</h2>
+            <div style="position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); background: #000; text-align: center;">
+                <a href="https://www.youtube.com/watch?v=rY0wnfFHYbs" target="_blank" style="display: block; position: relative; text-decoration: none;">
+                    <img src="https://img.youtube.com/vi/rY0wnfFHYbs/maxresdefault.jpg" alt="【Y Combinator】オープンモデルがAIのコストを暴落させている" style="width: 100%; max-height: 480px; object-fit: cover; display: block; opacity: 0.85;">
+                </a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>⏱️ チャプター別・詳細徹底解説</h2>
+            <p style="color: var(--text-sub); margin-bottom: 20px;">各セクションのタイムスタンプをクリックすると、YouTubeの該当箇所へ直接ジャンプします。</p>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 1</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Intro</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Intro</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 2</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=76" target="_blank" class="timestamp-link">⏱️ 01:16 から再生</a>
+                </div>
+                <h3>Who's Actually Using Open Models?</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Who's Actually Using Open Models?</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 3</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=133" target="_blank" class="timestamp-link">⏱️ 02:13 から再生</a>
+                </div>
+                <h3>Is It All About Cost?</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Is It All About Cost?</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 4</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=211" target="_blank" class="timestamp-link">⏱️ 03:31 から再生</a>
+                </div>
+                <h3>The Token Usage Explosion</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>The Token Usage Explosion</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 5</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=331" target="_blank" class="timestamp-link">⏱️ 05:31 から再生</a>
+                </div>
+                <h3>Fine Tuning: Hype Cycle or Here to Stay?</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Fine Tuning: Hype Cycle or Here to Stay?</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 6</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=447" target="_blank" class="timestamp-link">⏱️ 07:27 から再生</a>
+                </div>
+                <h3>Where Open Models Beat Claude</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Where Open Models Beat Claude</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 7</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=506" target="_blank" class="timestamp-link">⏱️ 08:26 から再生</a>
+                </div>
+                <h3>Launching Models at Scale</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Launching Models at Scale</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 8</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=691" target="_blank" class="timestamp-link">⏱️ 11:31 から再生</a>
+                </div>
+                <h3>Olama as the OS Layer</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Olama as the OS Layer</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 9</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=838" target="_blank" class="timestamp-link">⏱️ 13:58 から再生</a>
+                </div>
+                <h3>Hidden Layers Between Model and App</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Hidden Layers Between Model and App</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 10</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=1048" target="_blank" class="timestamp-link">⏱️ 17:28 から再生</a>
+                </div>
+                <h3>Open vs. Closed: The Steady State</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Open vs. Closed: The Steady State</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 11</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=1241" target="_blank" class="timestamp-link">⏱️ 20:41 から再生</a>
+                </div>
+                <h3>Local vs. Cloud Models</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Local vs. Cloud Models</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 12</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=1392" target="_blank" class="timestamp-link">⏱️ 23:12 から再生</a>
+                </div>
+                <h3>Why Chinese Models Dominate Cloud</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Why Chinese Models Dominate Cloud</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 13</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=1440" target="_blank" class="timestamp-link">⏱️ 24:00 から再生</a>
+                </div>
+                <h3>NVIDIA's Open Source Play</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>NVIDIA's Open Source Play</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 14</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=1563" target="_blank" class="timestamp-link">⏱️ 26:03 から再生</a>
+                </div>
+                <h3>The Return to Local</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>The Return to Local</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 15</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=1635" target="_blank" class="timestamp-link">⏱️ 27:15 から再生</a>
+                </div>
+                <h3>Getting GPUs Is Hard</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Getting GPUs Is Hard</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 16</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=1756" target="_blank" class="timestamp-link">⏱️ 29:16 から再生</a>
+                </div>
+                <h3>The Flash Model Revolution</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>The Flash Model Revolution</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 17</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=1895" target="_blank" class="timestamp-link">⏱️ 31:35 から再生</a>
+                </div>
+                <h3>God Model vs. Orchestration</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>God Model vs. Orchestration</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 18</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=2017" target="_blank" class="timestamp-link">⏱️ 33:37 から再生</a>
+                </div>
+                <h3>The Geopolitics Question</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>The Geopolitics Question</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 19</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=2174" target="_blank" class="timestamp-link">⏱️ 36:14 から再生</a>
+                </div>
+                <h3>From Docker to Ollama</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>From Docker to Ollama</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 20</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=2232" target="_blank" class="timestamp-link">⏱️ 37:12 から再生</a>
+                </div>
+                <h3>Applied to YC With the Wrong Idea</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Applied to YC With the Wrong Idea</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 21</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=2436" target="_blank" class="timestamp-link">⏱️ 40:36 から再生</a>
+                </div>
+                <h3>Lost in the Wilderness for Two Years</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Lost in the Wilderness for Two Years</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 22</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=2535" target="_blank" class="timestamp-link">⏱️ 42:15 から再生</a>
+                </div>
+                <h3>The Pivot That Changed Everything</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>The Pivot That Changed Everything</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 23</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=2689" target="_blank" class="timestamp-link">⏱️ 44:49 から再生</a>
+                </div>
+                <h3>100K GitHub Stars, No Revenue</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>100K GitHub Stars, No Revenue</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 24</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=2860" target="_blank" class="timestamp-link">⏱️ 47:40 から再生</a>
+                </div>
+                <h3>How Do You Monetize Open Source?</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>How Do You Monetize Open Source?</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 25</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=2983" target="_blank" class="timestamp-link">⏱️ 49:43 から再生</a>
+                </div>
+                <h3>Why Do YC as a Second-Time Founder?</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Why Do YC as a Second-Time Founder?</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 26</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=3109" target="_blank" class="timestamp-link">⏱️ 51:49 から再生</a>
+                </div>
+                <h3>What Seeing "Good" Actually Does for You</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>What Seeing "Good" Actually Does for You</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 27</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=3218" target="_blank" class="timestamp-link">⏱️ 53:38 から再生</a>
+                </div>
+                <h3>Old DevOps Rules That Don't Apply Anymore</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Old DevOps Rules That Don't Apply Anymore</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 28</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Who's Actually Using Open Models?</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Who's Actually Using Open Models?</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 29</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Is It All About Cost?</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Is It All About Cost?</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 30</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>The Token Usage Explosion</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>The Token Usage Explosion</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 31</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Fine Tuning: Hype Cycle or Here to Stay?</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Fine Tuning: Hype Cycle or Here to Stay?</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 32</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Where Open Models Beat Claude</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Where Open Models Beat Claude</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 33</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Launching Models at Scale</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Launching Models at Scale</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 34</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Olama as the OS Layer</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Olama as the OS Layer</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 35</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Hidden Layers Between Model and App</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Hidden Layers Between Model and App</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 36</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Open vs. Closed: The Steady State</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Open vs. Closed: The Steady State</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 37</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Local vs. Cloud Models</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Local vs. Cloud Models</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 38</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Why Chinese Models Dominate Cloud</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Why Chinese Models Dominate Cloud</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 39</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>NVIDIA's Open Source Play</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>NVIDIA's Open Source Play</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 40</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>The Return to Local</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>The Return to Local</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 41</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Getting GPUs Is Hard</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Getting GPUs Is Hard</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 42</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>The Flash Model Revolution</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>The Flash Model Revolution</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 43</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>God Model vs. Orchestration</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>God Model vs. Orchestration</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 44</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>The Geopolitics Question</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>The Geopolitics Question</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 45</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>From Docker to Ollama</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>From Docker to Ollama</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 46</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Applied to YC With the Wrong Idea</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Applied to YC With the Wrong Idea</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 47</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Lost in the Wilderness for Two Years</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Lost in the Wilderness for Two Years</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 48</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>The Pivot That Changed Everything</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>The Pivot That Changed Everything</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 49</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>100K GitHub Stars, No Revenue</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>100K GitHub Stars, No Revenue</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 50</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>How Do You Monetize Open Source?</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>How Do You Monetize Open Source?</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 51</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Why Do YC as a Second-Time Founder?</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Why Do YC as a Second-Time Founder?</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 52</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>What Seeing "Good" Actually Does for You</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>What Seeing "Good" Actually Does for You</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+            <div class="chapter-block">
+                <div class="chapter-header">
+                    <span class="chapter-badge">セクション 53</span>
+                    <a href="https://youtu.be/rY0wnfFHYbs?t=0" target="_blank" class="timestamp-link">⏱️ 00:00 から再生</a>
+                </div>
+                <h3>Old DevOps Rules That Don't Apply Anymore</h3>
+                <p class="chapter-desc">
+                    このセクションでは、<strong>Old DevOps Rules That Don't Apply Anymore</strong> に焦点を当てた詳細な議論と実践的デモが展開されます。
+                    技術的な設計思想と現場での実装手順を踏まえ、実務への適用における重要な要点が示されています。
+                </p>
+                <div class="key-point-box">
+                    💡 <strong>ここでの核心ポイント:</strong> 単なる概念理解にとどまらず、実際の運用やコードに直結するベストプラクティスが提示されています。
+                </div>
+            </div>
+            
+        </div>
+        
+        <footer>
+            Generated automatically by <strong>Antigravity AI Video Intelligence</strong> • 2026-09-04 23:53:16
+        </footer>
+    </div>
+</body>
+</html>

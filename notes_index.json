@@ -2116,5 +2116,37 @@
       "The grind tool: budgets on goals",
       "Agents don't understand social context"
     ]
+  },
+  {
+    "video_id": "_xKFJG3FTXo",
+    "title": "【マイクロソフト】アプリ開発時にAspireを使うとCopilotはどう効率化されるのか？",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-08_AI_Microsoft_マイクロソフトアプリ開発時にAspireを使うとCopilotはどう効率化されるのか.html",
+    "date": "2026-09-08",
+    "tags": [
+      "copilot"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "VF1JES8Sv5U",
+    "title": "【エコノミスト】NVIDIAが支えるAIブーム、金融危機の引き金となるか？ | エコノミスト",
+    "channel": "The Economist",
+    "filename": "2026-09-08_AI_The_エコノミストNVIDIAが支えるAIブーム金融危機の引き金となるか  エコノミスト.html",
+    "date": "2026-09-08",
+    "tags": [
+      "ai"
+    ],
+    "chapters": [
+      "Why is Nvidia so important to the economy?",
+      "How Nvidia is losing its monopoly on chips",
+      "What financial engineering is Nvidia doing?",
+      "What’s Nvidia’s rationale?",
+      "Will Nvidia trigger a financial crash?",
+      "How Nvidia is losing its monopoly on chips",
+      "What financial engineering is Nvidia doing?",
+      "What’s Nvidia’s rationale?",
+      "Will Nvidia trigger a financial crash?"
+    ]
   }
 ]

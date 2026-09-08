@@ -2184,5 +2184,65 @@
       "Specialist"
     ],
     "chapters": []
+  },
+  {
+    "video_id": "A7MSwdXj86k",
+    "title": "【OpenAI】APIにGPT-Image-2.5を導入",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-09-09_AI_OpenAI_OpenAIAPIにGPT-Image-25を導入.html",
+    "date": "2026-09-09",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "-VukmrOT1eE",
+    "title": "【OpenAI】Templates with ChatGPT Images 2.5",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-09-09_AI_OpenAI_OpenAITemplates with ChatGPT Images 25.html",
+    "date": "2026-09-09",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "imPtIEAEHSU",
+    "title": "【OpenAI】Sketch with ChatGPT Images 2.5",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-09-09_AI_OpenAI_OpenAISketch with ChatGPT Images 25.html",
+    "date": "2026-09-09",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "6l7ble9P74o",
+    "title": "【OpenAI】Introducing ChatGPT Images 2.5",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-09-09_AI_OpenAI_OpenAIIntroducing ChatGPT Images 25.html",
+    "date": "2026-09-09",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "V0Hx37EqcMI",
+    "title": "【NVIDIA】Premiere v6.1",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-09-09_AI_NVIDIA_NVIDIAPremiere v61.html",
+    "date": "2026-09-09",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
   }
 ]

@@ -2244,5 +2244,33 @@
       "Specialist"
     ],
     "chapters": []
+  },
+  {
+    "video_id": "O_EWbnkjXdk",
+    "title": "【Google】Can AI help us better predict the weather?",
+    "channel": "Google DeepMind (Demis Hassabis)",
+    "filename": "2026-09-10_AI_Google_GoogleCan AI help us better predict the weather.html",
+    "date": "2026-09-10",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "Introduction",
+      "Hurricane Melissa",
+      "Why weather forecasting is hard",
+      "Traditional models vs AI models",
+      "Probabilistic forecasting",
+      "WeatherNext 3",
+      "Future outlook",
+      "Hannah's reflections",
+      "Hurricane Melissa",
+      "Why weather forecasting is hard",
+      "Traditional models vs AI models",
+      "Probabilistic forecasting",
+      "WeatherNext 3",
+      "Future outlook",
+      "Hannah's reflections"
+    ]
   }
 ]

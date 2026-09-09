@@ -2272,5 +2272,45 @@
       "Future outlook",
       "Hannah's reflections"
     ]
+  },
+  {
+    "video_id": "K6ypSCMWvGU",
+    "title": "【マイクロソフト】You don’t need code to build your first AI agent",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-10_AI_Microsoft_マイクロソフトYou dont need code to build your first AI a.html",
+    "date": "2026-09-10",
+    "tags": [
+      "ai",
+      "agent"
+    ],
+    "chapters": [
+      "Explore the Microsoft Foundry Portal",
+      "Create Project | Sign into Foundry and Create a New Foundry Project",
+      "Navigate the Foundry Experience",
+      "Models | Find and Deploy GPT-5.4 Mini",
+      "Create Agent | Build a Prompt Agent",
+      "Connect an MCP Server",
+      "Test the Cupcake Ordering Agent",
+      "Tracing | Inspect Agent Traces",
+      "Measure Performance and Token Usage",
+      "Evaluations | Create an Agent Evaluation",
+      "Select Evaluation Criteria",
+      "Review Evaluation Results",
+      "Building Production-Ready Agents",
+      "Summary",
+      "Create Project | Sign into Foundry and Create a New Foundry Project",
+      "Navigate the Foundry Experience",
+      "Models | Find and Deploy GPT-5.4 Mini",
+      "Create Agent | Build a Prompt Agent",
+      "Connect an MCP Server",
+      "Test the Cupcake Ordering Agent",
+      "Tracing | Inspect Agent Traces",
+      "Measure Performance and Token Usage",
+      "Evaluations | Create an Agent Evaluation",
+      "Select Evaluation Criteria",
+      "Review Evaluation Results",
+      "Building Production-Ready Agents",
+      "Summary"
+    ]
   }
 ]

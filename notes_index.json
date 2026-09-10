@@ -2348,5 +2348,94 @@
       "Specialist"
     ],
     "chapters": []
+  },
+  {
+    "video_id": "ylSrbsZXc54",
+    "title": "【マイクロソフト】MCP認証：登録から連携へ",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-10_AI_Microsoft_マイクロソフトMCP認証登録から連携へ.html",
+    "date": "2026-09-10",
+    "tags": [
+      "mcp"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "yRKScx-TLmg",
+    "title": "【マイクロソフト】Building MCP servers with VS Code — Level up your MCP",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-10_AI_Microsoft_マイクロソフトBuilding MCP servers with VS Code  Level up.html",
+    "date": "2026-09-10",
+    "tags": [
+      "mcp"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "nPMbXzJqKmQ",
+    "title": "【マイクロソフト】Event-driven agents, powered by MCP",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-10_AI_Microsoft_マイクロソフトEvent-driven agents powered by MCP.html",
+    "date": "2026-09-10",
+    "tags": [
+      "mcp",
+      "agents"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "lP93VxU76aI",
+    "title": "【マイクロソフト】MCPの現状",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-10_AI_Microsoft_マイクロソフトMCPの現状.html",
+    "date": "2026-09-10",
+    "tags": [
+      "mcp"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "_pE2eqmCHr0",
+    "title": "【マイクロソフト】MCP：GitHubにおけるサーバー、クライアント、プロトコル",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-10_AI_Microsoft_マイクロソフトMCPGitHubにおけるサーバークライアントプロトコル.html",
+    "date": "2026-09-10",
+    "tags": [
+      "mcp"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "_VzwtDOqX0M",
+    "title": "【マイクロソフト】Microsoft FoundryにおけるToolboxを活用した統合MCPレイヤー",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-10_AI_Microsoft_マイクロソフトMicrosoft FoundryにおけるToolboxを活用した統合MCPレイヤー.html",
+    "date": "2026-09-10",
+    "tags": [
+      "mcp"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "C81lgsW5kIA",
+    "title": "【マイクロソフト】チャットボットにボタンが備わるとき：FastMCPで構築するMCPアプリ",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-10_AI_Microsoft_マイクロソフトチャットボットにボタンが備わるときFastMCPで構築するMCPアプリ.html",
+    "date": "2026-09-10",
+    "tags": [
+      "mcp"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "AHWS8PNVdEA",
+    "title": "【マイクロソフト】MCP認証の進化",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-10_AI_Microsoft_マイクロソフトMCP認証の進化.html",
+    "date": "2026-09-10",
+    "tags": [
+      "mcp"
+    ],
+    "chapters": []
   }
 ]

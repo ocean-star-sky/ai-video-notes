@@ -2520,5 +2520,46 @@
       "copilot"
     ],
     "chapters": []
+  },
+  {
+    "video_id": "OSaP6bJoU44",
+    "title": "【OpenAI】GPT-Live-1がAPIで利用可能に",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-09-12_AI_OpenAI_OpenAIGPT-Live-1がAPIで利用可能に.html",
+    "date": "2026-09-12",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "PrSf7IOYu-I",
+    "title": "【Dwarkesh】AI researchers debate how far the current paradigm goes",
+    "channel": "Dwarkesh Patel (最深技術対談)",
+    "filename": "2026-09-12_AI_Dwarkesh_DwarkeshAI researchers debate how far the current .html",
+    "date": "2026-09-12",
+    "tags": [
+      "ai"
+    ],
+    "chapters": [
+      "Steelmanning the case against RSI",
+      "What’s driving the Chinese labs’ progress",
+      "How will automated AI researchers be trained",
+      "Will long-horizon RL elicit AGI?",
+      "The sim-to-real gap",
+      "How much progress is explained by data?",
+      "Why is RL working so well?",
+      "Move 37 and entropy collapse",
+      "Rapid-fire timelines",
+      "What’s driving the Chinese labs’ progress",
+      "How will automated AI researchers be trained",
+      "Will long-horizon RL elicit AGI?",
+      "The sim-to-real gap",
+      "How much progress is explained by data?",
+      "Why is RL working so well?",
+      "Move 37 and entropy collapse",
+      "Rapid-fire timelines"
+    ]
   }
 ]

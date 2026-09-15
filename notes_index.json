@@ -2648,5 +2648,34 @@
       "Specialist"
     ],
     "chapters": []
+  },
+  {
+    "video_id": "X-uQwleiUwA",
+    "title": "【マイクロソフト】エージェントが自分のエージェントをリファクタリングしてくれたら？",
+    "channel": "Microsoft Developer",
+    "filename": "2026-09-16_AI_Microsoft_マイクロソフトエージェントが自分のエージェントをリファクタリングしてくれたら.html",
+    "date": "2026-09-16",
+    "tags": [
+      "エージェント"
+    ],
+    "chapters": [
+      "Is Your Agent Production-Ready?",
+      "Review the Existing Agent",
+      "Add Microsoft Foundry Skills",
+      "Identify Best-Practice Gaps",
+      "Fix Issues with GitHub Copilot",
+      "Review the Generated Changes",
+      "Upgrade Toolbox and Observability",
+      "Test with Agent Inspector",
+      "Production-Ready Agent Recap",
+      "Review the Existing Agent",
+      "Add Microsoft Foundry Skills",
+      "Identify Best-Practice Gaps",
+      "Fix Issues with GitHub Copilot",
+      "Review the Generated Changes",
+      "Upgrade Toolbox and Observability",
+      "Test with Agent Inspector",
+      "Production-Ready Agent Recap"
+    ]
   }
 ]

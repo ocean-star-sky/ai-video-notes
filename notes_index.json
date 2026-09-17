@@ -2897,5 +2897,67 @@
       "Chain of thought is degrading",
       "How will we know when alignment is solved?"
     ]
+  },
+  {
+    "video_id": "s495saGYWFg",
+    "title": "【OpenAI】Jump TradingがGPT-6 Astraに最も曖昧で困難なタスクを課す",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-09-18_AI_OpenAI_OpenAIJump TradingがGPT-6 Astraに最も曖昧で困難なタスクを課す.html",
+    "date": "2026-09-18",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "cr61seCie_c",
+    "title": "【NVIDIA】NVIDIA NVLink FusionでカスタムAIインフラを構築する",
+    "channel": "NVIDIA (Jensen Huang)",
+    "filename": "2026-09-18_AI_NVIDIA_NVIDIANVIDIA NVLink FusionでカスタムAIインフラを構築する.html",
+    "date": "2026-09-18",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "yslXlV2BP_Y",
+    "title": "【Y Combinator】スタートアップの潮流はビットからアトムへ",
+    "channel": "Y Combinator (AIスタートアップ)",
+    "filename": "2026-09-18_AI_Y_Y Combinatorスタートアップの潮流はビットからアトムへ.html",
+    "date": "2026-09-18",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": [
+      "Intro",
+      "Startups Are Moving From Bits to Atoms",
+      "Why AI Is Making Hard Tech Easier",
+      "Defense, Manufacturing, and the Return of Hard Tech",
+      "AI Compute Is Becoming a Physical Infrastructure Problem",
+      "Robotics Is Approaching Its ChatGPT Moment",
+      "Software Isn’t Dead. It’s Becoming the Harness",
+      "Why AI Startups Are Growing Faster",
+      "The Hidden Boom in Data and RL Environments",
+      "Why Robotics Will Need Specialized Models",
+      "The Rise of the Solo Founder",
+      "Why Experienced Founders Are Back",
+      "What Founders Should Do Right Now",
+      "Startups Are Moving From Bits to Atoms",
+      "Why AI Is Making Hard Tech Easier",
+      "Defense, Manufacturing, and the Return of Hard Tech",
+      "AI Compute Is Becoming a Physical Infrastructure Problem",
+      "Robotics Is Approaching Its ChatGPT Moment",
+      "Software Isn’t Dead. It’s Becoming the Harness",
+      "Why AI Startups Are Growing Faster",
+      "The Hidden Boom in Data and RL Environments",
+      "Why Robotics Will Need Specialized Models",
+      "The Rise of the Solo Founder",
+      "Why Experienced Founders Are Back",
+      "What Founders Should Do Right Now"
+    ]
   }
 ]

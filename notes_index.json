@@ -3102,5 +3102,41 @@
       "Specialist"
     ],
     "chapters": []
+  },
+  {
+    "video_id": "rRm3Vnb7UPY",
+    "title": "【OpenAI】FigmaがGPT-6 Astraに壮大な挑戦を与えた。その結果はこうだ。",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-09-22_AI_OpenAI_OpenAIFigmaがGPT-6 Astraに壮大な挑戦を与えたその結果はこうだ.html",
+    "date": "2026-09-22",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "p7TjXroM4ak",
+    "title": "【OpenAI】プロンプトは1つ。機能の構築からテストまで完了。 | Ramp × GPT-6 Astra",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-09-22_AI_OpenAI_OpenAIプロンプトは1つ機能の構築からテストまで完了  Ramp  GPT-6 Astra.html",
+    "date": "2026-09-22",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
+  },
+  {
+    "video_id": "dtNlpZI86Dk",
+    "title": "【OpenAI】「スタッフエンジニア協力者」｜NotionによるGPT-6 Astraの初公開",
+    "channel": "OpenAI (Sam Altman)",
+    "filename": "2026-09-22_AI_OpenAI_OpenAIスタッフエンジニア協力者NotionによるGPT-6 Astraの初公開.html",
+    "date": "2026-09-22",
+    "tags": [
+      "AI",
+      "Specialist"
+    ],
+    "chapters": []
   }
 ]
